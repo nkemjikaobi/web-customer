@@ -1,0 +1,242 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.footer {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  ul {
+    padding-left: 0 !important;
+  }
+  &_topBand {
+    width: 100%;
+    height: to-rem(75);
+    padding: to-rem(15 30);
+    background-color: color(Grey18);
+    @include breakpoint-mini("l") {
+      height: auto;
+    }
+    @include breakpoint-mini("xl") {
+      padding: to-rem(15 70);
+      height: to-rem(75);
+    }
+    @include breakpoint-mini("xxxl") {
+      padding: to-rem(15 0);
+    }
+
+    .topBandContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .containerItems {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include breakpoint-mini("l") {
+          margin-right: to-rem(10);
+        }
+      }
+      @include breakpoint-mini("m") {
+        display: block;
+      }
+      @include breakpoint-mini("xxl") {
+        display: flex;
+        max-width: 90rem;
+        margin: 0 auto;
+      }
+    }
+
+    .support {
+      display: flex;
+      .text {
+        color: color(PhilippineSilver);
+        margin-left: to-rem(16);
+        h1 {
+          font-size: to-rem(14);
+          text-transform: uppercase;
+        }
+      }
+    }
+    .latestDeals {
+      p {
+        color: color(PhilippineSilver);
+      }
+    }
+    .newsLetter {
+      display: flex;
+      input {
+        width: to-rem(267);
+        margin-top: 0;
+        height: to-rem(45);
+        border: 0px;
+        border-radius: to-rem(3 0 0 3);
+        @include breakpoint-mini("m") {
+          width: 85vw;
+          margin-top: to-rem(10);
+        }
+        @include breakpoint-mini("xl") {
+          width: to-rem(267);
+          margin-top: 0;
+        }
+      }
+      .subscribeBtn {
+        width: to-rem(103);
+        height: to-rem(45);
+        button {
+          border-radius: to-rem(0 3 3 0);
+          font-size: to-rem(14);
+          @include breakpoint-mini("m") {
+            margin-top: to-rem(10);
+          }
+          @include breakpoint-mini("xl") {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    > div:first-child {
+      .text {
+        color: color(White);
+      }
+    }
+  }
+  &_mainContent {
+    background-color: #0c0c0c;
+    padding: to-rem(30 110 42 30);
+    @include breakpoint-mini("xl") {
+      padding: to-rem(30 70);
+    }
+    @include breakpoint-mini("xxxl") {
+      padding: to-rem(30 0 42 0);
+    }
+    .mainContentContainer {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint-mini("xxl") {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 0 !important;
+      }
+    }
+    .left {
+      width: 55vw;
+      display: flex;
+      justify-content: space-between;
+      .row {
+        &_header {
+          font-size: to-rem(14);
+          font-weight: 700;
+          color: color(PhilippineSilver);
+          text-transform: uppercase;
+        }
+        .listItems {
+          margin-top: to-rem(17);
+          li {
+            color: color(PhilippineSilver);
+            font-size: to-rem(13);
+          }
+        }
+      }
+    }
+    .left > div:first-child {
+      .row {
+        &_header {
+          color: color(White);
+        }
+      }
+    }
+    .left > div:first-child > div.listItems > ul:nth-child(2) {
+      li {
+        color: color(White);
+        font-weight: 500;
+      }
+    }
+    .right {
+      .row {
+        &_header {
+          font-size: to-rem(14);
+          font-weight: 700;
+          color: color(PhilippineSilver);
+          text-transform: uppercase;
+        }
+        .appStoreLabelList {
+          display: flex;
+          margin-top: to-rem(16);
+        }
+        .socialIcons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: to-rem(7);
+          div:not(:nth-child(3)){
+            svg{
+              fill: color(White);
+            }
+          }
+          div:nth-child(3) {
+            > div {
+              background-color: color(white) !important;
+            }
+          }
+        }
+      }
+      .connect {
+        margin-top: to-rem(40);
+      }
+      .storeLabel > a {
+        padding: to-rem(7 17 7 10);
+        display: flex;
+        .icon {
+          padding-top: to-rem(4);
+        }
+        .text {
+          color: color(White);
+          margin-left: to-rem(11);
+          .heading {
+            font-size: to-rem(11);
+          }
+          .label {
+            font-weight: 600;
+            font-size: to-rem(15);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  &_bottom {
+    display: flex;
+    padding-bottom: to-rem(30);
+    background-color: #0c0c0c;
+    .footerRule {
+      width: 100%;
+      border-bottom: 1px solid #404040;
+      margin-bottom: to-rem(10);
+    }
+    p {
+      text-align: center;
+      width: 60%;
+      color: #9b9b9b;
+    }
+  }
+}
+@media screen and (max-device-width: 1439px) {
+  .footer {
+    &_topBand {
+      height: to-rem(130);
+      padding: to-rem(5 30);
+      .newsLetter {
+        margin-top: 1rem;
+        input {
+          width: 83vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 1024px){
+  .footer {
+    display: none;
+  }
+}

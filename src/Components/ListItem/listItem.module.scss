@@ -1,0 +1,32 @@
+
+@import "../../Assets/styles/shared-styles.scss";
+
+.listItem{
+    margin-bottom: to-rem(16);
+    width: to-rem(420);
+    height: to-rem(50);
+    box-shadow: 0px 4px 20px 0px #0000000A;
+    padding: to-rem(0 32 0 16);
+    @include breakpoint('s'){
+        width: to-rem(300);
+    }
+    &>div{
+        color: color(Black);
+    }
+    svg{
+        path{
+            fill: #A7A7A7;
+        }
+    }
+}
+.listItem:hover{
+    color: color(PrimaryLight);
+    &>div{
+            color: color(PrimaryLight);
+    }
+    svg{
+        path{
+            fill: color(PrimaryLight);
+        }
+    }
+}

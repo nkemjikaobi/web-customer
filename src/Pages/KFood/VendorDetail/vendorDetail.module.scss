@@ -1,0 +1,381 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.vendor {
+  position: relative;
+  @include breakpoint-mini("xxxl") {
+    // padding: to-rem(0 70);
+  }
+  .breadCrumbWrapper {
+    @include breakpoint-mini("xxl") {
+      margin-left: to-rem(-142);
+    }
+  }
+  &_header {
+    display: flex;
+    justify-content: center;
+    @include breakpoint("s") {
+      padding-top: to-rem(20);
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .vendorMenu {
+    .fixedMenu {
+      position: fixed;
+      width: 100%;
+      top: to-rem(70);
+      background-color: white;
+    }
+  }
+
+  .foodModalWrapper {
+    position: fixed;
+    z-index: 10;
+  }
+  &_bannerCard {
+    position: absolute;
+    top: to-rem(100);
+    left: 18%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: color(White);
+    width: to-rem(450);
+    padding: to-rem(15 20 15 20);
+    margin: to-rem(0 20 0 20);
+    box-shadow: 5px 10px 10px 0px #4d4c4c0d;
+
+    .detail {
+      padding: to-rem(35 0 0 40);
+    }
+
+    .list {
+      font-size: to-rem(13);
+      line-height: 1.5;
+      padding-top: to-rem(5);
+    }
+
+    .infoFont {
+      font-size: to-rem(13);
+    }
+
+    .lightText {
+      color: #606060;
+    }
+
+    .ratingText {
+      padding-right: to-rem(3);
+      font-size: to-rem(12);
+      font-weight: $font-weight-medium;
+      color: #f26822;
+    }
+
+    .rightBorder {
+      padding-right: to-rem(20);
+      border-right: to-rem(1) solid #aaa;
+    }
+
+    .storeInfo {
+      display: flex;
+      justify-content: space-between;
+      padding: to-rem(20 100 22 0);
+    }
+  }
+  &_subHeader {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: to-rem(1) solid #aaa;
+    .subCategories {
+      flex-basis: 70%;
+      padding: to-rem(15 40 15 50);
+      .categoryContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+      .list {
+        padding-left: to-rem(40);
+        align-items: center;
+      }
+      .activeList {
+        color: color(PrimaryLight);
+        padding-left: to-rem(40);
+        align-items: center;
+      }
+    }
+    .ordersHeading {
+      flex-basis: 25%;
+      box-shadow: 0 3px 10px color(Whisper);
+      .header {
+        padding: to-rem(15 40 15 50);
+      }
+    }
+    .virtual {
+      flex-grow: 1;
+      padding: to-rem(15 40 15 50);
+    }
+  }
+  &_container {
+    display: flex;
+    justify-content: space-around;
+    .productList {
+      padding: to-rem(15 40 15 50);
+      flex-basis: 70%;
+      h4 {
+        margin-top: to-rem(50);
+        font-weight: $font-weight-medium;
+        color: #555;
+      }
+      .listContainer {
+        padding-left: to-rem(40);
+      }
+    }
+    .orderContainer {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 25%;
+    }
+    .fixedOrderContainer {
+      position: fixed;
+      right: to-rem(95);
+      width: 24.8%;
+      top: to-rem(123);
+      height: 100vh;
+    }
+    .orderContent {
+      display: flex;
+      box-shadow: 0 3px 10px color(Whisper);
+      flex-direction: column;
+      padding: to-rem(15);
+      .defaultText {
+        display: flex;
+        padding: to-rem(50 0 50 0);
+        width: 100%;
+        justify-content: center;
+      }
+      .orderDetails {
+        padding-bottom: to-rem(15);
+      }
+      .orderItems {
+        display: flex;
+        justify-content: space-between;
+        padding-top: to-rem(5);
+        padding-bottom: to-rem(5);
+      }
+      .lightFont {
+        color: color(Grey29);
+      }
+      .darkFont {
+        color: color(Nero);
+        .cursor {
+          cursor: pointer;
+        }
+      }
+    }
+    .virtual {
+      flex-grow: 1;
+      padding: to-rem(15 40 15 50);
+    }
+  }
+  &_vendorListing {
+    display: flex;
+
+    .filter {
+      @include breakpoint("s") {
+        display: none;
+      }
+      min-width: to-rem(243);
+      margin-right: to-rem(23);
+      .deliveryDetails {
+        border-bottom: 1px solid color(Whisper);
+        display: flex;
+        justify-content: space-between;
+        a {
+          color: color(PrimaryLight);
+        }
+      }
+      h1 {
+        padding-top: to-rem(20);
+        font-size: to-rem(16);
+      }
+    }
+    .content {
+      padding: to-rem(98 16 0 16);
+      @include breakpoint-mini("xxl") {
+        padding: to-rem(98 80 0 0);
+      }
+      h2 {
+        padding-bottom: to-rem(23);
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include breakpoint-mini("xxl") {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  .paginateWrapper{
+    .paginationActive a {
+      color: color(White) !important;
+      background-color: #ed017f;
+    }
+    .paginationBttns {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      padding: 0 !important;
+    }
+    .paginationBttns a {
+      padding: 9px 12px;
+      margin: 8px;
+      color: color(White);
+      cursor: pointer;
+    }
+    .paginationBttns a:hover {
+      color: color(White);
+      background-color: #dee2e6;
+    }
+    .nextClassName {
+      background-color: color(White);
+      border: 1px solid #dee2e6;
+    }
+    .nextClassName:hover {
+      background-color: #dee2e6;
+    }
+    .nextClassName a {
+      padding: 0 !important;
+      width: 100%;
+    }
+    .previousClassName {
+      background-color: color(White);
+      border: 1px solid #dee2e6;
+    }
+    .previousClassName a {
+      padding: 0 !important;
+      width: 100%;
+    }
+    .previousClassName:hover {
+      background-color: #dee2e6;
+    }
+  }
+}
+.listingCard {
+  margin-bottom: to-rem(23);
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .vendor {
+    &_header {
+      @include breakpoint("s") {
+        img {
+          width: 100%;
+          height: 15rem;
+        }
+      }
+    }
+    &_bannerCard {
+      top: 3rem;
+      left: 44%;
+      width: 22.75rem;
+      padding: 0.2rem 1rem 0.2rem 0rem;
+      .storeInfo {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 2.625rem 1.375rem 0;
+      }
+    }
+    &_subHeader {
+      justify-content: space-between;
+      .ordersHeading {
+        display: none;
+      }
+      .virtual {
+        display: none;
+      }
+      .subCategories {
+        flex-basis: 100%;
+        padding: to-rem(8 5 8 5);
+        overflow-x: scroll;
+        .categoryContainer {
+          padding-left: to-rem(10);
+        }
+      }
+    }
+    &_container {
+      display: block;
+      .orderContainer {
+        display: none;
+      }
+      .orderContent {
+        display: none;
+      }
+      .productList {
+        padding: to-rem(0 0 15 0);
+        .listContainer {
+          padding-left: to-rem(0);
+        }
+      }
+      .virtual {
+        display: none;
+      }
+    }
+    .vendorMenu {
+      .fixedMenu {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: white;
+      }
+    }
+    .paginateWrapper{
+      ul{
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .vendor {
+    &_header {
+      img {
+        width: 100%;
+        height: 18rem;
+      }
+      @include breakpoint("s") {
+        img {
+          width: 100%;
+          height: 18rem;
+        }
+      }
+    }
+    &_bannerCard {
+      top: 1.75rem;
+      left: 18%;
+      width: 22.75rem;
+      padding: 0.6rem 1rem 0.6rem 1rem;
+    }
+    &_subHeader {
+      justify-content: space-between;
+      .virtual {
+        display: none;
+      }
+    }
+    &_container {
+      justify-content: space-between;
+      .productList {
+        padding: to-rem(0 0 15 0);
+        .listContainer {
+          padding-left: to-rem(0);
+        }
+      }
+      .virtual {
+        display: none;
+      }
+    }
+  }
+}

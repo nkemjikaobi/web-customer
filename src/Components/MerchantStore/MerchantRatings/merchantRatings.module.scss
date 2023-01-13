@@ -1,0 +1,129 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.merchantRatingsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: to-rem(50);
+  @include breakpoint("m") {
+    flex-direction: column;
+    width: 100%;
+  }
+  .starsReviewWrapper {
+    p {
+      font-size: to-rem(14);
+      line-height: to-rem(17);
+      font-weight: 700;
+      color: color(black);
+      display: inline-block;
+      width: 100%;
+    }
+    .stars {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      .iconWrapper {
+        span {
+          display: block;
+          font-size: to-rem(18);
+          font-weight: 700;
+          color: color(black);
+        }
+        @include breakpoint("l") {
+          div {
+            width: max-content !important;
+            margin-right: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+  .merchantAssessmentWrapper {
+    display: flex;
+    .productQuality,
+    .deliveryRate,
+    .communication {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: to-rem(16);
+      p {
+        text-transform: uppercase;
+        color: color(black);
+        font-weight: 400;
+        font-size: to-rem(14);
+        line-height: to-rem(17);
+        display: inline-block;
+        margin-bottom: to-rem(10);
+      }
+      .progressBar {
+        width: to-rem(180);
+        display: block !important;
+        div {
+          justify-content: flex-start !important;
+        }
+      }
+
+    }
+  }
+  @include breakpoint("m") {
+    .merchantAssessmentWrapper {
+      flex-direction: column;
+      width: 90%;
+      margin: 1rem;
+      .productQuality,
+      .deliveryRate,
+      .communication {
+        flex-direction: row;
+        margin-bottom: 1rem;
+        p {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+    @include breakpoint("l") {
+        .badgeWrapper {
+            flex-direction: column;
+        }
+    }
+
+  .badgeWrapper {
+    display: flex;
+    margin-right: to-rem(16);
+    .salesWrapper,
+    .durationWrapper {
+      display: flex;
+      background-color: #dddddd;
+      padding: 1rem;
+      margin-right: to-rem(20);
+      .figures {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-weight: 700;
+          font-size: to-rem(14);
+          color: color(black);
+          line-height: to-rem(17);
+        }
+        p {
+          font-weight: 400;
+          font-size: to-rem(14);
+          color: color(black);
+          line-height: to-rem(17);
+        }
+      }
+      .icons {
+        margin-right: to-rem(15);
+      }
+    }
+    @include breakpoint("m") {
+      .salesWrapper,
+      .durationWrapper {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        width: 100%;
+        margin-right: 0rem;
+      }
+    }
+  }
+}

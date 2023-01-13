@@ -1,0 +1,122 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.container {
+    background: #fff;
+    box-shadow: to-rem(0 0 5) rgba(0, 0, 0, 0.07);
+    height: to-rem(382);
+    margin: 0 auto;
+    margin-bottom: to-rem(44);
+    max-width: to-rem(296);
+}
+
+.gif {
+    height: to-rem(189);
+    margin: 0 auto;
+    margin-bottom: to-rem(22);
+    margin-top: to-rem(15);
+    width: to-rem(189);
+}
+
+.text {
+    margin: 0 auto;
+    text-align: left;
+    width: to-rem(257);
+
+    .textHeading {
+        height: to-rem(84);
+        padding-top: to-rem(21);
+        text-align: left;
+
+        .textHeading_text {
+            background: #fffbfd;
+            border: to-rem(0.474359) solid #d8d8d8;
+            border-radius: 50%;
+            height: to-rem(38);
+            padding: to-rem(9 0);
+            text-align: center;
+            width: to-rem(38);
+        }
+    }
+
+    h1,
+    p {
+        margin: to-rem(0);
+        padding: to-rem(0);
+    }
+
+    h1 {
+        font-size: to-rem(1.5);
+        line-height: to-rem(24);
+    }
+
+    p {
+        font-size: to-rem(13);
+        font-weight: 300;
+        line-height: to-rem(20);
+        margin-top: to-rem(7.5);
+    }
+}
+
+@include breakpoint-mini('m') {
+    .container {
+        background: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row-reverse;
+        height: to-rem(406);
+        justify-content: center;
+        max-width: to-rem(881.84);
+        padding-bottom: to-rem(60);
+    }
+
+    .gif {
+        background: #fff;
+        border: none;
+        height: to-rem(406);
+        margin: 0;
+        width: to-rem(406) !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .text {
+        margin-top: to-rem(49);
+        text-align: center;
+        width: to-rem(351.84);
+
+        .textHeading {
+            text-align: center;
+
+            .textHeading_text {
+                font-size: to-rem(24.4103);
+                font-weight: bold;
+                height: to-rem(56);
+                line-height: to-rem(37);
+                margin: 0 auto;
+                padding: to-rem(7 0);
+                width: to-rem(56);
+            }
+        }
+
+        h1 {
+            font-size: to-rem(32);
+            line-height: to-rem(40);
+            margin-top: to-rem(43);
+
+            @include breakpoint('m') {
+                font-size: to-rem(25);
+            }
+        }
+
+        p {
+            font-size: to-rem(16);
+            font-weight: 300;
+            line-height: to-rem(24);
+            margin: 0 auto;
+            margin-top: to-rem(21);
+            width: to-rem(255.43);
+        }
+    }
+}

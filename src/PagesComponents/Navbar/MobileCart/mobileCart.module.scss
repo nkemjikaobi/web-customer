@@ -1,0 +1,37 @@
+.mobileCart{
+    position: relative;
+    .badgeCounter{
+        background-color: #ED017F;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        position: absolute;
+        top: -8px;
+        right: -20px;
+        padding: 0 2.4px;
+        border-radius: 2px;
+        z-index: 0;
+
+    }
+}
+.mainWrapper{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    overflow-y: scroll;
+    z-index: 1;
+    height: 100vh;
+    .closeSection{
+        padding: 15px 7px;
+        border-bottom: 1px solid #FBA100;
+        display: flex;
+        span{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            padding-left: 30px;
+        }
+    }
+}

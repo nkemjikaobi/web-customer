@@ -1,0 +1,176 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.wrapper {
+  @include breakpoint-mini("l") {
+    margin-top: 12rem;
+  }
+  .productListing {
+    background-color: color(Whisper);
+
+    @include breakpoint-mini("xxxl") {
+      background-color: color(White);
+      padding: to-rem(0) !important;
+    }
+    @include breakpoint("s") {
+      width: 100%;
+    }
+    position: relative;
+    .heading {
+      .headingWrapper {
+        background-repeat: no-repeat;
+        img {
+          width: 100%;
+        }
+        @include breakpoint("m") {
+          height: to-rem(190) !important;
+          background-size: 100% 190px;
+          width: 100%;
+        }
+        @include breakpoint-mini("l") {
+          height: to-rem(319);
+          background-size: 100% 319px;
+          margin: 0;
+          width: 100%;
+        }
+        @include breakpoint-mini("xxxl") {
+          margin: 0 -45%;
+          width: auto;
+          background-size: cover;
+        }
+        .breadcrumbWrapper {
+          // margin-left: 18%;
+          @include breakpoint-mini("l") {
+          }
+          @include breakpoint-mini("xxxl") {
+            margin-left: 16%;
+          }
+        }
+      }
+      .header {
+        font-size: to-rem(30);
+        font-weight: 500;
+        text-align: center;
+        padding-top: to-rem(110);
+        @include breakpoint-mini("l") {
+          padding-top: to-rem(175);
+        }
+      }
+    }
+    .quickLinks {
+      position: absolute;
+      width: 100%;
+      top: 5.875rem;
+      padding: to-rem(0 70);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    &_main {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fdfdfd;
+      padding: to-rem(120 0 0 0);
+      padding-bottom: to-rem(30);
+      @include breakpoint-mini("l") {
+        padding: to-rem(120 70 30 70);
+      }
+      @include breakpoint-mini("xxxl") {
+        padding: to-rem(120 0 30 0) !important;
+      }
+      .filter {
+        width: to-rem(443);
+      }
+      .content {
+        .contentHeader {
+          display: flex;
+          justify-content: space-between;
+          .quantityInfo {
+            display: flex;
+            margin: to-rem(0 0 76 20);
+            h2 {
+              font-size: to-rem(14);
+              font-weight: 500;
+              margin-right: to-rem(30);
+            }
+            p {
+              font-size: to-rem(14);
+              font-weight: 400;
+              color: #999999;
+            }
+          }
+        }
+        .productList {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-left: to-rem(20);
+          .productCardWrapper {
+            margin: to-rem(0 8 20 00);
+          }
+        }
+      }
+    }
+    .servicesContent {
+      position: relative;
+      background-color: color(White);
+      bottom: 0px;
+      display: none;
+      justify-content: space-between;
+      overflow-x: scroll;
+      margin: to-rem(90 -65% 0 -65%);
+      padding: to-rem(26 0 38 0);
+      @include breakpoint("s") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        padding: to-rem(26 32 38 32);
+        margin-top: to-rem(20);
+      }
+    }
+    .mobileCategoryName {
+      display: none;
+    }
+  }
+}
+
+.disabledClassName {
+  background-color: grey-200;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .headingWrapper {
+    display: none;
+  }
+  .productListing_main {
+    padding-top: 0;
+  }
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    span {
+      font-weight: 500;
+    }
+  }
+  .content {
+    width: 100%;
+    padding: 1px 5px;
+  }
+  .productCardWrapper {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .servicesContent {
+    margin: 0 0 0 0 !important;
+  }
+  .pagination {
+    ul {
+      width: 100% !important;
+      margin-left: 1rem !important;
+    }
+    li {
+      padding: 0 !important;
+    }
+  }
+}

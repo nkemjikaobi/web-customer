@@ -1,0 +1,115 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.shoppingCart {
+  display: flex;
+  padding: to-rem(0 71 0 0);
+  .right {
+    margin-left: to-rem(20);
+    .orderSummary {
+      width: to-rem(420);
+      border: 1px solid #1b000c14;
+      box-shadow: 0px 2px 6px 1px #3f042308;
+      margin-bottom: to-rem(6);
+      .header,
+      .subTotal,
+      .deliveryCharges {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #1b000c14;
+      }
+      .header {
+        padding: to-rem(17 20);
+      }
+      .subTotal {
+        padding: to-rem(17 20);
+      }
+      .deliveryCharges {
+        padding: to-rem(20 20 12 20);
+        & > p {
+          width: 100%;
+        }
+        .subText {
+          color: #9b9b9b;
+          font-size: to-rem(12);
+          text-align: end;
+          // margin-left: to-rem(5);
+        }
+      }
+      .total {
+        padding: to-rem(20 20 30 20);
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .paymentOptions {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    margin: 1.875rem auto;
+    .cards {
+      display: flex;
+      span {
+        font-size: to-rem(14);
+        color: gray;
+        display: inline-block;
+        margin-right: to-rem(20);
+        font-weight: 300;
+        width: 20%;
+      }
+      img {
+        height: to-rem(15);
+        margin-right: to-rem(40);
+        margin-bottom: to-rem(15);
+      }
+    }
+    .secure {
+      display: flex;
+      img {
+        height: to-rem(15);
+        margin-right: to-rem(10);
+        margin-top: to-rem(5);
+      }
+      span {
+        font-size: to-rem(14);
+        color: gray;
+      }
+    }
+  }
+
+  .fontThirteen {
+    font-size: to-rem(13) !important;
+  }
+  .fontFourteen {
+    font-size: to-rem(14) !important;
+  }
+  .weightFiveHundred {
+    font-weight: 500 !important;
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .shoppingCart {
+    padding: to-rem(0 0 0 0);
+    .right {
+      width: 100%;
+      margin-left: 0rem;
+      .orderSummary {
+        width: 100%;
+      }
+    }
+    .paymentOptions {
+      width: 100%;
+      margin-left: 1rem;
+      .cards {
+        width: 90%;
+        span {
+          width: 41%;
+          margin-right: 0;
+        }
+      }
+      .secure {
+        margin-bottom: to-rem(50);
+      }
+    }
+  }
+}

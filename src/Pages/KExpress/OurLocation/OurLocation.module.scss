@@ -1,0 +1,188 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.ourLocation{
+    .locationContent{   
+        background-color:#F8F8FB;
+        margin: 0 -12%;
+        padding-bottom: to-rem(112);
+        @include breakpoint-mini('xxl'){
+            &>div{
+                max-width: 90rem;
+                margin: 0 auto;
+            }
+        }
+     }
+     .mainHeading{
+         display: flex;
+         padding: 5rem 0rem 2rem 2.8rem;
+         h1{
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 31px;
+            color: #000000;
+         }
+         img{
+             width: 2rem;
+             height: auto;
+             margin-right: 1.2rem;
+         }
+     }
+    .heading{
+        padding: 20px 0px 0px 45px;;
+        h1{
+            font-size: to-rem(18);
+            font-weight: 500;
+        }
+    }
+    .mainContent{
+        background-color: color(White);
+        .selectLocation{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 3.4%;
+            padding-top: 2rem;
+            .select{
+                width: to-rem(265);
+                select{
+                    height: to-rem(45);
+                    border-radius: 0px;
+                }
+            }
+            .select:first-child{
+                select{
+                    border-radius: to-rem( 4 0 0 4);
+                }
+            }
+            .button{
+                height: to-rem(45);
+                width: to-rem(131);
+                margin-top: to-rem(8);
+                button{
+                    border-radius: to-rem(0 4 4 0);
+                }
+            }
+            .showAllButton{
+                height: to-rem(45);
+                width: to-rem(100);
+                margin-top: to-rem(8);
+                margin-left: 2rem;
+                button{
+                    border-radius: to-rem(4 4 4 4);
+                    background-color: #fff;
+                    color: #ed017f !important;
+                    border: 1px solid #ed017f;
+                }
+            }
+        }
+        .locations{
+            display: flex;
+            height: to-rem(819);
+            margin-top: to-rem(29);
+            &_list{
+                overflow-y: scroll;
+                background-color: #F8F8FB;
+                @include breakpoint-mini('xxl'){
+                    min-width: to-rem(570);
+
+                }
+            }
+            &_map{
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .locationHolder {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .ourLocation{
+        .locationContent{   
+            padding-bottom: to-rem(10);
+        }
+        .mainHeading{
+            padding: 1rem 0rem 2rem 7.5rem;
+        }
+        .heading{
+            padding: 1.25rem 0 0 4.575rem;
+        }
+        .mainContent{
+          .selectLocation{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: to-rem(24);
+          }
+          .locationHolder {
+            display: flex;
+            flex-direction: column;
+        }
+      }
+  }
+    .seoText{
+        padding: 0rem to-rem(20);
+    }
+}
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .ourLocation{
+        .heading{
+            padding: 1.25rem 0 0 4.575rem;
+        }
+        .mainHeading{
+            padding: 4rem 0rem 2rem 7.5rem;
+        }
+        .mainContent{
+          .selectLocation{
+              width: 82%;
+              margin-left: 4.7rem;
+          }
+      }
+  }
+    .seoText{
+        padding: 3.875rem to-rem(65);
+    }
+}
+@media screen 
+  and (min-device-width: 1023px) 
+  and (max-device-width: 1439px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+      .ourLocation{
+          .heading{
+            padding: to-rem(20px 0px 0px 126px);
+          }
+          .mainHeading{
+            padding: 5rem 0rem 2rem 10.8rem;
+          }
+          .mainContent{
+            .selectLocation{
+                margin-left: 8rem;
+            }
+        }
+    }
+    .seoText{
+        padding: 3.875rem 3.2rem;
+    }
+}
+@media screen 
+  and (min-device-width: 1440px) 
+  and (max-device-width: 1440px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .seoText{
+        padding: 3.875rem to-rem(65);
+    }
+}

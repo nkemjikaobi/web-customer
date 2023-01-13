@@ -1,0 +1,428 @@
+@import "Assets/styles/shared-styles.scss";
+
+.no_scrollbar {
+  overflow: hidden !important;
+}
+.see_all_items {
+  font-size: small;
+}
+.home {
+  padding: to-rem(0 16 40 16);
+  position: relative;
+  background-color: #f2f2f2;
+  @include breakpoint-mini("xl") {
+    padding: to-rem(0 70);
+  }
+  @include breakpoint-mini("xxxl") {
+    padding: to-rem(0) !important;
+  }
+  .breadCrumbWrapper {
+    @include breakpoint-mini("xxl") {
+      margin-left: to-rem(-145);
+    }
+  }
+  img {
+    height: auto;
+    width: auto;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .kongaServices {
+    margin: to-rem(30 0 20 0);
+  }
+  &_categoryCarousel {
+    margin-top: to-rem(20);
+    @include breakpoint("s") {
+      margin-top: to-rem(100);
+    }
+  }
+  .categorySideMenuWrapper {
+    position: fixed;
+    z-index: 110;
+    @include breakpoint("xxl") {
+      left: 0;
+    }
+  }
+  .categorySideMenu {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: -900px;
+    z-index: 5;
+    @include breakpoint-mini("l") {
+      top: to-rem(-94);
+    }
+  }
+  .subCategorySideMenu {
+    position: absolute;
+    height: 100vh;
+    left: -900px;
+    z-index: 102;
+    @include breakpoint-mini("l") {
+      top: to-rem(-94);
+    }
+  }
+  .addSubCategorySideBar {
+    animation-name: move2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @include breakpoint-mini("xxl") {
+      animation-name: move;
+    }
+  }
+  .removeSubCategorySideBar {
+    transition: transform 0.5s;
+    transform: translate(-900px);
+  }
+
+  .removeSideBar {
+    transition: transform 0.5s;
+    transform: translate(-900px);
+  }
+  .moveSideBar {
+    animation-name: move2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @include breakpoint-mini("xxl") {
+      animation-name: move;
+    }
+  }
+  .headerImage {
+    border-radius: to-rem(5);
+
+    height: to-rem(170);
+    width: 100%;
+    @include breakpoint-mini("m") {
+      height: to-rem(395);
+    }
+    @include breakpoint-mini("xl") {
+      height: to-rem(421);
+    }
+  }
+  .headerContainer {
+    @include breakpoint("m") {
+      height: auto;
+    }
+
+    &Indicators {
+      @extend %tabletAndAboveOnly;
+    }
+  }
+  @keyframes move {
+    0% {
+      left: -900px;
+    }
+    100% {
+      left: calc((((100vw - 87.5rem) * -1) / 2));
+    }
+  }
+  @keyframes move2 {
+    0% {
+      left: -900px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  .banner {
+    width: 100%;
+    &_1 {
+      border-radius: to-rem(4);
+      width: 100%;
+      margin-bottom: to-rem(8);
+      @include breakpoint-mini("m") {
+        height: to-rem(395);
+        margin-bottom: to-rem(0);
+        section {
+          height: 100%;
+        }
+      }
+      @include breakpoint-mini("l") {
+        width: 70%;
+        height: to-rem(421);
+      }
+    }
+    .sideBannerWrappers {
+      display: flex;
+      flex-wrap: wrap;
+      @include breakpoint-mini("l") {
+        flex: 3;
+        margin: to-rem(-10 0 -10 20);
+        width: 30%;
+      }
+      .banner_2 {
+        flex: 0 50%;
+        overflow: hidden;
+        padding: to-rem(5 5 1);
+        width: 50%;
+
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+
+        &:nth-child(even) {
+          padding-right: 0;
+        }
+
+        @include breakpoint-mini("l") {
+          padding: to-rem(10);
+        }
+
+        &Image {
+          border-radius: to-rem(5);
+          @include breakpoint-mini("l") {
+            height: to-rem(184);
+            width: to-rem(235);
+          }
+        }
+      }
+      .banner_2 {
+        border-radius: to-rem(4);
+        height: to-rem(166);
+        width: 48%;
+        img {
+          border-radius: to-rem(4);
+          height: 100%;
+          width: 100%;
+        }
+        @include breakpoint("s") {
+          max-height: to-rem(203);
+        }
+        @include breakpoint("m") {
+          height: to-rem(362);
+        }
+        @include breakpoint-mini("l") {
+          width: auto;
+          height: to-rem(207);
+        }
+
+        @include breakpoint-mini("xl") {
+          width: auto;
+          height: to-rem(220);
+        }
+        .banner_2:last-child {
+          margin-right: 0;
+        }
+        @include breakpoint-mini("l") {
+          display: block;
+        }
+      }
+    }
+    @include breakpoint-mini("l") {
+      display: flex;
+      margin-top: to-rem(30);
+      .banner2Wrapper {
+        .banner_2:first-child {
+          margin-bottom: to-rem(15);
+        }
+      }
+      .banner2Wrapper:nth-child(3) {
+        .banner_2 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .lowerBanners {
+    display: flex;
+
+    border-radius: to-rem(5);
+    padding: to-rem(10);
+
+    @include breakpoint-mini("l") {
+      background-color: color(White);
+    }
+
+    @include breakpoint("s") {
+      display: block;
+      margin-top: to-rem(-20);
+    }
+  }
+  .homepageBanner {
+    width: 100%;
+
+    @include breakpoint("s") {
+      background-color: color(White);
+      padding: to-rem(9);
+      &:last-of-type {
+        margin-top: to-rem(10);
+      }
+    }
+
+    @include breakpoint-mini("m") {
+      width: 50%;
+
+      &:first-of-type {
+        margin-right: to-rem(10);
+      }
+    }
+  }
+
+  &_sponsoredProducts {
+    border: to-rem(1) solid color(Whisper);
+    border-radius: to-rem(5);
+    .heading {
+      border-bottom: to-rem(1) solid color(Whisper);
+      h2 {
+        font-size: to-rem(20);
+        padding: to-rem(20);
+        font-weight: 700;
+      }
+    }
+    .content {
+      overflow: hidden;
+      display: flex;
+      padding: 1rem;
+    }
+  }
+  &_midBanner {
+    height: to-rem(100);
+    margin: to-rem(30 0 20 0);
+    margin-bottom: to-rem(50);
+  }
+  &_recomendation {
+    border: to-rem(1) solid color(Whisper);
+    margin: to-rem(30 0 30 0);
+    height: to-rem(283);
+    overflow: hidden;
+    @include breakpoint-mini("l") {
+      height: auto !important;
+    }
+    .recommendationContentWrapper {
+      height: 100%;
+      overflow: hidden;
+    }
+    .heading {
+      display: flex;
+      border-bottom: to-rem(1) solid color(Whisper);
+      h1 {
+        font-size: to-rem(20);
+        padding: to-rem(20);
+        font-weight: 700;
+      }
+    }
+    .recommendationContent {
+      display: block;
+      overflow: hidden;
+      @include breakpoint-mini("l") {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      padding: to-rem(5);
+    }
+    .recomendationCardWrapper {
+      margin: to-rem(10);
+    }
+  }
+  .bestSellingProduct {
+    border: to-rem(1) solid color(Whisper);
+    margin-bottom: to-rem(30);
+    .heading {
+      border-bottom: to-rem(1) solid color(Whisper);
+      background-image: url("../../../Assets/images/png/bestSellingIcons.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: color(Charcoal);
+      border-radius: to-rem(5);
+      h3 {
+        color: color(white);
+        font-size: to-rem(20);
+        padding: to-rem(20);
+        font-weight: 700;
+      }
+    }
+    .content {
+      display: flex;
+      padding: 1rem;
+      overflow: hidden;
+    }
+  }
+  .servicesContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: to-rem(20);
+  }
+  .brandList {
+    display: flex;
+    @include breakpoint-mini("l") {
+      justify-content: space-between;
+      padding: to-rem(25 20);
+      margin-bottom: to-rem(20);
+      .brandImgWrapper {
+        cursor: pointer;
+        display: inline-block;
+        padding: unset;
+        position: relative;
+        justify-content: center;
+        width: to-rem(90);
+        height: to-rem(90);
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home {
+    &_recomendation {
+      .heading {
+        justify-content: space-between;
+        h1 {
+          padding: 0.5rem;
+        }
+      }
+    }
+    &_sponsoredProducts {
+      .heading {
+        h2 {
+          padding: 0.5rem;
+        }
+      }
+    }
+    &_midBanner {
+      height: 0rem;
+      margin: to-rem(0 0 0 0);
+    }
+    .bestSellingProduct {
+      .heading {
+        h3 {
+          padding: 0.5rem;
+        }
+      }
+    }
+    .brandList {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: to-rem(10 0);
+    }
+  }
+  .content {
+    overflow: scroll !important;
+  }
+  .recommendationContentWrapper {
+    height: 100%;
+    display: block !important;
+  }
+  .recommendationContent {
+    display: flex !important;
+  }
+}
+
+//To be moved to the header component

@@ -1,0 +1,103 @@
+@import "../../Assets/styles/shared-styles.scss";
+.shippingFee {
+    background-color: #f6f7f8;
+    margin-top: to-rem(20);
+    @include breakpoint-mini("m") {
+      margin-top: 0;
+    }
+    &_default {
+      background-color: #f6f7f8;
+      padding: to-rem(82 0 51 0);
+      text-align: center;
+      .price {
+        font-size: to-rem(40);
+
+        margin-bottom: to-rem(10);
+      }
+      p:last-child {
+        font-weight: 500;
+      }
+    }
+    &_active {
+      padding: to-rem(10 19 32 19);
+      background-image: url("../../Assets//images/png/send-package.png");
+      background-repeat: no-repeat;
+      background-position: right 110%;
+      background-color: #242424;
+      @include breakpoint-mini('m'){
+        background-color: #242424;
+        height: 90%;
+      }
+      @include breakpoint-mini("xl") {
+        width: to-rem(479);
+        // height: to-rem(331);
+      }
+     
+      .shippingDetails {
+        background-color: color(White);
+        border-radius: to-rem(3);
+        padding: to-rem(0 24);
+        margin-top: to-rem(28);
+        border-bottom: to-rem(1) solid color(WhisperVarOne);
+        @include breakpoint-mini('xxl'){
+          background-color: color(White);
+
+        }
+        .direction{
+          display: flex;
+          justify-content: space-between;
+          > div {
+            .title {
+              font-size: to-rem(12);
+            }
+            p:last-child {
+              font-size: to-rem(14);
+              font-weight: 500;
+              margin-bottom: to-rem(15);
+            }
+          }
+        }
+        h3 {
+          padding-top: to-rem(21);
+          text-align: center;
+          font-size: to-rem(16);
+          margin-bottom: to-rem(17);
+        }
+      }
+      .estimatedFee {
+        text-align: center;
+        @include breakpoint-mini('xxl'){
+          color: color(White);
+
+        }
+        color: color(white);
+        h4 {
+          font-size: to-rem(40);
+          padding-top: to-rem(22);
+        }
+        p {
+          font-size: to-rem(20);
+          margin: to-rem(7 0 30 0);
+      }
+      }
+    }
+    .buttonWrapper{
+      padding: to-rem(6 12);
+      background-color: rgba(208, 2, 27, 0.05);
+
+      .sendPackageButton {
+        margin: 0 auto;
+        height: to-rem(46);
+        button {
+          border-radius: to-rem(5);
+          font-size: to-rem(14);
+        }
+
+        .hoverState:hover {
+          color: white !important;
+        }
+        
+      }
+      
+    }
+  }

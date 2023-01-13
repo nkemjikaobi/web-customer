@@ -1,0 +1,70 @@
+@import "../../../../../Assets/styles/shared-styles.scss";
+
+.customerRatingCard {
+  display: flex;
+  flex-direction: column-reverse;
+  @include breakpoint("s") {
+    border-bottom: to-rem(1) solid #d8d8d8;
+  }
+  padding: to-rem(14 20);
+  @include breakpoint-mini("m") {
+    display: flex;
+    flex-direction: row;
+    padding: to-rem(20 0);
+  }
+  .profileImage {
+    @include breakpoint("s") {
+      display: none;
+    }
+    /* pixels are used on purpose to keep the width fixed on all screen sizes */
+    width: 50px !important;
+    max-width: 50px !important;
+    min-width: 50px !important;
+    height: to-rem(48);
+    border-radius: 50%;
+    background-color: #8d1c51;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: color(White);
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint("s") {
+      width: 100%;
+    }
+    h1,
+    p {
+      font-size: to-rem(14);
+      font-weight: 400;
+      display: contents;
+    }
+    @include breakpoint-mini("m") {
+      display: block;
+      margin: to-rem(0 34 0 30);
+      h1 {
+        font-size: to-rem(16);
+      }
+    }
+  }
+  .ratings {
+    p {
+      color: #6f6f6f;
+      display: contents;
+    }
+    .ratingIcons {
+      display: flex;
+      .icon {
+        margin-right: to-rem(12);
+      }
+      .icon:nth-child(5) {
+        margin-right: 0;
+      }
+    }
+    margin-top: to-rem(12);
+    @include breakpoint-mini("m") {
+      margin-top: to-rem(0);
+    }
+  }
+}

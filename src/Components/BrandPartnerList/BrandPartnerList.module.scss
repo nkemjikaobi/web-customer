@@ -1,0 +1,30 @@
+@import "../../Assets/styles/shared-styles.scss";
+.brandPartnerList{
+    width: 100%;
+    height: to-rem(330);
+    padding: to-rem(20);
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    margin-top: to-rem(2);
+    background-color: color(White);
+    @include breakpoint('s'){
+        height: auto;
+        margin-top: to-rem(-20);
+    }
+
+    &Heading{
+        font-size: to-rem(20);
+        font-weight: 700;
+        margin-bottom: to-rem(12);
+    }
+    &Content{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: space-between;
+        grid-gap: to-rem(5 10);
+        @include breakpoint('s'){
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+}

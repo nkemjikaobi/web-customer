@@ -1,0 +1,30 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.sizeFilter{
+    .sizeFilterWrapper{
+        p{
+            font-size: to-rem(13);
+            margin-bottom: to-rem(10);
+        }
+        .sizes{
+            display: flex;
+            flex-wrap: wrap;
+            button{
+                width: to-rem(38);
+                background-color: color(White);
+                border: 1px solid #000000;
+                height: to-rem(25);
+                text-align: center;
+                color: color(Black);
+                margin-right: to-rem(10);
+                margin-bottom: to-rem(10);
+                font-size: to-rem(12);
+                font-weight: 700;
+            }
+            button:hover{
+                background-color: color(PrimaryLight);
+                color: color(White);
+            }
+        }
+    }
+}

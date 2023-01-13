@@ -1,0 +1,140 @@
+
+@import "../../../Assets/styles/shared-styles.scss";
+.trackPackage{
+    background-color:  #F8F8FB;
+    @include breakpoint-mini('xxl'){
+        margin: 0 -12%;
+    }
+    .trackPackageWrapper{
+        background-color:  #F8F8FB;
+        @include breakpoint-mini('xxl'){
+            padding-top: to-rem(30);
+            max-width: 90rem;
+            margin: 0 auto;
+        }
+    }
+    .search {
+        position: relative;
+        width: to-rem(300);
+        height: to-rem(36);
+        box-shadow: 5px 10px 10px 0px #4D4C4C0D;
+        svg {
+          position: absolute;
+          fill: color(Black);
+          top: to-rem(23);
+          left: to-rem(18);
+          @include breakpoint-mini("m") {
+            top: to-rem(37);
+            left: to-rem(20);
+          }
+        }
+  
+        .button {
+          position: absolute;
+          top: to-rem(16);
+          right: to-rem(8);
+          width: to-rem(113);
+          font-size: to-rem(12);
+          height: to-rem(35);
+          button {
+            font-size: to-rem(12);
+          }
+          @include breakpoint-mini("m") {
+            top: to-rem(22);
+            height: to-rem(53);
+            right: to-rem(27);
+            width: to-rem(200);
+            font-size: to-rem(16);
+            button {
+              font-size: to-rem(16);
+            }
+          }
+        }
+        input::placeholder {
+          font-size: to-rem(12);
+          padding-left: to-rem(0);
+          @include breakpoint-mini('xxl'){
+            padding-left: to-rem(30);
+          }
+        }
+        @include breakpoint-mini("m") {
+          height: to-rem(77);
+          width: to-rem(660);
+          input {
+            height: to-rem(77);
+          }
+          input::placeholder {
+            padding-left: to-rem(48);
+          }
+        }
+        @include breakpoint-mini("xl") {
+        //   margin: to-rem(0) auto 0 auto;
+        }
+      }
+      .mainContent{
+          display: flex;
+          justify-content: space-between;
+          margin-top: to-rem(50);
+          padding-bottom: to-rem(200);
+          .left{
+              .heading{
+                  h1{
+                      font-size: to-rem(20);
+                      font-weight: 700;
+                      span{
+                          color: #5CAF7F;
+                      }
+                  }
+              }
+              .deliveryInfo{
+                  margin-top: to-rem(23);
+              }
+          }
+          .right{
+              width: to-rem(420);
+              height: to-rem(420);
+              padding: to-rem(16 15 17 15);
+              background-color: color(White);
+              .imgWrapper{
+
+              }
+              .bottom{
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: to-rem(10);
+                  .trackingNumber{
+                      .trackingLabel{
+                          font-weight: 700;
+                          color: #606060;
+                      }
+                    .number{
+                        font-weight: 700;
+                        font-size: to-rem(20);
+                    }
+                  }
+              }
+              .label{
+                  width: to-rem(136);
+                  height: to-rem(36);
+                  text-align: center;
+                  font-weight: 700;
+                  color: #5CAF7F;
+                  border-radius: to-rem(4);
+                  background-color: rgba(92, 175, 127, 0.3);
+                  p{
+                      padding: to-rem(8 32);
+                  }
+              }
+          }
+
+      }
+      .seoText{
+          background-color: color(white);
+          margin: 0 -12%;
+          padding-top: to-rem(90);
+          &>div{
+              max-width: 90rem;
+              margin: 0 auto;
+          }
+      }
+}

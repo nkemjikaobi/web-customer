@@ -1,0 +1,96 @@
+@import "../../Assets/styles/shared-styles.scss";
+$label-dimensions: to-rem(14);
+$label-dimensions--small: to-rem(16);
+
+.mainContainer {
+    @include breakpoint('s') {
+        padding-top: to-rem(5);
+    }
+
+    .container {
+        cursor: pointer;
+        display: block;
+        font-size: to-rem(12);
+        font-weight: 400;
+        margin-bottom: to-rem(12);
+        padding-left: to-rem(20);
+        position: relative;
+        width: 100%;
+        label{
+            padding-top: to-rem(5);
+        }
+
+        input[type='checkbox'] {
+            left: to-rem(-9999);
+            opacity: 0;
+            position: absolute;
+            top: to-rem(-9999);
+
+            & ~ .checkmark {
+                cursor: pointer;
+                height: to-rem(25);
+                @include ellipsis;
+                left: 0;
+                max-width: 80%;
+                overflow: hidden;
+                position: absolute;
+                top: to-rem(4);
+            }
+
+            & ~ .checkmark::before {
+                background-color: color(White);
+                border: to-rem(1) solid color(Grey);
+                content: '';
+                display: block;
+                height: $label-dimensions;
+                // @include flexShrink(0);
+                @include breakpoint('s') {
+                    border-color: color(Black);
+                    border-radius: to-rem(2);
+                    height: $label-dimensions--small;
+                    width: $label-dimensions--small;
+                }
+                margin-right: to-rem(10);
+                width: $label-dimensions;
+            }
+
+            &:checked ~ .checkmark::before {
+                $checked-color: color(PrimaryLight);
+                background-color: $checked-color;
+                border-color: $checked-color;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 0.875rem;
+    }
+
+    textarea {
+        border: to-rem(1) solid #cccccc;
+        border-radius: to-rem(5);
+        box-sizing: border-box;
+        font-family: inherit;
+        height: to-rem(166);
+        resize: none;
+        width: 100%;
+        margin-bottom: to-rem(60);
+    }
+
+    textarea:focus {
+        $background-color: color(PrimaryLight);
+        border: to-rem(1) solid $background-color;
+        outline: none;
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        input[type=checkbox]{
+            margin-right: to-rem(6);
+        }
+    }
+}

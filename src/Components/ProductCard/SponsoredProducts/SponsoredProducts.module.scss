@@ -1,0 +1,72 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.no_scrollbar {
+  overflow: hidden !important;
+}
+.leftPointer,
+.rightPointer {
+  display: none;
+}
+.home {
+  &_sponsoredProducts {
+    border: to-rem(1) solid color(Whisper);
+    border-radius: to-rem(5);
+    background-color: color(White);
+    @include breakpoint("s"){
+      margin-bottom: to-rem(30);
+    }
+    .heading {
+      border-bottom: to-rem(1) solid color(Whisper);
+      h2 {
+        font-size: to-rem(20);
+        padding: to-rem(20);
+        font-weight: 700;
+        @include breakpoint("s") {
+          font-size: to-rem(16);
+        }
+      }
+    }
+    .content {
+      // overflow: hidden;
+      overflow-x: scroll;
+      display: flex;
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .home {
+    &_sponsoredProducts {
+      .heading {
+        h2 {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+  .sponsoredProductsWrapper {
+    margin-top: to-rem(-20);
+    position: relative;
+    .leftPointer,
+    .rightPointer {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: to-rem(130) !important;
+      @include breakpoint("s") {
+        top: to-rem(40);
+      }
+    }
+    .leftPointer {
+      left: to-rem(140) !important;
+      @include breakpoint("s") {
+        left: to-rem(0) !important;
+      }
+    }
+
+    .rightPointer {
+      right: to-rem(0);
+    }
+  }
+}

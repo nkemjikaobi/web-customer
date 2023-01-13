@@ -1,0 +1,28 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.item {
+    &Container {
+        display: flex;
+        align-items: center;
+        @extend
+            %tabletAndAboveOnly;
+            }
+
+    &Wrapper {
+        background: color(White);
+        border: to-rem(1) solid transparentize(color(Black), 0.95);
+        border-radius: to-rem(5);
+        box-shadow: 0 0 to-rem(8) transparentize(color(Black), 0.95);
+        height: to-rem(56);
+        margin-right: to-rem(15);
+        padding: to-rem(13 25);
+        width: 17%;
+        width: calc((100% / 6) - 0.9375rem);
+
+        &:last-of-type {
+            margin-right: 0;
+            width: 17%;
+            width: calc(100% / 6);
+        }
+    }
+}

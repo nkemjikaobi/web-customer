@@ -1,0 +1,84 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.cardDetails {
+    background-color: color(White);
+  @include breakpoint-mini("l") {
+    width: to-rem(640);
+    border: to-rem(1) solid color(Whisper);
+    padding-bottom: to-rem(79);
+    margin-bottom: to-rem(50);
+  }
+  &_formNavigation {
+    display: flex;
+    border-bottom: to-rem(1) solid color(Whisper);
+    height: to-rem(55);
+    justify-content: space-between;
+    .navItem {
+      text-align: center;
+      padding: to-rem(18 45);
+      @include breakpoint-mini('l'){
+        padding: to-rem(18 115);  
+      }
+      &:hover, &:active{
+          border-bottom: 1px solid color(PrimaryLight);
+      }
+    }
+
+  }
+  &_content {
+    padding: to-rem(31 63 155 63);
+  }
+  &_content2{
+      padding: to-rem(10 16 97 16);
+      .cards{
+        display: flex;
+         overflow-x: scroll;
+         .card{
+             width: to-rem(250);
+             img{
+                 background-size: cover;
+             }
+         }
+      }
+      @include breakpoint-mini("l"){
+        padding: to-rem(31 63 71 63);
+        .cards{
+            .card{
+                padding-right: to-rem(10);
+            }
+        }
+      }
+    
+  }
+  &_form{
+      h1,h2{
+          font-size: to-rem(18);
+          padding: to-rem(16 0 30 0);
+      }
+      .date{
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: to-rem(250);
+                @include breakpoint("s"){
+                    width: to-rem(154);
+                }
+            }
+      }
+  }
+  input,
+  select {
+    margin-bottom: to-rem(16);
+  }
+  select {
+    height: to-rem(52);
+    border-color: color(WhisperVarOne);
+    border-radius: to-rem(3);
+  }
+  .button {
+    height: to-rem(52);
+    margin-top: to-rem(60);
+    @include breakpoint-mini("l") {
+      margin-top: to-rem(50);
+    }
+  }
+}

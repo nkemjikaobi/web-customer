@@ -1,0 +1,86 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.shipNow{
+    background-color: #F8F8FB;
+    margin: 0 -50%;
+    margin-top: -15px!important;
+    
+    .heading{
+        text-align: center;
+        font-size: to-rem(18);  
+        color: color(Black);
+        padding: to-rem(104 0 23 0);
+        @include breakpoint-mini('xxl'){
+        font-size: to-rem(40);
+        font-weight: 500;
+        }
+    }
+    .form{
+        width: 100vw;
+        margin: 0 auto;
+        @include breakpoint-mini('xxl'){
+        width: to-rem(860);
+        margin: 0 auto;
+        }
+
+        &_content{
+            background-color: color(White);
+            @include breakpoint-mini('xxxl'){
+                box-shadow: 5px 5px 1.5px #4D4C4C0D;
+            }
+        }
+        &_header{
+            border-bottom: to-rem(1) solid color(Gainsboro);
+            padding-left: to-rem(16);
+            h2{
+                font-size: to-rem(18);
+                font-size: 400;
+                padding: to-rem(10 0);
+            }
+            @include breakpoint-mini('xxxl'){
+                border-bottom: to-rem(1) solid color(Gainsboro);
+                h2{
+                    font-size: to-rem(18);
+                    font-weight: 400;
+                    padding: to-rem(30 0 22 43);
+                }
+            }
+        }
+        &_main{
+            padding: to-rem(0 16 30 16);
+            @include breakpoint-mini('xxxl'){
+               box-shadow: 2px 2px 1px #4D4C4C0D;
+               padding: to-rem(0 110 30 110);
+            }
+            input, select{
+                height: to-rem(46);
+                margin-bottom: to-rem(20);
+            }
+            .buttonOptions{
+                padding: 20px 50px;
+            }
+        }
+        .button{
+            height: to-rem(46);
+            margin: 0 auto;
+        }
+        .locationButton{
+            margin-bottom: 10px;
+            button{
+                background-color: white;
+                color: #ED017F !important;
+            }
+        }
+    }
+    .seoText{
+        background-color: color(White);
+        margin: 110px  0 0 0;
+        margin-bottom: to-rem(110);
+        padding: to-rem(90 200 0 200);
+        width: 100%;
+        @include breakpoint-mini('xxl'){
+            margin: 110px  19% 0 19%;
+            padding: to-rem(90 180 0 180);
+        }
+    }
+}

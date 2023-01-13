@@ -1,0 +1,120 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier"],
+  "rules": {
+    "camelcase": [
+      0,
+      {
+        "properties": "always"
+      }
+    ],
+    "semi": 2,
+    "eqeqeq": 2,
+    "no-console": "warn",
+    "max-len": [
+      2,
+      {
+        "code": 220,
+        "ignoreComments": true
+      }
+    ],
+    "quotes": [2, "double"],
+    "strict": [0, "global"],
+    "no-undef": 2,
+    "no-unused-vars": "warn",
+    "no-eq-null": 2,
+    "comma-dangle": ["error", "only-multiline"],
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "ignore",
+        "named": "never"
+      }
+    ],
+    "new-cap": "off",
+    "prefer-const": "error",
+    "no-multi-spaces": ["error"],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 1
+      }
+    ],
+    "no-param-reassign": "warn",
+    "no-useless-constructor": "error",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 3,
+        "when": "always"
+      }
+    ],
+    "react/require-default-props": [
+      2,
+      {
+        "forbidDefaultForRequired": true
+      }
+    ],
+    "react/prop-types": [
+      1,
+      {
+        "ignore": ["children"]
+      }
+    ],
+    "react/self-closing-comp": "error",
+    "react/no-unused-state": "error",
+    "react/no-unused-prop-types": "warn",
+    "react/no-deprecated": "warn",
+    "react/display-name": "warn",
+    "react/jsx-equals-spacing": ["error", "never"],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "afterOpening": "never",
+        "closingSlash": "never",
+        "beforeClosing": "never",
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {"endOfLine": "auto"},
+      {
+        "usePrettierrc": false
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

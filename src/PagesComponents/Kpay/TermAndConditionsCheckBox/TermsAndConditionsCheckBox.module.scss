@@ -1,0 +1,16 @@
+@import "Assets/styles/shared-styles.scss";
+.termsAndConditionsCheckBox{
+    .terms{
+        font-size: to-rem(14);
+        .smallText{
+            font-size: to-rem(14);
+            .termsAndConditions{
+                color: color(PrimaryLight);
+            }
+        }
+        input[type=checkbox] ~ label::before{
+            height: 13.33px;
+            width: 13.33px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.sliderWrapper {
+    width:629px;
+    overflow:hidden;
+    position:relative;
+    height:300px;
+  }
+  .slides {
+    overflow-x: hidden;
+    transition: top 2s;
+    position:absolute;
+    top:0;
+    height:100%;
+  }
+  .slides li {
+    float:left;
+    width:629px;
+    background-size: cover;
+    background:#ccc;
+    list-style-type:none;
+    height:300px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+  }
+  .pagers {
+    text-align:center;
+    top:-50px;
+    z-index:1000;
+    position:relative;
+  }
+  .pagers li {
+    width:20px;
+    height:20px;
+    border:1px solid #fff;
+    display:inline-block;
+    border-radius: 20px;
+    margin-right:8px;
+  }

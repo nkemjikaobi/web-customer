@@ -1,0 +1,17 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: to-rem(7);
+  div:not(:nth-child(3)) {
+    svg {
+      fill: color(White);
+    }
+  }
+  div:nth-child(3) {
+    > div {
+      background-color: color(white) !important;
+    }
+  }
+}

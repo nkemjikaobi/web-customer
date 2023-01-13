@@ -1,0 +1,12 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.content {
+    padding : to-rem(16 59 33 59);.info {
+        margin-top : to-rem(102);
+        text-align : center;
+        p {
+            padding-top : to-rem(28);
+            color : color(DavyGrey);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.asset {
+    text-indent: to-rem(-9999); // Hide the alt text
+}
+
+.placeHolder {
+    height: inherit;
+    position: relative;
+    width: inherit;
+
+    &::after {
+        @extend %shimmer;
+
+        content: "";
+        height: inherit;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.assetErrorContainer,
+.assetLoading {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.assetErrorContainer {
+    &::after {
+        background-color: color(Grey95);
+        background-image: url("https://res.cloudinary.com/staging-konga-com/image/upload/f_auto,q_auto/assets/images/content/fallback_image.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        color: transparent;
+        content: "";
+        height: inherit;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: inherit;
+    }
+}
+
+.assetLoading {
+    @extend %shimmer;
+}

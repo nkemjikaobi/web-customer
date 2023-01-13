@@ -1,0 +1,59 @@
+
+@import "../../Assets/styles/shared-styles.scss";
+
+.foodModal{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: color(white);
+    border-radius: to-rem(5);
+    // min-height: to-rem(376);
+    z-index: 11;
+    width: to-rem(519);
+    padding: to-rem(30 32);
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: to-rem(0.7) solid #717171;
+        padding: to-rem(0 0 16 0);
+        h1{
+            font-size: to-rem(20);
+            font-weight: 500;
+            color: color(Swamp);
+        }
+        .close{
+            cursor: pointer;
+
+        }
+    }
+    &_bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: to-rem(0.7) solid #717171;
+        padding: to-rem(22 0 0 0);
+        .button{
+            width: to-rem(211);
+            height: to-rem(48);
+        }
+    }
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .foodModal{
+        width: 95%;
+    }
+}

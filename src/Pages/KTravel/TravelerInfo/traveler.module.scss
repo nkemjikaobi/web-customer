@@ -1,0 +1,9 @@
+@import "../../../Assets/styles/shared-styles.scss";
+// .link {
+//     padding-top: to-rem(70);
+// }
+.icons {
+    display: flex;
+    padding: to-rem(50);
+    justify-content: space-around;
+}

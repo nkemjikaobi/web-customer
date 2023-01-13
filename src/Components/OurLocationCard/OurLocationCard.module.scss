@@ -1,0 +1,103 @@
+@import "../../Assets/styles/shared-styles.scss";
+.locationCard{
+    color: #464345;
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    .card {
+        background-color: #F7F7F7;
+        padding: 1.5rem;
+        height: to-rem(200) !important;
+        min-height: to-rem(200) !important;
+        max-height: to-rem(200) !important;
+        .storeName{
+            display: flex;
+            img{
+                margin-right: 0.7rem;
+                width: 2rem;
+                height: auto;
+            }
+            h3{
+                font-weight: bold;
+                font-size: to-rem(16);
+                line-height: to-rem(20);
+                color: #464345;
+                opacity: 0.8;
+                margin-top: 0.2rem;
+                text-transform: uppercase !important;
+            }
+        }
+        h3{
+            font-size: to-rem(16);
+            font-weight: 700;
+        }
+        p{
+            font-size: to-rem(16);
+            font-weight: 400;
+        }
+        .addressDetails{
+            margin-left: to-rem(40);
+            .address{
+                margin-bottom: to-rem(18);
+                font-size: to-rem(14);
+                line-height: to-rem(17);
+            }
+            
+            .workingHours{
+                margin-bottom: to-rem(18);
+                font-size: to-rem(14);
+                line-height: to-rem(17);
+            }
+            .deliveryOptions{
+                color: #94004F;
+                font-weight: 400;
+                min-width: to-rem(112);
+            }
+            .phone {
+                font-size: to-rem(14);
+                line-height: to-rem(17);
+            }
+            .fonts {
+                font-weight: bold;
+                font-size: to-rem(12);
+                line-height: to-rem(15);
+                color: #464345;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .locationCard{
+        width: 90%;
+        .card {
+            padding: 1rem;
+        }
+    }
+}
+@media screen 
+  and (min-device-width: 767px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .locationCard{
+        width: 40%;
+        .card {
+            padding: 1rem;
+        }
+    }
+}
+@media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1439px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .locationCard{
+        width: 30%;
+        .card {
+            padding: 1rem;
+        }
+    }
+}

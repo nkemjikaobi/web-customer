@@ -1,0 +1,49 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.selfWithdraw {
+  background-color: color(White);
+  margin-bottom: to-rem(202);
+
+  @media screen and (min-device-width: 425px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    margin-top: to-rem(50);
+  }
+  @media screen and (min-device-width: 0px) and (max-device-width: 425px) and (-webkit-min-device-pixel-ratio: 1) {
+    margin-top: to-rem(10);
+  }
+
+  @include breakpoint-mini("xxl") {
+    border: 1px solid #e5e5e5;
+    width: to-rem(640);
+    padding: to-rem(24 0 75 0);
+  }
+  h1 {
+    font-size: to-rem(16);
+    margin-left: to-rem(47);
+  }
+  .content {
+    padding: to-rem(24 16 0 16);
+    @include breakpoint-mini("xxl") {
+      padding: to-rem(24 63 0 63);
+    }
+
+    .min {
+      margin-top: to-rem(14);
+      font-size: to-rem(12);
+      color: #ed017f;
+    }
+    .button {
+      margin-top: to-rem(50);
+      height: to-rem(46);
+      @include breakpoint-mini("xxl") {
+        // margin: to-rem(50 43 0 43); no justification yet
+      }
+    }
+  }
+}
+div.noAccount {
+  height: to-rem(40);
+  line-height: to-rem(40);
+  text-align: center;
+  margin-bottom: to-rem(16);
+  background-color: #fcfcfc;
+}

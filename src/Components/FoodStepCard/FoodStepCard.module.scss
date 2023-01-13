@@ -1,0 +1,17 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.stepCard {
+  h4 {
+    font-size: to-rem(18);
+    margin-bottom: to-rem(5);
+  }
+  p {
+    font-size: to-rem(15);
+    padding-bottom: to-rem(15);
+  }
+  @include breakpoint-mini("m") {
+    width: 30%;
+    //   height: to-rem(70);
+    padding: to-rem(23 0);
+  }
+}

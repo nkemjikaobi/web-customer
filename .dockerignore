@@ -1,0 +1,8 @@
+node_modules
+build
+./build
+.dockerignore
+Dockerfile
+Dockerfile.k8s
+Dockerfile.prod
+npm-debug.log

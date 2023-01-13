@@ -1,0 +1,31 @@
+@import "../../../../Assets//styles/shared-styles.scss";
+.emptyOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  p {
+    font-weight: 700;
+    line-height: to-rem(16);
+    font-size: to-rem(12);
+    color: #999a9e;
+    margin-top: to-rem(20);
+    span {
+      color: color(PrimaryLight);
+      cursor: pointer;
+    }
+  }
+  .shoppingBtn {
+    width: to-rem(241.53);
+    height: to-rem(40);
+    background-color: color(PrimaryLight);
+    border-radius: 3px;
+    padding: 0.2rem;
+    margin-top: to-rem(20);
+    margin-bottom: to-rem(40);
+    button {
+        color: color(White);
+    }
+  }
+}

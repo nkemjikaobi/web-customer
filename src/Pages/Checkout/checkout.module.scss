@@ -1,0 +1,188 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.checkout {
+  display: block;
+  padding: to-rem(0 10 40 10);
+  background-color: color(Grey95);
+  @include breakpoint-mini("xl") {
+    display: flex;
+    padding: to-rem(73 70 40 70);
+  }
+  @include breakpoint-mini("xxxl") {
+    padding: to-rem(73 0 180 0) !important;
+  }
+  &_options {
+    @include breakpoint("s") {
+      margin: 0 -2.5%;
+    }
+    .deliveryOption {
+      width: 100%;
+      @include breakpoint-mini("l") {
+        width: to-rem(859);
+      }
+      box-shadow: 0px 2px 6px 1px #3f042305;
+      margin-bottom: to-rem(20);
+      .active {
+        background-color: #fffafa;
+      }
+      .header {
+        position: relative;
+        height: to-rem(56);
+        .icon_active {
+          background-color: #ed017f;
+        }
+        .complete {
+          position: relative;
+          top: 1.1rem;
+          left: 0.5rem;
+          margin-right: 0.4rem;
+        }
+        .icon {
+          margin: to-rem(22 0 24 19);
+          width: to-rem(17);
+          height: to-rem(17);
+          border: 1px solid #ccc;
+          border-radius: 50%;
+        }
+        p {
+          font-weight: 700;
+          padding-bottom: to-rem(10);
+          padding: to-rem(19 0 17 9);
+        }
+        display: flex;
+      }
+    }
+    .paymentOptions {
+      width: 100%;
+      @include breakpoint-mini("l") {
+        width: to-rem(859);
+      }
+      .icon_active {
+          background-color: #ed017f;
+        }
+        .complete {
+          position: relative;
+          top: 1.1rem;
+          left: 0.5rem;
+          margin-right: 0.4rem;
+        }
+      box-shadow: 0px 2px 6px 1px #3f042308;
+      .active {
+        background-color: #fffafa;
+      }
+      .header {
+        display: flex;
+        background-color: color(White);
+        .icon {
+          margin: to-rem(22 0 24 19);
+          width: to-rem(17);
+          height: to-rem(17);
+          border: 1px solid color(Grey80);
+          // background-color: #ED017F;
+          border-radius: 50%;
+        }
+        p {
+          font-weight: 700;
+          padding-bottom: to-rem(10);
+          padding: to-rem(19 0 17 9);
+        }
+      }
+    }
+  }
+
+  .sideMenu {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    height: 100%;
+    right: to-rem(-900);
+  }
+  .goodColor {
+    color: red;
+  }
+  .moveSideBar {
+    position: fixed;
+    transition: transform 0.5s;
+    transform: translate(-890px);
+  }
+  .removeSideBar {
+    // right: -200px !important;
+    transition: transform 0.5s !important;
+    transform: translateX(900px) !important;
+  }
+  .deliveryAddressForm {
+    padding: to-rem(0 20);
+    .input {
+      margin-bottom: to-rem(18);
+      select {
+        height: to-rem(48);
+      }
+    }
+  }
+  .addressBook {
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      padding: to-rem(18 20 26 20);
+      p {
+        font-size: to-rem(14);
+        font-weight: 400;
+        margin-top: to-rem(4);
+      }
+      .button {
+        height: to-rem(32);
+        button {
+          background-color: color(White);
+          border: to-rem(1) solid color(PrimaryLight);
+          color: color(PrimaryLight) !important;
+          padding: to-rem(3 12) !important;
+        }
+      }
+    }
+  }
+}
+.pickupLocationContent {
+  .addressHeading {
+    margin-bottom: to-rem(58);
+    padding: to-rem(24 20 0 20);
+    p {
+      font-size: to-rem(14);
+      margin-bottom: to-rem(16);
+    }
+    .selectInfo {
+      display: flex;
+      .select {
+        width: 100%;
+        height: to-rem(48);
+        select {
+          height: to-rem(48);
+        }
+      }
+      .select:first-child {
+        margin-right: to-rem(10);
+      }
+    }
+  }
+  .mainContent {
+    .noLocationSelected {
+      width: to-rem(225);
+      margin: to-rem(155) auto 0 auto;
+      text-align: center;
+      h2 {
+        font-size: to-rem(14);
+      }
+      p {
+        font-size: to-rem(12);
+      }
+    }
+  }
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}

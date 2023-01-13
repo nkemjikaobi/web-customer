@@ -1,0 +1,186 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.cardContainer {
+    // @extend %hoverShadowVarOne;
+
+    cursor: pointer;
+    padding: to-rem(15);
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(s) {
+        padding: to-rem(15 10);
+    }
+}
+
+.productLabel {
+    border-bottom-right-radius: to-rem(65);
+    border-top-right-radius: to-rem(65);
+    color: color(White);
+    display: inline-block;
+    font-size: to-rem(10);
+    font-weight: $font-weight-medium;
+    left: 0;
+    padding: to-rem(8 8 10);
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: to-rem(10);
+    z-index: 9;
+}
+
+.percentage_off {
+    background-color: color(Danger);
+}
+
+.new_product {
+    background-color: color(Success);
+}
+
+.promo {
+    background-color: color(NeonCarrot);
+    font-size: to-rem(9);
+
+    @include breakpoint-mini('l') {
+        font-size: to-rem(10);
+        padding: to-rem(2 10 2 2);
+    }
+
+    &Icon {
+        // @extend %tabletAndAboveOnly;
+        background-color: color(White);
+        border-radius: 50%;
+        box-shadow: inset to-rem(0 2 2) transparentize(color(Black), 0.5);
+        height: to-rem(26);
+        margin-right: to-rem(8);
+        padding: to-rem(3);
+        width: to-rem(26);
+    }
+}
+
+// Ensures the product image is centered and respects the boundaries of the container it is placed in
+.productImage {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: auto;
+}
+
+.priceBox {
+    // @extend
+        // %alignItemsVertically,
+        // %spreadItemsApart,
+        // %flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    line-height: to-rem(20);
+    padding: to-rem(7 0 4);
+    vertical-align: middle;
+
+    @include breakpoint-mini('m') {
+        border-bottom: to-rem(1) solid color(Grey95);
+        border-top: to-rem(1) solid color(Grey95);
+        font-size: to-rem(20);
+        padding-bottom: to-rem(7);
+    }
+}
+
+.price {
+    font-size: to-rem(16);
+    font-weight: $font-weight-bold;
+
+    @include breakpoint-mini('m') {
+        font-size: to-rem(20);
+    }
+}
+.primeOriginalPrice{
+    font-size: to-rem(14);
+    margin-left: to-rem(10);
+    text-decoration: line-through;
+}
+.primeTitle {
+    font-size: to-rem(13);
+    font-weight: $font-weight-regular;
+    text-transform: capitalize;
+
+    @include breakpoint-mini('m') {
+        color: color(SteelGrey);
+        font-size: to-rem(15);
+        margin: to-rem(0 10);
+    }
+}
+
+.initialPrice {
+    font-size: to-rem(12);
+    margin-left: to-rem(5);
+    opacity: 0.7;
+    text-decoration: line-through;
+
+    @include breakpoint-mini('m') {
+        font-size: to-rem(14);
+    }
+}
+
+.savingsText {
+    color: color(Success);
+    display: block;
+    font-size: to-rem(13);
+    font-weight: $font-weight-regular;
+    margin: to-rem(2 0);
+
+    @include breakpoint-mini('m') {
+        font-size: to-rem(12);
+        font-weight: $font-weight-medium;
+    }
+}
+
+.saveItem {
+    position: absolute;
+    right: 0;
+    top: to-rem(2);
+}
+
+.saveIcon {
+    color: color(Gainsboro);
+    transition: color 0.3s ease-in-out;
+
+    circle {
+        fill: currentColor;
+    }
+
+    path {
+        fill: color(White);
+    }
+
+    &:hover {
+        color: color(SecondaryLight);
+    }
+
+    &Saved {
+        circle {
+            fill: color(LightningYellow);
+        }
+    }
+
+    &Loading {
+        circle {
+            fill: color(White);
+            stroke: color(LightningYellow);
+        }
+    }
+}
+
+.saveText {
+    display: none;
+
+    @include breakpoint-mini('m') {
+        display: inline-block;
+    }
+}
+
+.quantitySold {
+    display: block;
+    font-size: to-rem(11);
+}

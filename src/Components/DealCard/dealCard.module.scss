@@ -1,0 +1,231 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.dealCardContainer {
+    display: block;
+    padding: to-rem(10);
+    box-shadow: 0px 0px 8px 0px #0000001A;
+
+    @include breakpoint-mini('m') {
+        //height: to-rem(435);
+        padding: to-rem(5 10 10);
+    }
+
+    @include breakpoint-mini('l') {
+        //height: to-rem(450);
+    }
+
+    .prices {
+        display: flex;
+        justify-content: space-between;
+        .dicountPrice {
+          font-size: to-rem(20);
+          font-weight: 700;
+          margin-right: to-rem(18);
+        }
+        .originalPrice {
+          color: color(QuickSilver);
+          font-size: to-rem(15);
+          font-weight: 400;
+          line-height: to-rem(17);
+          padding: to-rem(7 0 0 0);
+          text-decoration: line-through;
+        }
+      }
+    .dealCartTop {
+        .dealCardImage {
+            height: to-rem(200);
+            width: 100%;
+        }
+
+        .dealCardMetaContainer {
+            width: 100%;
+            @include breakpoint('s'){
+                margin-left: to-rem(8);
+            }
+        }
+
+        @include breakpoint('m') {
+            @include flex;
+
+            > * {
+                @include flexGrow(1);
+            }
+
+            .dealCardImage {
+                height: to-rem(125);
+            }
+        }
+    }
+
+    .dealCardProductName {
+        font-size: to-rem(16);
+        font-weight: $font-weight-regular;
+        margin: to-rem(5 0 8);
+        @include breakpoint('s'){
+            width: to-rem(95);
+        }
+        @include breakpoint-mini('m') {
+            border-bottom: solid to-rem(1) color(Grey95);
+            font-size: to-rem(15);
+            height: to-rem(45);
+            padding-bottom: to-rem(8);
+        }
+    }
+
+    .dealCardInfoContainer {
+        @include breakpoint-mini('m') {
+            border-bottom: solid to-rem(1) color(Grey95);
+        }
+
+        .pricingBox {
+            border: 0;
+            padding: 0;
+        }
+
+        .secondaryInfo {
+            display: flex;
+            justify-content: space-between;
+            
+
+            padding: to-rem(2 0);
+
+            .quantitySold {
+                // @extend %mobileOnly;
+
+                color: color(Black);
+                font-size: to-rem(13);
+                margin: 0;
+            }
+        }
+    }
+
+    .dealCartBottom {
+        .dealCartBottomContent {
+            @include breakpoint('m') {
+                @include flex;
+                @include spreadItemsApart;
+
+                .dealTime {
+                    width: 60%;
+                }
+
+                .dealCardSold {
+                    padding-left: to-rem(10);
+                    width: 40%;
+                }
+            }
+
+            .dealTime {
+                display: block;
+                line-height: 1;
+                margin: 0;
+                padding: to-rem(4) 0;
+
+                @include breakpoint-mini('m') {
+                    border-bottom: solid to-rem(1) color(Grey95);
+                    line-height: to-rem(15);
+                    padding: to-rem(10 0);
+                }
+
+                .dealCardCountdown {
+                    color: color(Black);
+                    font-size: to-rem(13);
+                    font-weight: $font-weight-medium;
+                    line-height: to-rem(13);
+                    vertical-align: bottom;
+
+                    @include breakpoint-mini('m') {
+                        font-size: to-rem(14);
+                        line-height: to-rem(14);
+                    }
+                }
+
+                svg {
+                    height: to-rem(13);
+                    margin-right: to-rem(4);
+                    vertical-align: sub;
+                    width: to-rem(13);
+
+                    @include breakpoint-mini('m') {
+                        height: to-rem(14);
+                        margin-right: to-rem(5);
+                        width: to-rem(14);
+                    }
+                }
+            }
+
+            .dealCardSold {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+        
+                margin: to-rem(4) 0;
+
+                > span {
+                    color: color(Black);
+                    font-size: to-rem(13);
+                    font-weight: $font-weight-medium;
+                    line-height: to-rem(13);
+                }
+
+                @include breakpoint-mini('m') {
+                    margin: to-rem(10 0 20);
+
+                    > span {
+                        font-size: to-rem(14);
+                        line-height: to-rem(14);
+                    }
+                }
+            }
+        }
+
+        .progressBar {
+            background-color: color(Success);
+            border-radius: to-rem(5);
+            height: 100%;
+            &Container {
+                background-color: color(Grey91);
+                border-radius: to-rem(5);
+                height: to-rem(8);
+                width: to-rem(50);
+
+                @include breakpoint-mini('m') {
+                    height: to-rem(10);
+                    width: to-rem(85);
+                }
+            }
+        }
+    }
+    .dealButton{
+        font-weight: 500;
+        background-color: color(White);
+        color: color(PrimaryLight) !important;
+    }
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+      .dealCardContainer{
+          .labelWrapper{
+              span{
+                  background-color: #33B27B;
+                  margin-left: -5px;
+                  z-index: 0;
+              }
+          }
+          .prices {
+            display: block !important;
+          }
+          .dealCartTop{
+              display: flex;
+              justify-content: space-between;
+              .dealCardMetaContainer{
+                  width: auto !important;
+              }
+          }
+          .dealButton{
+            display: none !important;
+          }
+      }
+}

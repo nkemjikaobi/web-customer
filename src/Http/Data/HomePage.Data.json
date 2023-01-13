@@ -1,0 +1,58 @@
+[
+    {
+        "Title": "Featured Services",
+        "children": [{
+                "Title" : "Pay Bills",
+                "Icon": "Credit-card.svg"
+            },
+            {
+                "Title" : "Send Package",
+                "Icon": "Truck.svg"
+            },
+            {
+                "Title" : "Travel Booking",
+                "Icon": "Aeroplane.svg"
+            },
+            {
+                "Title" : "Online Shopping",
+                "Icon": "Cart.svg"
+            },
+            {
+                "Title" : "Konga Food",
+                "Icon": "Miso-soup.svg"
+            },
+            {
+                "Title" : "Konga Health",
+                "Icon": "Miso-soup.svg"
+            }
+        ]
+    },
+    {
+        "Title" : "Recharge & Pay Bills",
+        "children": [{
+                "Title" : "Air Time",
+                "Icon": "Tablet.svg"
+            },
+            {
+                "Title" : "Mobile Data",
+                "Icon": "LTE.svg"
+            },
+            {
+                "Title" : "Electricity",
+                "Icon": "Bulb.svg"
+            },
+            {
+                "Title" : "Tv Subscription",
+                "Icon": "TV.svg"
+            },
+            {
+                "Title" : "E-Pins",
+                "Icon": "Hard-drive.svg"
+            },
+            {
+                "Title" : "E-Pins",
+                "Icon": "Hard-drive.svg"
+            }
+        ]
+    }
+]

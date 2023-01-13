@@ -1,0 +1,12 @@
+@import "../../Assets/styles/shared-styles.scss";
+.btn {
+  width: 100%;
+  height: 100%;
+  background-color: color(PrimaryLight);
+  border-radius: to-rem(3);
+  color: color(White);
+  text-transform: capitalize;
+  @include breakpoint('s'){
+    font-size: to-rem(12) !important;
+  }
+}

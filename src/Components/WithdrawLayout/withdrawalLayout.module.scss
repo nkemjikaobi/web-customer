@@ -1,0 +1,44 @@
+@import "../../Assets/styles/shared-styles.scss";
+.withdrawalLayout{
+  background-color: #E5E5E5;
+  @include breakpoint-mini('xxl'){
+    display: flex;
+    background-color: color(White);
+    padding: to-rem(40 0 0 180);
+  }
+    .left{
+      margin-right: to-rem(20);
+      // border: 1px solid black;
+      height: 100%;
+      display: none;
+      box-shadow: 0px 4px 4px 0px #00000008;
+      @include breakpoint-mini('xxl'){
+        display: block;
+        width: to-rem(418);
+      }
+      .heading{
+        background-color: color(Abbey);
+        height: to-rem(43);
+        h1{
+          font-size: to-rem(16);
+          font-weight: 500;
+          margin-left: to-rem(34);
+          padding: to-rem( 12 0);
+        }
+      }
+      .menuItem {
+        display: flex;
+        background-color: color(White);
+        justify-content: space-between;
+        height: to-rem(47);
+        padding: to-rem(14 22 14 32);
+        border-bottom: to-rem(1) solid color(WhisperVarOne);
+        &_left {
+          display: flex;
+          p {
+            margin-left: to-rem(5);
+          }
+        }
+      }
+    }
+}

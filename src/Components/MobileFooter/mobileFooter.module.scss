@@ -1,0 +1,149 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.footer {
+  &_top {
+    padding: to-rem(21 22);
+    background-color: color(Grey18);
+    &Band {
+      justify-content: space-between;
+      .contactData {
+        margin-bottom: to-rem(27);
+      }
+      .support {
+        display: flex;
+        .text {
+          color: color(PhilippineSilver);
+          margin-left: to-rem(16);
+          h1 {
+            font-size: to-rem(14);
+            text-transform: uppercase;
+          }
+        }
+      }
+      .latestDeals {
+        p {
+          color: color(PhilippineSilver);
+        }
+      }
+      .newsLetter {
+        margin-top: to-rem(13);
+        display: flex;
+        input {
+          width: to-rem(166);
+          margin-top: 0;
+          height: to-rem(50.63);
+          border: 0px;
+          border-radius: to-rem(3 0 0 3);
+        }
+        .subscribeBtn {
+          width: 100%;
+          height: to-rem(50.63);
+          button {
+            border-radius: to-rem(0 3 3 0);
+            padding: to-rem(15 20);
+            font-size: to-rem(14);
+          }
+        }
+      }
+    }
+  }
+  &_moreOptions {
+    display: flex;
+    justify-content: space-between;
+    background-color: color(Black);
+    color: color(PhilippineSilver);
+    font-size: to-rem(17);
+    padding: to-rem(18 22);
+    text-transform: uppercase;
+    // border-bottom: 1px thin rgb(180, 180, 180) !important;
+    // border-bottom-width: thin;
+    .arrowBottom {
+      margin-top: to-rem(2);
+    }
+    .active {
+      color: color(white);
+    }
+    .whiteBg {
+      background: color(white);
+    }
+  }
+  .flexIt {
+    display: flex;
+    background-color: color(black);
+    padding: 0.2rem;
+  }
+  .flexIt2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 50%;
+    margin-left: 4%;
+  }
+
+  .storeLabelContainer {
+    .storeLabel > a {
+      padding: to-rem(7 17 7 10);
+      background-color: color(black);
+      display: flex;
+      .icon {
+        padding-top: to-rem(4);
+      }
+      .text {
+        color: color(white);
+        margin-left: to-rem(11);
+        .heading {
+          font-size: to-rem(11);
+        }
+        .label {
+          font-weight: 600;
+          font-size: to-rem(15);
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .footerIcons {
+    //background: color(black);
+    .footerIconWrapper {
+      position: relative;
+      width: to-rem(42);
+      height: to-rem(42);
+      border-radius: 50%;
+      background-color: color(NightRider);
+      .img > a {
+        > svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .bodyTexts {
+    background-color: color(black);
+    font-size: to-rem(12);
+    padding: 0.5rem 1.5rem;
+    font-weight: 300;
+    color: color(PhilippineSilver);
+  }
+  @media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+    .newsLetter {
+      input {
+        width: to-rem(182);
+      }
+    }
+  }
+}
+.footerBottom {
+    background-color: color(black);
+    p {
+        font-weight: 300;
+        font-size: to-rem(14);
+        color: color(Grey18);
+        text-align: center;
+        padding: 1rem;
+    }
+}

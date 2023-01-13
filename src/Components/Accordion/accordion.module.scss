@@ -1,0 +1,90 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.accordion {
+    border: to-rem(1) solid color(LightGrey);
+    border-radius: to-rem(5);
+    display: block;
+    margin: to-rem(10 0);
+    width: 100%;
+
+    &Title {
+        color: color(Grey29);
+        cursor: pointer;
+        font-size: to-rem(13);
+        padding: to-rem(12 16);
+        text-align: left;
+        width: 100%;
+
+        span {
+            display: inline-block;
+            width: 90%;
+        }
+
+        svg {
+            float: right;
+            height: to-rem(10);
+            margin-top: to-rem(5);
+            transform: rotate(90deg);
+            transition: all 0.3s linear;
+            width: to-rem(10);
+
+            path {
+                fill: color(LightGrey);
+            }
+        }
+
+        &.open {
+            color: color(Black);
+            font-weight: $font-weight-bold;
+
+            svg {
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+    &ContentFrame,
+    &Content {
+        animation: slideDown 1s linear 0s 1 forwards;
+        overflow-y: scroll;
+    }
+
+    &Content {
+        border-top: to-rem(1) solid color(LightGrey);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: to-rem(500);
+    }
+}
+
+.accordionWrapper {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+
+    &:not(:last-child) {
+        border-bottom: to-rem(1) solid color(LightGrey);
+    }
+
+    > div {
+        &:first-child {
+            padding: to-rem(20 15);
+
+            span {
+                font-size: to-rem(14);
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        &:nth-child(2) {
+            border-top: none;
+        }
+    }
+}

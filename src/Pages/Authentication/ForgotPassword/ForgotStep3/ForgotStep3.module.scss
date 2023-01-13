@@ -1,0 +1,65 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: to-rem(100 0 48 0);
+}
+.forgotPasswordCard {
+  margin: 0 auto;
+  padding: to-rem(65 16 44 16);
+  background-color: color(White);
+  @include breakpoint-mini("l") {
+    width: to-rem(640);
+    padding: to-rem(65 109 44 109);
+    border: 1px solid #90909033;
+  }
+  h1 {
+    font-size: to-rem(20);
+    margin-bottom: to-rem(30);
+  }
+  .input {
+    margin-bottom: to-rem(20);
+  }
+  .otp {
+    position: relative;
+    .otpLink {
+      position: absolute;
+      top: to-rem(-40);
+      right: 0;
+    }
+  }
+  .button {
+    height: to-rem(48);
+  }
+  .link {
+    color: color(PrimaryLight) !important;
+    margin-top: to-rem(40);
+    display: flex;
+    justify-content: center;
+  }
+  .success {
+    border: to-rem(1) solid #307f00;
+    border-left: to-rem(8) solid #307f00;
+  }
+  .error {
+    border: to-rem(1) solid red;
+    border-left: to-rem(8) solid red;
+  }
+  .alert {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: to-rem(5);
+    margin-bottom: to-rem(20);
+    align-items: center;
+    .icon {
+      svg {
+        height: to-rem(30);
+      }
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+}

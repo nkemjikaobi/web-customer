@@ -1,0 +1,21 @@
+@import "Assets/styles/shared-styles.scss";
+.addressComponent{
+    display: flex;
+    .sourceInfo{
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #606060;
+        }
+    }
+    .edit{
+        display: flex;
+        padding-top: 1rem;
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #ED017F;
+            margin-left: 5px;
+        }
+    }
+}

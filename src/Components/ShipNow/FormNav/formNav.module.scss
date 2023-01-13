@@ -1,0 +1,60 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.formNav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: to-rem(10);
+    .navLink{
+        display: flex;
+        margin-left: to-rem(16);
+        color: #CFCFCF;
+        .numberWrapper{
+            border-radius: 50%;
+            width: to-rem(24);
+            height: to-rem(24);
+            text-align: center;
+            padding-bottom: to-rem(5);
+            font-size: to-rem(12);
+            @include breakpoint-mini('xxl'){
+                font-size: to-rem(16);
+            }
+            span{
+                color: color(White);
+            }
+    
+        }
+    }
+    .active{
+        display: flex;
+        margin-left: to-rem(16);
+        .numberWrapper{
+            border-radius: 50%;
+            width: to-rem(20);
+            height: to-rem(20);
+            text-align: center;
+            background-color: color(PrimaryLight);
+            color: color(White);
+            font-size: to-rem(12);
+            @include breakpoint-mini('xxl'){
+                width: to-rem(24);
+                height: to-rem(24);
+                font-size: to-rem(16);
+            }
+        }
+        p{
+            color: color(PrimaryLight);
+            font-size: to-rem(12);
+            @include breakpoint-mini('xxl'){
+                font-size: to-rem(16);
+            }
+        }
+    }
+    
+    p{
+        margin-left: to-rem(9);
+        font-size: to-rem(12);
+        @include breakpoint-mini('xxl'){
+            font-size: to-rem(16);
+        }
+    }
+}

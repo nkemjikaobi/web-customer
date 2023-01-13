@@ -1,0 +1,41 @@
+// Import utilities
+@import "utils/utils";
+@import "mixins/mixins";
+@import "colors";
+@import "settings";
+@import "atoms/atoms";
+
+.mobileOnly {
+  @extend %mobileOnly;
+}
+
+.tabletAndAboveOnly {
+  @extend %tabletAndAboveOnly;
+}
+
+.customScroll {
+  @include breakpoint-mini("xl") {
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: color(LightGrey);
+      border-radius: to-rem(5);
+
+      &:hover {
+        background-color: color(SteelGrey);
+      }
+    }
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      height: to-rem(5);
+      width: to-rem(5);
+    }
+  }
+}

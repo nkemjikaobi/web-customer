@@ -1,0 +1,23 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.seoText{
+    color: color(ShuttleGrey);
+    padding: to-rem(30 0 30 0);
+    @include breakpoint-mini('xl'){
+        padding: to-rem(30 0) ;
+      }
+    @include breakpoint-mini('xxxl'){
+        padding: to-rem(30 0) !important;
+    }
+    &_title{
+        font-size: to-rem(20);
+        font-weight: 700;
+        line-height: to-rem(24);
+        margin-bottom: to-rem(21);
+    }
+    &_text{
+        font-size: to-rem(14);
+        font-weight: 400;
+        line-height: to-rem(23);
+    }
+}

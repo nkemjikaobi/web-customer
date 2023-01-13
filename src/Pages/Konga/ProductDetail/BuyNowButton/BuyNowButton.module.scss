@@ -1,0 +1,45 @@
+@import "Assets/styles/shared-styles.scss";
+.buyNowButton{
+    display: flex;
+    padding: to-rem(20 0 11 0);
+    border-bottom: to-rem(1) solid color(Grey80);
+    .button {
+        width: to-rem(300);
+        height: to-rem(48);
+    }
+
+    .saveForLater {
+        display: flex;
+        > div {
+          display: flex;
+          margin-left: to-rem(36);
+          align-items: center;
+        }
+        p {
+          margin-left: to-rem(10);
+          padding: to-rem(7 0);
+          font-size: to-rem(11);
+          color: color(QuickSilver);
+        }
+        .iconWrapper {
+          cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+    .buyNowButton{
+        width: 100%;
+        padding: to-rem(20 10 11 10);
+        background-color: white;
+        border: none;
+        .button{
+          width: 85%;
+        }
+        .saveForLater {
+          > div {
+            margin-left: to-rem(10);
+          }
+        }
+    }
+}

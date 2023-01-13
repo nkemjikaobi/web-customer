@@ -1,0 +1,107 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.productCard {
+  display: flex;
+  height: to-rem(145);
+  width: 100%;
+  @include breakpoint("s") {
+    width: inherit !important;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  &_Top {
+    width: 40%;
+    height: auto;
+    padding: to-rem(5);
+    @include breakpoint('l'){
+      height: to-rem(126);
+
+    }
+  }
+  &_Bottom {
+    padding: to-rem(16 12);
+    width: 100%;
+    h1 {
+      font-size: to-rem(13) !important;
+      font-weight: 400 !important;
+      text-overflow: ellipsis;
+    }
+    .prices {
+      display: flex;
+      padding-top: to-rem(8);
+      .dicountPrice {
+        font-size: to-rem(16);
+        font-weight: 700;
+        margin-right: to-rem(18);
+      }
+      .originalPrice {
+        color: color(QuickSilver);
+        font-size: to-rem(14);
+        font-weight: 400;
+        line-height: to-rem(17);
+        padding: to-rem(5 0 0 0);
+        text-decoration: line-through;
+      }
+    }
+    .amountSaved {
+      font-size: to-rem(12);
+      color: color(FauxLightGreen);
+      margin-top: to-rem(8);
+    }
+  }
+  .recomendationCardWrapperContent {
+    display: flex;
+    align-items: center;
+  }
+   &:hover{
+    box-shadow: 0px 3px 5px 0px #00000026;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productCard {
+    height: to-rem(193);
+    &_Top {
+      width: 50%;
+      padding-top: to-rem(6);
+      height: 90px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &_Bottom {
+      padding: 1px 1px;
+      h1 {
+        font-size: to-rem(12);
+        height: 30px;
+        overflow: hidden;
+      }
+    }
+  }
+  .recomendationCardWrapperContent {
+    display: block !important;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productCard {
+    &_Top {
+      width: 25%;
+      padding-top: to-rem(6);
+    }
+  }
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productCard {
+    &_Top {
+      width: 50%;
+    }
+    &_Bottom {
+      h1 {
+        font-size: to-rem(12);
+      }
+    }
+  }
+}

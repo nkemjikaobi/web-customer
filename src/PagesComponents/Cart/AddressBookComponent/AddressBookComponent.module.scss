@@ -1,0 +1,23 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.addressBook{
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(18 20 26 20);
+        p{
+            font-size: to-rem(14);
+            font-weight: 400;
+            margin-top: to-rem(4);
+        }
+        .button{
+            height: to-rem(32);
+            button{
+                background-color: color(White);
+                border: to-rem(1) solid color(PrimaryLight);
+                color: color(PrimaryLight) !important;
+                padding: to-rem(3 12) !important;
+            }
+        }
+    }
+}

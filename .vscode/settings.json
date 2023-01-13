@@ -1,0 +1,8 @@
+{
+    "sonarlint.connectedMode.connections.sonarqube": [
+        {
+            "serverUrl": "http://sonarqube.igbimo.com/",
+            "token": "da5f1a31adb564d84877e6c47eea0ccdef375aaa"
+        },
+    ],
+}

@@ -1,0 +1,24 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.accountInfoCard{
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(21 35 21 19);
+    border: to-rem(1) solid color(Whisper);
+    margin-bottom:to-rem(14);
+    &_left{
+        display:flex;
+        .img{
+            width: to-rem(44);
+            height: to-rem(44);
+            background-color: lightgreen;
+        }
+        .accountDetails{
+            
+            padding-left: to-rem(13);
+        }
+    }
+    &_right{
+        padding: to-rem(10 0);
+    }
+}

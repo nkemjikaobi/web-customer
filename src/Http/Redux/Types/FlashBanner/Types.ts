@@ -1,0 +1,1 @@
+export const SHOW_FLASHBANNER = "SHOW_FLASHBANNER";

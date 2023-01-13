@@ -1,0 +1,9 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.nav {
+    display: flex !important;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: to-rem(80.9);
+    max-width: to-rem(917); 
+}

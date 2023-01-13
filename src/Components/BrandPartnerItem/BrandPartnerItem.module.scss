@@ -1,0 +1,49 @@
+@import "../../Assets/styles/shared-styles.scss";
+.brandPartnerItem{
+    position: relative;
+    width: 100%;
+    height: to-rem(122.83);
+    border-radius: to-rem(4);
+    margin-bottom: to-rem(10);
+    @include breakpoint('s'){
+        height: to-rem(60);
+    }
+    .brandLogo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+    }
+    .brandImage{
+        @include breakpoint-mini('s'){
+            img{
+                height: to-rem(122.83);
+                border-radius: to-rem(4);
+            }
+        }
+        @include breakpoint('s'){
+            img{
+                height: to-rem(60); 
+                border-radius: to-rem(4);
+            }
+        }
+       
+        &::before{
+            content: ""; // ::before and ::after both require content
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: to-rem(122.83);
+            opacity: .7;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: to-rem(4);
+            @include breakpoint('s'){
+                    height: to-rem(60); 
+            }
+        }
+    }
+    
+}

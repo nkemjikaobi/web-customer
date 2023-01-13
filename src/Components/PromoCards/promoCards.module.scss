@@ -1,0 +1,96 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.promoCard {
+    display: block;
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint-mini('m') {
+        margin-bottom: to-rem(20);
+    }
+
+    &Image {
+        background: transparent;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+
+        @include breakpoint('s') {
+            height: to-rem(120);
+        }
+    }
+
+    &ImageContainer {
+        border-radius: to-rem(5 5 0 0);
+        margin-bottom: to-rem(-5);
+        overflow: hidden;
+
+        @include breakpoint-mini('m') {
+            height: to-rem(200);
+            margin-bottom: auto;
+        }
+    }
+
+    &DetailsWrapper {
+        padding: to-rem(10);
+
+        @include breakpoint-mini('m') {
+            padding: to-rem(15);
+            padding-bottom: unset;
+        }
+    }
+
+    &Title,
+    &Description,
+    &Action {
+        margin: to-rem(20 0);
+    }
+
+    &Title {
+        color: color(ShuttleGrey);
+        font-size: to-rem(13);
+        font-weight: 700;
+        height: to-rem(35);
+        margin: 0;
+
+        @include breakpoint-mini('m') {
+            font-size: to-rem(18);
+            margin: auto;
+        }
+    }
+
+    &Description {
+        color: color(Tundora);
+        font-size: to-rem(14);
+        height: to-rem(35);
+
+        @include breakpoint('s') {
+            font-size: to-rem(12);
+            height: unset;
+            margin-bottom: to-rem(10);
+            margin-top: to-rem(5);
+            min-height: to-rem(40);
+        }
+    }
+
+    &Action {
+        color: color(PrimaryVarTwo);
+        font-size: to-rem(12);
+        font-weight: 500;
+
+        svg {
+            height: to-rem(10);
+            margin-left: to-rem(5);
+            padding-bottom: to-rem(1);
+
+            path {
+                fill: color(PrimaryVarTwo);
+                stroke: none;
+            }
+        }
+
+        @include breakpoint-mini('m') {
+            font-size: to-rem(13);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../Assets/styles/shared-styles.scss";
+.iconText {
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  width: to-rem(75);
+  height: to-rem(75);
+  padding: to-rem(30);
+  @include breakpoint-mini('l'){
+    width: to-rem(82.5);
+    height: to-rem(75);
+  }
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .title {
+      font-size: to-rem(10);
+      color: color(white);
+      font-weight: 500;
+      text-transform: capitalize;
+      margin-top: to-rem(8);
+      @include breakpoint-mini('xxxl'){
+        font-size: to-rem(12);
+      }
+    }
+  }
+  .icon:hover{
+    color: color(PrimaryLight);
+    mask: color(PrimaryLight);
+  }
+  &:hover{
+    // background-color: color(white);
+  }
+}
+
+
+

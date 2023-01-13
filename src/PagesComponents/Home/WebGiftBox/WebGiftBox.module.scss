@@ -1,0 +1,34 @@
+@import "Assets/styles/shared-styles.scss";
+.promoWrapper {
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+    @include breakpoint-mini("m") {
+      display: none;
+    }
+    @include breakpoint-mini("xl") {
+      position: fixed;
+      display: block;
+      top: 700px !important;
+      left: 10px !important;
+    }
+    &_icon {
+      height: to-rem(60);
+      width: to-rem(60);
+      border-radius: 50%;
+      position: relative;
+      background-color: #ffd7ee;
+      margin: 0 auto;
+      img {
+        width: to-rem(54);
+        height: to-rem(54);
+        border-radius: 50%;
+      }
+    }
+    p {
+      font-size: to-rem(14);
+      color: color(White);
+      font-weight: 700;
+    }
+  }

@@ -1,0 +1,46 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.sideMenu{
+    width: to-rem(410);
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    border-radius: 5px;
+    background-color: color(White);
+    // overflow-y: scroll;
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(26 25 14 25);
+    background-color: #F0F0F0;
+    h1{
+        font-size: to-rem(25);
+        font-weight: 700e;
+    }
+    .close{
+        width: to-rem(24);
+        height: to-rem(24);
+        text-align: center;
+        background-color: #494949 ;
+        border-radius: to-rem(3);
+        p{
+            text-align: center;
+            // height: to-rem(14);
+            // width: to-rem(14);
+            color: color(White);
+        }
+    }
+}
+&_Main{
+    height: 80%;
+}
+.bottom{
+    margin-top: to-rem(-450);
+    height: to-rem(152);
+    padding: to-rem(16 20 96 20);
+    border-top: to-rem(1) solid #F2F2F2;
+    button{
+        padding: to-rem(3) auto;
+    }
+}
+}

@@ -1,0 +1,418 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.sendPackage {
+  &_header {
+    position: relative;
+    color: color(White);
+    background: #ffdfe2;
+    height: 70vh;
+    text-align: center;
+    background-image: url("../../../Assets/images/png/kexpress-truck.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-mini("xxl") {
+      margin: 0 -13%;
+    }
+    @include breakpoint("xs") {
+      height: 70vh;
+    }
+    .breadcrumbWrapper {
+      text-align: flex-start;
+      @include breakpoint-mini("xxl") {
+        padding-left: to-rem(70);
+      }
+      @include breakpoint-mini("xxxl") {
+        padding-left: to-rem(0) !important;
+      }
+    }
+
+    h1 {
+      font-size: to-rem(40);
+    }
+    p {
+      font-size: to-rem(18);
+      padding-top: to-rem(30);
+      width: 30%;
+    }
+    @include breakpoint("s") {
+      h1 {
+        font-size: to-rem(25);
+        font-weight: 500;
+        padding-top: to-rem(36);
+        margin-bottom: to-rem(20);
+        @include breakpoint-mini("xxl") {
+          padding-top: to-rem(100);
+        }
+      }
+      p {
+        font-size: to-rem(12);
+        padding-top: to-rem(12);
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    .trackPackage {
+      position: relative;
+      width: to-rem(300);
+      height: to-rem(36);
+      margin: 25px auto 0 auto;
+      svg {
+        position: absolute;
+        fill: color(Black);
+        top: to-rem(23);
+        left: to-rem(18);
+        @include breakpoint-mini("m") {
+          top: to-rem(37);
+          left: to-rem(20);
+        }
+      }
+
+      &_button {
+        position: absolute;
+        top: to-rem(16);
+        right: to-rem(8);
+        width: to-rem(113);
+        font-size: to-rem(12);
+        height: to-rem(35);
+        button {
+          font-size: to-rem(12);
+        }
+        @include breakpoint-mini("m") {
+          top: to-rem(22);
+          height: to-rem(53);
+          right: to-rem(27);
+          width: to-rem(200);
+          font-size: to-rem(16);
+          button {
+            font-size: to-rem(16);
+          }
+        }
+      }
+      input::placeholder {
+        font-size: to-rem(12);
+        padding-left: to-rem(0);
+        @include breakpoint-mini("xxl") {
+          padding-left: to-rem(30);
+        }
+      }
+      @include breakpoint-mini("m") {
+        height: to-rem(77);
+        width: to-rem(660);
+        input {
+          height: to-rem(77);
+        }
+        input::placeholder {
+          padding-left: to-rem(48);
+        }
+      }
+      @include breakpoint-mini("xl") {
+        margin: to-rem(50) auto 0 auto;
+      }
+    }
+    @include breakpoint("m") {
+      height: 70vh;
+    }
+  }
+  &_shippingClaculator {
+    background-color: color(GhostWhite);
+    padding: 0.01rem 0rem;
+    @include breakpoint-mini("xxl") {
+      margin: 0 -13%;
+    }
+    .heading {
+      text-align: center;
+      padding: to-rem(0 50);
+      h2 {
+        color: #616161;
+        font-size: to-rem(16);
+        font-weight: 500;
+        margin: to-rem(47 0 15 0);
+      }
+      p {
+        color: color(QuickSilver);
+        font-size: to-rem(12);
+        line-height: to-rem(14.32);
+        margin: 0 auto 3.625rem auto;
+      }
+      @include breakpoint-mini("m") {
+        h2 {
+          font-size: to-rem(40);
+          margin: to-rem(102 0 40 0);
+        }
+        p {
+          font-size: to-rem(18);
+          line-height: to-rem(21.47);
+          width: 600px;
+          margin: 0 auto 5.625rem auto;
+        }
+      }
+    }
+    @include breakpoint-mini("m") {
+      .calculateShipping {
+        display: flex;
+        justify-content: center;
+        padding: to-rem(0 16);
+        padding-bottom: to-rem(30);
+      }
+    }
+    .form {
+      background-color: color(white);
+      padding: to-rem(0 16 29 16);
+      @include breakpoint-mini("m") {
+        width: to-rem(500);
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      @include breakpoint-mini("l") {
+        width: to-rem(711);
+        height: to-rem(630);
+        margin-right: to-rem(50);
+        padding: to-rem(20 20 10 20);
+      }
+      textarea {
+        resize: none;
+      }
+
+      &_select {
+        margin-bottom: to-rem(16);
+        @include breakpoint-mini("m") {
+          width: to-rem(200);
+          margin-bottom: to-rem(30);
+        }
+        @include breakpoint-mini("l") {
+          width: to-rem(322);
+        }
+        select {
+          height: to-rem(46);
+          border-color: color(WhisperVarOne);
+        }
+      }
+      &_button {
+        height: to-rem(46);
+        margin-top: to-rem(50);
+        width: 100%;
+        @include breakpoint-mini("xl") {
+          margin-top: to-rem(-10);
+          font-size: to-rem(16);
+          margin-bottom: to-rem(30);
+        }
+        @include breakpoint-mini("l") {
+          margin-top: to-rem(-10);
+          font-size: to-rem(16);
+          margin-bottom: to-rem(30);
+        }
+      }
+    }
+    .calculateRate {
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+  &_deliverySolutionsSection {
+    margin: 50px auto;
+    span {
+      text-align: center;
+      color: #3a001f;
+      font-size: to-rem(17);
+      display: inline-block;
+      width: 382px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: to-rem(13);
+      color: #464345;
+      padding: 0px 40px 0px 40px;
+    }
+    div {
+      border-bottom: 5px solid #fb8f00;
+      width: to-rem(118);
+      margin: 10px auto 20px auto;
+    }
+    @include breakpoint-mini("m") {
+      span {
+        display: inherit;
+        text-align: center;
+        font-size: to-rem(21);
+      }
+      p {
+        font-size: to-rem(18);
+        width: 700px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .deliverySolutions {
+    .deliverySolutionsCard {
+      padding: to-rem(0 16);
+      h1 {
+        font-size: to-rem(21);
+        font-weight: 500;
+        margin-top: to-rem(20);
+        color: Color(#3a001f);
+        text-align: center;
+      }
+      p {
+        color: #464345;
+        display: inline-block;
+        margin-top: to-rem(10);
+        text-align: center;
+        margin-bottom: to-rem(100);
+        font-size: to-rem(14);
+      }
+      p:last-child {
+        margin-bottom: to-rem(50);
+      }
+      .image {
+        width: 100%;
+      }
+    }
+    @include breakpoint-mini("m") {
+      display: flex;
+      .deliverySolutionsCard {
+        width: 33%;
+        h1 {
+          text-align: left;
+        }
+        p {
+          text-align: left;
+          margin-bottom: to-rem(400);
+        }
+        .image {
+          height: 276px;
+        }
+      }
+    }
+  }
+  &_locations {
+    background-color: color(White);
+    background-image: url("../../../Assets/images/png/world.png");
+    background-repeat: no-repeat;
+    color: #616161;
+    margin-top: to-rem(30);
+    padding: to-rem(30 0 40 0);
+
+    h2 {
+      text-align: center;
+      font-size: to-rem(21);
+      font-weight: 500;
+      margin: to-rem(0 60);
+      padding-top: to-rem(36);
+      @include breakpoint-mini("xl") {
+        font-size: to-rem(36);
+        margin: to-rem(0);
+      }
+    }
+    p {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-size: to-rem(14);
+      padding: to-rem(15);
+      color: color(QuickSilver);
+      @include breakpoint-mini("xl") {
+        font-size: to-rem(20);
+      }
+    }
+  }
+  &_bottom {
+    background-color: color(White);
+    .seoText {
+      padding: to-rem(70 16);
+      @include breakpoint-mini("l") {
+        padding: to-rem(70 70 0 70);
+      }
+      @include breakpoint-mini("xxxl") {
+        padding: to-rem(70 0 0 0) !important;
+      }
+    }
+  }
+  .warningBand {
+    display: flex;
+    color: color(VenetianRed);
+    font-size: to-rem(10);
+    height: to-rem(29);
+    justify-content: center;
+    background-color: rgba(208, 2, 27, 0.05);
+    p {
+      padding: to-rem(7 0 7 3);
+    }
+  }
+}
+
+@media only screen and (max-width: 996px) and (min-width: 768px) {
+  .form {
+    width: to-rem(920);
+    height: to-rem(360);
+    margin-right: to-rem(20);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: to-rem(10) !important;
+    &_select {
+      width: to-rem(160.92);
+      select {
+        height: to-rem(46);
+        border-color: color(WhisperVarOne);
+      }
+    }
+    &_button {
+      width: to-rem(160.92);
+      margin-top: to-rem(23) !important;
+      margin-bottom: to-rem(30);
+    }
+  }
+  .shippingFee {
+    margin-top: 0;
+    background-color: color(white);
+    &_active {
+      width: to-rem(345);
+      height: to-rem(331);
+    }
+  }
+  .trackPackage {
+    margin-top: to-rem(100) !important;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 996px) {
+  .form {
+    width: to-rem(620);
+    height: to-rem(360);
+    margin-right: to-rem(20);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: to-rem(10) !important;
+    &_select {
+      width: to-rem(285.92);
+      select {
+        height: to-rem(46);
+        border-color: color(WhisperVarOne);
+      }
+    }
+    &_button {
+      width: to-rem(285.92);
+      margin-top: to-rem(23) !important;
+    }
+  }
+  .trackPackage {
+    margin-top: to-rem(157) !important;
+  }
+}

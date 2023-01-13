@@ -1,0 +1,185 @@
+$default-float: left !default;
+
+@mixin clearfix {
+    -ms-zoom: 1; //for IE only //TODO add user agent detection for this
+
+    &::after,
+    &::before {
+        content: " ";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+//for adding box sizing
+@mixin box-sizing($type:border-box) {
+    -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+    -moz-box-sizing: $type;
+    box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+//for adding border-radius
+@mixin border-radius($px) {
+    -webkit-border-radius: $px; // Android < 2.3, iOS < 4
+    -moz-border-radius: $px;
+    border-radius: $px; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+    transition: $value;
+}
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    transform: $value;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//makes and inline ordered or unordered list
+@mixin inline-list(
+    $float: $default-float,
+    $margin: $inline-list-item-margin,
+    $opposite-float: $float) {
+    @include clearfix();
+
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+// Reset styles for List elements
+@mixin list-reset($list-style: none) {
+    list-style: $list-style;
+    margin: 0;
+    padding: 0;
+}
+
+//this mixin styles the checkboxes and radio buttons
+
+@mixin list-checkbox() {
+    &__item-checkbox-input {
+        $checkbox-size: to-rem(15);
+        $checkbox-border-width: to-rem(2);
+        $checkbox-inner-size: $checkbox-size - ($checkbox-border-width * 2);
+        $checkbox-dot-size: to-rem(7);
+
+        & + label {
+            border: 2px solid color(SteelGrey);
+            border-radius: to-rem(3);
+            cursor: pointer;
+            display: none;
+            height: $checkbox-size;
+            line-height: $checkbox-inner-size;
+            text-align: center;
+            vertical-align: middle;
+            width: $checkbox-size;
+
+            svg {
+                height: $checkbox-inner-size;
+                width: $checkbox-inner-size;
+            }
+
+            path {
+                fill: color(White);
+            }
+        }
+
+        &_radio + label {
+            border-radius: $checkbox-size;
+        }
+
+        &:checked + label {
+            background-color: color(PrimaryDark);
+            border-color: color(PrimaryDark);
+        }
+
+        &_radio:checked + label {
+            background-color: color(White);
+        }
+
+        &-dot {
+            background-color: color(White);
+            border-radius: to-rem($checkbox-dot-size);
+            display: inline-block;
+            height: to-rem($checkbox-dot-size);
+            margin-top: ($checkbox-inner-size - $checkbox-dot-size) * 0.5;
+            vertical-align: middle;
+            width: to-rem($checkbox-dot-size);
+        }
+
+        //TODO Find a better way to target the &-dot
+        &_radio:checked + label &-dot {
+            background-color: color(PrimaryDark);
+        }
+    }
+}
+
+@mixin top-fix {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+@mixin bottom-fix {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 99;
+}
+
+@mixin right-fix {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+@mixin left-fix {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+@mixin full-page-fix {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+// Create a perfect circle
+@mixin circle ($dimension) {
+    border-radius: calc($dimension / 2);
+    height: $dimension;
+    width: $dimension;
+}
+
+@mixin boxShadowVarOne {
+    box-shadow: $box-shadow-var-one;
+}
+
+@mixin tooltipHover($selector) {
+    &:hover {
+        .#{$selector} {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@import "../../Assets/styles/shared-styles.scss";
+.business {
+    z-index: 60;
+    position: relative;
+    width: to-rem(200);
+    height: auto;
+    font-size: 14px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    background-color: color(White);
+    margin-top: to-rem(10);
+    .topPointer {
+        position: absolute;
+        top: to-rem(-20);
+        right: 0;
+    }
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(15 21 15 12);
+        background-color: color(Whisper2);
+        &_content {
+            p {
+                font-size: to-rem(16);
+                font-weight: 500;
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .activeSection {
+        max-height: to-rem(260);
+        overflow-y: scroll;
+        overflow-x: visible;
+    }
+    &_kongaFood {
+        .arrowIcon {
+            margin: auto 0;
+            width: to-rem(24);
+            padding-left: to-rem(8);
+        }
+    }
+    .subTotal {
+        padding: to-rem(18 18 13 18);
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: to-rem(26);
+        }
+        .button {
+            height: to-rem(35);
+        }
+    }
+    .agregatedCartTotal {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: to-rem(11 8 9 8);
+        background-color: color(Grey98);
+        h3 {
+            color: #727272;
+            font-size: to-rem(14);
+            font-weight: 700;
+            margin-bottom: to-rem(6);
+        }
+        .total {
+            color: color(DavyGrey);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: to-rem(6);
+            p {
+                font-size: to-rem(12);
+                font-weight: 700;
+            }
+        }
+        .deliveryFee {
+            color: color(DavyGrey);
+            display: flex;
+            justify-content: space-between;
+            &_name {
+                font-size: to-rem(12);
+                font-weight: 500;
+            }
+            &_info {
+                font-size: to-rem(10);
+            }
+        }
+    }
+    .kongaPayBusiness {
+        margin-left: 20px;
+    }
+}
+
+.standardFont {
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+}

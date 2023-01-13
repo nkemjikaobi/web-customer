@@ -1,0 +1,52 @@
+$box-shadow-var-one: 0 to-rem(4) to-rem(8) 0 rgba(0, 0, 0, 0.12), 0 to-rem(2) to-rem(4) 0 rgba(0, 0, 0, 0.08);
+$box-shadow-var-two: 0 to-rem(-4) to-rem(8) 0 rgba(0, 0, 0, 0.12), 0 to-rem(-2) to-rem(4) 0 rgba(0, 0, 0, 0.08);
+
+%boxShadowVarOne {
+    box-shadow: $box-shadow-var-one;
+}
+
+%boxShadowVarTwo {
+    box-shadow: $box-shadow-var-two;
+}
+
+// Apply a box-shadow effect on hover
+%hoverShadowVarOne {
+    transition: box-shadow 0.4s ease-in-out;
+
+    &:hover {
+        box-shadow: $box-shadow-var-one;
+    }
+}
+
+%scaleOnHover {
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+%shimmer {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeholderShimmer;
+    animation-timing-function: linear;
+
+    background: color(GhostWhite);
+    background-image: linear-gradient(to right, color(GhostWhite) 0%, color(Solitude) 20%, color(GhostWhite) 40%, color(GhostWhite) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: relative;
+}
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: to-rem(-468) 0;
+    }
+
+    100% {
+        background-position: to-rem(468) 0;
+    }
+}

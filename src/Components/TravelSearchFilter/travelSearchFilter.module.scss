@@ -1,0 +1,24 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.travelFilter{
+    width: to-rem(243);
+    background-color: #FDFDFD;
+    padding: to-rem(5 18 20 18);
+    margin-top: to-rem(8);
+    
+    .depatureFilterWrapper,.arrivalFilterWrapper{
+        display: flex;
+        justify-content: space-between;
+        p{
+            font-size: to-rem(14);
+        }
+    }
+
+    label {
+        color: #666565 !important;
+        font-size: to-rem(13);
+    }
+}
+.resultsCount {
+    background-color: #FFDFE2;
+}

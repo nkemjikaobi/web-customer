@@ -1,0 +1,68 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.travelInfo {
+  &_content {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: to-rem(31);
+    padding-bottom: to-rem(71);
+    .left {
+      .form_main {
+        width: to-rem(857);
+      }
+    }
+    .rightTotal {
+      width: to-rem(420);
+      height: 100%;
+      background-color: #fffafa;
+      box-shadow: 0px 2px 5px 0px #0000000d;
+      padding: to-rem(49 25 55 25);
+      .header {
+        font-size: to-rem(16);
+        font-weight: 500;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: to-rem(13);
+      }
+      .total {
+        font-size: to-rem(20);
+        font-weight: 500;
+      }
+    }
+    .directionalButtons {
+      width: to-rem(800);
+      margin: 0 auto;
+      button {
+        width: 100%;
+      }
+      .guestButton {
+        button {
+          background: color(White) !important;
+          color: color(PrimaryLight) !important;
+          margin-top: to-rem(20);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .travelerInfo {
+    .travelInfo_content {
+      justify-content: normal;
+      .rightTotal {
+        display: none !important;
+      }
+      .left,
+      .form_main {
+        width: 100% !important;
+      }
+      .directionalButtons {
+        width: 100%;
+        padding: 0 30px;
+      }
+    }
+  }
+}

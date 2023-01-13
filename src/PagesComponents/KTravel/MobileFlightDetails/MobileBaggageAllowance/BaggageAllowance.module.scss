@@ -1,0 +1,36 @@
+@import "Assets/styles/shared-styles.scss";
+.baggageAllowance{
+    background-color: #F8F9F9;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 13px;
+    padding-right: 16px;
+    margin-bottom: 5px;
+    .dropdownNode{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        .title{
+            span{
+                padding-left: 17px;
+            }
+        }
+    }
+    .dropdownNode.mainNode,.dropdownNode.detailsNode{
+        span{
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+    .dropdownNode.mainNode{
+        span{
+            font-size: 14px;
+        }
+    }
+    .dropdownNode.detailsNode{
+        span{
+            font-size: 12px;
+        }
+    }
+}

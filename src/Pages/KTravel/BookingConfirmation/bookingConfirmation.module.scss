@@ -1,0 +1,56 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.cards {
+    height: 200px;
+    background: #ECECEC;
+
+    .icons {
+        display: flex;
+        padding: to-rem(50);
+        justify-content: space-around;
+    }
+}
+.buttonContainer {
+    margin-left: 52.5rem;
+
+    .printButton {
+        height: 40px;
+        width: 93px; 
+        margin-right: 0.5rem;
+    }
+    .pdfButton {
+        height: 40px; 
+        width: 145px;
+    }
+}
+.phoneNumberContainer {
+    margin-top: 8rem;
+    font-size: 1.5rem;
+}
+.tableContainer {
+    width: 555px;
+    height: 80px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background: #fcfcfc;
+}
+.flightDetails {
+    background: #F26822;
+    height: 3rem;
+}
+.flightDetailsContainer {
+    background: grey; 
+    height: 3rem;
+
+    .pending {
+        color: #F26822;
+    }
+}
+
+.returnHomeButton {
+    width: 58rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    font-size: 14px;
+    color: #fff;
+}

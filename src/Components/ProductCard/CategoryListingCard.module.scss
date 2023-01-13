@@ -1,0 +1,163 @@
+@import "../../Assets/styles/shared-styles.scss";
+.listingCard {
+  cursor: pointer;
+  width: to-rem(165);
+  background-color: color(White);
+  padding-bottom: to-rem(13);
+  @include breakpoint("m") {
+    width: 100%;
+    height: auto;
+  }
+  @include breakpoint-mini("l") {
+    width: to-rem(244);
+    max-height: to-rem(461);
+  }
+  &_top {
+    padding-bottom: to-rem(10);
+    position: relative;
+    .img {
+      position: relative;
+      @include breakpoint-mini("xl") {
+        height: to-rem(234) !important;
+      }
+
+      img {
+        max-height: 100% !important;
+        max-width: 100% !important;
+      }
+      @include breakpoint("s") {
+        max-height: to-rem(142);
+        max-width: to-rem(142);
+      }
+    }
+    .icon {
+      position: absolute;
+      top: to-rem(10);
+      right: to-rem(10);
+      @include breakpoint("s") {
+        right: to-rem(-30);
+      }
+    }
+    .iconWrapper {
+      position: relative;
+      width: to-rem(24);
+      height: to-rem(24);
+      border-radius: 50%;
+      svg {
+        position: absolute;
+        width: to-rem(44.22);
+        height: to-rem(43);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .title {
+      padding: to-rem(0 10);
+      height: to-rem(36);
+      h1 {
+        font-size: to-rem(12);
+        font-weight: 400 !important;
+        border-bottom: to-rem(1) solid color(Whisper);
+        padding: to-rem(10 0);
+      }
+    }
+  }
+  &_bottom {
+    padding: to-rem(0 10);
+    .prices {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: to-rem(1) solid color(Whisper);
+      .discountPrice {
+        font-size: to-rem(16);
+        font-weight: 700;
+        @include breakpoint("s") {
+          font-size: to-rem(12);
+        }
+      }
+      .originalPrice {
+        color: color(QuickSilver);
+        font-size: to-rem(12);
+        font-weight: 400;
+        line-height: to-rem(17);
+        padding: to-rem(5 0 0 0);
+        text-decoration: line-through;
+        @include breakpoint("s") {
+          font-size: to-rem(8);
+        }
+      }
+    }
+    .merchantInfo {
+      font-size: to-rem(11);
+      line-height: to-rem(13);
+      color: color(QuickSilver);
+      span {
+        color: color(ButterflyBush);
+      }
+    }
+    .rating {
+      display: flex;
+      align-items: baseline;
+      @include breakpoint("s") {
+        flex-direction: column;
+      }
+      p {
+        color: color(SteelGrey);
+        font-size: to-rem(12);
+        margin-left: to-rem(4);
+      }
+    }
+    .reviews {
+      display: flex;
+      p {
+        color: color(QuickSilver);
+        font-size: to-rem(12);
+        padding: to-rem(5 0);
+      }
+      .stars {
+        svg {
+        }
+      }
+    }
+  }
+  .button {
+    height: to-rem(49);
+
+    button {
+      border: to-rem(1) solid color(PrimaryLight);
+      color: color(PrimaryLight);
+      font-size: to-rem(16);
+      font-weight: 700;
+      @include breakpoint("s") {
+        padding: 0;
+      }
+    }
+    button:hover {
+      color: color(White);
+    }
+    @include breakpoint("s") {
+      height: to-rem(31);
+    }
+  }
+  &:hover {
+    box-shadow: 0px 3px 5px 0px #00000026;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .title {
+    h1 {
+      white-space: inherit;
+      height: 3em;
+      // width: to-rem(133) !important;
+      border-bottom: none !important;
+    }
+  }
+  .prices {
+    padding-top: 0;
+    .originalPrice {
+      padding-top: 0 !important;
+    }
+  }
+}

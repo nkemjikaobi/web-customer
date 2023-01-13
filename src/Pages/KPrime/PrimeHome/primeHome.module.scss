@@ -1,0 +1,151 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.kongaPrime {
+    margin: 3.125rem 1.875rem 3.125rem 1.875rem;
+    background: white;
+    &__primeBanner {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+    .hidden {
+        display: none;
+    }
+    &__primeSubscription {
+        display: block;
+        margin: 0 2%;
+        .primeSubheader {
+            text-align: center;
+            font-size: to-rem(18);
+            font-weight: 700;
+            padding-top: to-rem(20);
+            margin-bottom: to-rem(27);
+            @include breakpoint-mini('m') {
+                padding-top: to-rem(0);
+                font-size: to-rem(28);
+                line-height: to-rem(52);
+            }
+        }
+        .primeSubscriptionRows {
+            display: block;
+            @include breakpoint-mini('m') {
+                display: block;
+            }
+        }
+
+        .row {
+            @include breakpoint-mini('m') {
+                justify-content: center;
+                display: flex !important;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .primeSubTerms {
+        display: none;
+        @include breakpoint-mini('m') {
+            display: contents;
+        }
+    }
+
+    // Styles for the how it works section
+    &__primeWorks {
+        margin-top: to-rem(50);
+        width: 100%;
+        height: 100%;
+        background: #fffcfd;
+        padding-top: to-rem(36);
+        .primeWorks_Desktop {
+            display: none;
+        }
+
+        @include breakpoint-mini('m') {
+            padding-bottom: to-rem(60);
+            .primeWorks_Mobile {
+                display: none;
+            }
+            .primeWorks_Desktop {
+                display: block;
+                padding: 0 to-rem(32);
+            }
+        }
+        .primeWorks_header {
+            text-align: center;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: to-rem(34);
+        }
+    }
+
+    // Styles for how prime helps its members
+
+    &__primeHelp {
+        width: 100%;
+        height: 100%;
+        @include breakpoint-mini('l') {
+            max-width: to-rem(1109);
+            margin: 0 auto;
+        }
+    }
+    .primeHelpHeader {
+        text-align: center;
+        margin-bottom: to-rem(30);
+        h3 {
+            margin: 0 10%;
+            font-size: to-rem(18);
+            font-weight: 700;
+            line-height: to-rem(24);
+            @include breakpoint-mini('l') {
+                font-size: to-rem(28);
+                line-height: to-rem(52);
+                margin-top: to-rem(60);
+            }
+        }
+    }
+    .primeHelprow {
+        display: block;
+        @include breakpoint-mini('l') {
+            justify-content: space-between;
+            display: flex !important;
+            flex-wrap: wrap;
+        }
+        @include breakpoint('xl') {
+            margin: 0;
+            flex-wrap: wrap;
+            display: flex !important;
+            padding: to-rem(32);
+        }
+    }
+
+    //Styles for prime Terms and Conditions
+    &__primeTerms {
+        width: 100%;
+        height: 100%;
+        background: #fffcfd;
+        padding-top: to-rem(46);
+        text-align: center;
+        margin-bottom: to-rem(50);
+        @include breakpoint-mini('m') {
+            padding: 0 to-rem(32);
+        }
+        .primeTermsWrapper {
+            padding-bottom: to-rem(60);
+            max-width: to-rem(271);
+            margin: 0 auto;
+            text-align: left;
+            @include breakpoint-mini('m') {
+                max-width: to-rem(1047);
+            }
+        }
+        h4 {
+            font-weight: bold;
+            font-size: to-rem(18);
+            line-height: to-rem(24);
+            @include breakpoint-mini('l') {
+                font-size: to-rem(28);
+                line-height: to-rem(52);
+                margin-top: to-rem(60);
+            }
+        }
+    }
+}

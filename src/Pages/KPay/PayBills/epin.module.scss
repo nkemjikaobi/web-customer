@@ -1,0 +1,33 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0rem;
+    form {
+        width: 55%;
+        .cardBody{
+            padding: 2rem;
+        }
+    }
+    .divInput {
+        height: 3rem !important;
+        padding-top: 12px !important;
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        margin: 2rem 0rem;
+        form {
+            width: 100%;
+            .cardBody{
+                padding: 1rem;
+            }
+        }
+    }
+}

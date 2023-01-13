@@ -1,0 +1,61 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.orderItem{
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(23 28 28 20);
+    border-top: to-rem(1) solid color(CornflowerBlueVar2);
+    @include breakpoint('xs'){
+        flex-direction: column;
+    }
+    &_details{
+        display: flex;
+        .imageContainer{
+            cursor: pointer;
+            height: to-rem(100);
+            margin-right: to-rem(20);
+            width: to-rem(100);
+
+        }
+        .textInfo{
+            .title{
+                color: color(SteelGrey);
+                margin: to-rem(0 0 8 0);
+                max-width: to-rem(310);
+                @include breakpoint('s'){
+                    font-size: to-rem(12);
+                }
+            }
+            .price{
+                font-weight: 700;
+                margin: to-rem(0 0 4 0);
+            }
+            .quantity{
+                color: color(SteelGrey);
+                margin: to-rem(0 0 4 0);
+            }
+        }
+    }
+    &_actionButtons{
+        .buyBtn,.cancelBtn,.rateBtn{
+            font-weight: 400;
+            height: 2.5rem;
+            margin-bottom: to-rem(10);
+            width: to-rem(141);
+            @include breakpoint('s'){
+                font-size: to-rem(12);
+                max-width: to-rem(120);
+                height: 2rem;
+                width: 5.5rem;
+            }
+
+        }
+        .buyBtn{
+            background-color: color(PrimaryLight);
+            color: color(White);
+        }
+        .rateBtn, .cancelBtn{
+            background-color: #fde6f2;
+            color: color(PrimaryLight);
+        }
+    }
+}

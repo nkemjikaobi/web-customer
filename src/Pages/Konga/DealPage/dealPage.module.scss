@@ -1,0 +1,85 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.dealPage {
+  padding-bottom: to-rem(40);
+  min-height: 80vh !important;
+  .headerWrapper {
+    margin: to-rem(5) -50%;
+    background-color: #fff;
+    .header {
+      margin: 0 auto;
+      height: to-rem(105);
+      padding: to-rem(30 0 8 0);
+      width: 100vw;
+      @include breakpoint-mini("l") {
+        max-width: to-rem(1440);
+      }
+      h1 {
+        font-size: to-rem(30);
+        font-weight: 500;
+        margin-top: to-rem(16);
+      }
+    }
+  }
+  .bannerContainer {
+    margin-top: to-rem(-35);
+    @include breakpoint("xxl") {
+      padding: to-rem(0 15);
+    }
+  }
+  .banner {
+    height: to-rem(328);
+    margin: to-rem(30 0 40 0);
+  }
+
+  .dealContainer {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+    li {
+      width: 100%;
+      @include breakpoint-mini(l) {
+        width: calc(20% - 1.125rem);
+        float: left;
+        margin-left: 0.9375rem;
+      }
+    }
+  }
+}
+@media screen and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1){
+  .dealPage {
+    .headerWrapper {
+      .header {
+        margin-top: to-rem(20);
+        h1 {
+          padding-left: to-rem(18);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .dealPage {
+    .headerWrapper {
+      .header {
+        display: flex;
+        justify-content: center;
+        margin-top: -1rem;
+        h1 {
+          font-size: 16px;
+          font-weight: 500;
+          padding: to-rem(0);
+        }
+      }
+    }
+    .banner {
+      height: auto;
+      margin: to-rem(10 0 );
+    }
+  }
+}

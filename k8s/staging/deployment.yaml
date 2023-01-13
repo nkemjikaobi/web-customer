@@ -1,0 +1,173 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aphrodite
+  labels:
+    app: aphrodite
+spec:
+  selector:
+    matchLabels:
+      app: aphrodite
+  template:
+    metadata:
+      labels:
+        app: aphrodite
+    spec:
+      nodeSelector:
+        # cloud.google.com/gke-nodepool: backend-stage-preemtpible
+        kubernetes.azure.com/agentpool: backend
+      containers:
+        - image: acrkongastage.azurecr.io/aphrodite:latest
+          name: aphrodite
+          resources:
+            limits:
+              memory: 8192Mi
+              cpu: 500m
+            requests:
+              memory: 512Mi
+          ports:
+            - containerPort: 80
+              protocol: TCP
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+              scheme: HTTP
+            initialDelaySeconds: 20
+            periodSeconds: 60
+
+          # environment variables to be passed to staging
+          env:
+            - name: NODE_ENV
+              value: development
+            - name: REACT_APP_NODE_ENV
+              value: development
+            - name: DEBUG
+              value: '1'
+            - name: PORT
+              value: "80"
+            - name: NODE_PATH
+              value: "."
+            - name: PUBLIC_URL
+              value: https://az-staging-aphrodite.igbimo.com
+            - name: REACT_APP_FIREBASE_API_KEY
+              value: AIzaSyDKcWjYlYXaj78897Z-xnNaK2WZnbmeAbw
+            - name: REACT_APP_FIREBASE_AUTH_DOMAIN
+              value: super-app-v1.firebaseapp.com
+            - name: REACT_APP_FIREBASE_PROJECT_ID
+              value: super-app-v1
+            - name: REACT_APP_FIREBASE_STORAGE_BUCKET
+              value: super-app-v1.appspot.com
+            - name: REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+              value: "1083581267143"
+            - name: REACT_APP_FIREBASE_APP_ID
+              value: 1:1083581267143:web:e3f0db2938bf357aead2e2
+            - name: REACT_APP_GATEWAY_API_ROUTE
+              value: "https://az-staging-silkroad.igbimo.com"
+            - name: REACT_APP_GENERATE_SOURCEMAP
+              value: "false"
+            - name: REACT_APP_MAX_AGE
+              value: "86400"
+            - name: REACT_APP_ALGOLIA_APP_ID
+              value: B9ZCRRRVOM
+            - name: REACT_APP_ALGOLIA_API_KEY
+              value: cb605b0936b05ce1a62d96f53daa24f7
+            - name: REACT_APP_ALGOLIA_QUERY_SUGGESTIONS_INDEX
+              value: staging_query_suggestions_query_suggestions
+            - name: REACT_APP_ALGOLIA_MAIN_PRODUCT_INDEX
+              value: staging_catalog_store_konga_ranking
+            - name: REACT_APP_CLOUDINARY_BASE_IMAGE_URL
+              value: https://staging-konga-com-res.cloudinary.com
+            - name: REACT_APP_FALLBACK_IMAGE
+              value: /image/upload/f_auto,q_auto/assets/images/content/fallback_image.svg
+            - name: REACT_APP_IMAGE_API_URL
+              value: /w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product
+            - name: REACT_APP_IMAGE_SERVICE_URL
+              value: /w_250,h_250,q_auto,f_auto,fl_lossy,dpr_auto
+            - name: REACT_APP_CATEGORIES_IMAGES_BASE_URL
+              value: /image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/
+
+            - name: REACT_APP_ALGOLIA_B2B_PRODUCT_INDEX
+              value: catalog_store_konga_b2b
+            - name: REACT_APP_ALGOLIA_INDEX_PRICE_ASC
+              value: staging_catalog_store_konga_price_asc
+            - name: REACT_APP_ALGOLIA_FILTER_LIMIT
+              value: "50"
+            - name: REACT_APP_KONGA_ONLINE_URL
+              value: "https://staging.konga.com"
+
+            #SDK
+            - name: REACT_APP_KONGA_ONLINE_MERCHANT_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_online_merchant_public_key
+            - name: REACT_APP_KONGA_ONLINE_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_online_merchant_id
+            - name: REACT_APP_KONGA_FOOD_MERCHANT_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_food_merchant_public_key
+            - name: REACT_APP_KONGA_FOOD_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_food_merchant_id
+            - name: REACT_APP_KONGA_EXPRESS_MERCHANT_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_express_merchant_public_key
+            - name: REACT_APP_KONGA_EXPRESS_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_express_merchant_id
+            - name: REACT_APP_KONGA_TRAVEL_MERCHANT_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_travel_merchant_public_key
+            - name: REACT_APP_KONGA_TRAVEL_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_travel_merchant_id
+            - name: REACT_APP_KONGA_PAY_GUEST_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_pay_guest_public_key
+            - name: REACT_APP_KONGA_PAY_GUEST_MERCHANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: konga_pay_guest_merchant_id
+            - name: REACT_APP_KONGA_PAYMENT_MODE
+              value: "test"
+            - name: REACT_APP_WEB_SDK_ENABLE_IFRAME
+              value: "true"
+            - name: REACT_APP_NEW_RELIC_LOG_LEVEL
+              value: "info"
+            - name: REACT_APP_NEW_RELIC_APP_NAME
+              value: "Staging-Aphrodite:SuperApp"
+            - name: REACT_APP_NEW_RELIC_LICENSE_KEY
+              value: "05737f3e8a99cf75de62acbb36ffc75ad3019a62"
+
+              #SPREADSHEET
+            - name: REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supper-app-secret
+                  key: REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY
+            - name: REACT_APP_SPREADSHEET_ID
+              value: "1Ir0dtC6pUFvQMR7lVsMXq-slOTJd1FPwGoTD57aurR0"
+            - name: REACT_APP_SHEET_ID
+              value: "0"
+            - name: REACT_APP_GOOGLE_CLIENT_EMAIL
+              value: "superapp-feedback@konga-production.iam.gserviceaccount.com"

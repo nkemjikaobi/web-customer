@@ -1,0 +1,53 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.recommendations {
+  min-height: 80vh !important;
+  padding-bottom: to-rem(40);
+  .headerWrapper {
+    margin: to-rem(0) -50%;
+    background-color: color(WhisperVarOne);
+    @include breakpoint("m") {
+      background-color: #e5e5e5;
+    }
+    .header {
+      margin: 0 auto;
+      height: to-rem(105);
+      padding: to-rem(30 0 8 0);
+      width: 100vw;
+      @include breakpoint-mini("l") {
+        max-width: to-rem(1440);
+      }
+      @include breakpoint("m") {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: to-rem(30);
+        font-weight: 500;
+        margin-top: to-rem(16);
+        @include breakpoint("m") {
+          font-size: to-rem(16);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .recommendationsContainer {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+    li {
+      width: 100%;
+      @include breakpoint-mini(l) {
+        width: calc(20% - 1.125rem);
+        float: left;
+        margin-left: 0.9375rem;
+      }
+    }
+  }
+}

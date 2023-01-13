@@ -1,0 +1,218 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.productListing_main {
+  display: flex;
+  justify-content: space-between;
+  padding: to-rem(120 0 0 0);
+  padding-bottom: to-rem(30);
+  background-color: color(Grey95);
+  @include breakpoint-mini("l") {
+    padding: to-rem(0 70 30 70);
+    margin-top: to-rem(-370);
+  }
+
+  @include breakpoint-mini("xxxl") {
+    padding: to-rem(0 0 30 0) !important;
+  }
+  .filter {
+    @include breakpoint-mini("l") {
+      margin-right: to-rem(13);
+    }
+    background-color: color(White);
+  }
+  .content {
+    width: 100%;
+    .mobileFilterSortCaller {
+      display: none;
+    }
+    @include breakpoint("l") {
+      padding: to-rem(20 8);
+    }
+    // @include breakpoint("s") {
+    //   margin-top: to-rem(100);
+    // }
+    &_mainContent {
+      background-color: color(White);
+      margin-top: to-rem(12);
+      padding-top: to-rem(5);
+    }
+    .contentHeader {
+      display: flex;
+      justify-content: space-between;
+      .quantityInfo {
+        display: flex;
+        margin: to-rem(0 0 76 20);
+        h2 {
+          font-size: to-rem(14);
+          font-weight: 500;
+          margin-right: to-rem(30);
+        }
+        p {
+          font-size: to-rem(14);
+          font-weight: 400;
+          color: #999999;
+        }
+      }
+    }
+    .sortByFilter {
+      margin-right: to-rem(28);
+    }
+    .productList {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-left: to-rem(20);
+      @include breakpoint("s") {
+        margin-top: to-rem(5);
+      }
+      @include breakpoint("l") {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: to-rem(8);
+        margin-left: 0 !important;
+      }
+      .productCardWrapper {
+        margin: to-rem(0 8 20 00);
+        @include breakpoint("m") {
+          max-width: 48vw;
+          margin-bottom: 0;
+        }
+        @include breakpoint("s") {
+          height: to-rem(333);
+        }
+      }
+    }
+  }
+}
+
+.disabledClassName {
+  background-color: grey-200;
+}
+.mobileFilterHeader,
+.clearApply {
+  display: none;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .headingWrapper {
+    display: none;
+  }
+  .productListing_main {
+    padding-top: 0;
+  }
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    span {
+      font-weight: 500;
+    }
+  }
+  .content {
+    width: 100%;
+    // padding: 20px 5px;
+  }
+  .productList {
+    // margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: to-rem(8);
+    margin-left: 0 !important;
+  }
+  .productCardWrapper {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .servicesContent {
+    margin: 0 0 0 0 !important;
+  }
+  .pagination {
+    ul {
+      width: 100% !important;
+      margin-left: 1rem !important;
+    }
+    li {
+      padding: 0 !important;
+    }
+  }
+  .productListing_main {
+    .mobileFilter {
+      display: block !important;
+      position: fixed;
+      background-color: white;
+      height: 100vh;
+      width: 100%;
+      padding: 0 15px;
+      overflow-x: scroll;
+      top: 0;
+      z-index: 2;
+    }
+    .content {
+      .mobileFilterSortCaller {
+        display: block !important;
+        position: fixed;
+        bottom: 0 !important;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+    .mobileFilterHeader {
+      display: flex;
+      height: to-rem(50);
+      align-items: center;
+      border-bottom: 2px solid #fba100;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      span {
+        margin-left: 1rem;
+        color: #515151;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .mobileFilterHeader.fixed,
+    .clearApply {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      z-index: 1;
+    }
+    .fixed {
+      top: 0;
+    }
+    .clearApply {
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      height: 60px;
+      align-items: center;
+      padding: to-rem(0 15);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+      z-index: 2;
+      .apply,
+      .clearAll {
+        width: 50%;
+        text-align: center;
+      }
+      .apply,
+      .clearAll {
+        border-radius: to-rem(3);
+        padding: 10px 0;
+        span {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .apply {
+        background-color: #ed017f;
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../Assets/styles/shared-styles.scss";
+.pageNotFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: to-rem(100);
+    .content{
+        .pageNotFoundIcon,.header,.message,.homePage{
+            text-align: center;
+        }
+        .pageNotFoundIcon{
+            margin-top: to-rem(70);
+        }
+        .header{
+            font-weight: 500;
+            font-size: to-rem(42);
+            margin-top: to-rem(20);
+            h2{
+                color: #ED017F;
+            }
+        }
+        .message{
+            width: 47%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            p{
+                color: #9B9B9B;
+                font-size: to-rem(22);
+                line-height: to-rem(30);
+            }
+        }
+        .homePage{
+            margin-top: to-rem(20);
+            .homePageInner{
+                background-color: #ED017F;
+                border-radius: to-rem(100);
+                padding: to-rem(10 60);
+                display: inline-block;
+            }
+            span{
+                color: white;
+            }
+        }
+    }
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .message{
+        width: 100% !important;
+        padding: to-rem(0 10);
+    }
+}

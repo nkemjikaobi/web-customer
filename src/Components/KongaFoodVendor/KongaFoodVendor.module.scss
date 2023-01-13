@@ -1,0 +1,47 @@
+@import "../../Assets/styles/shared-styles.scss";
+.wrapper{
+    width: to-rem(360);
+    margin: 0 auto;
+    h4{
+        text-align: center;
+        font-weight: 500;
+        font-size: to-rem(23);
+        line-height: to-rem(22);
+        font-weight: $font-weight-dense;
+        margin-top: to-rem(30)
+    }  
+    p {
+        font-size: to-rem(14);
+        line-height: to-rem(23);
+        text-align: center;
+        margin-top: to-rem(20);
+        padding: 1rem;
+    } 
+    .button {
+        height: to-rem(49);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: to-rem(15);
+
+
+    button {
+      border: to-rem(1) solid color(PrimaryLight);
+      background-color: color(PrimaryLight);
+      color: color(White);
+      font-size: to-rem(19);
+      font-weight: 700;
+      height: to-rem(42);
+      width: to-rem(266);
+      @include breakpoint("s") {
+        padding: 0;
+      }
+    }
+    button:hover {
+      color: color(White);
+    }
+    @include breakpoint("s") {
+      height: to-rem(31);
+    }
+  }
+}

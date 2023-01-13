@@ -1,0 +1,26 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.travelCallback{
+    height: 100vh;
+    text-align: center;
+    .content{
+        display: flex;
+        justify-content: center;
+        padding-top: to-rem(50);
+        .message{
+            padding: to-rem(50 75);
+            box-shadow: to-rem(0 0 6 2) rgba(63, 4, 35, 0.03);
+            p{
+                margin: to-rem(30 30);
+                color: #E40006;
+            }
+            span{
+                background-color: #ED017F;
+                color: white;
+                border-radius: to-rem(3);
+                padding: to-rem(12 64);
+                font-weight: 700;
+            }
+        }
+    }
+}

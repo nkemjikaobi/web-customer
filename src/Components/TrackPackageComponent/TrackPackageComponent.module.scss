@@ -1,0 +1,80 @@
+@import "../../Assets/styles/shared-styles.scss";
+.trackPackage{
+  margin-top: 5%;
+}
+.row{
+  display: flex;
+  justify-content: center;
+}
+.trackPackage {
+    position: relative;
+    width: to-rem(300);
+    height: to-rem(36);
+    // margin: 25px auto 0 auto;
+    svg {
+      position: absolute;
+      fill: color(Black);
+      top: to-rem(23);
+      left: to-rem(18);
+      @include breakpoint-mini("m") {
+        top: to-rem(37);
+        left: to-rem(20);
+      }
+    }
+
+    &_button {
+      position: absolute;
+      top: to-rem(16);
+      right: to-rem(8);
+      width: to-rem(113);
+      font-size: to-rem(12);
+      height: to-rem(35);
+      button {
+        font-size: to-rem(12);
+      }
+      @include breakpoint-mini("m") {
+        top: to-rem(22);
+        height: to-rem(53);
+        right: to-rem(27);
+        width: to-rem(200);
+        font-size: to-rem(16);
+        button {
+          font-size: to-rem(16);
+        }
+      }
+    }
+    input::placeholder {
+      font-size: to-rem(12);
+      padding-left: to-rem(0);
+      @include breakpoint-mini('xxl'){
+        padding-left: to-rem(30);
+      }
+    }
+    @include breakpoint-mini("m") {
+      height: to-rem(77);
+      width: to-rem(660);
+      input {
+        height: to-rem(77) !important;
+      }
+      input::placeholder {
+        padding-left: to-rem(48);
+      }
+    }
+    // @include breakpoint-mini("xl") {
+    //   margin: to-rem(50) auto 0 auto;
+    // }
+}
+.trackPackage_input::placeholder {
+    padding-left: to-rem(48);
+}
+
+@media only screen and (max-width: 996px) and (min-width: 768px) {
+  .trackPackage {
+    margin-top: 10% !important;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 996px) {
+  .trackPackage {
+    margin-top: 5% !important;
+  }
+}

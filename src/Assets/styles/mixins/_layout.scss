@@ -1,0 +1,147 @@
+@mixin flex {
+    display: flex;
+    // Fallback for browsers that don't support flex e.g. Opera Mini
+    @supports not (display: flex) {
+        display: block;
+    }
+}
+
+@mixin inlineFlex {
+    display: inline-flex;
+}
+
+@mixin flexShortHand($value) {
+    flex: $value;
+}
+
+@mixin flexOrder($value) {
+    order: $value;
+}
+
+@mixin flexBasis($value) {
+    flex-basis: $value;
+}
+
+@mixin flexGrow($value) {
+    flex-grow: $value;
+}
+
+@mixin flexShrink($value) {
+    flex-shrink: $value;
+}
+
+@mixin flexWrap($value) {
+    flex-wrap: $value;
+}
+
+@mixin flexAdjust($grow, $shrink) {
+    flex: $grow $shrink;
+}
+
+@mixin flexDirectionRow {
+    flex-direction: row;
+}
+
+@mixin flexDirectionColumn {
+    flex-direction: column;
+}
+
+@mixin alignItemsToStart {
+    align-items: flex-start;
+}
+
+@mixin alignItemsToCenter {
+    align-items: center;
+}
+
+@mixin alignItemsToEnd {
+    align-items: flex-end;
+}
+
+@mixin alignSelfToEnd {
+    align-self: flex-end;
+}
+
+@mixin alignSelfToStart {
+    align-self: flex-start;
+}
+
+@mixin flexDirectionColumnReverse {
+    flex-direction: column-reverse;
+}
+
+@mixin flexDirectionRowReverse {
+    flex-direction: row-reverse;
+}
+
+@mixin alignItemsVertically {
+    align-items: center;
+}
+
+@mixin alignItemsNone {
+    align-items: unset;
+}
+
+@mixin alignSelfToCenter {
+    align-self: center;
+}
+
+@mixin alignContentNone {
+    align-content: unset;
+}
+
+@mixin alignItemsHorizontally {
+    justify-content: center;
+}
+
+@mixin justifyContentStart {
+    justify-content: flex-start;
+}
+
+@mixin spreadItemsApart {
+    justify-content: space-between;
+}
+
+@mixin justifyContentSpaceAround {
+    justify-content: space-around;
+}
+
+@mixin justifyContentSpaceEvenly {
+    justify-content: space-evenly;
+}
+
+@mixin alignContentSpaceAround {
+    align-content: space-around;
+}
+
+@mixin placeholder {
+    &::placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin horizontalPagePaddingReset {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@mixin pageMaxLayout {
+    margin: 0 auto;
+    max-width: $global-max-width;
+
+    @include breakpoint-mini('xxl') {
+        padding-left: to-rem(20);
+        padding-right: to-rem(20);
+    }
+}
+
+@mixin object-fit($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+}
+
+@mixin flexFlow($value) {
+    flex-flow: $value;
+}

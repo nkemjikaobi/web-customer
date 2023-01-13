@@ -1,0 +1,60 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.contactUs {
+  @include breakpoint-mini("m") {
+    width: 50%;
+    background-color: #fbfbfb;
+    padding: 3rem;
+    form div label {
+      margin-top: to-rem(30);
+    }
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      .checkbox {
+        display: flex;
+        align-items: center;
+        margin-top: to-rem(16);
+        .checkBoxInput {
+          & > div {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-right: to-re(10);
+          }
+          & > div > label {
+            display: block;
+            margin-left: to-rem(10);
+          }
+        }
+        p {
+          color: color(DavyGrey);
+          margin-left: to-rem(10.33);
+        }
+      }
+      button {
+        width: 40%;
+      }
+    }
+  }
+  padding: 1px 15px;
+  padding-bottom: 5rem;
+
+  .howCaWeHelp {
+    padding: 15px 1px;
+    span {
+      font-weight: 500;
+      font-size: 23px;
+      text-transform: capitalize;
+    }
+  }
+  .yourMessage {
+    textarea {
+      height: 100px;
+    }
+  }
+  .sendMessage {
+    padding-top: 15px;
+  }
+}

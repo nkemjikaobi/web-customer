@@ -1,0 +1,27 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.bannerImage {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.bannerMobile {
+    height: 100%;
+}
+
+.bannerDesktop {
+    display: none;
+}
+
+@include breakpoint-mini('m') {
+    .bannerMobile {
+        display: none;
+    }
+
+    .bannerDesktop {
+        display: block;
+        height: 100%;
+        padding: to-rem(5 15);
+    }
+}

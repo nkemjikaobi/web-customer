@@ -1,0 +1,86 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: to-rem(100 0 48 0);
+}
+.loginCard {
+ 
+  height: to-rem(680);
+  @include breakpoint-mini('l'){
+    width: to-rem(640);
+    padding: to-rem(65 109 35 109);
+    border: 1px solid #90909033;
+  }
+  margin: 0 auto;
+  padding: to-rem(65 16 35 16);
+  background-color: color(White);
+  h1 {
+    font-size: to-rem(20);
+    margin-bottom: to-rem(30);
+  }
+  .input {
+    margin-bottom: to-rem(20);
+  }
+  .forgotPasswordLink {
+    margin: to-rem(22 0 26 0);
+    .link {
+      color: color(PrimaryLight);
+      margin-left: to-rem(11.33);
+    }
+  }
+  .button {
+    height: to-rem(48);
+  }
+  &FormDivider {
+    margin-top: to-rem(30);
+  }
+  .bottomIcons {
+    display: flex;
+    justify-content: center;
+    .icons {
+      margin: to-rem(17 20.5 0 0);
+    }
+  }
+  .bottomLink {
+    margin-top: to-rem(35);
+    text-align: center;
+    a {
+      color: color(PrimaryLight);
+    }
+  }
+}
+.errorPadding {
+  padding-top: 2.0625rem !important;
+}
+.backWrapper{
+  display: none;
+}
+
+.loginNotificationBase{
+  position: fixed;
+  right: -330px;
+  top: 105px;
+  z-index: 9;
+}
+
+.loginNotificationShow{
+  right: 0;
+  transition-duration: .5s;
+}
+.loginNotificationRemove{
+  right: -330px;
+  transition-duration: .5s;
+}
+
+@media screen 
+and (min-device-width: 320px) 
+and (max-device-width: 767px) 
+and (-webkit-min-device-pixel-ratio: 1){
+  .backWrapper{
+    display: block;
+    padding-left: 12px;
+    padding-top: 24px;
+  }
+}

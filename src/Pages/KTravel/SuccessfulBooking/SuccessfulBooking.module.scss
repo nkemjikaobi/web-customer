@@ -1,0 +1,125 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.successfulBooking{
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        margin: 43px 15px 43px 15px;
+        .action{
+            background-color: #F5F5F5;
+            color: #ED017F;
+            padding: 4px 16px;
+            border-radius: 4px;
+        }
+        .action,.right_actions{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .successContent{
+        border: 1px solid #ccc;
+        margin: 0 50px 0 50px;
+        border-radius: 4px;
+        padding: 25px 0 0 8px;
+        .contentPanel{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .bookRefPanel{
+            display: flex;
+            justify-content: space-between;
+            .refPanel{
+                .refDetails{
+                    .dark{
+                        background-color: #EFEFEF;
+                        .darkData{
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+                    }
+                    th{
+                        color: #555555;
+                        font-weight: 500;
+                        font-size: 16px;
+                        padding-left: 16px;
+                        padding-right: 32px;
+                    }
+                    td{
+                        color: #3D8081;
+                        font-weight: 400;
+                        font-size: 14px;
+                        padding-left: 16px;
+                        padding-right: 50px;
+                    }
+                }
+            }
+        }
+        .successBody{
+            .adjustLeft{
+                margin-left: -8px !important;
+            }
+            .header,.content{
+                padding: 6px 0 6px 0;
+            }
+            .pink{
+                background-color: #FFFAFA;
+                .heading{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+            .dark{
+                background-color: #EFEFEF;
+                span{
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .flightHeader{
+                text-align: center;
+                span{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+            .planeIcon{
+                margin-left: 24px;
+                margin-right: 18px;
+            }
+            .multiHeader{
+                display: flex;
+            }
+            .flightDetails{
+                align-items: center;
+            }
+            .itinerary,.paxDetails,.contact,.payment{
+                display: flex;
+            }
+            .spaceBetween{
+                justify-content: space-between;
+            }
+            .column{
+                width: 100%;
+                .details{
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+            .right{
+                text-align: right;
+            }
+            .airlinePane{
+                span{
+                    margin-left: 20px;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+            .terms{
+                .termsBold{
+                    font-weight: 700;
+                }
+            } 
+        }
+    }
+}

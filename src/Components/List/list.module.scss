@@ -1,0 +1,432 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+$category_header: 'https://res.cloudinary.com/staging-konga-com/image/upload/f_auto,q_auto/assets/images/homepage/category_icons.png';
+
+// Custom grid dimensions for product listing grid
+// Desktop and larger screens
+$listing-grid-container-large: (
+    columns: 15,
+    gutter: to-rem(15),
+    media: map-get($breakpoints, 'l'),
+);
+
+// Tablets
+$listing-grid-container-medium: (
+    columns: 12,
+    gutter: to-rem(20),
+);
+
+//Mobile Phones
+$listing-grid-container-small: (
+    columns: 12,
+    gutter: to-rem(10),
+);
+
+/* Styling for ProductList component */
+$block-className: list;
+
+.listContainer {
+    // @include grid-media($listing-grid-container-large) {
+    //     @include grid-container($listing-grid-container-large);
+    // }
+    width: 100%;
+    margin: to-rem(15) auto;
+
+    @include breakpoint('s') {
+        margin: to-rem(-5) auto 0;
+    }
+}
+
+.#{$block-className} {
+    @include inline-list($margin: to-rem(0), $opposite-float: left);
+
+    &Item {
+        // @include grid-media($listing-grid-container-large) {
+        //     @include grid-column(3, $listing-grid-container-large);
+        // }
+
+        // @include breakpoint('l') {
+        //     @include grid-column(4, $listing-grid-container-medium);
+        // }
+
+        // @include breakpoint('m') {
+        //     @include grid-column(6, $listing-grid-container-medium);
+        // }
+
+        // @include breakpoint('s') {
+        //     @include grid-column(6, $listing-grid-container-small);
+        // }
+
+        background-color: color(White);
+        list-style-type: none;
+        margin-top: to-rem(15);
+    }
+}
+
+.horizontalContainer {
+   display: flex;
+    overflow-x: auto;
+    padding-bottom: to-rem(10);
+
+    // .#{$block-className}Item {
+    //     @extend %noFlexShrink;
+    // }
+}
+
+.fourColumn {
+    width: 100%;
+
+    @include breakpoint-mini('l') {
+        margin-left: to-rem(-4);
+        width: 101%;
+        width: calc(100% + #{to-rem(8)});
+    }
+
+    // .#{$block-className}Item {
+    //     @include grid-column(3, $listing-grid-container-medium);
+
+    //     @include breakpoint('l') {
+    //         @include grid-column(4, $listing-grid-container-medium);
+    //     }
+
+    //     @include breakpoint-mini('m') {
+    //         margin-top: to-rem(20);
+    //     }
+
+    //     @include breakpoint('m') {
+    //         @include grid-column(6, $listing-grid-container-medium);
+    //     }
+
+    //     @include breakpoint('xs') {
+    //         @include grid-column(12, $listing-grid-container-medium);
+    //     }
+    // }
+}
+.fourColumnShrunk {
+    width: 100%;
+
+    @include breakpoint-mini('l') {
+        width: 101%;
+        width: calc(100% + #{to-rem(18)});
+    }
+
+    // .#{$block-className}Item {
+    //     @include grid-column(12, $listing-grid-container-medium);
+
+    //     @include breakpoint-mini('xs') {
+    //         @include grid-column(6, $listing-grid-container-medium);
+    //     }
+
+    //     @include breakpoint-mini('m') {
+    //         margin-top: to-rem(20);
+    //     }
+
+    //     @include breakpoint-mini('l') {
+    //         @include grid-column(4, $listing-grid-container-medium);
+    //     }
+
+    //     @include breakpoint-mini('xl') {
+    //         @include grid-column(3, $listing-grid-container-medium);
+    //     }
+
+    //     @include breakpoint-mini('xxxl') {
+    //         @include grid-column(3, $listing-grid-container-large);
+    //     }
+    // }
+}
+
+// To allow for the overflowing content effect on listing page
+.list.listing {
+    overflow: visible;
+}
+
+// Listing and deal card items need to be full width and single column at mobile dimensions
+.listItem.listing,
+.listItem.deals {
+    @include breakpoint('s') {
+        // @include grid-column(12, $listing-grid-container-medium);
+        max-width: 100;
+
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: to-rem(8);
+        width: 100%;
+    }
+}
+
+
+.sectionHeaderContainer {
+   align-items: center;
+    display: flex;
+    background: color(Grey29) url(#{$category_header}) no-repeat;
+    border-radius: to-rem(5 5 0 0);
+    height: to-rem(40);
+    margin-top: to-rem(15);
+    padding: to-rem(0 10);
+
+    @include breakpoint-mini('l') {
+        height: to-rem(50);
+        margin-top: to-rem(20);
+        padding: to-rem(0 15);
+    }
+
+    &Plain {
+        background: color(White);
+        border-bottom: to-rem(1) solid color(MercuryVarOne);
+    }
+}
+
+.sectionHeader {
+    color: color(White);
+    font-size: to-rem(20);
+    letter-spacing: to-rem(0.5);
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 70%;
+
+    @include breakpoint('m') {
+        font-size: to-rem(16);
+        margin-left: to-rem(0);
+    }
+
+    @include breakpoint('s') {
+        font-size: to-rem(14);
+        margin-left: to-rem(0);
+    }
+
+    &Plain {
+        color: color(Black);
+    }
+}
+
+.sectionHeaderLink {
+    color: color(PrimaryVarTwo);
+    display: inline-block;
+    font-size: to-rem(13);
+    font-weight: $font-weight-dense;
+    letter-spacing: to-rem(0.5);
+    margin-left: to-rem(46);
+    padding-bottom: to-rem(3);
+
+    @include breakpoint('s') {
+        font-size: to-rem(11);
+        margin-left: auto;
+    }
+}
+
+.sectionHeaderLink:hover {
+    text-decoration: underline;
+}
+
+.staticListItem {
+    list-style-type: none;
+    border: to-rem(1) solid color(Whisper);
+    margin-bottom: to-rem(40);
+    margin-left: to-rem(18);
+    width: 25%;
+    width: calc(25% - 1.125rem);
+
+    @include breakpoint('m') {
+        margin: to-rem(0 0 8 10);
+        width: 50%;
+        width: calc(50% - 1.125rem);
+    }
+
+    @include breakpoint('s') {
+        width: 50%;
+        width: calc(50% - 0.925rem);
+    }
+    &:hover{
+        box-shadow: 0px 3px 5px 0px #00000026;
+    }
+}
+.staticListItem:first-child{
+    margin-left: 0;
+}
+
+.spearIcon {
+    display: none;
+
+    @include breakpoint('s') {
+        display: inline-block;
+        margin-left: to-rem(9);
+    }
+}
+
+.mobileShrunk {
+    @include breakpoint('s') {
+        padding: 0 to-rem(10);
+
+        .list {
+            .listItem {
+                // @include grid-column(6, $listing-grid-container-small);
+                max-width: 100vw;
+                width: calc(50% - #{to-rem(5)});
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("s") {
+    .hideMobileRecs {
+        display: none;
+    }
+}
+
+@include breakpoint-mini("m") {
+    .hideDesktopRecs {
+        display: none;
+    }
+}
+
+.recCardWrapper {
+    background-color: color(White);
+    border-radius: to-rem(0 0 5 5);
+
+    @include breakpoint-mini('m') {
+        padding: 0 0 to-rem(5) 0;
+    }
+
+    &Plain {
+        @include breakpoint-mini('m') {
+            padding: to-rem(7.5);
+        }
+    }
+
+    .listItem {
+        box-shadow: 0 0 to-rem(8) transparentize(color(Black), 0.95);
+
+        @include breakpoint-mini('m') {
+            &Trending {
+                margin: to-rem(7.5);
+                width: calc(100% / 3);
+                width: calc((100% / 3) - 0.9375rem);
+            }
+        }
+
+        @include breakpoint('s') {
+            margin-top: to-rem(10);
+        }
+    }
+}
+
+.promoCardWrapper {
+    margin: 0 to-rem(-10);
+
+    @include breakpoint-mini('m') {
+        margin: 0 to-rem(0);
+    }
+
+    .horizontalContainer {
+        padding: 0;
+    }
+
+    .listItem {
+        border-radius: to-rem(5);
+        margin-top: 0;
+    }
+}
+
+.popularCategoryWrapper {
+    @include breakpoint-mini('m') {
+        padding: 0 0 to-rem(15);
+    }
+
+    @include breakpoint('s') {
+        .listItem {
+            border: to-rem(1) solid transparentize(color(Black), 0.95);
+            border-width: to-rem(1 0 0 1);
+            box-shadow: none;
+            margin: 0;
+            width: 50%;
+        }
+    }
+}
+
+.listCarousel {
+    margin: to-rem(20) 0 0 0;
+    width: 100%;
+
+    @include breakpoint-mini('xxl') {
+        margin-left: to-rem(19.2);
+        width: calc(100% - 1.2rem);
+    }
+
+    @include breakpoint-mini('xl') {
+        margin-left: to-rem(19.2);
+        width: calc(100% - 1.2rem);
+    }
+
+    @include breakpoint-mini('l') {
+        width: calc(100% - 1.2rem);
+    }
+
+    @include breakpoint('m') {
+        width: 57%;
+    }
+
+    @include breakpoint('s') {
+        width: 45.5%;
+    }
+
+    @include breakpoint('xs') {
+        width: 34.5%;
+    }
+
+    .listCarouselInlineWrapper {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-box;
+        max-height: to-rem(332);
+        overflow-y: hidden;
+
+        @include breakpoint('s') {
+            margin-bottom: to-rem(15);
+            max-height: to-rem(204);
+        }
+    }
+
+    .listCarouselItem {
+        background: color(White);
+        display: block;
+        width: 100%;
+
+        @include breakpoint-mini('m') {
+            margin-left: to-rem(20);
+            width: calc(40.4% - 1.875rem);
+        }
+
+        @include breakpoint-mini('l') {
+            margin-left: to-rem(15);
+            width: calc(35.4% - 1.66667rem);
+        }
+
+        @include breakpoint-mini('xl') {
+            margin-left: to-rem(20);
+            width: calc(20.8% - 1.5625rem);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        @include breakpoint-mini('xxl') {
+            margin-left: to-rem(20);
+            width: calc(25.8% - 1.5625rem);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        @include breakpoint-mini('xxxl') {
+            margin-left: to-rem(15);
+            width: calc(20.4% - 1.125rem);
+        }
+    }
+}

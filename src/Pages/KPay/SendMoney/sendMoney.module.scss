@@ -1,0 +1,126 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.sendMoney {
+  width: 100%;
+  @include breakpoint-mini("m") {
+    width: to-rem(1080);
+    display: flex;
+  }
+  margin: 0 auto;
+  padding: to-rem(49 0 127 0);
+  &_Form {
+    border: 1px solid black;
+    background-color: color(White);
+    width: 100%;
+
+    padding: to-rem(36 36 41 36);
+    border: 1px solid rgba(144, 144, 144, 0.2);
+    border-radius: to-rem(3);
+    @include breakpoint-mini("m") {
+      width: to-rem(500);
+    }
+    input[type="number"],
+    select {
+      width: 100%;
+      height: to-rem(48);
+      border-color: color(Whisper);
+    }
+    label {
+      color: color(DavyGrey);
+    }
+    .checkbox {
+      display: flex;
+      margin-top: to-rem(16);
+      .checkBoxInput {
+        & > div {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          margin-right: to-re(10);
+        }
+        & > div > label {
+          display: block;
+          margin-left: to-rem(10);
+        }
+      }
+      p {
+        color: color(DavyGrey);
+        margin-left: to-rem(10.33);
+      }
+    }
+    .selectBankRow{
+      position: relative;
+    }
+    .spinner{
+        position: absolute;
+        top: 70%;
+        z-index: 5;
+        right: 2rem;
+        transform: translateY(-50%);
+    }
+  }
+  .button {
+    height: to-rem(46);
+    margin-top: to-rem(50);
+    @include breakpoint-mini("m") {
+      width: to-rem(428);
+    }
+  }
+  &_savedBeneficiary {
+    background-color: color(White);
+    width: 100%;
+    height: to-rem(464);
+    border: 1px solid rgba(144, 144, 144, 0.2);
+    margin: to-rem(100 0 0 0);
+    @include breakpoint-mini("m") {
+      margin: to-rem(0 0 0 20);
+      width: to-rem(530);
+    }
+
+    .heading {
+      border-bottom: 1px solid color(WhisperVarOne);
+      border-radius: to-rem(6);
+      h1 {
+        font-size: to-rem(16);
+        font-weight: 400;
+        padding: to-rem(24 0 30 35);
+      }
+    }
+    .content {
+      padding: to-rem(16 59 33 59);
+      .info {
+        margin-top: to-rem(102);
+        text-align: center;
+        p {
+          padding-top: to-rem(28);
+          color: color(DavyGrey);
+        }
+      }
+    }
+  }
+}
+
+.benficiaryInfoCard {
+  display: flex;
+  padding: to-rem(16);
+  background-color: #fbfbfb;
+  .icon {
+    width: to-rem(48);
+    height: to-rem(48);
+    border-radius: 50%;
+    background-color: rgba(243, 105, 35, 0.1);
+    text-align: center;
+    svg {
+      margin-top: to-rem(12);
+    }
+  }
+  .beneficiaryInfo {
+    margin: to-rem(5 0 0 16);
+    h1 {
+      font-size: to-rem(14);
+    }
+    p {
+      font-size: to-rem(12);
+      color: color(DavyGrey);
+    }
+  }
+}

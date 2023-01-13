@@ -1,0 +1,198 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.breadcrumb {
+    background: #ECECEC;
+    margin-bottom: to-rem(40);
+    padding-bottom: to-rem(20);
+}
+
+.header {
+    background-color: color(black);
+    background-image: url("../../../Assets/images/png/Rectangle 44.png");
+    border-radius: to-rem(4);
+    height: to-rem(504);
+    @include breakpoint-mini("xxxl") {
+        margin: 0 -12.5%;
+    }
+    &_Text {
+        text-align: center;
+        padding-top: to-rem(120);
+        h1 {
+            font-size: to-rem(60);
+            font-style: normal;
+            font-weight: bold;
+            line-height: to-rem(73);
+            color: color(white);
+        }
+        p {
+            font-size: to-rem(20);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .sellButton {
+            width: to-rem(228);
+            margin-top: to-rem(40);
+            color: color(white) !important;
+            border: 1px solid color(PrimaryLight) !important;
+            background-color: color(PrimaryLight);
+        }
+    }
+}
+.sell_benefits {
+    padding-top: to-rem(70);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #484848;
+    margin-bottom: to-rem(50);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: to-rem(22);
+}
+.items {
+  height: 349px;
+  background: rgba(230, 206, 220, 0.13);
+  border-radius: 5px;
+  margin-bottom: to-rem(25);
+  padding: to-rem(50);
+  text-align: left;
+  h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: to-rem(20);
+    line-height: to-rem(24);
+    color: #444D56;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: to-rem(16);
+    line-height: to-rem(19);
+    color: rgba(68, 77, 86, 0.7);
+  }
+}
+.testimonals_header {
+    font-weight: normal;
+    font-size: to-rem(40);
+    line-height: to-rem(48);
+    text-align: center;
+    color: #484848;
+    padding: 40px 0px 40px 0px;
+    margin-top: to-rem(25);
+}
+.testimonals {
+    background-color: #fffcfd;
+    padding-bottom: 80px;
+    .quote {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+        color: rgba(54, 54, 54, 0.9);
+        margin: 100px 30px 30px 30px;
+        width: 88%;
+    }
+    .testimonial_name {
+        text-align: center;
+        font-weight: 1000;
+    }
+    .testimonalPic {
+        height: to-rem(430);
+    }
+}
+
+.how_it_work {
+    background: #fbfbfb;
+    padding-bottom: 1px;
+    h5 {
+        color: color(black);
+        font-size: to-rem(18);
+        padding-left: to-rem(30);
+        padding-top: to-rem(40);
+        font-style: normal;
+        font-weight: bold;
+        span {
+            color: color(PrimaryLight);
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+    p {
+        font-size: to-rem(14);
+        line-height: 250.8%;
+        color: #363636;
+        padding-left: to-rem(30);
+    }
+}
+
+.how_it_work_header {
+    font-size: to-rem(40) !important;
+    line-height: to-rem(48) !important;
+    text-align: center !important;
+    color: #484848 !important;
+    padding-top: to-rem(70) !important;
+    padding-bottom: to-rem(25);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.downButton {
+    background: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: to-rem(120);
+    padding-top: to-rem(50);
+    width: to-rem(200);
+    margin: 50px auto;
+    button {
+        width: to-rem(229);
+    }
+}
+.getStartedButton {
+    width: to-rem(228);
+    margin-top: to-rem(40);
+    color: color(white) !important;
+    border: 1px solid color(PrimaryLight) !important;
+    background-color: color(PrimaryLight);
+}
+.getStartedButton:hover {
+    color: color(white) !important;
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .header {
+        height: to-rem(600);
+    }
+    .container {
+        display: block;
+      }
+      .testimonals {
+        .quote {
+            margin: 70px 30px 30px 30px;
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .items {
+        padding: to-rem(20);
+    }
+}
+
+  @media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1199px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .items {
+        padding: to-rem(40);
+    }
+}

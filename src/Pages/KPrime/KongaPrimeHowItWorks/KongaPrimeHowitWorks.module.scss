@@ -1,0 +1,30 @@
+@import "../../../Assets/styles/shared-styles.scss";
+$inactive-color: #d8d8d8;
+$active-color: black;
+
+.container {
+    border-bottom: to-rem(2) solid $inactive-color;
+    color: $inactive-color;
+    cursor: pointer;
+    font-size: to-rem(24);
+    font-weight: 500;
+    line-height: to-rem(28);
+    padding: to-rem(0 10 11.7 10);
+
+    h1 {
+        margin: 0;
+        font-size: to-rem(24);
+    }
+
+    @include breakpoint('l') {
+        font-size: to-rem(18);
+        line-height: to-rem(24);
+        padding: to-rem(0);
+    }
+}
+
+.active {
+    border-bottom: to-rem(2) solid $active-color;
+    color: $active-color;
+    cursor: pointer;
+}

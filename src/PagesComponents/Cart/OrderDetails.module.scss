@@ -1,0 +1,55 @@
+@import "../../Assets/styles/shared-styles.scss";
+.right {
+  @include breakpoint-mini("l") {
+    margin-left: to-rem(20);
+  }
+  .orderDetails {
+    max-height: 80% !important;
+    border: 1px solid #1b000c14;
+    background: color(White);
+    margin-bottom: to-rem(20);
+    @include breakpoint-mini("l") {
+      width: to-rem(420);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #1b000c14;
+      h1 {
+        padding: to-rem(18 0 18 28);
+        font-size: to-rem(16);
+        font-weight: 700;
+      }
+      a {
+        font-size: to-rem(12);
+        padding: to-rem(22 40 22 0);
+        &:hover {
+            color: color(PrimaryLight) !important;
+        }
+      }
+    }
+    .items {
+      overflow-y: scroll;
+      height: 60%;
+    }
+    .summary {
+      padding: to-rem(30 31 38 31);
+      .subTotal,
+      .deliveryFee,
+      .total {
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(10 0);
+      }
+    }
+  }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .right{
+      padding-bottom: to-rem(95);
+    }
+}

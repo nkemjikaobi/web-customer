@@ -1,0 +1,170 @@
+@import "../../Assets/styles/shared-styles.scss";
+.itemDetailsCard {
+  display: flex;
+  justify-content: space-between;
+  padding: to-rem(16 0 46 10);
+  @include breakpoint('s'){
+    padding: to-rem(16 0 46 0);
+  }
+  .mobileOnly{
+    padding: 0;
+  }
+  .productCard {
+    @include breakpoint-mini("xs") {
+    }
+  }
+  .image {
+    min-width: to-rem(110);
+    height: to-rem(90);
+  }
+  .productInfo {
+    margin-left: to-rem(8);
+    font-size: to-rem(16);
+    max-width: to-rem(201);
+    h6 {
+      font-size: to-rem(16);
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    p {
+      font-size: to-rem(12);
+      margin-top: to-rem(8);
+      span {
+        color: rgb(47, 13, 196);
+      }
+    }
+  }
+  .price {
+    .priceInfo {
+      font-size: to-rem(18);
+      font-weight: 700;
+    }
+    .btmPriceInfo {
+      font-size: to-rem(14);
+      font-weight: 400;
+      color: color(SuvaGrey);
+    }
+  }
+  .saveItem {
+    display: flex;
+    cursor: pointer;
+    .iconWrapper {
+      position: relative;
+      width: to-rem(16);
+      height: to-rem(16);
+      border-radius: 50%;
+      > svg {
+        position: absolute;
+        width: to-rem(24);
+        height: to-rem(24);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .removeItem {
+    display: flex;
+    margin-top: to-rem(-15);
+    margin-left: to-rem(-6);
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .itemDetailsCard{
+    display: block;
+  }
+  .row{
+    margin: 0 !important;
+  }
+  .image{
+    padding-left: to-rem(16);
+  }
+  .numberOfDelivery {
+    background-color: #e8e8e8;
+    color: color(black);
+    height: to-rem(40);
+    margin-bottom: to-rem(15);
+    padding: 0.5rem 1rem;
+  }
+  .productCard {
+    justify-content: space-between;
+  }
+  .productInfo {
+    width: 60%;
+  }
+  .quantityContainer {
+    width: 60%;
+    margin-top: to-rem(20);
+    padding-left: 16px;
+    .quantity {
+      p {
+        font-weight: 400 !important;
+        color: #50545b !important;
+        font-size: to-rem(10) !important;
+      }
+    }
+  }
+  .priceContainer {
+    margin-top: to-rem(-40);
+      margin-left: -20%;
+    .price {
+      .priceInfo p:first-child {
+        color: #4a4a4a !important;
+        font-size: to-rem(15) !important;
+        font-weight: 700 !important;
+      }
+      .btmPriceInfo p:first-child {
+        color: #9b9b9b !important;
+        font-size: to-rem(8) !important;
+        font-weight: 400 !important;
+      }
+    }
+  }
+  .productIconsContainer {
+    border-top: 1px solid #e8e8e8;
+    margin-top: to-rem(25);
+    margin-left: to-rem(5);
+    @include breakpoint('s'){
+      margin-left: to-rem(0);
+    }
+  }
+  .productIcons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: to-rem(20);
+    @include breakpoint('s'){
+      padding: to-rem(0 8);
+    };
+  }
+  .removeItem {
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 1.9rem;
+    border-radius: to-rem(3);
+    margin-top: 0rem !important;
+    padding: 0rem 0rem 0.4rem 0rem;
+    button {
+      padding: 0rem !important;
+      @include breakpoint("s") {
+        border: 0px !important;
+      }
+    }
+  }
+  .saveItem {
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 1.9rem;
+    border-radius: to-rem(3);
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.payment{
+    .heading{
+        background: #475F7E0D;
+        box-shadow: 0px 2px 4px 0px #0000000D;
+        h1{
+            font-size: to-rem(24);
+            font-weight: 400;
+            padding: to-rem(32 30);
+        }
+    }
+    .policy{
+        margin: to-rem(30);
+        font-size: to-rem(14);
+        span{
+            color: #1D8BC3;
+        }
+    }
+
+}

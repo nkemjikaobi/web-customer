@@ -1,0 +1,17 @@
+@import "/src/Assets/styles/shared-styles.scss";
+
+.footerIconWrapper {
+  position: relative;
+  width: to-rem(42);
+  height: to-rem(42);
+  border-radius: 50%;
+  background-color: color(NightRider);
+  .img > a {
+    > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

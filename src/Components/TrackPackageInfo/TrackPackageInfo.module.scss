@@ -1,0 +1,33 @@
+@import "../../Assets/styles/shared-styles.scss";
+.trackPackageInfo{
+    display: flex;
+
+    .checkmarkWrapper{
+        width: to-rem(24);
+        height: to-rem(24);
+        text-align: center;
+        color: color(White);
+        background-color: color(PrimaryLight);
+        border-radius: 50%;
+        margin-right: to-rem(24);
+    }
+    .dashedLine{
+        height: to-rem(90);
+        border-right: to-rem(1) dashed black;
+        width: to-rem(1);
+        margin-left: to-rem(11);
+    }
+    .right{
+        .heading{
+            font-weight: 700;
+            color: #606060;
+        }
+        .date{
+            font-size: to-rem(12);
+            font-weight: 700;
+            color: #030E1A;
+
+        }
+    }
+
+}

@@ -1,0 +1,172 @@
+@import "../../../../../Assets/styles/shared-styles.scss";
+
+.accountLayoutContent {
+  border: 1px solid color(Whisper);
+  width: 95%;
+  height: 100%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 6px 1px rgba(63, 4, 35, 0.03);
+  @include breakpoint("s") {
+    width: 100%;
+  }
+}
+
+.orderDetail {
+  background-color: color(White);
+  min-height: to-rem(650);
+  position: relative;
+  width: 100%;
+  &_header {
+    border-bottom: to-rem(1) solid color(CornflowerBlueVar2);
+    display: flex;
+    padding-left: to-rem(25);
+    padding-top: 0.7rem;
+    padding-bottom: 0.8rem;
+    @include breakpoint("s") {
+      padding-left: 1rem;
+    }
+    .content {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      svg {
+        cursor: pointer;
+        margin-right: 0.6rem;
+      }
+      h1 {
+        color: color(OxfordBlue);
+        font-size: to-rem(12);
+        margin: to-rem(14 0 14 17);
+        @include breakpoint-mini("m") {
+          font-size: to-rem(14);
+        }
+      }
+    }
+  }
+  .orderNumber {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    height: to-rem(58);
+    .status {
+      font-size: 16px;
+      line-height: 23px;
+      color: #33B27B;
+      padding: 0.4rem 1rem 1.8rem 1rem;
+      background: #E3FFF3;
+      border-radius: 4px;
+      margin-left: 3%;
+    }
+    p {
+      font-size: 25px;
+      line-height: 127.8%;
+      color: #000000;
+    }
+  }
+  &_mainContent {
+    .details {
+      border: 1px solid #EBEBEB;;
+      display: flex;
+      justify-content: space-between;
+      .restaurantDetails {
+        padding: to-rem(30 44 30 31);
+        width: 50%;
+        border-right: 1px solid #EBEBEB;
+        h1 {
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #828585;     
+        }
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 127.8%;
+          color: #000000;
+        }
+      }
+      .customerDetails {
+        padding: to-rem(30);
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        text-align: end;
+        h1 {
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #828585;
+          font-weight: 500;  
+        }
+        span {
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #828585;     
+        }
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 127.8%;
+          color: #000000;
+        }
+      }
+    }
+    .orderedItemDetail{
+      display: flex;
+      justify-content: space-between;
+      padding: to-rem(30);
+      span {
+        font-size: 14px;
+        line-height: 127.8%;
+        color: #828585;     
+      }
+      .delivery{
+        width: 50%;
+        h1 {
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #828585; 
+          font-weight: 500;
+        }
+      }
+      .date {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
+        h1 {
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #828585; 
+          font-weight: 500;
+        }
+      }
+    }
+    .items{
+      h1 {
+        font-size: 15px;
+        line-height: 127.8%;
+        color: #828585; 
+        padding: to-rem(30);
+        font-weight: 500;
+      }
+      background: #FAFAFA;
+      padding-top: to-rem(30);
+      span {
+        font-size: 14px;
+        line-height: 127.8%;
+        color: #828585; 
+      }
+      .item {
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(30);
+        border-bottom: 1px solid #EBEBEB;;
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 127.8%;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+

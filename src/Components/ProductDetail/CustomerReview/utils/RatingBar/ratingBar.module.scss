@@ -1,0 +1,33 @@
+@import "../../../../../Assets/styles/shared-styles.scss";
+
+.ratingBar{
+    display: flex;
+    margin-top: to-rem(-20);
+    .section {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      padding: 1rem !important;
+    }
+    progress[value] {
+        /* Reset the default appearance */
+        -webkit-appearance: none;
+         appearance: none;
+         margin-left: to-rem(7);
+        height: to-rem(8);
+        border-radius: to-rem(2);
+        @include breakpoint-mini('m'){
+          width: 250px;
+        }
+      }
+    progress[value]::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+    progress[value]::-webkit-progress-value {
+        background-color: #E09B3D;
+        // background-image:  
+      }
+}

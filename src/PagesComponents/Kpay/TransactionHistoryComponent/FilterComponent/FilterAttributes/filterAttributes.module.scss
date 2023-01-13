@@ -1,0 +1,119 @@
+@import "../../../../../Assets/styles/shared-styles.scss";
+
+.filterAttributes{
+    background-color: white;
+    padding: to-rem(35 15);
+    .filterWrapper{
+        padding: 1px 1px;
+        height: 30rem;
+        .select, label{
+            color: #767676 !important;
+            font-size: 14px !important;
+        }
+        .header {
+            display: none;
+        }
+        .buttonStyles {
+            background: #F1F1F1;
+            border-radius: 5px;
+            color: #767676;
+            padding: 6px 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .active {
+            background: rgba(51, 178, 123, 0.1);
+            color: #33B27B;
+        }
+        .buttonContainer{
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(185, 187, 192, 0.37);
+        }
+        .label {
+            font-size: 14px;
+            line-height: 17px;
+            color: #767676;
+            padding-bottom: 0.6rem;
+        }
+        .rangeHolder {
+            display: flex;
+            border: 1px solid rgba(185, 187, 192, 0.37);
+            border-radius: 4px;
+            cursor: pointer;
+            p{
+                padding: 5px;
+                margin-left: 15px;
+                color: rgba(185, 187, 192, 0.37);
+            }
+            .calendarIcon {
+                background: #D8D8D8;
+                border-radius: 3px;   
+                width: 2.3rem;
+                height: 35px;  
+                svg{
+                    width: 35px;
+                    height: 27px;
+                    padding-top: 5px;
+                }
+            }
+        }
+        .hr {
+            color: rgba(171, 172, 175, 0.9);
+            margin-top: 2rem;
+        }
+        .buttonHolder{
+            display: flex;
+            justify-content: flex-end;
+            .cancelButton {
+                font-size: 12px;
+                color: #ED017F;
+                margin-right: 1rem;
+                border: 1px solid #ED017F;
+                box-sizing: border-box;
+                border-radius: 3px;
+                background-color: #ffffff;
+                padding: 6px 16px;
+            }
+            .filterButton {
+                font-size: 12px;
+                color: #ffffff;
+                margin-right: 1rem;
+                border: 1px solid #ED017F;
+                box-sizing: border-box;
+                border-radius: 3px;
+                background-color: #ED017F;
+                padding: 6px 18px;
+            }
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .filterAttributes{
+        background-color: white;
+        padding: to-rem(20 15 150 15);
+        .filterWrapper{
+            padding: 1px 1px;
+            overflow-y: scroll;
+            height: 70vh;
+            .header {
+                display: flex;
+                p{
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    margin: 0.4rem 0rem 2rem 2rem;
+                }
+            }
+            .buttonStyles {
+                padding: to-rem(6 9);
+                margin: to-rem(5);
+            }
+        }
+    }
+}

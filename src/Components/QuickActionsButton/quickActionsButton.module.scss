@@ -1,0 +1,139 @@
+@import "../../Assets/styles/shared-styles.scss";
+.container{
+  height: 100%;
+}
+.quickActionButton{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px #00000073;
+    height: to-rem(70);
+    position: fixed;
+    width: to-rem(70);
+
+    border-radius: to-rem(80);
+    background-color: color(PrimaryLight);
+    color: color(White);
+    z-index: 10;
+    @include breakpoint-mini('l'){
+      top: 80vh;
+      left: to-rem(66);
+      bottom: to-rem(62);
+    }
+
+    @include breakpoint('xl'){
+      top: 80%;
+      left: to-rem(18);
+      margin-left: 0;  
+    }
+
+    @include breakpoint-mini('xxxl'){
+      margin-left: to-rem(-41);
+      top: to-rem(880);
+      left: auto;
+    }
+    
+  }
+  .homeQuickActionButton{
+    cursor: pointer;
+ display: none;
+  }
+  .content{
+    position: relative;
+    svg{
+      top: to-rem(3);
+      left: 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+      margin: 0 auto;
+    }
+    p{
+      font-size: to-rem(12);
+      font-weight: 500;
+      text-align: center;
+      padding-top: to-rem(20);
+    }
+  }
+  .sideMenu{
+      z-index: 10;
+      &>div{
+          position: absolute;
+          bottom: -300px;
+          left: calc(-226px - (100vw - 90rem)/2);
+      }
+      // bottom: to-rem(-2000);
+  }
+.moveSideBar{
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @include breakpoint('l'){
+      animation-name: move2;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+}
+@keyframes move
+    {
+        0%   {
+          left: calc(-226px - (100vw - 90rem)/2);
+        }
+        50%{
+          transform: translateX(90px) ;
+
+        }
+        98%  {
+          left: to-rem(18);
+          transform: translateY( -695px) ;
+        }
+        100%  {
+          bottom: none;
+          left: to-rem(18);
+          transform: translateY( -680px) ;
+        }
+      }
+      @keyframes move2
+    {
+        0%   {
+          left: calc(-226px - (100vw - 90rem)/2);
+        }
+        50%{
+          left: to-rem(5);
+          transform: translateX(90px) ;
+
+        }
+        90%  {
+          left: to-rem(4);
+          transform: translateY( -695px) ;
+        }
+        100%  {
+          bottom: none;
+          left: to-rem(0);
+          transform: translateY( -680px) ;
+        }
+      }
+.removeSideBar{
+  animation-name: remove;
+  animation-duration: 2s;
+  // animation-fill-mode: forwards;
+}
+@keyframes remove
+    {
+        0%   {
+          transform: translateY( 0px) ;
+        }
+        50%{
+          transform: translateY( 200px) ;
+        }
+        100%  {
+          left: calc(-226px - (100vw - 90rem)/2);
+          transform: translateY( 580px) ;
+        }
+      }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}

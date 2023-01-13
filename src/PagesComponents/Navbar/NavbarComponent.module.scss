@@ -1,0 +1,269 @@
+@import "../../Assets/styles/shared-styles.scss";
+.navigation {
+  border-bottom: to-rem(3) solid #f9a024;
+  position: fixed !important;
+  justify-content: space-between;
+  top: to-rem(75);
+  width: 100%;
+  z-index: 9;
+  height: to-rem(70);
+  @include breakpoint-mini("xl") {
+    padding: to-rem(0 70);
+  }
+  &_container {
+    @include breakpoint-mini("xxl") {
+      max-width: 90rem;
+      margin: 0 auto !important;
+      padding: 0;
+    }
+  }
+}
+.navigation2 {
+  border-bottom: to-rem(3) solid #f9a024;
+  position: fixed !important;
+  justify-content: space-between;
+  top: to-rem(0);
+  width: 100%;
+  z-index: 9;
+  height: to-rem(70);
+  @include breakpoint-mini("xl") {
+    padding: to-rem(0 70);
+  }
+  &_container {
+    @include breakpoint-mini("xxl") {
+      max-width: 90rem;
+      margin: 0 auto !important;
+      padding: 0;
+    }
+  }
+}
+.searchWrapper {
+  height: to-rem(40);
+  input {
+    height: 100%;
+  }
+  > div {
+    > form {
+      display: flex;
+      align-items: center;
+      input {
+        width: to-rem(445);
+        border-radius: to-rem(3 0 0 3);
+        height: to-rem(40);
+        @include breakpoint-mini("xxxl") {
+          width: to-rem(600);
+        }
+      }
+      button[type="submit"] {
+        border-radius: to-rem(0 3 3 0);
+        height: 2.3756rem;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button[type="reset"] {
+        display: none;
+      }
+    }
+  }
+}
+.myAccountWrapper {
+  height: 4.25rem;
+  li {
+    height: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+.walletManagerWrapper:hover {
+  background-color: white;
+}
+.walletManagerWrapper {
+  .fontBold {
+    font-weight: 600;
+    font-size: to-rem(20);
+    display: inline-block;
+    width: inherit;
+  }
+  .walletFont {
+    font-size: to-rem(13);
+  }
+  .walletItemList {
+    ul {
+      padding-left: to-rem(0);
+    }
+  }
+}
+
+.balanceWrapper:active {
+  background-color: white !important;
+  color: black !important;
+}
+.walletManger {
+  background-color: color(white);
+  width: 15.6875rem;
+  padding: to-rem(0 7);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+  border: 0px;
+  position: absolute;
+  top: 4.3rem;
+  left: to-rem(0);
+
+  li {
+    font-weight: 700;
+    .icon,
+    .icon2 {
+      width: to-rem(24);
+      height: to-rem(24);
+      margin-right: to-rem(16);
+      svg {
+        height: to-rem(24);
+        width: to-rem(24);
+        path {
+          fill: color(CobaltGrey);
+        }
+        rect {
+          fill: color(CobaltGrey);
+        }
+      }
+    }
+    .firstNameContainer {
+      margin-top: to-rem(10);
+      .firstName {
+        display: inline-block;
+        font-size: to-rem(20);
+        font-weight: 700;
+        margin-left: to-rem(-5);
+      }
+    }
+    .bgColor {
+      background-color: #f9f9f9;
+    }
+  }
+  a {
+    padding: 0.6rem;
+    height: 100%;
+  }
+  a:hover {
+    background-color: rgba(237, 1, 127, 0.04);
+    svg path {
+      fill: color(PrimaryLight);
+    }
+    svg rect {
+      fill: color(PrimaryLight);
+    }
+  }
+  .children {
+    padding-left: to-rem(20) !important;
+  }
+  .balance {
+    cursor: pointer;
+  }
+}
+
+.cart {
+  position: absolute;
+  top: 2.4rem;
+  right: 0;
+  width: to-rem(330);
+}
+
+.business {
+  position: absolute;
+  top: to-rem(55);
+  left: to-rem(10);
+  @include breakpoint-mini("xxl") {
+    right: to-rem(184);
+  }
+}
+.faqs {
+  position: absolute;
+  top: to-rem(60);
+  left: to-rem(30);
+  @include breakpoint-mini("xxl") {
+    right: to-rem(184);
+  }
+}
+.flexBasis {
+  flex-basis: 50% !important;
+}
+.ipads {
+  margin-left: 3.8rem;
+}
+.businessContainer {
+  height: to-rem(68);
+  .businessList {
+    padding: 1rem !important;
+  }
+  .business {
+    position: absolute;
+    left: to-rem(0);
+  }
+}
+.businessContainer:hover {
+  background: white;
+}
+.faqContainer {
+  height: to-rem(70);
+  .faqList {
+    padding: 1rem !important;
+  }
+  .faqs {
+    position: absolute;
+    left: to-rem(0);
+  }
+}
+.paddings {
+  padding-top: 0.7rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.faqContainer:hover {
+  background: white;
+}
+
+.standardFont {
+  font-weight: 350 !important;
+  font-size: 0.9rem !important;
+}
+.fontSize350 {
+  font-size: 0.9rem !important;
+}
+
+@media screen and (min-device-width: 541px) and (max-device-width: 988px) and (-webkit-min-device-pixel-ratio: 1) {
+  .navigation {
+    &_container {
+      img {
+        display: none;
+      }
+      background-color: #fff;
+      height: 3rem;
+      margin: 0rem 1rem !important;
+    }
+  }
+  .flexBasis {
+    margin-top: -0.6rem;
+    display: flex;
+    flex-basis: 30% !important;
+  }
+  .ipads {
+    display: flex !important;
+    flex-direction: row;
+    margin-left: 1.8rem;
+    .faqContainer {
+      .paddings {
+        padding-top: 0.7rem !important;
+      }
+    }
+  }
+  .businessContainer {
+    height: 3.25rem;
+    .businessList {
+      padding: 0.5rem !important;
+    }
+  }
+}

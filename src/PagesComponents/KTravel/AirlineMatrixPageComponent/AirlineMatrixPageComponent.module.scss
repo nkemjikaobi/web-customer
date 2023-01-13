@@ -1,0 +1,105 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.designedButton {
+    font-size: 16px;
+}
+
+.theadBackground,.tbodyBackground {
+    border: none !important;
+    th,td{
+        font-size: 14px;
+    }
+}
+.theadBackground {
+    .airlineHeader{
+        min-width: to-rem(50) !important;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: to-rem(14);
+    }
+    tr{
+        th{
+            border-right: 1px solid #EEEEEE;
+            text-align: center;
+        }
+    }
+    tr > th:last-child{
+        border-right: none;
+    }
+}
+
+.tbodyBackground {
+    tr > td:first-child{
+        padding-left: to-rem(14);
+    }
+    tr{
+        td{
+            border-right: 1px solid #EEEEEE;
+            border-bottom: none !important;
+        }
+    }
+    .fare{
+        font-size: 16px !important;
+    }
+}
+
+.resultTable{
+    tr:nth-child(even) {background-color: #FAFAFA;}
+    background-color: white;
+    margin-top: 7px !important;
+    .tableCaption{
+        background-color: white;
+        padding: 1rem 4rem;
+    }
+}
+
+.webView{
+    display: block;
+}
+.mobileView{
+    display: none;
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .webView{
+        display: none !important;
+    }
+    .mobileView{
+        display: flex !important;
+        justify-content: space-between;
+        height: to-rem(80);
+        background-color: #F4F4F4;
+        margin-right: -14px;
+        margin-left: -14px;
+        padding: 1rem 2rem;
+        .originDestinationWrapper{
+            display: flex;
+            align-items: center;
+            label{
+                font-size: 16px;
+                font-weight: 500;
+                padding-right: .5rem;
+            }
+            svg{
+                margin-right: .5rem;
+            }
+        }
+        .detailsWrapper{
+            .littleDetail{
+                p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #727272;
+                }
+            }
+        }
+        .modifySearch{
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

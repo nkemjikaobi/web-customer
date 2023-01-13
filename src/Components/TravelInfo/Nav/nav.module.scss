@@ -1,0 +1,96 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.formNav{
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(42 0 17 0);
+    background-color: #fffafa;
+    margin-top: to-rem(-16);
+    @include breakpoint-mini('xxxl'){
+        padding: to-rem(42 214 17 214);
+    }
+    .navItemWrapper{
+        display: flex;
+        justify-content: space-between;
+        >div{
+            width: to-rem(209);
+            text-align: center;
+            p{
+                font-size: to-rem(14);
+            }
+        }
+        .activeText{
+            color: color(PrimaryLight);
+        }
+    }
+    .iconWrapper{
+        position: relative;
+        margin: 0 auto;
+        width: to-rem(54);
+        height: to-rem(54);
+        border: 1px solid #A5A0A0;
+        border-radius: 50%;
+        background-color: color(Grey96);
+        > svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        text-align: center;
+        .checkmark{
+            font-size: to-rem(20);
+            margin: to-rem(10 0);
+            color: color(PrimaryLight);
+         }
+    }
+    .activeIconWrapper{
+        position: relative;
+        margin: 0 auto;
+        width: to-rem(54);
+        height: to-rem(54);
+        background-color: color(White);
+        border: to-rem(1) solid color(PrimaryLight);
+        border-radius: 50%;
+        > svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        text-align: center;
+        .checkmark{
+            font-size: to-rem(20);
+            margin: to-rem(10 0);
+            color: color(PrimaryLight);
+         }
+    }
+   
+    .seperator{
+        height: to-rem(1);
+        width: to-rem(182);
+        background-color: color(PrimaryLight);
+        margin-top: to-rem(30);
+    }
+    &>div:nth-child(4)>div>div:nth-child(2){
+        display: none;
+    }
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .formNav{
+        .navItemWrapper{
+            >div{
+                width: to-rem(100) !important;
+            }
+        }
+        .seperator{
+            display: none !important;
+        }
+    }
+    .hideInMobile{
+        display: none !important;
+    }
+}

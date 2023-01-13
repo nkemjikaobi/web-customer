@@ -1,0 +1,43 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.productCard {
+  min-width: to-rem(297.24);
+  max-height: to-rem(400);
+  box-shadow: 0px 0px 8px 0px #0000001a;
+  padding: to-rem(5.5 5.5 20.8 5.5);
+  margin-right: to-rem(20);
+
+  &_Top {
+    p {
+      font-size: to-rem(15);
+      line-height: to-rem(20);
+      margin: to-rem(15 0 22 0);
+    }
+  }
+  &_Bottom {
+    .prices {
+      display: flex;
+      .dicountPrice {
+        font-size: to-rem(20);
+        font-weight: 700;
+        margin-right: to-rem(18);
+      }
+      .originalPrice {
+        color: color(QuickSilver);
+        font-size: to-rem(15);
+        font-weight: 400;
+        line-height: to-rem(17);
+        padding: to-rem(5 0 0 0);
+        text-decoration: line-through;
+      }
+    }
+    .amountSaved {
+      font-size: to-rem(12);
+      color: color(FauxLightGreen);
+      margin-top: to-rem(19);
+    }
+  }  &:hover{
+    box-shadow: 0px 3px 5px 0px #00000026;
+}
+
+}

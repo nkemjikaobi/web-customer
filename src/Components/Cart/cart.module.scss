@@ -1,0 +1,120 @@
+@import "../../Assets/styles/shared-styles.scss";
+.cartIconContainer {
+    z-index: 20;
+    margin-top: to-rem(30);
+    position: relative;
+    width: 100%;
+    height: 8.75rem;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    background-color: color(White);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ 
+    p {
+        color: color(gray);
+        font-size: to-rem(12);
+    }
+}
+.cart{
+    z-index: 20;
+    margin-top: to-rem(30);
+    position: relative;
+    width: 100%;
+    height: to-rem(648);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    background-color: color(White);
+    .topPointer{
+        position: absolute;
+        top: to-rem(-20);
+        right: 0;
+    }
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(15 21 15 12);
+        background-color: color(Whisper2);
+        &_content{
+            p{
+                font-size: to-rem(16);
+                font-weight: 500;
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+ 
+    .activeSection{
+        max-height: to-rem(260);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-width: 500px;
+    }
+    &_kongaFood{
+        .arrowIcon{
+            margin: auto 0;
+            width: to-rem(24);
+            padding-left: to-rem(8);
+        }
+    }
+    .subTotal{
+        padding: to-rem(18 18 13 18);
+        .info{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: to-rem(26);
+        }
+        .button{
+            height: to-rem(35);
+        }
+    }
+    .agregatedCartTotal{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: to-rem(11 8 9 8);
+        background-color: color(Grey98);
+        h3{
+            color: #727272;
+            font-size: to-rem(14);
+            font-weight: 700;
+            margin-bottom: to-rem(6);
+        }
+        .total{
+            color: color(DavyGrey);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: to-rem(6);
+            p{
+                font-size: to-rem(12);
+                font-weight: 700;
+            }
+        }
+        .deliveryFee{
+            color: color(DavyGrey);
+            display: flex;
+            justify-content: space-between;
+            &_name{
+                font-size: to-rem(12);
+                font-weight: 500;
+            }
+            &_info{
+                font-size: to-rem(10);
+
+            }
+        }
+
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .cart{
+        margin-top: 0;
+    }
+}

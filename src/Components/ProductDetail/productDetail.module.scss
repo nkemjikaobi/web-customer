@@ -1,0 +1,408 @@
+@import "../../Assets/styles/shared-styles.scss";
+$detail-breakpoint: "screen and (min-width: #{map-get($breakpoints, 'm')})";
+.wrapper {
+  @include breakpoint-mini("l") {
+    margin-top: to-rem(137);
+  }
+  .productDetail {
+    @include breakpoint-mini("m") {
+      display: flex;
+      // padding: 1rem;
+    }
+    @media screen and (max-device-width: 1381px) and (-webkit-min-device-pixel-ratio: 1) {
+      flex-direction: column;
+    }
+    .filter {
+      border-bottom: to-rem(1) solid color(Grey95);
+      padding: to-rem(18 0);
+      @media #{$detail-breakpoint} {
+        font-size: to-rem(28);
+      }
+      .productAttribute {
+        display: flex;
+        align-items: center;
+        margin-top: to-rem(10);
+        label,
+        .attributeOption {
+          margin-bottom: to-rem(15);
+        }
+        label {
+          font-size: to-rem(12);
+          margin-right: to-rem(8);
+          width: to-rem(60);
+        }
+        > * {
+          &:not(:last-child) {
+            margin-right: to-rem(10);
+          }
+        }
+        .attributeOptions {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          overflow-x: auto;
+          white-space: nowrap;
+          > div {
+            &:not(:last-child) {
+              margin-right: to-rem(10);
+            }
+          }
+        }
+        .attributeOption {
+          color: color(CobaltGrey);
+          cursor: pointer;
+          font-size: to-rem(12);
+          font-weight: $font-weight-bold;
+        }
+        &Size {
+          .attributeOption {
+            border: to-rem(1) solid color(LightGrey);
+            border-radius: to-rem(2);
+            transition: background-color 0.3s ease-in-out;
+            &Selected {
+              background-color: color(CobaltGrey);
+              border: none;
+              color: color(White);
+            }
+          }
+        }
+        &Color {
+          .attributeOption {
+            color: color(LightGrey);
+            transition: color 0.3s ease-in-out;
+
+            &Selected {
+              color: color(CobaltGrey);
+            }
+          }
+        }
+        &:not(.productAttributeColor) {
+          .attributeOption {
+            padding: to-rem(6 12);
+          }
+        }
+      }
+    }
+    &_left {
+      background-color: #fdfdfd;
+      margin-bottom: to-rem(20);
+      .carouselMobile {
+        display: none;
+      }
+      .sellerBandMobileOnly {
+        display: none;
+      }
+      @include breakpoint-mini("l") {
+        display: flex;
+        padding: to-rem(46 0 70 0);
+      }
+      .content {
+        .priceBarMobileOnly {
+          display: none;
+        }
+        padding: to-rem(0 16);
+        margin-top: to-rem(12);
+        @include breakpoint-mini("l") {
+          margin-left: to-rem(34);
+          margin-top: to-rem(0);
+          padding: to-rem(0);
+        }
+        .header {
+          padding-bottom: to-rem(33);
+          h1 {
+            font-size: to-rem(25);
+            padding-right: to-rem(50);
+          }
+          .reviews {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+          p {
+            margin-top: to-rem(8);
+            color: color(DustyGray);
+            font-size: to-rem(15);
+            font-weight: 500;
+            .productCode {
+              color: color(ButterflyBush);
+              font-weight: 700;
+              margin-top: to-rem(5);
+            }
+          }
+        }
+        .priceBar {
+          p {
+            font-size: to-rem(24);
+            font-weight: 700;
+            padding: to-rem(13 0 17 0);
+            border-bottom: to-rem(1) solid color(Grey80);
+          }
+        }
+        .filter {
+          padding: to-rem(10 0);
+          border-bottom: to-rem(1) solid color(Grey80);
+          .label {
+            width: to-rem(60);
+            font-size: to-rem(13);
+            line-height: to-rem(15);
+            margin-right: to-rem(20);
+          }
+          &_quantity {
+            display: flex;
+            align-items: center;
+            p {
+              margin-top: to-rem(3);
+            }
+            .itemQuantityWrapper {
+              width: to-rem(90);
+            }
+          }
+          .bulk {
+            p {
+              display: inline-block;
+              font-size: 0.8125rem;
+              line-height: 1.15;
+              color: #9b9b9b;
+            }
+            p:last-child {
+              display: block;
+              font-weight: 500;
+              color: #4a4a4a;
+              font-size: to-rem(13);
+              cursor: pointer;
+            }
+          }
+        }
+        .buyNow {
+          display: flex;
+          padding: to-rem(20 0 11 0);
+          .button {
+            width: to-rem(300);
+            height: to-rem(48);
+          }
+          .saveForLater {
+            display: flex;
+            > div {
+              display: flex;
+              margin-left: to-rem(36);
+              align-items: center;
+            }
+            p {
+              margin-left: to-rem(10);
+              padding: to-rem(7 0);
+              font-size: to-rem(11);
+              color: color(QuickSilver);
+            }
+            .iconWrapper {
+              cursor: pointer;
+            }
+          }
+        }
+        .paymentOptions {
+          display: flex;
+          padding: to-rem(12 0);
+          border-bottom: to-rem(1) solid color(Grey80);
+        }
+        .paymentOptions {
+          p {
+            margin-left: to-rem(22);
+            padding: to-rem(5 0);
+          }
+        }
+      }
+      .productShareOptions {
+        display: flex;
+        align-items: center;
+        &Wrapper {
+          padding-top: to-rem(14);
+          h5 {
+            font-size: to-rem(14);
+            font-weight: $font-weight-regular;
+            margin: 0 0 to-rem(10);
+          }
+        }
+        .productShareOption {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: color(LightGrey);
+          border-radius: to-rem(25);
+          height: to-rem(30);
+          margin-right: 3%;
+          transition: background-color 0.3s ease-in-out;
+          width: to-rem(30);
+          svg {
+            height: to-rem(15);
+            width: auto;
+            path {
+              transition: fill 0.3s ease-in-out;
+            }
+          }
+          &:not(:hover) {
+            svg {
+              path {
+                fill: color(White);
+              }
+            }
+          }
+          &:hover {
+            background-color: color(White);
+            border: to-rem(1) solid color(LightGrey);
+          }
+        }
+      }
+      .productDetailPriceBox {
+        border-color: color(Grey80);
+        border-style: solid;
+        border-width: to-rem(1 0);
+        margin-top: to-rem(10);
+        padding: to-rem(15) 0;
+        > div {
+          &:not(:last-child) {
+            margin-right: to-rem(16);
+          }
+        }
+      }
+      .productLabels {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: to-rem(1) solid color(Grey95);
+        padding: to-rem(16 0 0);
+        .productLabel {
+          display: flex;
+          align-items: center;
+          @include flexBasis(100%);
+          font-size: to-rem(12);
+          font-weight: $font-weight-dense;
+          margin-bottom: to-rem(16);
+          &Icon {
+            @include flexBasis(#{to-rem(35)});
+            @include flexShrink(0);
+
+            margin-right: to-rem(10);
+          }
+          @include breakpoint-mini("m") {
+            @include flexBasis(48%);
+
+            margin-right: 2%;
+
+            &Icon {
+              margin-right: to-rem(16);
+            }
+          }
+        }
+        .locations {
+          &Container {
+            align-items: center;
+            display: flex;
+            font-size: to-rem(13);
+            max-width: to-rem(600);
+          }
+          &Title {
+            width: 30%;
+          }
+          &List {
+            background-color: color(Grey96);
+            list-style: none;
+            margin: to-rem(10 0 0 10);
+            padding: to-rem(10 10 10) 0;
+            position: relative;
+            white-space: nowrap;
+            width: 70%;
+          }
+        }
+      }
+    }
+    &_right {
+      @include breakpoint-mini("m") {
+        margin-left: to-rem(20);
+      }
+      @media screen and (max-device-width: 1381px) and (-webkit-min-device-pixel-ratio: 1) {
+        display: flex;
+        align-items: center;
+      }
+      @include breakpoint("s") {
+        flex-direction: column;
+        align-items: inherit;
+      }
+      .buyNowUnfixed {
+        display: none;
+      }
+      .sellerB {
+        @media screen and (max-device-width: 1381px) and (-webkit-min-device-pixel-ratio: 1) {
+          height: 100%;
+          margin-left: to-rem(30);
+        }
+      }
+    }
+  }
+}
+.footerIconWrapper {
+  background-color: #b7b7b7 !important ;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productDetail {
+    &_left {
+      .sellerBandMobileOnly {
+        display: block;
+      }
+      .content {
+        .buyNow {
+          z-index: 1;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding-bottom: 0;
+        }
+        .priceBarMobileOnly {
+          display: block;
+          .productDetailPriceBox {
+            border: none;
+          }
+        }
+        .priceBar {
+          display: none;
+        }
+      }
+    }
+
+    .buyNow.hide {
+      display: none;
+    }
+    .buyNow.show {
+      display: block;
+    }
+
+    .buyNowUnfixed.hide {
+      display: none;
+    }
+    .buyNowUnfixed.show {
+      display: block;
+    }
+    .header {
+      h1 {
+        font-size: 18px !important;
+        font-weight: 400;
+      }
+    }
+    .productDetailPriceBox {
+      display: block !important;
+      > div {
+        &:not(:last-child) {
+          display: block !important;
+        }
+      }
+    }
+    .carouselMobile {
+      display: block !important;
+      margin-top: to-rem(100);
+    }
+    .carouselTabsUpwards {
+      display: none !important;
+    }
+  }
+}

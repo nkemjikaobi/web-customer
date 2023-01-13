@@ -1,0 +1,48 @@
+@import "Assets/styles/shared-styles.scss";
+.dropdown{
+    display: flex;
+    align-items: center;
+    border: 1px solid #6c757d;
+    border-radius: .25rem;
+    padding-left: to-rem(8);
+    .dropdownButton {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .dropdownMenu{
+        top: to-rem(47);
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .dropdown{
+        background-color: white;
+        border: none;
+    }
+}
+
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .dropdownSize {
+        width: 11.6rem
+    }
+    .width {
+        width: 12rem
+    }
+}
+@media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1440px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .width {
+        width: 12rem
+    }
+}

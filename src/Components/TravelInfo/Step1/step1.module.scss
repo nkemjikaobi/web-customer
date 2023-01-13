@@ -1,0 +1,128 @@
+
+@import "../../../Assets/styles/shared-styles.scss";
+
+.travelerInfoForm{
+    padding: to-rem(40 22 42 22);
+    border-radius: to-rem(3);
+    margin-bottom: to-rem(20);
+    .travellersBreakdown,.contactInformation{
+        background-color: #fffafa;
+        padding: 25px 10px;
+        border-radius: 10px;
+        .info{
+            font-size: 12px;
+            font-weight: 400;
+            color: #777777;
+        }
+        .title{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        label{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    .travellersBreakdown{
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: to-rem(24);
+        padding-bottom: to-rem(57);
+    }
+    &_top{
+    
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: to-rem(20);
+        .inputWrapper{
+            width: 100%;
+            margin-right: to-rem(20);
+        }
+        input{
+            width: 100%;
+        }
+    }
+    &_bottom{
+        display: flex;
+        justify-content: space-between;
+
+        .nationalityField{
+            width: 49%;
+        }
+        .birthField{
+            width: 25%;
+        }
+
+        .radioButtons{
+            p{
+                
+            }
+            .buttons{
+                display: flex;
+                margin-top: to-rem(18);
+                margin-bottom: to-rem(20);
+                .radioButtonsWrapper{
+                    position: relative;
+                    label:before{
+                        border-radius: 50%;
+                        border: to-rem(1) solid color(PrimaryLight);
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.contactForm{
+    background: #FCFCFC;
+    padding: to-rem(40 22 42 22);
+    border-radius: to-rem(3);
+    margin-bottom: to-rem(30);
+    h2{
+        font-size: to-rem(24);
+        padding-bottom: to-rem(57);
+    }
+    &_top, &_bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: to-rem(20);
+        .inputWrapper:first-child{
+            margin-right: to-rem(20);
+        }
+        .inputWrapper{
+            width: 100%;
+            input{
+                width: 100%;
+            }
+        }
+    }
+}
+.policy{
+    margin: to-rem(30);
+    font-size: to-rem(14);
+    span{
+        color: #1D8BC3;
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .travelerInfoForm{
+        display: flex;
+        flex-direction: column;
+        &_top{
+            flex-direction: column;
+            border-bottom: 1px solid #D3D3D3;
+        }
+        .travellersBreakdown,.contactInformation{
+            .title{
+                padding-bottom: 1rem !important;
+            }
+        }
+    }
+}

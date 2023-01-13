@@ -1,0 +1,59 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  .icon {
+    width: to-rem(50);
+    height: to-rem(50);
+  }
+  .imgCarousel {
+    max-width: to-rem(390);
+    .mainImg {
+      height: to-rem(271);
+      cursor: zoom-in;
+      width: 100%;
+      border-radius: to-rem(4);
+      @include breakpoint-mini("l") {
+        height: to-rem(386);
+        width: to-rem(386);
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .extraImages {
+      cursor: pointer;
+    }
+    .subImgList {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      .subImg {
+        max-width: to-rem(80);
+        margin: to-rem(20 20 0 0);
+        border-radius: to-rem(4);
+      }
+      .activeBaseImage {
+        border: to-rem(3) solid #fba100;
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .imgCarousel {
+    .extraImages {
+      display: none;
+    }
+    .mainImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: auto;
+      }
+    }
+  }
+}

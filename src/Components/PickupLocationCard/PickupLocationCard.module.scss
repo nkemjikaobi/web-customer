@@ -1,0 +1,47 @@
+@import "../../Assets/styles/shared-styles.scss";
+.pickupLocation {
+  border: to-rem(1) solid color(WhisperVarOne);
+  border-radius: to-rem(4);
+  margin-bottom: to-rem(16);
+  width: to-rem(370);
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: to-rem(14);
+    font-weight: 700;
+    margin-bottom: to-rem(10);
+  }
+  .heading {
+    display: flex;
+    border-bottom: to-rem(1) solid color(WhisperVarOne);
+    &_active {
+      border-bottom: to-rem(2) solid color(SandyBeach);
+    }
+    padding: to-rem(16 0 11 0);
+    .checkmark {
+      margin-left: to-rem(16.31);
+    }
+  }
+  &_icon_active {
+      background-color: color(SandyBeach);
+  }
+  p {
+    font-size: to-rem(13);
+    font-weight: 300;
+  }
+  .mainContent {
+    padding: to-rem(20 5 48 24);
+  }
+  .address {
+    display: flex;
+  }
+  .info {
+    margin-bottom: to-rem(16);
+  }
+}
+.active {
+  border: to-rem(1) solid color(BridalHeath) !important;
+  background-color: color(BridalHeath) !important;
+}

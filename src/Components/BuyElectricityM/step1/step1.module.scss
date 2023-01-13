@@ -1,0 +1,246 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.buyElectricity {
+  padding: to-rem(0 59);
+  .header {
+    h1 {
+      font-size: to-rem(20);
+      font-weight: 500;
+      padding: to-rem(18 0 21 0);
+      color: color(PrimaryLight);
+    }
+    border-bottom: to-rem(1) solid color(WhiteSmoke);
+  }
+  .saveAsBeneficiary {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    input[type="checkbox"] {
+      position: unset;
+    }
+    span {
+      margin-left: 5px;
+      color: #555555;
+      font-size: 12px;
+    }
+  }
+  .form {
+    &_heading {
+      h1 {
+        margin-top: to-rem(25);
+        font-size: to-rem(18);
+        font-weight: 400;
+      }
+    }
+    select {
+      height: to-rem(50);
+      padding-left: 10px;
+    }
+    .radioButtonsWrapper {
+      display: flex;
+      margin: to-rem(10 0);
+      input[type="radio"]:checked ~ .radioButton {
+        background-color: lightgreen;
+      }
+      .radioButton {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        background-color: #fbfbfb;
+        height: to-rem(56);
+        padding-left: to-rem(30);
+        p {
+          margin-left: to-rem(18);
+        }
+        .container {
+          cursor: pointer;
+          display: block;
+          font-size: to-rem(13);
+          padding-top: to-rem(2);
+          margin-bottom: to-rem(12);
+          padding-left: to-rem(20);
+          position: relative;
+          width: 100%;
+          input[type="radio"] {
+            left: to-rem(0);
+            opacity: 0;
+            position: absolute;
+            top: to-rem(0);
+            margin-top: 0;
+            z-index: 1;
+            & ~ .checkmark {
+              cursor: pointer;
+              height: to-rem(25);
+              @include ellipsis;
+              left: 0;
+              margin-right: to-rem(10);
+              max-width: 80%;
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+            }
+            & ~ .checkmark::before {
+              background-color: color(White);
+              border: to-rem(1) solid color(Grey81);
+              border-radius: 50%;
+              content: "";
+              display: block;
+              height: to-rem(16);
+              flex-shrink: 0;
+              @include breakpoint("s") {
+                border-color: color(Black);
+                height: to-rem(11);
+                width: to-rem(10);
+              }
+              margin-top: to-rem(4);
+              margin-right: to-rem(18);
+              width: to-rem(16);
+            }
+
+            &:checked ~ .checkmark::before {
+              $checked-color: color(PrimaryLight);
+              background-color: $checked-color;
+              border-color: $checked-color;
+            }
+          }
+        }
+      }
+    }
+    .inputWrapper2 {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: to-rem(255);
+      }
+    }
+    .smallText {
+      font-size: 0.8rem !important;
+    }
+    .termsAndConditions {
+      color: color(PrimaryLight);
+    }
+    .meterNumberRow {
+      position: relative;
+    }
+    .spinner {
+      position: absolute;
+      top: 70%;
+      z-index: 5;
+      right: 2rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+.recentPurchases {
+  @include breakpoint-mini("m") {
+    margin: to-rem(20 0);
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .buyElectricity {
+    padding: 0rem 1rem;
+    position: absolute;
+    top: -3px;
+    left: 4px;
+    width: 100%;
+    .form {
+      padding-bottom: 5rem;
+      .smallText {
+        font-size: 0.7rem !important;
+      }
+    }
+    .header {
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 14px;
+        background: #ed017f;
+        color: #fff;
+        margin: to-rem(-22 -20 20 -20);
+      }
+      border-bottom: to-rem(1) solid color(WhiteSmoke);
+    }
+
+    .inputWrapper2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 2rem;
+      input {
+        width: 19.8rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .buyElectricity {
+    padding: 0rem 2rem;
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .buyElectricity {
+    padding: 0 10px;
+    position: fixed;
+    top: to-rem(15);
+    width: 100%;
+    .formWrapper {
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+      height: 80vh;
+      .form {
+        padding-bottom: 5rem;
+      }
+    }
+    .header {
+      padding-left: 5px;
+      margin-top: 0 !important;
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 14px;
+        background: #ed017f;
+        margin-right: -6px;
+        margin-left: -20px;
+        color: #fff;
+        margin-top: -14px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+      border-bottom: to-rem(1) solid color(WhiteSmoke);
+    }
+    .form {
+      &_heading {
+        h1 {
+          margin-top: 1rem;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+      .inputWrapper {
+        input,
+        select {
+          margin-top: 0 !important;
+          margin-bottom: 5px !important;
+        }
+        select {
+          height: to-rem(50);
+        }
+        label {
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      }
+      small {
+        line-height: 1;
+        font-size: 12px;
+        color: #555555;
+      }
+      .button {
+        padding-top: 12px;
+      }
+    }
+  }
+}

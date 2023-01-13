@@ -1,0 +1,66 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.checkboxFilter{
+    display: flex;
+
+    input[type="checkbox"]{
+        height: to-rem(16);
+        width: to-rem(16);
+        border: 1px solid #B7B7B7;
+    }
+    .container {
+        cursor: pointer;
+        display: block;
+        font-size: to-rem(13);
+        padding-top: to-rem(2);
+        margin-bottom: to-rem(12);
+        padding-left: to-rem(20);
+        position: relative;
+        width: 100%;
+        input[type='checkbox'] {
+            left: to-rem(0);
+            opacity: 0;
+            position: absolute;
+            top: to-rem(0);
+            margin-top: 0;
+            z-index: 1;
+            & ~ .checkmark {
+                cursor: pointer;
+                height: to-rem(25);
+                @include ellipsis;
+                left: 0;
+                margin-right: to-rem(10);
+                max-width: 80%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+            }
+    
+            & ~ .checkmark::before {
+                background-color: color(White);
+                border: to-rem(1) solid color(Grey81);
+                content: '';
+                display: block;
+                height: to-rem(16);
+                flex-shrink: 0;
+                @include breakpoint('s') {
+                    border-color: color(Black);
+                    border-radius: to-rem(2);
+                    height: to-rem(11);
+                    width: to-rem(10);
+                }
+                margin-top: to-rem(4);
+                margin-right: to-rem(16);
+                width: to-rem(16);
+            }
+            label{
+            margin-right: to-rem(10);
+            }
+            &:checked ~ .checkmark::before {
+                $checked-color: color(PrimaryLight);
+                background-color: $checked-color;
+                border-color: $checked-color;
+            }
+        }
+    }
+}

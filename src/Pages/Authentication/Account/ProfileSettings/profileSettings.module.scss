@@ -1,0 +1,129 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.profileSettings {
+    background-color: color(White);
+    margin-bottom: to-rem(67);
+  @include breakpoint-mini("l") {
+    width: to-rem(640);
+    border: to-rem(1) solid color(Whisper);
+    padding-bottom: to-rem(40);
+  }
+  .active{
+    border-bottom: 2px solid color(PrimaryLight);
+  }
+  &_formNavigation {
+    display: flex;
+    border-bottom: to-rem(1) solid color(Whisper);
+    height: to-rem(55);
+    justify-content: space-between;
+    margin: 0 auto;
+    .navItem{
+        text-align: center;
+        font-size: to-rem(14);
+        padding: to-rem(15 0);
+        cursor: pointer;
+        @include breakpoint-mini("l"){
+            font-size: to-rem(16);
+            padding: to-rem(18 45);
+        }
+    }
+
+  }
+  .addressForm{
+    padding-top: to-rem(31) !important;
+  }
+  .formGroup {
+    padding: to-rem(0 16);
+    @include breakpoint-mini("l"){
+        padding: to-rem(0 63);
+    }
+    .bvnInput{
+        padding-top: to-rem(30);
+    }
+  }
+  .button {
+    height: to-rem(52);
+    @include breakpoint-mini('l'){
+        margin-top: to-rem(50);
+    }
+  }
+  input,select{
+      margin-bottom: to-rem(16);
+  }
+  select {
+    height: to-rem(52);
+    border-color: color(WhisperVarOne);
+    border-radius: to-rem(3);
+  }
+  &_profileDetails {
+    .header {
+      .img {
+        width: to-rem(134);
+        height: to-rem(134);
+        background-color: blanchedalmond;
+        border-radius: 50%;
+        margin: to-rem(10) auto 0 auto;
+      }
+      .customerTier{
+          display: flex;
+          justify-content: center;
+          max-width: to-rem(83);
+          border-radius: to-rem(20);
+          background-color: rgba(255, 1, 2, 0.05);
+          margin: to-rem(17) auto 0 auto;
+          padding: to-rem(5 13);
+          .staricons{
+            display: flex;
+            margin: to-rem(6.2 0 0 4);
+          }
+          p{
+            font-size: to-rem(12);
+          }
+      }
+    }
+    .profileDetailsForm {
+      .midHeading {
+        background-color: color(LyxnWhite);
+        h1 {
+          font-size: to-rem(16);
+          padding: to-rem(14.5 16);
+          @include breakpoint-mini('l'){
+              padding: to-rem(16 63);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .profileSettings {
+      margin-top: 0rem;
+      &_formNavigation {
+        width: 23rem;
+      }
+  }
+}
+
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .profileSettings {
+      &_formNavigation {
+        width: 25rem;
+      }
+  }
+}
+
+@media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1439px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .profileSettings {
+      width: to-rem(580);
+  }
+}

@@ -1,0 +1,219 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.basePageLayout {
+  position: relative;
+  background-color: #f2f2f2;
+  .loginNotificationBase {
+    position: fixed;
+    right: -330px;
+    top: 105px;
+    z-index: 9;
+  }
+  .loginNotificationShow {
+    right: 0;
+    transition-duration: 0.5s;
+  }
+  .loginNotificationRemove {
+    right: -330px;
+    transition-duration: 0.5s;
+  }
+  .flashBanner {
+    position: fixed;
+    top: 0;
+    z-index: 12;
+  }
+
+  .rewind,
+  .rewind2 {
+    position: fixed;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .rewind {
+    top: 6rem;
+    right: 0px;
+  }
+  .rewind2 {
+    top: 11rem;
+    right: 0px;
+  }
+  .pageContentWrapper {
+    .pageContent2 {
+      @include breakpoint-mini("s") {
+        padding: to-rem(137 0 0 0);
+      }
+    }
+    position: relative;
+    .breadcrumb {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      background-color: color(White);
+      @include breakpoint("s") {
+        display: none;
+      }
+    }
+    .pageContent {
+      @include breakpoint-mini("l") {
+        padding: to-rem(65 0 0 0);
+      }
+    }
+    .pageContentWrapperContainer {
+      max-width: to-rem(1440);
+      margin: 0 auto;
+      background-color: color(White);
+      padding: 0;
+      position: relative;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      left: 0;
+      z-index: 9;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .categoryCarousel {
+      margin-top: to-rem(20);
+      @include breakpoint("s") {
+        margin-top: -1.75rem;
+      }
+    }
+    .categorySideMenuWrapper {
+      position: fixed;
+      z-index: 110;
+      @include breakpoint("xxl") {
+        left: 0;
+      }
+    }
+    .categorySideMenu {
+      position: absolute;
+      height: 100vh;
+      top: 0;
+      left: -900px;
+      z-index: 5;
+      @include breakpoint-mini("l") {
+        top: to-rem(-94);
+      }
+    }
+    .subCategorySideMenu {
+      position: absolute;
+      height: 100vh;
+      left: -900px;
+      z-index: 102;
+      @include breakpoint-mini("l") {
+        top: to-rem(-94);
+      }
+    }
+    .addSubCategorySideBar {
+      animation-name: move2;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      @include breakpoint-mini("xxl") {
+        animation-name: move;
+      }
+    }
+    .removeSubCategorySideBar {
+      transition: transform 0.5s;
+      transform: translate(-900px);
+    }
+
+    .removeSideBar {
+      transition: transform 0.5s;
+      transform: translate(-900px);
+    }
+    .moveSideBar {
+      animation-name: move2;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      @include breakpoint-mini("xxl") {
+        animation-name: move;
+      }
+    }
+
+    @keyframes move {
+      0% {
+        left: -900px;
+      }
+      100% {
+        left: calc((((100vw - 87.5rem) * -1) / 2));
+      }
+    }
+    @keyframes move2 {
+      0% {
+        left: -900px;
+      }
+      100% {
+        left: 0;
+      }
+    }
+    .no_scrollbar {
+      overflow: hidden !important;
+    }
+    .homePageContentWrapper {
+      overflow-y: hidden;
+      margin: 0 auto;
+      background-color: color(White);
+      padding: 0;
+    }
+    .footerHome {
+      margin-left: to-rem(80);
+      @include breakpoint("xl") {
+        margin-left: to-rem(0);
+      }
+    }
+
+    .oldWebsiteContainer {
+      position: relative;
+    }
+  }
+  // .bottomNavigationWrapper{
+  //   position: relative;
+  //   z-index: 1000;
+  //   height: 100%;
+  //   width: 100%;
+  //   margin-left: to-rem(-16);
+  //   @include breakpoint-mini('s'){
+  //     display: none;
+  //   }
+  // }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .fixedMobileNav {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background-color: white;
+    width: 100%;
+  }
+  .pageContentWrapper {
+    margin-top: 50px !important;
+    @include breakpoint("s") {
+      margin-top: 0px !important;
+    }
+  }
+
+  .rewind,
+  .rewind2 {
+    top: 18rem !important;
+  }
+}
+
+.tablet2 {
+  @include breakpoint("s") {
+    display: none;
+  }
+}
+.tablet {
+  @include breakpoint("m") {
+    display: none;
+  }
+}
+.mobile {
+  // display: none;
+  @include breakpoint-mini("s") {
+    display: none;
+  }
+  // display: none;
+}

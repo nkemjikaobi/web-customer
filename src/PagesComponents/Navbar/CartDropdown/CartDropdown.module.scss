@@ -1,0 +1,36 @@
+@import "Assets/styles/shared-styles.scss";
+.cartContainer {
+    height: to-rem(68);
+    position: relative;
+    .cartList {
+      padding: 1rem !important;
+      .cartCounter{
+        background-color: #ED017F;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        position: absolute;
+        top: 17px;
+        left: 30px;
+        padding: 0 2.4px;
+        border-radius: 2px;
+        z-index: 1;
+      }
+    }
+  }
+  .cartContainer:hover {
+    background: white;
+  }
+  .margin_top_two {
+    margin-top: to-rem(2);
+  }
+  .standardFont {
+    font-weight: 350 !important;
+    font-size: 0.9rem !important;
+  }
+  .cart {
+    position: absolute;
+    top: 2.4rem;
+    right: 0;
+    width: to-rem(330);
+  }

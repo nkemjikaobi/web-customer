@@ -1,0 +1,37 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.orderDetailsStep{
+    padding: to-rem(0 59);
+    .header{
+        display: flex;
+        padding: to-rem(18 0 21 0);
+        h1{
+            font-size: to-rem(20);
+            font-weight: 500;
+            color: color(Black);
+            margin-left: to-rem(28);
+
+        }
+        border-bottom: to-rem(1) solid color(WhiteSmoke);
+    
+}
+    .detailsWrapper{
+        margin: to-rem(45 0 100 0);
+        .info{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: to-rem(15);
+            p{
+                font-size: to-rem(18);
+            }
+            .title{
+                font-weight: 400;
+                color: color(SonicSilver);
+            }
+            .result{
+                font-weight: 500;
+            }
+        }
+    }
+  
+}

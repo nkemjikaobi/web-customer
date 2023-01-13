@@ -1,0 +1,40 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.pickupLocationContent{
+    .addressHeading{
+        margin-bottom: to-rem(58);
+        padding: to-rem(24 20 0 20);
+        p{
+            font-size: to-rem(14);
+            margin-bottom: to-rem(16);
+        }
+        .selectInfo{
+            display: flex;
+          .select{
+              width: 100%;
+              height: to-rem(48);
+              select{
+                  height: to-rem(48);
+              }
+          }
+          .select:first-child{
+              margin-right: to-rem(10);
+          }
+            
+        }
+    } 
+    .mainContent{
+        .noLocationSelected{
+            width: to-rem(225);
+            margin: to-rem(155) auto 0 auto;
+            text-align: center;
+            h2{
+                font-size: to-rem(14);
+            }
+            p{
+                font-size: to-rem(12);
+            }
+        }
+    }
+
+}

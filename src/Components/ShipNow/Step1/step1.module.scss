@@ -1,0 +1,22 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.step1{
+    .form{
+        &_content{
+            h2{
+                font-size: to-rem(16);
+            }
+            @include breakpoint-mini('xxxl'){
+                h2{
+                    font-size: to-rem(20);
+                    font-weight: 500;
+                    padding: to-rem(25 0 47 0);
+                }
+            }
+            label{
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.contentWrapper {
+  position: relative;
+  .arrowIcon {
+    position: absolute;
+    right: to-rem(15);
+    top: to-rem(8);
+  }
+  .listItem {
+    display: flex;
+    height: to-rem(44);
+    padding-left: to-rem(15);
+    p {
+      font-size: to-rem(14);
+      font-weight: 400;
+      padding-left: to-rem(25);
+      padding-top: to-rem(13);
+    }
+    svg {
+      margin: auto 0;
+    }
+  }
+  hr {
+    border: 1px solid #ccc;
+  }
+}
+.logoutContainer {
+  display: flex;
+  .logout {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: to-rem(10);
+    padding-bottom: to-rem(80);
+    bottom: to-rem(10);
+    margin-top: 30%;
+    left: 38%;
+  }
+}

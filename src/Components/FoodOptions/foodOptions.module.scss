@@ -1,0 +1,24 @@
+@import "../../Assets/styles/shared-styles.scss";
+.foodOptions{
+    display: flex;
+    justify-content: space-between;
+    margin: to-rem(10 0);
+    .inputWrapper{
+        position: relative;
+        margin-bottom: to-rem(15);
+        label{
+            color: color(Swamp);
+            }
+        label::before{
+            border-radius: 50%;
+            border: hidden;
+        
+        }
+        input{
+            top: to-rem(0) !important;
+            left: to-rem(0) !important;
+            margin-right: to-rem(20)
+        }
+        
+    }
+}

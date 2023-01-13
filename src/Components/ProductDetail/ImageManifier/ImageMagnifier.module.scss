@@ -1,0 +1,38 @@
+@import "Assets/styles/shared-styles.scss";
+.imageMagnifier{
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    z-index: 3;
+    width: 100%;
+    .closeMagnifier{
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: to-rem(10);
+        padding-right: to-rem(20);
+    }
+    .image{
+        margin-top: 50%;
+        padding: to-rem(0 8);
+        img{
+            transition: all .8s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    .extraImages{
+        height: to-rem(100);
+        width: 100%;
+        .images > div:first-child{
+            img{
+                margin-left: 0;
+            }
+        }
+        .images{
+            display: flex;
+            img{
+                width: to-rem(90);
+                margin-left: to-rem(8);
+            }
+        }
+    }
+}

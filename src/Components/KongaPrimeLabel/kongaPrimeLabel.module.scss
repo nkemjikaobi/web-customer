@@ -1,0 +1,63 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.kongaPrimeLabel{
+    width: 100%;
+    @include breakpoint-mini('m'){
+        width:to-rem(420);
+    }
+    padding: to-rem(31 30 24 30);
+    background-color: #FFF4FA;
+    .text{
+        p{
+            font-size: to-rem(14);
+            font-weight: 400;
+        }
+    }
+    .bottom{
+        display: flex;
+        .logo{
+            display: flex;
+            .img{
+                width: to-rem(73);
+                height: to-rem(20);
+                margin-top: to-rem(3);
+            }
+            p{
+                font-size: to-rem(20);
+                font-weight: 500;
+                color: #F9A024;
+            }
+        }
+        .button{
+            margin-left: to-rem(78);
+            width: to-rem(83);
+            height: to-rem(33);
+            button{
+                background-color: #FBA100;
+                border: 0px;
+            }
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .kongaPrimeLabel {
+        border-radius: to-rem(4);
+        .text{
+            p{
+                font-size: 12px;
+                line-height: 14.32px;
+            }
+        }
+        .bottom{
+            margin-top: 8px;
+            .button{
+                margin-left: 1rem;
+                width: 70%;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.mobileNav{
+    height: to-rem(58);
+    padding: to-rem(17);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: to-rem(2) solid color(PrimaryLight);
+    .left,.right{
+        display: flex;
+    }
+    .right div:nth-child(2) {
+       margin-right: to-rem(18);
+    }
+    .logo{
+        height: to-rem(22);
+        width: to-rem(87);
+        margin-left: to-rem(16);
+    }
+    .search{
+        margin-right: to-rem(30);
+    }
+ 
+}
+.sideMenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+}
+.sideMenu2{
+    width: 84% !important;
+}
+.moveSideBar{
+    transition: transform 0.5s;
+    left: to-rem(65);
+}
+.overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+    }
+    .removeSideBar{
+        transition: transform 0.5s;
+        transform: translate(350px);
+    }

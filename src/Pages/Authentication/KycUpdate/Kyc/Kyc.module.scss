@@ -1,0 +1,44 @@
+.header {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+.container {
+    background-color: #f2f2f2;
+    margin-top: 2rem;
+}
+
+.menuItem {
+    width: 100%;
+    padding: to-rem(12 30);
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+    .menuItemLeft {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        .left {
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 16px;
+                line-height: 19px;
+                color: #878787;
+                margin-left: 0.7rem;
+            }
+        }
+    }
+}
+
+@media screen 
+  and (max-device-width: 540px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        background-color: #fff;
+        margin-top: 0rem;
+    }
+    
+  }

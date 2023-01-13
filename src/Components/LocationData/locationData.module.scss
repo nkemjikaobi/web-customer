@@ -1,0 +1,32 @@
+@import "../../Assets/styles/shared-styles.scss";
+.locationList {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: to-rem(0 16);
+      justify-content: center;
+      @include breakpoint-mini("l") {
+        padding: to-rem(0 70);
+        justify-content: left;
+      }
+      margin-top: to-rem(20);
+      li {
+        color: #000;
+        width: 50%;
+        font-size: to-rem(14);
+        font-weight: 400;
+        margin-bottom: to-rem(10);
+      }
+      @include breakpoint-mini("m") {
+        li {
+          width: 25%;
+          font-size: to-rem(18);
+        }
+      }
+    }
+    .linkStyle {
+      color: #000;
+    }
+    .linkStyle:visited {
+      color: #000;
+    }

@@ -1,0 +1,15 @@
+@mixin unit-vh($prop, $int) {
+    #{$prop}: #{$int + 'vh'};
+    // Fallback for browsers that don't support vh e.g opera mini
+    @supports not (max-height: 1vh) {
+        #{$prop}: #{$int + '%'};
+    }
+}
+
+@mixin unit-vw($prop, $int) {
+    #{$prop}: #{$int + 'vw'};
+    // Fallback for browsers that don't support vw e.g opera mini
+    @supports not (max-width: 1vw) {
+        #{$prop}: #{$int + '%'};
+    }
+}

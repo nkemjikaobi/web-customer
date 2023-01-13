@@ -1,0 +1,22 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.servicesCard {
+  width: to-rem(182);
+  @include breakpoint("s") {
+    width: to-rem(150);
+  }
+  &_title {
+    font-weight: 500 !important;
+    font-size: to-rem(16);
+    margin: to-rem(15 0);
+    text-transform: capitalize;
+    @include breakpoint("s"){
+      font-size: to-rem(14);
+    }
+  }
+  &_text {
+    font-size: to-rem(12);
+    font-weight: 400;
+    color: color(ShuttleGrey);
+  }
+}

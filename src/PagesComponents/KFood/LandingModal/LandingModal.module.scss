@@ -1,0 +1,42 @@
+@import "Assets/styles/shared-styles.scss";
+.landingModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    background-color: rgba(29, 27, 27, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .details{
+        padding: to-rem(50 38);
+        background-color: white;
+        width: to-rem(600);
+        border-radius: to-rem(3);
+        .message{
+            p{
+                font-weight: 500;
+                font-size: to-rem(24);
+            }
+        }
+        .iGetIt{
+            background-color: #ED017F;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: to-rem(115);
+            border-radius: to-rem(4);
+            padding: to-rem(16 0);
+            text-align: center;
+            margin-top: to-rem(50);
+            cursor: pointer;
+            span{
+                color: white;
+                font-weight: 400;
+                font-size: to-rem(14);
+            }
+        }
+    }
+}

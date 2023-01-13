@@ -1,0 +1,99 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.accountLayoutContent {
+    border: 1px solid color(Whisper);
+    height: 100%;
+    .header {
+        font-weight: bold;
+        font-size: to-rem(14);
+        line-height: to-rem(17);
+        color: #344356;
+        border-bottom: 1px solid color(Whisper);
+        padding: 1rem;
+    }
+  }
+  .container {
+    border-bottom: 1px solid color(Whisper);
+    padding-bottom: 1rem;
+    .headerList{
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(14 20 0 16);
+        .date {
+            font-weight: bold;
+            font-size: to-rem(14);
+            line-height: to-rem(17);
+            color: #000000;
+            margin-top: to-rem(3);
+            
+          }
+          .detailsButton {
+            a {
+              padding: 0.3rem 1rem;
+              background: rgba(237, 1, 127, 0.1);
+              border-radius: 4px;
+              color: color(PrimaryLight) !important;
+            }
+        }
+    }
+    .ordersCard {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        .right {
+            width: 35%;
+        }
+        .details {
+            span {
+              font-weight: 500;
+              font-size: to-rem(14);
+              line-height: to-rem(17);
+              color: #9B9B9B; 
+            }
+        }
+        .address{
+            p {
+                text-align: end;
+              padding: 0.4rem;
+              font-weight: 500;
+              font-size: to-rem(14);
+              line-height: to-rem(17);
+              color: #9B9B9B;  
+            }
+        }
+    }
+    .img {
+        display: flex;
+        margin-left: 1rem;
+        img {
+            width: to-rem(87);
+            height: auto;
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .accountLayoutContent {
+        width: 100%;
+    }
+}
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .accountLayoutContent {
+        width: 90%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1440px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .accountLayoutContent {
+        width: 100%;
+    }
+}

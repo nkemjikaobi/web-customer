@@ -1,0 +1,19 @@
+
+@import "../../Assets/styles/shared-styles.scss";
+.filterWrapper{
+    .header{
+        display: flex;
+        justify-content: space-between;
+        margin: to-rem(20 0 23 0);
+        h1{
+            font-size: to-rem(15);
+            font-weight: 700;
+        }
+        .dash{
+            height: to-rem(2);
+            width: to-rem(17);
+            background-color: color(Black);
+            margin-top: to-rem(7);
+        }
+    }
+}

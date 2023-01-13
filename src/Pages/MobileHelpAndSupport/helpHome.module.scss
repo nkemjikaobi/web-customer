@@ -1,0 +1,107 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.helpHome {
+  padding: 30px 320px;
+  @include breakpoint-mini("m") {
+    padding: 0;
+    .getInTouchWrapper {
+      height: to-rem(160);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: to-rem(32);
+        color: color(black);
+        line-height: to-rem(39.07);
+        margin-bottom: to-rem(20);
+        display: inline-block;
+      }
+      p {
+        font-size: to-rem(16);
+        color: #5e5e5e;
+      }
+    }
+  }
+  .getInTouchWrapper {
+    text-align: center;
+    margin: 0 -50%;
+    background-color: #ffdbde;
+    .getInTouch {
+      color: #1c1d1f;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+  @include breakpoint-mini("m") {
+    .subSections {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: to-rem(200);
+      margin-top: to-rem(50);
+      .speakWithAgent {
+        display: flex;
+        flex-direction: column;
+        margin-top: to-rem(30);
+        span {
+          font-size: to-rem(32);
+          font-weight: 700;
+          width: to-rem(361);
+          display: inline-block;
+          text-align: left;
+        }
+        p {
+          display: inline-block;
+          width: to-rem(355);
+          font-weight: 700;
+          font-size: to-rem(25);
+          color: #666666;
+          text-align: left;
+        }
+        p:nth-child(3) {
+          color: #575757;
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: left;
+        }
+        .whatsApp {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          p {
+            font-size: to-rem(14);
+            color: #575757;
+            width: 11.3125rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .speakWithAgent {
+    padding-top: 10px;
+    text-align: center;
+    span {
+      font-weight: 500;
+    }
+    p {
+      font-weight: 400;
+      padding-top: 15px;
+      color: #666666;
+    }
+    .whatsApp {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .button {
+      padding: 1px 15px;
+    }
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .helpHome {
+    padding: 8px 0;
+  }
+}

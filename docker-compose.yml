@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+    aphrodite:
+        container_name: aphrodite
+        build: .
+        ports:
+            - 80:80
+            - 443:8443
+        volumes:
+            - .:/repo
+        environment:
+            NODE_ENV: development
+            REACT_APP_NODE_ENV : development
+            DEBUG : '1'
+            PORT : "80"
+            NODE_PATH : "."
+            PUBLIC_URL : https://az-staging-aphrodite.igbimo.com
+            REACT_APP_FIREBASE_API_KEY: "AIzaSyDKcWjYlYXaj78897Z-xnNaK2WZnbmeAbw"
+            REACT_APP_FIREBASE_AUTH_DOMAIN: super-app-v1.firebaseapp.com
+            REACT_APP_FIREBASE_PROJECT_ID: super-app-v1
+            REACT_APP_FIREBASE_STORAGE_BUCKET: super-app-v1.appspot.com
+            REACT_APP_FIREBASE_MESSAGING_SENDER_ID: "1083581267143"
+            REACT_APP_FIREBASE_APP_ID: 1:1083581267143:web:e3f0db2938bf357aead2e2
+            REACT_APP_GATEWAY_API_ROUTE: "https://az-staging-silkroad.igbimo.com"
+            REACT_APP_GENERATE_SOURCEMAP: "false"
+            REACT_APP_MAX_AGE: "86400"
+            REACT_APP_ALGOLIA_APP_ID: B9ZCRRRVOM
+            REACT_APP_ALGOLIA_API_KEY: cb605b0936b05ce1a62d96f53daa24f7
+            REACT_APP_ALGOLIA_QUERY_SUGGESTIONS_INDEX: staging_query_suggestions_query_suggestions
+            REACT_APP_ALGOLIA_MAIN_PRODUCT_INDEX: staging_catalog_store_konga_ranking
+            REACT_APP_CLOUDINARY_BASE_IMAGE_URL: https://az-staging-konga-com-res.cloudinary.com
+            REACT_APP_FALLBACK_IMAGE: /image/upload/f_auto,q_auto/assets/images/content/fallback_image.svg
+            REACT_APP_IMAGE_API_URL: /w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product
+            REACT_APP_IMAGE_SERVICE_URL: /w_250,h_250,q_auto,f_auto,fl_lossy,dpr_auto
+            REACT_APP_CATEGORIES_IMAGES_BASE_URL: /image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/
+
+            REACT_APP_ALGOLIA_B2B_PRODUCT_INDEX: catalog_store_konga_b2b
+            REACT_APP_ALGOLIA_INDEX_PRICE_ASC: staging_catalog_store_konga_price_asc
+            REACT_APP_ALGOLIA_FILTER_LIMIT: "50"
+            REACT_APP_KONGA_ONLINE_URL: "https://az-staging.konga.com"

@@ -1,0 +1,26 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.infoCard{
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(18 16);
+    background-color: #FBFBFB;
+    margin-bottom: to-rem(8);
+    @include breakpoint-mini('xxl'){
+        padding: to-rem(18 29);
+    }
+    .status{
+        padding: to-rem(4 16);
+        background-color: rgba(51, 178, 123, 0.1);
+        border-radius: to-rem(5);
+        color:  rgba(51, 178, 123, 1);
+    }
+    .heading{
+        font-size: to-rem(14);
+        color: color(SonicSilver);
+        margin-bottom: to-rem(11);
+        &_text{
+            color: color(SonicSilver);
+        }
+    }
+}

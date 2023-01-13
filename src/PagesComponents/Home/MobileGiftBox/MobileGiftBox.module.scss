@@ -1,0 +1,24 @@
+@import "Assets/styles/shared-styles.scss";
+.mobilePromoWrapper{
+    position: fixed;
+    top: to-rem(484);
+    right: to-rem(16);
+    @include breakpoint-mini('xl'){
+      display: none;
+    }
+    .mobilePromo{
+        width: to-rem(64);
+        height: to-rem(64);
+        text-align: center;
+        border-radius: 50%;
+        background-color: #FFD7EE;
+        font-size: to-rem(10);
+        font-weight: 400;
+        position: relative;
+        img{
+          border-radius: 50%;
+          height: 70%;
+          margin-top: 10px;
+        }
+      }
+  }

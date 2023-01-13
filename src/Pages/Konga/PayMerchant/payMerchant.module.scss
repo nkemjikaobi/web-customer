@@ -1,0 +1,115 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.payMerchant {
+  background-color: #EDEDED;
+  @include breakpoint-mini('xxl'){
+    background-color: color(White);
+    width: to-rem(1080);
+  }
+  margin: 0 auto;
+  @include breakpoint-mini('xxl'){
+    display: flex;
+    padding: to-rem(49 0 90 0);
+  }
+  &_Form {
+    border: 1px solid black;
+    background-color: color(White);
+    height: to-rem(501);
+    padding: to-rem(36 16 57 16);
+    border: 1px solid rgba(144, 144, 144, 0.2);
+    border-radius: to-rem(3);
+    margin-bottom: to-rem(20);
+
+    @include breakpoint-mini('xxl'){
+      width: to-rem(530);
+      padding: to-rem(36 51 57 51);
+    }
+    input[type="number"],
+    textarea{
+        margin-bottom: to-rem(16);
+    }
+    textarea{
+        height: to-rem(100);
+        resize: none;
+    }
+    label{
+      color: color(DavyGrey);
+    }
+  }
+  .button {
+   
+    height: to-rem(46);
+    margin-top: to-rem(34);
+
+    @include breakpoint-mini('xxl'){
+      width: to-rem(428);
+    }
+    button{
+      border: 0px;
+    }
+  }
+  &_savedBeneficiary {
+    background-color: color(White);
+   
+    height: to-rem(501);
+    border: 1px solid rgba(144, 144, 144, 0.2);
+   
+    @include breakpoint-mini('xxl'){
+      width: to-rem(530);
+      margin-left: to-rem(20);
+    }
+    
+    .heading {
+      border-bottom: 1px solid color(WhisperVarOne);
+      border-radius: to-rem(6);
+      h1 {
+        font-size: to-rem(16);
+        font-weight: 400;
+        padding: to-rem(24 0 30 35);
+      }
+    }
+    .content{
+      padding: to-rem(16 59 33 59);
+      .info{
+        margin-top: to-rem(102);
+        text-align: center;
+        p{
+          padding-top: to-rem( 28);
+          color: color(DavyGrey);
+        }
+      }
+    }
+  }
+}
+
+.merchantInfoCard{
+  display: flex;
+  justify-content: space-between;
+  padding: to-rem(16 32 16 16);
+  background-color:  #FBFBFB;
+  .left{
+      display: flex;
+      p{
+          font-size: to-rem(14);
+          margin: to-rem( 15 0 15 15);
+      }
+  }
+  .icon{
+    width: to-rem(48);
+    height: to-rem(48);
+    border-radius: 50%;
+    background-color: rgba(243, 105, 35, 0.1);
+    text-align: center;
+    svg{
+      margin-top: to-rem(12);
+    }
+  }
+  .merchantInfo{
+    p{
+      font-size: to-rem(14);
+      color: #335C88;
+      padding: to-rem(15 0);
+      text-decoration: underline;
+    }
+  }
+
+}

@@ -1,0 +1,76 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.TravelCard {
+    box-shadow: 0px 6.4633073806762695px 24.237401962280273px 0px #0000000a;
+    min-width: to-rem(287);
+    margin: to-rem(0 20.31 65 0);
+    padding-bottom: to-rem(27);
+    cursor: pointer;
+    &Bottom {
+        border-radius: to-rem(8.08);
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(0 10 0 10);
+        &_left {
+            .location {
+                color: color(DimGrey);
+                font-size: to-rem(18);
+                margin-top: to-rem(19.7);
+            }
+            .direction {
+                color: color(SuvaGrey);
+                margin-top: to-rem(10);
+            }
+        }
+        &_right {
+            .priceHeading {
+                margin-top: to-rem(21.2);
+                font-size: to-rem(14);
+            }
+            .price {
+                color: color(PrimaryLight);
+                margin-top: to-rem(13);
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 0px 3px 5px 0px #00000026;
+    }
+    .listingCard3Bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(10);
+        &_left{
+            .location{
+                color: #707070;
+                font-size: to-rem(18);
+                font-weight: 500;
+            }
+            .direction{
+                color: #8A8989;
+                font-weight: 400;
+                font-size: to-rem(16.16);
+            }
+        }
+        &_right{
+            .priceHeading{
+                color: #14171A;
+                font-weight: 500;
+                font-size: to-rem(14);
+            }
+            .price{
+                color: #ED017F;
+                font-size: to-rem(16);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .TravelCard{
+        margin-bottom: to-rem(16);
+    }
+}

@@ -1,0 +1,37 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.fundWalletWrapper{
+padding: to-rem(48 0 106 0);
+}
+.fundWallet{
+    background-color: color(White);
+    border: to-rem(1) solid color(Whisper);
+    padding: to-rem(30 16 71 16);
+    @include breakpoint-mini('l'){
+        padding: to-rem(61 106 68 106);
+        width: to-rem(640);
+        margin: 0 auto;
+    }
+    h1{
+        font-size: to-rem(18);
+        margin-bottom: to-rem(32);
+    }
+    input,
+    select {
+      margin-bottom: to-rem(16);
+    }
+    select {
+      height: to-rem(52);
+      border-color: color(WhisperVarOne);
+      border-radius: to-rem(3);
+    }
+    .button {
+        height: to-rem(52);
+        margin-top: to-rem(60);
+        @include breakpoint-mini("l") {
+          margin-top: to-rem(50);
+        }
+      }
+      label{
+          color: color(#555555);
+      }
+}

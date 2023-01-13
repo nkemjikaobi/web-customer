@@ -1,0 +1,14 @@
+// Show only on mobile
+%mobileOnly {
+  @media screen and (min-width: #{map-get($breakpoints, 'm')}) {
+    display: none;
+  }
+}
+
+
+// Only renders on tablet and above
+%tabletAndAboveOnly {
+  @media screen and (max-width: #{map-get($breakpoints, 'm')}) {
+    display: none !important;
+  }
+}

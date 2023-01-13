@@ -1,0 +1,46 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.productLabel {
+    border-bottom-right-radius: to-rem(65);
+    border-top-right-radius: to-rem(65);
+    color: color(White);
+    display: inline-block;
+    font-size: to-rem(10);
+    font-weight: 500;
+    left: 0;
+    padding: to-rem(8 8 10);
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: to-rem(10);
+}
+
+.percentage_off {
+    background-color: color(Danger);
+    z-index: 1;
+}
+
+.new_product {
+    background-color: color(Success);
+}
+
+.promo {
+    background-color: color(NeonCarrot);
+    font-size: to-rem(9);
+
+    @include breakpoint-mini('l') {
+        font-size: to-rem(10);
+        padding: to-rem(2 10 2 2);
+    }
+
+    &Icon {
+        @extend %tabletAndAboveOnly;
+        background-color: color(White);
+        border-radius: 50%;
+        box-shadow: inset to-rem(0 2 2) transparentize(color(Black), 0.5);
+        height: to-rem(26);
+        margin-right: to-rem(8);
+        padding: to-rem(3);
+        width: to-rem(26);
+    }
+}

@@ -1,0 +1,73 @@
+@import "../../../Assets/styles/shared-styles.scss";
+// .link {
+//     padding-top: to-rem(70);
+// }
+.icons {
+    display: flex;
+    padding: to-rem(50);
+    justify-content: space-around;
+}
+
+.button {
+    width: to-rem(90);
+    height: to-rem(48);
+    margin-top: to-rem(10);
+    background-color: color(PrimaryLight);
+    color: white;
+}
+.icon {
+    height: to-rem(175);
+    background: #ECECEC; 
+}
+.flightCard {
+    width: 40rem;
+    margin-left: 1rem;
+}
+.flightCardSettings {
+    width: 18rem;
+    margin-left: 10rem; 
+}
+.card {
+    width: 40rem;
+}
+.cardFlightDetails {
+    color: #777777;
+    // font-family: "Helvitica Neue";
+    font-size: to-rem(18);
+    line-height: to-rem(22);
+}
+.cardTitle {
+    font-size: to-rem(18);
+    line-height: to-rem(22);
+}
+.paymentInfo {
+    font-size: to-rem(12);
+    line-height: to-rem(15.34);
+}
+.applyButton {
+    width: to-rem(90);
+    height: to-rem(40);                    
+    background: #F26822;
+    color: #fff;
+    margin-top: 0.7rem;
+}
+.continueButton {
+    width: 38rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    font-size: to-rem(14);
+    color: #fff;
+    background: #F26822;
+}
+.termsConditions {
+    width: 38rem;
+    margin-left: 1rem; 
+    font-size: to-rem(14); 
+    a {
+        color: blue;
+    }
+}
+.formControl {
+    width: to-rem(458);
+    height: to-rem(40); 
+}

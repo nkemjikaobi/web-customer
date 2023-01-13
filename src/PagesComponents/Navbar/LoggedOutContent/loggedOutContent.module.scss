@@ -1,0 +1,34 @@
+.contentWrapper{
+    position: relative;
+    .arrowIcon{
+        position: absolute;
+        right: 15px;
+        top: 8px;
+    }
+    .listItem{
+        display: flex;
+        height: 44px;
+        padding-left: 15px;
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            padding-left: 35px;
+            padding-top: 13px;
+        }
+        svg{
+            margin: auto 0;
+        }
+    }
+    hr{
+        border: 1px solid #ccc
+    }
+}
+.logoutContainer{
+    display: flex;
+    .logout{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+    }
+}

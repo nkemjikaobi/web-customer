@@ -1,0 +1,114 @@
+.transactionHistories{
+  .noHistory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    p{
+      font-size: 16px;
+      color: #B0B0B0;
+    }
+  }
+  .transactionHistoryItems{
+    min-height: 50vh;
+  }
+    margin-top: 3rem;
+    ul{
+        padding-left: 0 !important;
+    }
+    .transactionHistoryHeader{
+        padding: 0 5px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        .transactionHistoryHeading{
+          label{
+            font-weight: 500;
+          }
+        }
+        .filterExportWrapper{
+            display: flex;
+            .filter,.export{
+              svg {
+                margin: 3px 16px 3px 0px;
+              }
+                padding: 8px 16px;
+                border: 1px solid #ED017F;
+                border-radius: 3px;
+                color: #ED017F;
+                margin-left: 30px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-around;
+            }
+            .filter:hover, .export:hover {
+              background-color: #ED017F;
+              color: #ffffff;
+              svg {
+                path{
+                  fill: color(#ffffff);
+                }
+              }
+            }
+        }
+      }
+      .filterButtons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+      .channelStyles{
+        background: #F1F1F1;
+        border-radius: 5px;
+        color: #767676;
+        padding: 6px 8px;
+        margin: 10px;
+      }
+      .active {
+        background: rgba(51, 178, 123, 0.1);
+        color: #33B27B;
+      }
+}
+
+@media screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .transactionHistories{
+      .transactionHistoryHeader{
+        margin: 0rem 0.8rem;
+        .filterExportWrapper{
+          display: flex;
+          .filter,.export{
+            svg {
+              margin: -4px 1px;
+            }
+            span {
+              display: none;
+            }
+              padding: 8px 10px;
+              margin-left: 10px;
+          }
+        }
+        
+    }
+    .filterButtons {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 1rem 0.8rem 0rem 0.8rem;
+      overflow-x: scroll;
+      cursor: pointer;
+    }
+    .channelStyles{
+      background: #F1F1F1;
+      border-radius: 5px;
+      color: #767676;
+      padding: 6px 8px;
+      margin: 0.4rem;
+    }
+    .active {
+      background: rgba(51, 178, 123, 0.1);
+      color: #33B27B;
+    }
+  }
+}

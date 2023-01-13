@@ -1,0 +1,23 @@
+@import "../../Assets/styles/shared-styles.scss";
+.sessionTimeout{
+    position: relative;
+    .backdrop{
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .sessionTimeoutModal{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        position: fixed;
+        z-index: 1000;
+        @include breakpoint('m'){
+            top: 40%; 
+        }
+    }
+}

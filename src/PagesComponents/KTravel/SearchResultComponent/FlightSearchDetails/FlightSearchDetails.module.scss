@@ -1,0 +1,277 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.detailsHolder{
+    height: 100%;
+    padding: to-rem(16 16 70 16);
+
+    .destinationDetails{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        margin-bottom: to-rem(10);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #C9161E;
+    }
+    .mainContainer {
+        display: flex;
+        justify-content: space-between;
+        .container {
+            display: flex;
+            width: 53%;
+            .flightDetails {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: to-rem(118);
+                background: #FDFDFD;
+                border: 1px solid #DDDDDD;
+                box-sizing: border-box;
+                border-radius: 2px;
+                padding: 2rem;
+                .operator {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #000000;
+                    margin-top: 1.5rem;
+                    .align {
+                        text-align: center;
+                    }
+                }
+                .locTime {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #ECA344;
+                    width: to-rem(86);
+                }
+                .text {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #000000;
+                    margin-top: 0.2rem;
+                    text-align: center;
+                }
+                .alignCity1 {
+                    text-align: center;
+                }
+                .line1 {
+                    width: 0px;
+                    height: 70px;
+                    border: 1px solid #D8D8D8;
+                    transform: rotate(-90deg);
+                }
+                .duration {
+                    margin-top: 0.4rem;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #8F8F8F;
+                }
+            }
+        }
+        .flightStops {
+            width: 45%;
+        }
+        .fareHolder {
+            width: 100%;
+            .fareContainer {
+                width: 100%;
+                height: 9.375rem;
+                background: #FDFDFD;
+                border: 1px solid #DDDDDD;
+                box-sizing: border-box;
+                border-radius: 2px;
+                padding: to-rem(16 16 20 16);
+                p {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 21px;
+                    line-height: 26px;
+                    color: #ECA344;
+                    margin-bottom: 1rem;
+
+                }
+                .fareDetailsHeader {
+                    display: grid;
+                    height: to-rem(10);
+                    grid-template-columns: 19% 15% 24% 24% 20%;
+                    align-items: center;
+                    justify-items: start;
+                    font-style: normal;
+                    font-weight: bold !important;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #000000;
+                }
+                .fareDetails {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 600 !important;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #000000;
+
+                }        
+                .fareDetails1 {
+                    display: grid;
+                    height: to-rem(40);
+                    grid-template-columns: 20% 14% 25% 23% 20%;
+                    align-items: center;
+                    justify-items: start;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #000000;
+                }
+            }
+        }
+        .grandTotal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            background: #FDFDFD;
+            border: 1px solid #DDDDDD;
+            box-sizing: border-box;
+            border-radius: 2px;
+            margin-top: 0.6rem;
+            padding: to-rem(20);
+            font-weight: bold !important;
+            font-size: 12px;
+            line-height: 15px;
+            color: #000000;
+            p{
+                font-weight: 600 !important;
+            }
+        }
+    }
+    .stopHolder {
+        .stopDetails {
+            display: flex !important;
+            justify-content: space-between;
+            width: to-rem(571);
+            height: to-rem(118);
+            background: #FDFDFD;
+            border: 1px solid #DDDDDD;
+            box-sizing: border-box;
+            border-radius: 2px;
+            padding: 2rem;
+            margin-bottom: 0.5rem;
+            .operator2 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                color: #000000;
+                margin-top: 1.5rem;
+                .align {
+                    text-align: center;
+                }
+            }
+            .locTime2 {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #ECA344;
+                width: to-rem(86);
+            }
+            .text {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000000;
+                margin-top: 0.2rem;
+                text-align: center;
+            }
+            .alignCity {
+                text-align: center;
+            }
+            .line {
+                width: 0px;
+                height: 70px;
+                border: 1px solid #D8D8D8;
+                transform: rotate(-90deg);
+            }
+            .duration {
+                margin-top: 0.4rem;
+                font-size: 14px;
+                line-height: 17px;
+                color: #8F8F8F;
+            }
+        }
+    }
+    .stopContainer {
+        margin: to-rem(3 0 10 80);
+        .stops {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 405.51px;
+            height: 36.51px;
+            background: rgba(249, 160, 36, 0.15);
+            border-radius: 8px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #F9A024;
+        }
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    .detailsHolder{
+        height: 43rem;
+        .destinationDetails{
+            width: 30%;
+        }
+        .mainContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 8rem;
+
+            .container {
+                width: 100%;
+                margin-bottom: 0.5rem;
+                .flightDetails {
+                    padding: 1rem;
+                }
+            }
+            .flightStops {
+                width: 100%;
+            }
+            .fareHolder {
+                width: 100%;
+            }
+            .stopHolder {
+                .stopDetails {
+                    display: flex !important;
+                    justify-content: space-between;
+                    height: to-rem(118);
+                    width: 100%;
+                    background: #FDFDFD;
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                    padding: 2rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../Assets/styles/shared-styles.scss";
+.deliveryLocation{
+  padding: to-rem(20);
+  background-color: color(GhostWhite);
+  max-height: to-rem(350);
+  .changeDeliveryBtn{
+      padding-top: to-rem(10);
+  }
+  select{
+      height: to-rem(55);
+      padding: to-rem(15);
+      option{
+        padding-left: to-rem(20);
+      }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .deliveryLocation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 2;
+    max-height: none;
+    .title {
+      color: #858585;
+      font-weight: 500 !important;
+      font-size: 14px !important;
+      margin-bottom: 10px;
+    }
+    .close{
+      text-align: right;
+      margin-bottom: 25px;
+    }
+  }
+}

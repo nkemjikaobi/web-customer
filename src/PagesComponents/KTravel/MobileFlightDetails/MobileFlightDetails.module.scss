@@ -1,0 +1,76 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.flightDetails{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    .closeSection{
+        height: to-rem(64);
+        display: flex;
+        align-items: center;
+        span{
+            padding-left: 1rem;
+        }
+    }
+    .fullDetails{
+        .airlineInfo,.durationInfo,.terminalInfo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .airlineInfo{
+            height: to-rem(100);
+            span{
+                font-size: to-rem(14);
+                font-weight: 400;
+                margin-left: to-rem(10);
+            }
+            .aircraft{
+                span{
+                    font-weight: 400;
+                    font-size: to-rem(12);
+                    color: #727272;
+                }
+            }
+        }
+        .durationInfo{
+            .takeOffLanding{
+                text-align: center;
+                .time{
+                    font-size: to-rem(14);
+                    font-weight: 500;
+                }
+            }
+            .duration{
+                text-align: center;
+                p{
+                    font-size: to-rem(12);
+                    font-weight: 400;
+                    color: #727272;
+                    line-height: to-rem(14.32);
+                }
+            }
+        }
+        .terminalInfo{
+            height: to-rem(80);
+            .terminal{
+                span, p{
+                    color: #727272;
+                    font-size: to-rem(12);
+                    font-weight: 400;
+                }
+            }
+            .terminal.origin{
+                span,p{
+                    float: left;
+                }
+            }
+            .terminal.destination{
+                span,p{
+                    float: right;
+                }
+            }
+        }
+    }
+    .bookNowButton{
+        margin-top: 1rem;
+    }
+}

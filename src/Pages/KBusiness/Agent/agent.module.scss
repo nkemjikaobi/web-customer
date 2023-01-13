@@ -1,0 +1,271 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.header {
+    background-image: url("../../../Assets/images/png/Rectangle 3.png");
+    height: to-rem(372);
+    @include breakpoint-mini("xxl") {
+        margin: 0 -13%;
+    }
+    &_Text {
+        color: color(white);
+        text-align: center;
+        padding-top: to-rem(70);
+        h1 {
+            font-size: to-rem(40);
+            font-style: normal;
+            font-weight: bold;
+        }
+        p {
+            font-size: to-rem(18);
+        }
+    }
+    .getStartedButton {
+        width: to-rem(152);
+        height: to-rem(56);
+        background-color: color(white);
+        color: #F36923 !important;
+        border: 1px solid #ffffff;
+        margin-top: to-rem(40);
+        padding: to-rem(14);
+    }
+    .loginButton {
+        width: to-rem(101);
+        height: to-rem(56);
+        border: 1px solid;
+        background: Transparent;
+        margin-left: to-rem(20);
+        margin-top: to-rem(40);
+        padding: to-rem(14);
+    }
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #F0F0F0;
+    flex-wrap: wrap;
+    @include breakpoint-mini("xxl") {
+        margin: 0 -13%;
+    }
+    .buttonDiv {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.3125rem;
+        align-items: center;
+        padding: 0.5rem;
+        
+        .current_button {
+            width: to-rem(310);
+            height: to-rem(50);
+            background: #F26822;
+            color: #fff;
+            margin-right: 2rem;
+            @include breakpoint("s") {
+                width: to-rem(140);
+                margin: 0rem 0rem;
+            }
+        }
+        .button {
+            width: to-rem(310);
+            height: to-rem(50);
+            color: #555555 !important;
+            border: none;
+            margin-right: 2rem;
+            @include breakpoint("s") {
+                width: to-rem(140);
+            }
+            &:current {
+                color: white !important;
+                background-color: color(PrimaryLight);
+            }
+            &:hover {
+                color: #F26822 !important;
+            }
+        }
+    }
+}
+
+.pricing_header {
+    font-size: to-rem(36);
+    line-height: to-rem(46);
+    text-align: center;
+    color: #335C88;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.pricing_subheader {
+    font-size: to-rem(24);
+    line-height: to-rem(34);
+    text-align: center;
+    color: #909090;
+}
+
+.product_card_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: to-rem(100);
+    justify-content: space-between;
+}
+@mixin fonts {
+    h5 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 34px;
+        color: #335C88;
+    }
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 34px;
+        color: #909090;
+    }
+}
+
+.product_card{
+    width: 34%;
+    height: to-rem(400);
+    background: #FFFFFF;
+    box-shadow: -1px 20px 40px rgba(30, 30, 30, 0.05);
+    border-radius: 12px;
+    transition: all .2s ease-in-out;
+    @include fonts;
+    &:hover {
+        transform: scale(1.1)
+    }
+    
+}
+
+.product_card1 {
+    width: 33%;
+    height: to-rem(400);
+    background: #FFFFFF;
+    border: 1px solid rgba(144, 144, 144, 0.2);
+    box-sizing: border-box;
+    border-radius: 12px;
+    transition: all .2s ease-in-out;
+    @include fonts;
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+.bold {
+    font-size: 48px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.bold_discount {
+    font-weight: bold;
+    font-size: to-rem(48);
+    line-height: to-rem(58);
+    color: #E8661C;
+}
+.product_card_content{
+    padding: to-rem(30 0 0 100)
+}   
+    
+.transaction {
+    padding-top: to-rem(100);
+    background: #f8f8fb;
+    margin-bottom: to-rem(100);
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 46px;
+        color: #335C88;
+    }
+    p {
+        padding-top: to-rem(5);
+        text-align: center;
+        font-weight: normal;
+        font-size: to-rem(22);
+        line-height: to-rem(34);
+        color: #909090;
+    }
+
+    .android_sdk {
+        color: #88A920;
+    }
+    .ios_sdk {
+        color: #95B3C2;
+    }
+    .web_plugin {
+        color: #4082CE;
+    }
+    .view_doc {
+        color: #4E7F86;
+    }
+}
+.documentation_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: to-rem(40);
+    padding-bottom: to-rem(100);
+    
+}
+
+.documentation_card {
+    width: to-rem(380);
+    height: to-rem(300);
+    border: 1px solid rgba(144, 144, 144, 0.2);
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin: to-rem(9);
+    padding: to-rem(80);
+    p {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 46px;
+    } 
+}
+
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+      .header {
+          height: 28rem;
+          padding: 0.5rem;
+      }
+    .product_card_container{
+        display: block;
+    }
+    .product_card1 ,.product_card {
+        width: 100%;
+    }.product_card_content{
+        padding: to-rem(12 0 0 0);
+        text-align: center;
+    } 
+    .documentation_card {
+        padding: to-rem(60);
+    } 
+  }
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .btnContainer {
+        .buttonDiv {
+            .current_button {
+                width: to-rem(210);
+            }
+            .button {
+                width: to-rem(210);
+            }
+        }
+    }
+    
+    .product_card_content{
+        padding: to-rem(12 0 0 0);
+        text-align: center;
+    } 
+  }

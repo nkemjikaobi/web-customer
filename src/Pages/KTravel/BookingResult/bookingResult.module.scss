@@ -1,0 +1,238 @@
+@import "Assets/styles/shared-styles.scss";
+
+// .breadCrumbClass {
+//   background: linear-gradient(93.2deg, #fff3f4 2.4%, #ffbdc3 173.15%) !important;
+// }
+.searchWidgetWrapper{
+  margin-left: -7rem;
+  margin-right: -7rem;
+  padding: 25px 123px 1px 123px;
+  background-color: white;
+  .header2{
+    .bookingSummaryWrapper{
+      margin-top: 3rem;
+    }
+  }
+}
+.contentWrapper{
+  padding-top: 1px;
+  background-color: #f2f2f2;
+}
+.header {
+  height: to-rem(170);
+  @include breakpoint-mini("xxxl") {
+    margin: 0 -12.5%;
+  }
+  &_Text {
+    color: color(Black);
+    text-align: center;
+    padding-top: to-rem(70);
+    h1 {
+      font-size: to-rem(60);
+    }
+    p {
+      font-size: to-rem(19);
+    }
+  }
+  .searchAdditionalWrapper {
+    margin-top: 0px !important;
+    padding: to-rem(1 170);
+  }
+  .bookingSummaryWrapper{
+    display: flex;
+    justify-content: center;
+    .bookingSummary{
+      width: 79%;
+      margin-top: 3rem;
+    }
+  }
+ 
+  .travelSearchFormWrapper {
+    width: to-rem(1150);
+    margin: 0 auto;
+    margin-top: 9rem;
+    .serviceSelectors {
+      display: flex;
+      p {
+        padding: to-rem(17 47);
+        background-color: color(white);
+      }
+      p.flights {
+        background-color: rgb(242, 104, 34) !important;
+        color: white;
+      }
+    }
+    .travelSearchForm {
+      background-color: color(White);
+      box-shadow: 5px 10px 10px 0px #4d4c4c0d;
+      height: to-rem(209);
+      .flightDetails {
+        display: flex;
+        width: to-rem(1080);
+        justify-content: space-between;
+        margin: to-rem(27 0 0 32);
+        &Inputs {
+          width: to-rem(200);
+          height: to-rem(46);
+        }
+        input[type="date"] {
+          border: 1px solid #ededed;
+          width: 100%;
+          height: to-rem(46);
+          margin-top: to-rem(10);
+        }
+        select {
+          border: 1px solid #ededed;
+          width: 100%;
+          height: to-rem(46);
+          margin-top: to-rem(2);
+        }
+      }
+      .bottom {
+        display: flex;
+        width: to-rem(1080);
+        margin-left: to-rem(33);
+        justify-content: space-between;
+        .moreOptions {
+          margin: to-rem(33 0 0 0);
+          color: color(OptionsGreen);
+        }
+        .button {
+          margin-top: to-rem(13);
+          width: to-rem(200);
+          height: to-rem(46);
+        }
+      }
+    }
+  }
+}
+.tableHeaderText {
+  img, svg {
+    width: to-rem(10) !important;
+    margin-right: to-rem(10) !important;
+  }
+  span {
+    font-size: to-rem(13) !important;
+  }
+}
+.mainContent{
+  display: flex;
+  margin-top: 2.5rem;
+  .tripDetails{
+    padding-left: 2rem;
+    .background {
+      background-color: #E2E2E2;
+      margin-top: -2rem;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    .modifySearch{
+      display: none;
+    }
+    .resetSearch{
+      span{
+        font-size: to-rem(18);
+        font-weight: 700;
+      }
+    }
+  }
+  .headingWrapper{
+    .heading{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-right: to-rem(1) solid color(WhisperVarOne);
+      >div{
+        display: flex;
+        align-items: center;
+        p{
+          margin-left: to-rem(10);
+        }
+      }
+      &:last-child{
+        border-right: none;
+      
+     }
+      }
+    }
+  }
+  .noResult{
+    min-height: to-rem(100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .mainContent{
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 3rem;
+      .tripDetails{
+        padding-left: 0rem;
+        .background {
+          display: none;
+        }
+        .resultWrapper{
+          padding: to-rem(0 0);
+        }
+        .resetSearch{
+          display: none;
+        }
+        .modifySearch{
+          display: block !important;
+          text-align: center;
+          span{
+            background-color: #ED017F;
+            color: white;
+            padding: to-rem(10 10);
+            border-radius: to-rem(5);
+          }
+        }
+      }
+    }
+    .travelSearchFilter{
+      display: none !important;
+    }
+
+    .searchWidgetWrapper{
+      .header2{
+        display: none !important;
+      }
+      .header{
+        position: fixed;
+        left: 0;
+        top: to-rem(58);
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        background-color: #FFF4F5;
+        .closeMobile{
+          padding: to-rem(16 0 0 22);
+        }
+      }
+      .searchAdditionalWrapper{
+        padding: 0;
+      }
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+  .mainContent{
+    .tripDetails{
+      padding-left: 0rem;
+    }
+  }
+  .travelSearchFilter{
+    display: none !important;
+  }
+} 

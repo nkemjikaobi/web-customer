@@ -1,0 +1,151 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.deliveryOptions {
+  &_active {
+    background: #475f7e0d;
+  }
+  &_inactive {
+    background: color(white);
+  }
+
+  &_selector {
+    display: block;
+    @include breakpoint("s") {
+      padding: to-rem(0 10);
+    }
+    @include breakpoint-mini("l") {
+      padding: to-rem(33 29 48 49);
+      display: flex;
+      justify-content: space-between;
+    }
+    .left {
+      @include breakpoint-mini("xxl") {
+        margin-right: to-rem(24);
+      }
+      .button {
+        width: to-rem(184);
+        height: to-rem(40);
+        margin-top: to-rem(48);
+        .inactive {
+          background-color: #e0e0e0 !important;
+        }
+      }
+      .inputWrapper {
+        position: relative;
+        margin-bottom: to-rem(15);
+        input {
+          top: to-rem(1) !important;
+          left: to-rem(3) !important;
+          // z-index: 2;
+        }
+      }
+    }
+    .right {
+      padding: to-rem(20 22 17 20);
+      background: #fff8fc;
+      height: 100%;
+      font-size: to-rem(12);
+      font-weight: 500;
+      margin: to-rem(16 0);
+      color: color(PrimaryLight);
+      @include breakpoint-mini("l") {
+        margin-top: to-rem(39);
+      }
+      .locationContainer {
+        background-color: #fff8fc;
+        border-radius: 1.96px;
+        width: to-rem(200);
+        p {
+          font-size: to-rem(12);
+          font-weight: 500;
+          line-height: to-rem(16);
+          display: inline-block;
+          margin-bottom: to-rem(10);
+          color: color(black);
+        }
+        .location {
+          display: flex;
+          span {
+            color: color(PrimaryLight);
+            font-size: to-rem(20);
+            line-height: to-rem(25.50);
+            font-weight: 500;
+            display: inline-block;
+            margin-left: to-rem(20);
+          }
+        }
+      }
+    }
+  }
+  .deliveryInstructions {
+    padding: to-rem(22 29 9 12);
+    background: color(White);
+  }
+  .selectWrapper {
+    background-color: color(White);
+    border: to-rem(1) solid color(WhisperVarOne);
+
+    padding: to-rem(28 67 20 22);
+    p {
+      @include breakpoint-mini("l") {
+        width: to-rem(360);
+      }
+      font-size: to-rem(12);
+      font-weight: 500;
+      span {
+        font-weight: 700;
+        color: color(PrimaryLight);
+      }
+    }
+    button {
+    }
+  }
+  .foodInfoContainer {
+    background: rgba(253, 152, 0, 0.1);
+    color: color(black);
+    padding: to-rem(8 27 8 16);
+    margin-top: to-rem(20);
+    span {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+  label {
+    font-size: to-rem(14);
+    font-weight: 700;
+  }
+  label::before {
+    border-radius: 50%;
+  }
+  button {
+    font-size: to-rem(14);
+  }
+  .customerAddress{
+      p{
+          font-size: to-rem(13);
+      }
+      .addressHeader{
+        display: flex;
+        justify-content: space-between;
+      }
+  }
+  .changeDeliveryAddress {
+    button {
+      height: to-rem(45);
+    }
+  }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .deliveryOptions{
+      .changeDeliveryAddress{
+        width: 30%;
+        button{
+          height: to-rem(30);
+        }
+      }
+    }
+}

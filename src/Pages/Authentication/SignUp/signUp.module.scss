@@ -1,0 +1,74 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.signUpNotificationBase{
+  position: fixed;
+  right: -330px;
+  top: 105px;
+  z-index: 9;
+}
+
+.signUpNotificationShow{
+  right: 0;
+  transition-duration: .5s;
+}
+.signUpNotificationRemove{
+  right: -330px;
+  transition-duration: .5s;
+}
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: to-rem(100 0 48 0);
+}
+.signUpCard {
+  height: to-rem(880);
+  margin: 0 auto;
+  background-color: color(White);
+  padding: to-rem(65 16 35 16);
+  @include breakpoint-mini('l'){
+    border: 1px solid #90909033;
+    width: to-rem(640);
+    padding: to-rem(65 109 35 109);
+  }
+  h1 {
+    font-size: to-rem(20);
+    margin-bottom: to-rem(30);
+  }
+  &_names {
+    
+    @include breakpoint-mini('l'){
+      display: flex;
+      justify-content: space-between;
+    }
+    .nameInput {
+      width: 100%;
+      @include breakpoint-mini('l'){
+        width: to-rem(201);
+
+      }
+    }
+  }
+  .input {
+    margin-bottom: to-rem(20);
+  }
+  .button {
+    height: to-rem(48);
+  }
+  &FormDivider {
+    margin-top: to-rem(30);
+  }
+  .bottomIcons {
+    display: flex;
+    justify-content: center;
+    .icons {
+      margin: to-rem(17 20.5 0 0);
+    }
+  }
+  .bottomLink {
+    margin-top: to-rem(35);
+    text-align: center;
+    a {
+      color: color(Pumpkin);
+    }
+  }
+}

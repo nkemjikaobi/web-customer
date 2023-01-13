@@ -1,0 +1,83 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.no_scrollbar {
+  overflow: hidden !important;
+}
+.bestSellingProductsWrapper {
+  @include breakpoint("s") {
+    margin-top: to-rem(-30);
+  }
+  position: relative;
+  .leftPointer,
+  .rightPointer {
+    cursor: pointer;
+    position: absolute;
+    top: to-rem(225) !important;
+    @include breakpoint("s") {
+      top: to-rem(40);
+    }
+  }
+  .leftPointer {
+    left: to-rem(0) !important;
+    @include breakpoint("s") {
+      left: to-rem(0) !important;
+    }
+  }
+
+  .rightPointer {
+    right: to-rem(0);
+  }
+}
+.bestSellingProduct {
+  border: to-rem(1) solid color(Whisper);
+  margin-bottom: to-rem(30);
+  margin-top: to-rem(40);
+  background-color: color(White);
+  .heading {
+    border-bottom: to-rem(1) solid color(Whisper);
+    background-image: url("../../../Assets/images/png/bestSellingIcons.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: color(Charcoal);
+    border-radius: to-rem(5);
+    h3 {
+      color: color(white);
+      font-size: to-rem(20);
+      padding: to-rem(20);
+      font-weight: 700;
+      @include breakpoint("s") {
+        font-size: to-rem(16);
+      }
+    }
+  }
+  .content {
+    display: flex;
+    padding: 1rem;
+    overflow-x: scroll !important;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .bestSellingProduct {
+    .heading {
+      h3 {
+        padding: 0.5rem;
+      }
+    }
+    .content {
+      overflow-x: scroll !important;
+    }
+  }
+  .bestSellingProductsWrapper {
+    position: relative;
+    .leftPointer,
+    .rightPointer {
+      top: to-rem(130) !important;
+    }
+  }
+  .bestSellingProduct {
+    .content {
+      overflow-x: scroll;
+    }
+  }
+}

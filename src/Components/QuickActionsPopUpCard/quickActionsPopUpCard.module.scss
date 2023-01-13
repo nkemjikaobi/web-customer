@@ -1,0 +1,68 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.quickActionsPopUp{
+    position: absolute;
+    padding-bottom: to-rem(10);
+    width: to-rem(226);
+    height: to-rem(359);
+    box-shadow: 0px 0px 10px 0px #00000066;
+    @include breakpoint-mini('l'){
+        margin-left: to-rem(-21);
+    }
+    @include breakpoint-mini('xxxl'){
+        margin-left: to-rem(-41);
+    }
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        height: to-rem(50);
+        padding: to-rem(17 15 16 20);
+        background-color: color(PrimaryLight);
+        border-radius: to-rem(4 4 0 0);
+        h1{
+            color: color(White);
+            font-size: to-rem(16);
+            font-weight: 500;
+        }
+        .closeButtonWrapper{
+            border-radius: to-rem(2);
+            width: to-rem(17);
+            height: to-rem(17);
+            background-color: #353535;
+            text-align: center;
+            p{
+                font-size: to-rem(12);
+            }
+        }
+    }
+    .listItems{
+        border-radius: to-rem(0 0 4 4);
+        padding-top: to-rem(29);
+        padding-bottom: to-rem(25);
+        background-color: color(White);
+        .listItem{
+            padding-left: to-rem(20);
+            display: flex;
+            .icon{
+                margin-right: to-rem(13);
+                margin-bottom: to-rem(27);
+                svg{
+                    height: to-rem(18);
+                    width: to-rem(18);
+                    path{
+                        fill: color(PrimaryLight);
+                    }
+                    rect{
+                        fill: color(PrimaryLight);
+                    }
+                }
+            }
+            p{
+                color: color(DavyGrey);
+            }
+            p:hover {
+                color:#ED017F;
+            }
+        }
+    }
+}

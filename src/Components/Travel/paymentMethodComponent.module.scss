@@ -1,0 +1,68 @@
+@import "../../Assets/styles/shared-styles.scss";
+.paymentOptions{
+    &_card{
+       padding: to-rem(35 0 0 23);
+       height: to-rem(131);
+       .cardInfo{
+           margin-top: to-rem(4);
+       }
+       .inputWrapper{
+        position: relative;
+        margin-bottom: to-rem(15);
+        label{
+            font-size: to-rem(14);
+            font-weight: 700;
+        }
+        label::before{
+            border-radius: 50%;
+        
+        }
+        input{
+            top: to-rem(1) !important;
+            left: to-rem(3) !important;
+            margin-right: to-rem(8);
+        }
+        
+    }
+       p{
+           font-size: to-rem(12);
+           font-weight: 500;
+           max-width: to-rem(400);
+           margin-left: to-rem(22);
+       }
+    }
+    .addVoucher{
+        padding: to-rem(0 0 30 23);
+        .heading{
+            h3{
+                font-size: to-rem(16);
+                font-weight: 700;
+                margin-bottom: to-rem(16);
+            }
+            p{
+                font-size: to-rem(16);
+                font-weight: 700;
+            }
+        }
+        .applyVoucher{
+            display: flex;
+            margin-bottom: to-rem(5);
+            .input{
+                width: to-rem(535);
+                height: to-rem(40);
+                input{
+                    height: to-rem(40) !important;
+                }
+            }
+            .applyVoucherButton{
+                width: to-rem(90);
+                height: to-rem(40);
+                margin: to-rem(10 0 0 0 );
+                button{
+                    border-radius: to-rem(0 4 4 0);
+                }
+                
+            }       
+        }
+    }
+}

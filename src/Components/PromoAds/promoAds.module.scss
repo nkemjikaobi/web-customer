@@ -1,0 +1,52 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.promoAd {
+  &Image {
+    border-radius: to-rem(5);
+    height: to-rem(132);
+    padding: to-rem(10 0);
+    padding-right: 0;
+    @include breakpoint-mini("l") {
+      height: to-rem(212) !important;
+      width: to-rem(255);
+      width: calc((100vw / 6) - 1.125rem) !important;
+    }
+
+    &Wrapper {
+      background-color: color(White);
+      margin-left: to-rem(-10);
+
+      &:last-child {
+        padding-right: to-rem(10);
+
+        @include breakpoint-mini("l") {
+          padding: 0;
+        }
+      }
+
+      &Tablet {
+        display: flex;
+        @include breakpoint("s") {
+          width: to-rem(900);
+        }
+
+        @include breakpoint("m") {
+          // display: none;
+        }
+      }
+    }
+  }
+
+  &Container {
+    @include breakpoint-mini("l") {
+      background-color: color(White);
+      border-radius: to-rem(5);
+      box-shadow: 0 0 to-rem(5) transparentize(color(Black), 0.95);
+    }
+    overflow: scroll !important;
+  }
+
+  &Link {
+    display: inline-block;
+  }
+}

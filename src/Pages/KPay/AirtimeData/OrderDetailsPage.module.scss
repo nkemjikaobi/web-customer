@@ -1,0 +1,12 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.goBack {
+    display: flex;
+    align-items: center;
+    .icon {
+        cursor: pointer;
+    }
+    h6 {
+        margin-bottom: 0;
+        margin-left: to-rem(5);
+    }
+}

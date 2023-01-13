@@ -1,0 +1,22 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.basePageLayout {
+  position: relative;
+  .pageContentWrapper {
+    .pageContentWrapperContainer {
+      z-index: 6;
+      max-width: to-rem(1440);
+      margin: 0 auto;
+      background-color: color(White);
+      padding: 0;
+    }
+    .homePageContentWrapper{
+      z-index: 6;
+      overflow-y: hidden;
+      // max-width: to-rem(1440);
+      margin: 0 auto;
+      background-color: color(White);
+      padding: 0;
+    }
+  }
+}

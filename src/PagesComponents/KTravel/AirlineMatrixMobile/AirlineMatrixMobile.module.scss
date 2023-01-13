@@ -1,0 +1,37 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.mobileView{
+    display: flex !important;
+    justify-content: space-between;
+    height: to-rem(80);
+    background-color: #F4F4F4;
+    margin-right: to-rem(-14);
+    margin-left: to-rem(-14);
+    padding-left: 1rem;
+    align-items: center;
+    .originDestinationWrapper{
+        display: flex;
+        align-items: center;
+        label{
+            font-size: to-rem(16);
+            font-weight: 500;
+            padding-right: .5rem;
+        }
+        svg{
+            margin-right: .5rem;
+        }
+    }
+    .detailsWrapper{
+        .littleDetail{
+            p{
+                font-weight: 400;
+                font-size: to-rem(14);
+                color: #727272;
+            }
+        }
+    }
+    .modifySearch{
+        padding-right: 3rem;
+        display: flex;
+        align-items: center;
+    }
+}

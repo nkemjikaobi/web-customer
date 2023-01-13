@@ -1,0 +1,209 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+$detailBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'm')})";
+.productSellerBand {
+  border-radius: to-rem(4);
+  @include breakpoint-mini("xl") {
+    width: to-rem(350);
+    height: 10.375rem;
+    background-color: #fdfdfd;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: to-rem(0 12 0 20);
+    background-color: color(Grey96);
+    height: to-rem(50);
+    h1 {
+      font-weight: 400;
+      font-size: to-rem(16);
+    }
+    a {
+      padding: to-rem(4);
+      background-color: #f3f3f3;
+      border-radius: to-rem(4);
+      color: color(PrimaryLight) !important;
+    }
+    .sellerLink {
+      display: none;
+      font-size: to-rem(12);
+      color: color(PrimaryVarOne);
+      text-decoration: underline;
+
+      @media #{$detailBreakpoint} {
+        display: inline-block;
+      }
+    }
+  }
+  &_mainContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fdfdfd;
+    margin: to-rem(20 0);
+    padding: to-rem(10 15);
+
+    &Banner,
+    .sellerBadge {
+      flex-shrink: 0;
+    }
+
+    &Banner {
+      background-color: color(Grey97);
+      border-radius: to-rem(5);
+      height: to-rem(40);
+      object-fit: contain;
+      width: to-rem(40);
+
+      @media #{$detailBreakpoint} {
+        height: to-rem(60);
+        width: to-rem(60);
+      }
+    }
+
+    .sellerBadge {
+      background-color: color(PrimaryVarOne);
+      border-radius: 50%;
+      color: color(White);
+      font-size: to-rem(20);
+      font-weight: 400;
+      line-height: to-rem(40);
+      text-align: center;
+      text-transform: uppercase;
+      width: to-rem(50);
+      height: to-rem(50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &_mainContent2 {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fdfdfd;
+    margin: to-rem(20 0);
+    padding: to-rem(10 15);
+
+    &Banner,
+    .sellerBadge {
+      flex-shrink: 0;
+    }
+
+    .location {
+      background-color: #ffdb66;
+      border-radius: to-rem(25);
+      padding: to-rem(8);
+      margin-left: to-rem(10);
+      font-size: to-rem(14);
+      line-height: to-rem(16.7);
+    }
+
+    &Banner {
+      background-color: color(Grey97);
+      border-radius: to-rem(5);
+      height: to-rem(40);
+      object-fit: contain;
+      width: to-rem(40);
+
+      @media #{$detailBreakpoint} {
+        height: to-rem(60);
+        width: to-rem(60);
+      }
+    }
+
+    .sellerBadge {
+      background-color: color(PrimaryVarOne);
+      border-radius: 50%;
+      color: color(White);
+      font-size: to-rem(20);
+      font-weight: 400;
+      line-height: to-rem(40);
+      text-align: center;
+      text-transform: uppercase;
+      width: to-rem(50);
+      height: to-rem(50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .productSellerBandContent {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: to-rem(10);
+
+    span,
+    a {
+      margin-right: to-rem(8);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    span {
+      color: color(CobaltGrey);
+      font-size: to-rem(11);
+      font-weight: 400;
+
+      @media #{$detailBreakpoint} {
+        font-size: to-rem(18);
+      }
+    }
+  }
+
+  .sellerName {
+    color: color(ButterflyBush) !important;
+    font-size: to-rem(11);
+    font-weight: 500;
+    text-transform: capitalize;
+
+    @media #{$detailBreakpoint} {
+      font-size: to-rem(18);
+    }
+  }
+
+  .sellerReviews {
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      color: color(SlateGrey);
+      font-size: to-rem(13);
+      line-height: to-rem(18);
+      margin-left: to-rem(8);
+
+      @include breakpoint-mini("m") {
+        font-size: to-rem(15);
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productSellerBand {
+    &_header {
+      display: none;
+    }
+    &_mainContent {
+      border-bottom: 1px solid #c4c4c480;
+    }
+    .productSellerBandContent {
+      a,
+      span {
+        font-size: 12px;
+      }
+      a {
+        &:last-child {
+          color: #ed017f !important;
+        }
+      }
+    }
+  }
+}

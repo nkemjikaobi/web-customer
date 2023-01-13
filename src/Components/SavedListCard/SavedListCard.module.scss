@@ -1,0 +1,63 @@
+@import "../../Assets/styles/shared-styles.scss";
+.savedListCard{
+    align-items: center;
+    border-bottom: 1px solid color(Whisper);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    .image{
+        width: to-rem(110);
+    }
+    .productInfo{
+        margin-left: to-rem(16);
+        font-size: to-rem(16);
+        h1{
+            padding: to-rem(0);
+            font-size: to-rem(16);
+            font-weight: 500;
+            max-width: 11rem;
+        }
+        p{
+            font-size: to-rem(12);
+            margin-top: to-rem(8);
+        }
+        span{
+            color: #2F0DC4;
+        }
+    }
+    .price{
+        .priceInfo{
+            font-size: to-rem(18);
+            font-weight: 700;
+        }
+        .btmPriceInfo{
+            font-size: to-rem(12);
+            font-weight: 400;
+            color: color(SuvaGrey);
+        }
+    }
+    .button{
+        width: to-rem(115);
+        height: to-rem(35);
+        button{
+            background-color: white;
+            border: to-rem(1) solid color(PrimaryLight);
+            color: color(PrimaryLight) !important;
+            &:hover{
+                background-color: color(PrimaryLight);
+                color: color(White) !important;
+            }
+        }
+    }
+    .removeItem{
+        display: flex;
+        margin-top: to-rem(8);
+        p{
+            font-size: to-rem(14);
+            font-weight: 400;
+            color: color(PrimaryLight);
+            margin-left: to-rem(17);
+            cursor: pointer;
+        }
+    }
+}

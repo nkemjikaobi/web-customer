@@ -1,0 +1,61 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.sideMenuWrapper {
+  position: relative;
+}
+.sideMenu {
+  position: fixed;
+  background-color: color(White);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 20rem;
+  @include breakpoint("s") {
+    overflow-y: scroll;
+  }
+  .closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: to-rem(24);
+    height: to-rem(24);
+    text-align: center;
+    background-color: color(White);
+  }
+  &_content {
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    padding: to-rem(15.42 0 11.5 18.81);
+    background-color: #f9f9f9;
+    p {
+      padding: to-rem(3 0 0 20);
+    }
+    svg {
+      margin: auto 0;
+    }
+    span {
+      padding-left: 20px;
+    }
+  }
+}
+.loggedInHeader {
+  width: 100%;
+  .walletHeading {
+    font-size: 12px;
+  }
+  .balance {
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+  }
+  .viewBalance {
+    width: 100%;
+    position: relative;
+    display: flex;
+    span {
+      font-weight: bold;
+    }
+  }
+}

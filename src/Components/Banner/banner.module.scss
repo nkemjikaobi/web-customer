@@ -1,0 +1,10 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.banner {
+    img {
+        border-radius: to-rem(5);
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}

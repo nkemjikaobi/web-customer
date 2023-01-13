@@ -1,0 +1,46 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.deliveryInfo{
+    width: to-rem(860);
+    padding: to-rem(67 220 56 220);
+    background-color: color(White);
+    h1,h2{
+        font-size: to-rem(16);
+        font-weight: 700;
+        margin-bottom: to-rem(12);
+    }
+    .reciept{
+        display: flex;
+        justify-content: space-between;
+        padding-right: to-rem(20);
+        margin-bottom: to-rem(48);
+        border-radius: to-rem(5);
+        background-color: #F6F5F5;
+        .deliveryId{
+            padding: to-rem(28 0 20 19);
+        }
+        .print, .save{
+            background-color: #FAFAFA;
+            display: flex;
+            justify-content: space-between;
+            padding: to-rem(10 20);
+            margin: to-rem(21 0);
+            p{
+                margin-left: to-rem(12.5);
+            }
+        }
+        .save{
+            width: to-rem(165);
+        }
+    }
+    .instructions{
+        p{
+            margin-bottom: to-rem(16);
+        }
+    }
+    .button{
+        margin-top: to-rem(39);
+        height: to-rem(48);
+    }
+
+}

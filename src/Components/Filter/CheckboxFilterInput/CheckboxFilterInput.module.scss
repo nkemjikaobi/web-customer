@@ -1,0 +1,13 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.input[type="radio"] {
+  top: 0px !important;
+  left: 0px !important;
+}
+.input[type="checkbox"] {
+  position: initial !important;
+}
+
+.label {
+    position: relative !important;
+}

@@ -1,0 +1,90 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.verificationStep {
+  padding: to-rem(0 59);
+  .header {
+    display: flex;
+    padding: to-rem(18 0 21 0);
+    h1 {
+      font-size: to-rem(20);
+      font-weight: 500;
+      color: color(Black);
+      margin-left: to-rem(28);
+    }
+    border-bottom: to-rem(1) solid color(WhiteSmoke);
+  }
+  .heading {
+    font-weight: 500;
+    margin-bottom: to-rem(25);
+    padding: to-rem(57 32 0 32);
+  }
+  .passcodeWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(0 77);
+    input {
+      width: to-rem(48);
+      height: to-rem(48);
+    }
+  }
+  .button {
+    margin: to-rem(62 0 44 0);
+  }
+  .requestNewCode {
+    text-align: center;
+    color: #9e9e9e;
+  };
+
+  &NotModal {
+    &Heading {
+      text-align: center;
+      h1,
+      p {
+        font-size: to-rem(16);
+        font-weight: to-rem(500);
+      }
+      h1 {
+        margin: to-rem(31 0 32 0);
+      }
+      p {
+        margin: 0px auto 35px auto;
+        width: to-rem(461);
+      } 
+      @include breakpoint("s") {
+        p {
+          margin: 0px auto 35px auto;
+          width: 90%;
+        } 
+      }
+    }
+    .passcodeWrapper {
+      display: flex;
+      justify-content: center;
+      .input {
+        width: to-rem(48);
+        height: to-rem(48);
+        margin-right: to-rem(16);
+        border: none;
+        background-color: color(Snow);
+      }
+    }
+    .button {
+      width: to-rem(420);
+      height: to-rem(48);
+      margin: to-rem(48) auto to-rem(50) auto;
+    }
+    .bottomText {
+      color: color(Nobel);
+    }
+  }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .passcodeWrapper {
+      padding: 0 0 !important;
+      margin-left: -20px !important;
+    }
+}

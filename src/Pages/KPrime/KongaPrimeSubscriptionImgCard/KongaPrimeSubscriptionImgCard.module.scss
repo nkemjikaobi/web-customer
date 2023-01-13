@@ -1,0 +1,36 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.mainContainer{
+    color: color(white);
+    height: to-rem(186);
+    margin: 0 auto to-rem(10) auto;
+    position: relative;
+    width: to-rem(228);
+
+    .title{
+        font-size: to-rem(19);
+        font-weight: bold;
+        left: to-rem(67);
+        position: absolute;
+        text-transform: uppercase;
+        top: to-rem(42);
+    }
+    .price{
+        bottom:to-rem(45);
+        font-size: to-rem(19);
+        left: to-rem(50);
+        position: absolute;
+    }
+    .specialPrice{
+        bottom: to-rem(47);
+        color: color(white);
+        font-size: to-rem(14);
+        left: to-rem(130);
+        position: absolute;
+        text-decoration: line-through;
+    }
+}
+@include breakpoint-mini('l'){
+    .mainContainer{
+    margin: 0 to-rem(12) 0 to-rem(12);
+    }
+}

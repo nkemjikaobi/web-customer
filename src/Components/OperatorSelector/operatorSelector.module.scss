@@ -1,0 +1,69 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.operatorContainer {
+  margin-top: to-rem(10);
+  margin-right: to-rem(7);
+  .operator {
+    background-image: url("../../Assets/images/svg/images-bg.svg");
+    height: 86px;
+    width: 86px;
+
+    .tick {
+      height: 0px;
+      width: 0px;
+    }
+    .logo {
+      margin: 15px 25px 10px 25px;
+      height: 35px !important;
+      width: 35px !important;
+    }
+    .title {
+      text-align: center;
+      font-family: "Proxima Nova";
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 14.18px;
+      color: #909090;
+      margin-top: 0px;
+    }
+  }
+  .operatorActive {
+    background-image: url("../../Assets/images/svg/networkOnselect.svg");
+    height: 97px;
+    width: 97px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+
+    .logo {
+      margin: 25px 25px 10px 35px;
+      height: 35px !important;
+      width: 35px !important;
+    }
+    .title {
+      text-align: center;
+      font-family: "Proxima Nova";
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 14.18px;
+      color: #909090;
+      margin-top: 0px;
+      margin-left: 9px;
+    }
+  }
+}
+.operatorHolder {
+  display: flex;
+  overflow-x: scroll;
+}
+.skeleton {
+  width: to-rem(86);
+  height: to-rem(86);
+  margin-top: to-rem(12);
+}
+
+@media (min-width: 768px) {
+  .operatorContainer {
+    width: 6.5rem !important;
+  }
+}

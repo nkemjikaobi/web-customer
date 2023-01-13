@@ -1,0 +1,236 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.header {
+    background-image: url("../../../Assets/images/png/Rectangle 1.png");
+    // background: linear-gradient(93.2deg, #fff3f4 2.4%, #ffbdc3 173.15%);
+    height: to-rem(372);
+    @include breakpoint-mini("xxxl") {
+        margin: 0 -12.5%;
+    }
+    &_Text {
+        color: color(white);
+        text-align: center;
+        padding-top: to-rem(70);
+        h1 {
+            font-size: to-rem(40);
+            font-style: normal;
+            font-weight: bold;
+        }
+        p {
+            font-size: to-rem(18);
+        }
+    }
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: space-around;
+    margin-top: to-rem(10);
+    .current_button {
+        width: to-rem(210);
+        height: to-rem(50);
+        // color: black !important;
+        background: color(PrimaryLight);
+    }
+    .button {
+        width: to-rem(210);
+        height: to-rem(50);
+        color: #555555 !important;
+        background: white;
+        border: none;
+        &:current {
+            color: white !important;
+            background-color: color(PrimaryLight);
+        }
+        &:hover {
+            color: white !important;
+            background-color: color(PrimaryLight);
+        }
+    }
+}
+
+.svg {
+    border-radius: 50%;
+    background: #fdf2eb;
+    margin-top: to-rem(20);
+    margin-bottom: to-rem(20);
+}
+
+.card_header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: to-rem(25);
+    line-height: to-rem(30);
+    color: #555555;
+}
+
+.image1 {
+    // border-radius: 50%;
+    width: to-rem(374);
+    margin-left: to-rem(150);
+    margin-top: to-rem(100);
+    background-image: url("../../../Assets/images/png/phone1.png");
+    background-repeat: no-repeat;
+    height: to-rem(600);
+    display: inline-flex;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ussd_section {
+    margin-top: to-rem(150);
+    .easy_access {
+        width: to-rem(530);
+        height: to-rem(90);
+        font-size: to-rem(40);
+        line-height: to-rem(48);
+        color: #555555;
+    }
+    .ussd {
+        font-size: to-rem(50);
+        line-height: to-rem(26);
+        font-weight: bold;
+        color: #e8661c;
+        width: to-rem(240);
+        height: to-rem(35);
+    }
+}
+
+.benefit {
+    margin: 0;
+    p {
+        text-align: center;
+        margin: 0;
+        font-size: to-rem(40);
+        line-height: to-rem(48);
+        font-weight: bold;
+        color: #555555;
+    }
+}
+
+.image3 {
+    background-image: url("../../../Assets/images/png/phone2.png");
+    background-repeat: no-repeat;
+    height: to-rem(500);
+    .imageDiv {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    // .image4 {
+    //     margin-top: to-rem(120);
+    // }
+    // .image5 {
+    //     margin-top: to-rem(180);
+    // }
+    .image6 {
+        margin-top: to-rem(200);
+    }
+    .image7 {
+        margin-top: to-rem(250);
+    }
+    .image8 {
+        margin-top: to-rem(250);
+    }
+}
+
+.payments {
+    font-size: to-rem(48);
+    line-height: to-rem(60);
+    color: #335c88;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.payments_writeup {
+    font-size: to-rem(24);
+    line-height: to-rem(28);
+    color: #555555;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.payment_subheader {
+    font-size: to-rem(24);
+    line-height: to-rem(36);
+    color: #555555;
+    width: to-rem(594);
+    margin-top: to-rem(25);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.payment_subheader_writeup {
+    font-size: to-rem(20);
+    line-height: to-rem(20);
+    color: #555555;
+    margin-top: to-rem(20);
+}
+
+.pos {
+    background-image: url("../../../Assets/images/png/pos.png");
+    background-repeat: no-repeat;
+    height: to-rem(300);
+}
+
+.pos_writeup {
+    font-size: to-rem(45);
+    line-height: to-rem(45);
+    color: #393939;
+    width: to-rem(326);
+    height: to-rem(90);
+    padding: to-rem(30);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.pos_writeup2 {
+    font-size: to-rem(20);
+    line-height: to-rem(20);
+    color: #393939;
+    width: to-rem(282);
+    height: to-rem(40);
+    padding: to-rem(50);
+}
+
+.phone3 {
+    background-image: url("../../../Assets/images/png/phone3.png");
+    background-repeat: no-repeat;
+    height: to-rem(600);
+    align-items: center;
+    margin-left: to-rem(-60);
+    overflow: hidden;
+}
+
+.alert {
+    padding-top: to-rem(70);
+    margin-left: to-rem(350);
+    box-shadow: 0px 4px 30px rgba(242, 104, 34, 0.15);
+}
+
+.airtime {
+    padding-top: to-rem(150);
+    width: to-rem(509);
+    font-size: to-rem(40);
+    color: #393939;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url("../../../Assets/images/png/bannerbusiness2.png");
+    opacity: 0.7;
+    height: to-rem(555);
+    margin-bottom: to-rem(100);
+    //margin-top: to-rem(100);
+}
+
+.banner_header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: to-rem(70);
+    margin-bottom: to-rem(20);
+}

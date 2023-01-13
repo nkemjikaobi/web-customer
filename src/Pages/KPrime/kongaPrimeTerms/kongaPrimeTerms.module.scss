@@ -1,0 +1,82 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.terms {
+    &wrapper {
+        background-color: none;
+    }
+
+    &Wrapper {
+        background-color: color(White);
+        padding: to-rem(10);
+
+        @include breakpoint-mini('m') {
+            margin-top: to-rem(30);
+            padding: to-rem(20);
+        }
+    }
+
+    &header {
+        font-size: to-rem(20);
+        margin: to-rem(0);
+
+        text-align: center;
+
+        @include breakpoint-mini('m') {
+            padding-top: to-rem(48);
+        }
+    }
+
+    &Header {
+        font-size: to-rem(20);
+        margin: to-rem(0);
+    }
+
+    &text {
+        letter-spacing: to-rem(0.26);
+
+        ol {
+            color: #000;
+            padding-left: to-rem(14);
+
+            li {
+                font-size: to-rem(15);
+                line-height: to-rem(21);
+                padding-left: to-rem(4);
+
+                @include breakpoint-mini('m') {
+                    padding-left: to-rem(23);
+                }
+            }
+
+            @include breakpoint('s') {
+                li {
+                    font-size: to-rem(14);
+                }
+            }
+        }
+    }
+
+    &Text {
+        letter-spacing: to-rem(0.26);
+
+        ol {
+            color: #8f8f8f;
+            padding-left: to-rem(14);
+
+            li {
+                font-size: to-rem(15);
+                line-height: to-rem(21);
+
+                @include breakpoint-mini('m') {
+                    padding-left: to-rem(23);
+                }
+            }
+
+            @include breakpoint('s') {
+                li {
+                    font-size: to-rem(14);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.mainWrapper {
+  background: color(Grey95);
+  max-width: to-rem(1440);
+  @include breakpoint-mini("l") {
+    margin-top: 12rem;
+  }
+  margin-bottom: 5rem;
+  .main {
+    padding: to-rem(16);
+    margin-top: 7rem;
+    .container {
+      display: grid;
+      max-width: to-rem(1440);
+      margin: 0 auto;
+      grid-gap: to-rem(25) to-rem(10);
+      align-items: center;
+      @include breakpoint("xs") {
+        display: block;
+      }
+      @include breakpoint("s") {
+        .items {
+          width: 100%;
+        }
+      }
+      @include breakpoint('m'){
+        .items{
+          width: to-rem(300);
+        }
+}
+      @include breakpoint-mini("m") {
+        grid-template-columns: repeat(2, 1fr);
+        .items {
+          & > div {
+            margin: 0 auto;
+          }
+        }
+      }
+      @include breakpoint-mini("l") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint-mini("xl") {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: to-rem(25) to-rem(0);
+
+      }
+    }
+    .header {
+      font-weight: 500;
+      font-size: to-rem(30);
+      line-height: to-rem(36.63);
+      font-style: normal;
+      padding-left: to-rem(20);
+      padding-bottom: to-rem(20);
+    }
+    /* Pagination Buttons */
+    .paginationBttns {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      padding: 0 !important;
+    }
+    .disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+    .paginationBttns a {
+      padding: 9px 12px;
+      margin: 8px;
+      color: white;
+      cursor: pointer;
+    }
+    .nextClassName {
+      background-color: white;
+      border: 1px solid #dee2e6;
+    }
+    .previousClassName {
+      background-color: white;
+      border: 1px solid #dee2e6;
+    }
+    .previousClassName a {
+      padding: 0 !important;
+      width: 100%;
+    }
+    .nextClassName a {
+      padding: 0 !important;
+      width: 100%;
+    }
+    .previousClassName:hover {
+      background-color: #dee2e6;
+    }
+    .nextClassName:hover {
+      background-color: #dee2e6;
+    }
+    .paginationBttns a:hover {
+      color: white;
+      background-color: #dee2e6;
+    }
+    .paginationActive a {
+      color: white !important;
+      background-color: #ed017f;
+    }
+    .activeText {
+      color: white !important;
+      background-color: white !important;
+    }
+    .paginateWrapper {
+      margin-top: to-rem(48);
+    }
+  }
+}
+
+.items {
+  margin: 0 auto;
+}

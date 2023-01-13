@@ -1,0 +1,59 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.itemQuantity{
+    border-radius: to-rem(3);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: to-rem(30);
+    border: to-rem(1) solid color(WhisperVarOne);
+    p{
+        border-right: to-rem(1) solid color(WhisperVarOne);
+        border-left: to-rem(1) solid color(WhisperVarOne);
+
+        padding: to-rem(0 8);
+    }
+    small{
+        font-size: to-rem(16);
+        color: color(CobaltGrey);
+    }
+    .buttonWrapper{
+        width: to-rem(25);
+        height: 100%;
+        button{
+            width: 100%;
+            height: 100%;
+            background-color: color(White);
+            color: color(Grey80);
+            display: flex;
+            align-items: center;
+            font-size: to-rem(15);
+        }
+    }
+}
+
+.itemQuantityFood{
+    width: to-rem(64);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    .buttonWrapper{
+        width: to-rem(18);
+        height: to-rem(18);
+        button{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: to-rem(1) solid color(PrimaryLight);
+            background-color: color(White);
+            color: color(PrimaryLight);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: to-rem(15);
+        }
+    }
+}

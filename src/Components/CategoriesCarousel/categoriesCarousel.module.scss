@@ -1,0 +1,149 @@
+@import "../../Assets/styles/shared-styles.scss";
+.carouselContainer {
+  position: relative;
+  background-color: color(White);
+}
+
+.categoriesCarousel {
+  display: flex;
+  width: 100%;
+  margin-top: 1.2rem;
+  cursor: pointer !important;
+  @include breakpoint-mini("l") {
+    padding: to-rem(7 17 10 17);
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 80%;
+  }
+  overflow-x: hidden;
+  padding: to-rem(7 0 10 0);
+  .img {
+    width: to-rem(90);
+    height: to-rem(90);
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    @include breakpoint("s") {
+      width: to-rem(60);
+      height: to-rem(60);
+    }
+  }
+  .smallFont {
+    font-size: 12px !important;
+    line-height: 12px !important;
+    font-weight: 500;
+  }
+
+  .categoryInfo:last-child {
+    margin-right: 0;
+  }
+  .categoryInfo {
+    text-align: center;
+    margin-right: to-rem(14);
+    .img {
+      width: to-rem(90);
+      height: to-rem(90);
+      margin: 0 auto;
+      border-radius: 50%;
+      @include breakpoint("s") {
+        width: to-rem(60);
+        height: to-rem(60);
+      }
+    }
+    p {
+      font-size: to-rem(14);
+      width: to-rem(121);
+      @include breakpoint("s") {
+        width: to-rem(100);
+        font-size: to-rem(10);
+      }
+    }
+  }
+}
+.leftPointer,
+.rightPointer {
+  cursor: pointer;
+  position: absolute;
+  top: to-rem(70);
+  @include breakpoint("s") {
+    top: to-rem(40);
+  }
+}
+
+.leftPointer {
+  left: to-rem(140);
+  @include breakpoint("s") {
+    left: to-rem(-11);
+  }
+}
+
+.rightPointer {
+  right: to-rem(0);
+}
+
+.categoriesCarouselHome {
+  display: flex;
+  width: 100%;
+  cursor: pointer !important;
+  @include breakpoint-mini("l") {
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px 0px #0000001a;
+    overflow-x: hidden;
+  }
+  .smallFont {
+    font-size: 12px !important;
+  }
+  overflow-x: hidden;
+  @include breakpoint("s") {
+    overflow-x: scroll;
+  }
+  padding: to-rem(7 17 10 17);
+  .categoryInfoHome:first-child {
+    display: none;
+  }
+  .categoryInfoHome:last-child {
+    margin-right: 0;
+  }
+  @include breakpoint("m") {
+    padding: to-rem(0);
+  }
+  .categoryInfoHome {
+    text-align: center;
+    width: to-rem(120);
+    margin-right: to-rem(8);
+    .img {
+      width: to-rem(90);
+      height: to-rem(90);
+      margin: 0 auto;
+      border-radius: 50%;
+      @include breakpoint("s") {
+        width: to-rem(60);
+        height: to-rem(60);
+      }
+      img {
+        height: 100%;
+      }
+    }
+    p {
+      font-size: to-rem(14);
+      width: to-rem(121);
+      @include breakpoint("s") {
+        width: to-rem(100);
+        font-size: to-rem(10);
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .categoriesCarousel {
+    overflow-x: scroll !important;
+  }
+  .categoryInfoHome {
+    .img {
+      svg {
+        height: 58px !important;
+      }
+    }
+  }
+}

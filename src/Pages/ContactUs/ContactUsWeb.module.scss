@@ -1,0 +1,162 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.container {
+    padding-top: 3rem;
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFDBDE;
+        height: to-rem(160);
+        h1 {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: -0.165px;
+            color: #000000;
+        }
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.165px;
+            color: #5E5E5E;
+            padding-top: to-rem(10);
+        }
+    }
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+        .contentLeft {
+            padding-top: to-rem(88);
+            .textLeft {
+                width: 68%;
+                padding-left: to-rem(73);
+                h1 {
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 39px;
+                    color: #171717;
+                    padding-bottom: to-rem(21);
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 31px;
+                    color: #666666;
+
+                }
+                .time {
+                    padding: to-rem(20 32);
+                    span {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #575757;
+                    }
+                }
+                .chat {
+                    display: flex;
+                    width: 60%;
+                    cursor: pointer;
+                    span {
+                        padding-left: to-rem(8);
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #575757;
+                    }
+                }
+            }
+        }
+    }
+    .formHolder {
+        display: flex;
+        margin: to-rem(50 65 50 50);
+        width: to-rem(648);
+        .content {
+            h1 {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 35px;
+                color: #4A4A4A;
+                padding: to-rem(44 0 20 24);
+            }
+            height: to-rem(630);
+            width: 100%;
+            background: #FBFBFB;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.13);
+            .form {
+                padding: to-rem(30 24 40);
+            }
+            .send {
+                display: flex;
+                justify-content: space-between;
+                padding: to-rem(25 25 40 0);
+                button {
+                    width: to-rem(170);
+                    height: to-rem(45);
+                    background: #E41A80;
+                    border-radius: to-rem(4);
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+.seoText {
+    display: flex;
+    padding: to-rem(40 120 80);
+    h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #5A5F66;
+        padding-bottom: to-rem(10);
+    }
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #5A5F66;
+    }
+}
+
+@media screen and (max-device-width: 1024px){
+    .container {
+        padding-top: 3rem;
+        .contact {
+            justify-content: center;
+            .contentLeft {
+                .textLeft {
+                    width: 100%;
+                    padding-left: to-rem(0);
+                    text-align: center;
+                    .chat {
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .formHolder {
+            display: flex;
+            margin: to-rem(50);
+        }
+    }
+    .seoText {
+        display: flex;
+        padding: to-rem(40 20 80);
+    }
+  }
+
+@media screen and (max-device-width: 540px){
+    .container {
+        padding-top: 0rem;
+        
+    }
+}

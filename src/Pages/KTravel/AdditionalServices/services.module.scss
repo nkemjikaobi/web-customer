@@ -1,0 +1,58 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.icons {
+    display: flex;
+    padding: to-rem(50);
+    justify-content: space-around;
+}
+.iconCard {
+    height: "175px";
+    background: "#ECECEC";
+}
+.changeFlightContainer {
+    width: 40rem; 
+    margin-left: 0.9rem;
+
+    .flightDetails {
+        color: #777777;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.priceSummaryContainer {
+    width: 20rem;
+    margin-top: 10rem;
+    margin-left: 7rem;
+    background: #fcfcfc;
+}
+
+.additionalServicesContainer {
+    width: 40rem;
+
+    .additionalServices {
+        font-size: 25px;
+    }
+
+    .additionalServicesItem {
+        font-size: 25px;
+        line-height: 22px;
+    }
+    .additionalServicesText {
+        line-height: 22px;
+    }
+}
+.paragraphContainer {
+    width: 38rem;
+    margin-left: 1rem; 
+    font-size: 14px;
+}
+.link {
+    color: blue;
+}
+.continueButton {
+    width: 38rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}

@@ -1,0 +1,49 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.productCard{
+    display: flex;
+    height: to-rem(145);
+    width: 100%;
+    @include breakpoint-mini('l'){
+        width: to-rem(403);
+    }
+    box-shadow: 0px 0px 10.820672988891602px 0px #0000001A;
+    img{
+        height: 100%;
+    }
+    &_Top{
+        height: to-rem(144);
+    }
+    &_Bottom{
+        padding: to-rem(16 10);
+        h1{
+            font-size: to-rem(14);
+            text-overflow: ellipsis;
+        }
+        .prices{
+            display: flex;
+            padding-top: to-rem(8);
+            .dicountPrice {
+              font-size: to-rem(16);
+              font-weight: 700;
+              margin-right: to-rem(18);
+            }
+            .originalPrice {
+              color: color(QuickSilver);
+              font-size: to-rem(14);
+              font-weight: 400;
+              line-height: to-rem(17);
+              padding: to-rem(5 0 0 0);
+              text-decoration: line-through;
+            }
+        }
+        .amountSaved {
+            font-size: to-rem(12);
+            color: color(FauxLightGreen);
+            margin-top: to-rem(8);
+          }
+    }
+    &:hover{
+        box-shadow: 0px 3px 5px 0px #00000026;
+    }
+}

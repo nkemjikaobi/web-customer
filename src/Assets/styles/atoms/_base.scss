@@ -1,0 +1,85 @@
+%clearfix {
+  @include clearfix;
+}
+
+%horizontalPagePadding {
+  $dimensions: 2vw;
+
+  padding-left: $dimensions;
+  padding-right: $dimensions;
+}
+
+// %horizontalPagePaddingReset {
+//     @include horizontalPagePaddingReset;
+// }
+
+%contentWrapper {
+  @extend %horizontalPagePadding;
+}
+
+// Resets a given ul/ol list
+%listReset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%button {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+%buttonReset {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+}
+
+%ellipsis {
+  @include ellipsis;
+}
+
+%tooltip {
+  position: relative;
+}
+
+%tooltipText {
+  background-color: color(CobaltGrey);
+  border-radius: to-rem(1);
+  color: color(White);
+  font-size: to-rem(12);
+  font-weight: $font-weight-bold;
+  margin-right: to-rem(10);
+  opacity: 0;
+  padding: to-rem(5 10);
+  position: absolute;
+  text-align: center;
+  transition: opacity 1s;
+  visibility: hidden;
+  z-index: 79;
+}
+
+// Please See `mixin tooltipHover` in the utils/_mixins file
+
+%checkmark {
+  background-color: color(NearWhite);
+  border-radius: 100%;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  height: to-rem(15);
+  padding: to-rem(4);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  vertical-align: middle;
+  width: to-rem(15);
+
+  path {
+    fill: transparent;
+    stroke: transparent;
+  }
+}

@@ -1,0 +1,156 @@
+@import "../../../../../Assets/styles/shared-styles.scss";
+
+.container {
+    background: #E5E5E5;    
+    padding-top: to-rem(90);
+    padding-bottom: to-rem(100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -30%;
+    margin-left: -30%;
+    .content {
+        width: 45%;
+        height: 70vh;
+        background: #FFFFFF;
+        border: 1px solid rgba(144, 144, 144, 0.2);
+        box-sizing: border-box;
+        border-radius: 6px;
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #505050;
+            margin: to-rem(61);
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            padding: 8px 23px 8px 32px;
+            background: #ED017F;
+            border-radius: 4px;
+            width: 140px;
+            color: #fff;
+            margin: 4rem auto;
+        }
+        .tiersContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .classic{
+                width: to-rem(320);
+                height: 400px;
+                background: #FFFCF8;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+                border-top: 8px solid #FFBC56;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                h2 {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    color: #4A4A4A;
+                    margin-left: 1.5rem;
+
+                }
+                p {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 0.2px;
+                    color: #505050;
+                    margin-left: 1.5rem;
+                }
+                h6 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 0.2px;
+                    color: #505050;
+                    margin-left: 1.5rem;
+                    margin-top: 1rem;
+
+                }
+            }
+            .premium {
+                width: to-rem(320);
+                height: 360px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+                border-radius: 0px 4px 4px 0px;
+                border-top: 8px solid #0075E0;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                h2 {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    color: #4A4A4A;
+                    margin-left: 1.5rem;
+
+                }
+                p {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 0.2px;
+                    color: #505050;
+                    margin-left: 1.5rem;
+                }
+                h6 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 0.2px;
+                    color: #505050;
+                    margin-left: 1.5rem;
+                    margin-top: 1rem;
+
+                }
+            }
+        }
+        
+    }
+}
+
+.item {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+    color: #878787;
+    margin-left: 0.5rem;
+
+}
+
+@media screen 
+  and (max-device-width: 900px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        .content {
+            width: 60%;
+        }
+    }
+}
+@media screen 
+  and (max-device-width: 540px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        padding-top: 20px;
+        .content {
+            height: 100vh;
+            h1 {
+                margin: 10px;
+            }
+        }
+    }
+}

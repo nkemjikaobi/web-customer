@@ -1,0 +1,37 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: to-rem(100 0 48 0);
+}
+.forgotPasswordCard {
+  margin: 0 auto;
+  padding: to-rem(65 16 44 16);
+  background-color: color(White);
+  @include breakpoint-mini('l'){
+    width: to-rem(640);
+    padding: to-rem(65 109 44 109);
+    border: 1px solid #90909033;
+  }
+  h1 {
+    font-size: to-rem(20);
+    margin-bottom: to-rem(30);
+  }
+  p {
+    margin-bottom: to-rem(32);
+  }
+  .input {
+    margin-bottom: to-rem(20);
+  }
+  .button {
+    margin-top: to-rem(39);
+    height: to-rem(48);
+  }
+  .link {
+    color: color(PrimaryLight) !important;
+    margin-top: to-rem(40);
+    display: flex;
+    justify-content: center;
+  }
+}

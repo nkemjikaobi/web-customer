@@ -1,0 +1,34 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.sortByFilter{
+    display: flex;
+
+    .button{
+        height: to-rem(15);
+        background-color: color(White);
+        border: 1px solid #CCCCCC;
+        border-right: 0px;
+        padding: to-rem(5 12 20 12);
+        font-size: to-rem(11);
+    }
+    .button:last-child{
+        border-right:1px solid #CCCCCC;
+
+    }
+    .button:hover{
+        border-radius: to-rem(3);
+        border: 1px solid color(PrimaryLight);
+        color: color(PrimaryLight);
+    }
+    p{
+        font-size: to-rem(14);
+        font-weight: 700;
+        color: color(DarkCyan);
+        margin-right: to-rem(3);
+    }
+    .btnActive{
+        border-radius: to-rem(3);
+        border: 1px solid color(PrimaryLight);
+        color: color(PrimaryLight);
+    }
+}

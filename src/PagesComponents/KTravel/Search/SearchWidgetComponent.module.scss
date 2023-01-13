@@ -1,0 +1,90 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.travelSearchFormWrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: to-rem(270);
+  .flights {
+    @include breakpoint("s") {
+      height: to-rem(700);
+    }
+  }
+  .hotels {
+    @include breakpoint("s") {
+      height: auto;
+    }
+  }
+}
+.SearchWidget {
+  position: absolute;
+  width: 80%;
+  height: to-rem(209);
+  left: 10%;
+  bottom: -20%;
+  box-shadow: to-rem(5 10 10) rgba(77, 76, 76, 0.05);
+  border-radius: to-rem(0 0 3 3);
+}
+
+.FlightWidget {
+  background: #fcfcfc;
+  width: 100%;
+}
+.buttonsContainer {
+  display: flex;
+  padding-top: 4.875rem !important;
+}
+.buttonStyle {
+  padding: to-rem(10 40 10 40);
+  background: #ed017f;
+  color: #fff;
+  border-radius: to-rem(0 0 0 3);
+}
+.buttonInactive {
+  padding: to-rem(10 40 10 40);
+  background: #ffffff;
+  color: #828282;
+  border-radius: to-rem(0 0 0 3);
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .travelSearchFormWrapper {
+    width: 100%;
+    padding-top: 0;
+    .buttonsContainer {
+      display: flex;
+      padding-top: to_rem(0.2) !important;
+      margin-left: to-rem(0);
+      background-color: white;
+
+      .buttonStyle,
+      .buttonInactive {
+        font-size: to-rem(14);
+        background: transparent;
+        display: flex;
+        padding-left: to-rem(5);
+        .tabIcon {
+          margin-right: to-rem(10);
+        }
+      }
+      .buttonStyle {
+        color: #ed017f;
+        font-weight: 500;
+        border-bottom: to-rem(2) solid #ed017f;
+        padding-left: to-rem(16);
+      }
+      .buttonInactive {
+        color: #8c8c8c;
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  .travelSearchFormWrapper {
+    width: 90%;
+  }
+}
+@media screen and (min-device-width: 1440px) and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
+  .travelSearchFormWrapper {
+    width: 91%;
+  }
+}

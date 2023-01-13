@@ -1,0 +1,117 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.SubscriptionWrapper {
+  display: flex;
+  justify-content: center;
+  &__main{
+    padding: to-rem(16);
+  }
+}
+.expiredCardWrapper {
+  margin-top: ro-rem(20);
+  @include breakpoint-mini("xl") {
+    width: to-rem(1113);
+  }
+  @include breakpoint("m") {
+    flex-wrap: wrap-reverse;
+  }
+  background-color: #fff2dc;
+  &__container {
+    align-items: center;
+    padding: 8px 32px;
+    display: flex;
+  }
+  &__text {
+    @include breakpoint("m") {
+      font-size: to-rem(12);
+      flex: 100%;
+      width: 100%;
+    }
+    @include breakpoint-mini("l") {
+      margin-right: to-rem(66);
+    }
+    @include breakpoint-mini("xl") {
+      margin-right: to-rem(66);
+    }
+  }
+}
+.buttonWrapper {
+  white-space: nowrap;
+  @include breakpoint("m") {
+    font-size: to-rem(12);
+    flex: 100%;
+    width: 100%;
+  }
+  &_subscribeButton {
+    background-color: #33b27b;
+    border-color: #ffffff;
+    padding: 6px 18px;
+    &:hover {
+      background-color: #33b27b;
+    }
+  }
+}
+.tableWrapper {
+  @include breakpoint-mini("xl") {
+    width: to-rem(1113);
+  }
+
+  overflow-x: scroll;
+  box-shadow: 0px 0px 10px 2px #0000000d;
+  padding: 30px;
+  margin: to-rem(17) 0;
+  &__text {
+    font-weight: 700;
+    padding: to-rem(22) to-rem(30) to-rem(22) 0;
+    @include breakpoint-mini("l") {
+      font-size: to-rem(20);
+    }
+  }
+  &__body {
+    @include breakpoint("s") {
+      max-width: 17.9375rem !important;
+      overflow: scroll;
+    }
+    @include breakpoint("m") {
+      width: 44.9375rem !important;
+      overflow: scroll;
+    }
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+.table {
+  width: 100%;
+  overflow-x: scroll;
+}
+.tableRow {
+  overflow-x: scroll;
+  &__td {
+    padding: to-rem(24);
+    border-bottom: 0.0625rem solid #f2f2f2;
+    margin-bottom: 0.625rem;
+  }
+}
+tr:last-child {
+  border-bottom: none;
+}
+.tableHead {
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
+  &__th {
+    padding: to-rem(24);
+    background-color: #f2f2f2;
+    white-space: nowrap;
+  }
+}
+.kongaPrimeFallBack__Text{
+  text-align: center;
+  line-height: to-rem(30);
+  margin: to-rem(34 0);
+  
+  @include breakpoint-mini('m') {
+      width: 50%;
+      margin: to-rem(35) auto 0 auto;
+  }
+}

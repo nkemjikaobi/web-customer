@@ -1,0 +1,41 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.listingCard {
+  min-width: to-rem(297.31);
+  height: to-rem(379.9);
+  margin-right: to-rem(20);
+  box-shadow: 0px 6.4633073806762695px 24.237401962280273px 0px #0000000a;
+
+  &_top {
+    position: relative;
+    .timeTag {
+      bottom: to-rem(18);
+      right: to-rem(8.67);
+      position: absolute;
+      width: to-rem(88.87);
+      height: to-rem(40.4);
+      border-radius: to-rem(80.79);
+      background-color: color(White);
+      p {
+        padding: to-rem(11.4 8);
+      }
+    }
+  }
+  &_bottom {
+    padding: to-rem(17.7);
+    h1 {
+      font-size: to-rem(19.39);
+      line-height: to-rem(23.68);
+      margin-bottom: to-rem(8);
+    }
+    p {
+      color: color(SuvaGrey);
+    }
+    .percentage {
+      margin-top: to-rem(8);
+    }
+  }
+  &:hover{
+    box-shadow: 0px 3px 5px 0px #00000026;
+}
+}

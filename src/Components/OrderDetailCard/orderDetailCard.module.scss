@@ -1,0 +1,62 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.orderDetail{
+    border-bottom: to-rem(1) solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    padding: to-rem(24 29);
+    .orderInfo{
+        width: 100% !important;
+        h1{
+            font-size: to-rem(14);
+            font-weight: 400;
+        }
+        .brandName,.quantityLabel{
+            margin-top: to-rem(9);
+            font-size: to-rem(12);
+        }
+
+        .itemQuantityWrapper{
+            margin-top: to-rem(8);
+            width: to-rem(70);
+            box-shadow: 0px 2px 5px 0px #0000001C;
+        }
+    }
+    .orderInfoOptions{
+        h2{
+            font-size: to-rem(12);
+            font-weight: 700;
+        }
+        .saveItem{
+            display: flex;
+            margin-top: to-rem(35);
+            .iconWrapper {
+                position: relative;
+                width: to-rem(16);
+                height: to-rem(16);
+                border-radius: 50%;
+                background-color: #B7B7B7;
+                  > svg {
+                    position: absolute;
+                    width: to-rem(9); 
+                    height: to-rem(8);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+              }
+              p{
+                  font-size: to-rem(12);
+                  margin-left: to-rem(17);
+              }
+        }
+        .removeItem{
+            margin-top: to-rem(35);
+            display: flex;
+            p{
+                font-size: to-rem(12);
+                margin-left: to-rem(18);
+            }
+        }
+        }
+}

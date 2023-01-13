@@ -1,0 +1,84 @@
+@import "../../Assets/styles/shared-styles.scss";
+.accountLayout {
+  display: flex;
+  padding: to-rem(85 0 0 181);
+  background-color: #f2f2f2;
+  @include breakpoint("s") {
+    display: block;
+    padding: 0;
+    margin-top: to-rem(0);
+
+  }
+  .settingsWrapper {
+    background-color: color(White);
+    border: 1px solid color(Whisper);
+    width: to-rem(420);
+    height: 100%;
+    margin-right: to-rem(21);
+    .heading {
+      padding: to-rem(12 35);
+      background-color: color(Seashell);
+      h1,
+      h2 {
+        font-size: to-rem(16);
+        font-weight: 500;
+      }
+    }
+  }
+  .active {
+    color: color(PrimaryLight);
+    svg {
+      path {
+        fill: color(PrimaryLight);
+      }
+    }
+  }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  .menuItem {
+    display: flex;
+    justify-content: space-between;
+    height: to-rem(47);
+    padding: to-rem(14 22 14 32);
+    border-bottom: to-rem(1) solid color(WhisperVarOne);
+    &_left {
+      display: flex;
+      p {
+        margin-left: to-rem(5);
+      }
+    }
+  }
+  .menuItem:hover {
+    color: color(PrimaryLight);
+    svg {
+      path {
+        fill: color(PrimaryLight);
+      }
+      rect {
+        fill: color(PrimaryLight);
+      }
+    }
+  }
+}
+
+.hiden {
+  @include breakpoint("s") {
+    display: none;
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  .accountLayout {
+    padding: 5.0625rem 3rem 0 3rem;
+  }
+}
+@media screen and (min-device-width: 767px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .accountLayout {
+    padding: 5.0625rem 0 0 0rem;
+    .settingsWrapper {
+      width: 20rem;
+    }
+  }
+}

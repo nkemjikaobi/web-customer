@@ -1,0 +1,57 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.paymentMethodStep{
+    padding:to-rem(0 10);
+    .header{
+        display: flex;
+        padding: to-rem(18 57 21 57);
+        h1{
+            font-size: to-rem(20);
+            font-weight: 500;
+            color: color(Black);
+            margin-left: to-rem(28);
+
+        }
+        border-bottom: to-rem(1) solid color(WhiteSmoke);
+    
+}
+.mainContent{
+    display: flex;
+}
+    .paymentDetails {
+        width: to-rem(200);
+        height: to-rem(288);
+        background-color: #EDEFF1;
+        margin-right: to-rem(20);
+        padding: to-rem(30 0 0 21);
+        p{
+            font-size: to-rem(18);
+            font-weight: 500;
+            margin-bottom: to-rem(18);
+            color: #787878;
+        }
+    }
+    .formWrapper{
+        width: to-rem(420);
+        background-color: color(WhiteSmoke);
+        padding: to-rem(41 33 74 33);
+        form{
+            input{
+                margin-bottom: to-rem(15);
+            }
+            label{
+                color: color(DavyGrey);
+            }
+            .expiry{
+                display: flex;
+                justify-content: space-between;
+                input{
+                    width: to-rem(163);
+                }
+            }
+            .button{
+                margin-top: to-rem(84);
+            }
+        }
+    }
+}

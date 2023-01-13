@@ -1,0 +1,19 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.servicesCard {
+  margin-bottom: to-rem(30);
+  &_title {
+    font-size: to-rem(20);
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: to-rem(10);
+  }
+  &_cards {
+    box-shadow: 0px 0px 4px 0px #0000001a;
+    display: flex;
+    justify-content: space-between;
+    height: to-rem(160);
+    padding: to-rem(6 20 10 20);
+    overflow-x: scroll;
+  }
+}

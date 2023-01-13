@@ -1,0 +1,20 @@
+// Globals
+$global-font-size: 100%;
+$global-font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", sans-serif;
+
+// Body styles
+$body-font-size: $global-font-size;
+$body-font-color: #000000;
+
+// Navigation Search Band
+$search-band-border-radius-dimension: to-rem(4);
+$search-band-items-height: to-rem(35);
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-dense: 500;
+$font-weight-medium: 600;
+$font-weight-bold: 700;

@@ -1,0 +1,22 @@
+@import '../../Assets/styles/shared-styles.scss';
+
+.parentNode{
+    padding-left: 48px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-weight: 500;
+    border-top: 1px solid #ccc;
+}
+.childNode{
+    padding-left: 48px;
+    padding-bottom: 5px;
+    font-size: 14px;
+
+    &:hover {
+        background-color: color(WhisperVarOne);
+        color: color(PrimaryLight);
+    }
+}
+.childNode:hover{
+    cursor: pointer;
+}

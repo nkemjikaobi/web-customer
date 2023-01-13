@@ -1,0 +1,52 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.operator{
+    background-image: url("../../../Assets/images/svg/images-bg.svg");
+    height: 86px;
+    width: 86px;
+
+    .tick {
+        height: 0px;
+        width: 0px;
+    }
+    .logo {
+        margin: 15px 25px 10px 25px;
+    }
+    .title {
+        text-align: center;
+        font-family: "Proxima Nova";
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 14.18px;
+        color: #909090;  
+    }
+}
+.operatorActive {
+    background-image: url("../../../Assets/images/svg/images-bg.svg");
+    height: 86px;
+    width: 86px;
+
+    .tick {
+        height: 0px;
+        width: 0px;
+    }
+    .logo {
+        margin: 15px 25px 10px 25px;
+    }
+    .title {
+        text-align: center;
+        font-family: "Proxima Nova";
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 14.18px;
+        color: #909090;  
+    }
+}
+.activetick{
+    background-image: url("../../../Assets/images/svg/tick-active-selection.svg");
+}
+.active {
+    // background-image: url("../../../Assets/images/svg/active-image-bg.svg");
+    height: 89px;
+    width: 89px;
+}

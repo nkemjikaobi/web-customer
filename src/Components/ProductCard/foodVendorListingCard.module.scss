@@ -1,0 +1,73 @@
+@import "../../Assets/styles/shared-styles.scss";
+@include breakpoint("m") {
+  h4 {
+    text-align: left;
+    margin-left: 1rem;
+  }
+}
+
+.foodListingCard{
+  box-shadow: (0px 2px 8px rgba(0, 0, 0, 0.05));
+  padding-right: to-rem(30);
+  .vendorListingCard {
+    display: flex;
+    padding: to-rem(25 0 40 0);
+    margin-left: to-rem(30);
+    border-bottom: to-rem(1) solid #aaa;
+    flex-basis: 50%;
+  
+    .imgList {
+      width: to-rem(117);
+      height: to-rem(97.44);
+    }
+  
+    .listContainer {
+      display: flex;
+      flex-basis: 100%;
+    }
+  
+    .cardDetail {
+      flex: 2;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: to-rem(5 0 0 15);
+    }
+  
+    p {
+      font-size: to-rem(12);
+    }
+  
+    .lightText {
+      color: #606060;
+    }
+  
+    .addCartContainer {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+  
+    .addCartButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: color(PrimaryDark);
+      @include breakpoint("s") {
+        width: max-content;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.vendorListingCard:last-child {
+  border-bottom: 0;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .vendorListingCard {
+    padding: to-rem(25 14 40 0);
+    margin-left: 0.8rem;
+  }
+}

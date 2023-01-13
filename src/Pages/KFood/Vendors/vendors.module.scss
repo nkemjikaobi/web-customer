@@ -1,0 +1,164 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.vendor {
+  padding: to-rem(0 16);
+  display: flex;
+  @include breakpoint-mini("xxxl") {
+    padding: to-rem(0 0);
+  }
+  .breadCrumbWrapper {
+    @include breakpoint-mini("xxl") {
+      margin-left: to-rem(-142);
+    }
+  }
+  &_header {
+    padding-top: to-rem(35);
+    display: flex;
+    justify-content: center;
+    @include breakpoint("s") {
+      padding-top: to-rem(20);
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .filter {
+    min-width: 300px;
+    padding: 75px 10px 0 10px;
+    @include breakpoint("l") {
+      width: 100%;
+    }
+    margin-right: to-rem(23);
+    .deliveryDetails {
+      padding: to-rem(5 0 10 0);
+      border-bottom: 1px solid #D8D8D8;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      p{
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .title {
+      color: #858585;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .button {
+      color: #ED017F;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 2;
+      cursor: pointer;
+    }
+  }
+  &_vendorListing {
+    display: flex;
+    @include breakpoint("l") {
+      flex-direction: column;
+    }
+    .content {
+      width: 100%;
+      padding: to-rem(98 16 0 16);
+      @include breakpoint-mini("xxl") {
+        padding: to-rem(98 0 0 0);
+      }
+      h2 {
+        padding-bottom: to-rem(23);
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: to-rem(50 20);
+        margin-bottom: to-rem(120);
+        .itemContent {
+          display: flex;
+          position: relative;
+          flex-basis: 32%;
+          @include breakpoint("l") {
+            flex-basis: 48%;
+          }
+          @include breakpoint("s") {
+            flex-basis: 100%;
+            margin-bottom: unset;
+          }
+          .listingCard_bottom {
+            padding: to-rem(20);
+            h1 {
+              font-size: to-rem(18);
+              margin-bottom: to-rem(8);
+              display: block;
+            }
+            p {
+              color: color(SuvaGrey);
+            }
+            .labels {
+              display: flex;
+              font-size: to-rem(14);
+              .label {
+                display: flex;
+                justify-content: center;
+                width: to-rem(86.64);
+                background-color: color(Grey95);
+                margin-right: to-rem(6);
+                padding: to-rem(9 10 9 10);
+                .lineAlign {
+                  line-height: 1;
+                  padding-right: to-rem(2);
+                }
+              }
+            }
+          }
+          .cardContent {
+            width: 100%;
+            .listingCard {
+              height: to-rem(400);
+              box-shadow: 0px 1px 5px 0px #0000002e;
+              img {
+                height: to-rem(270);
+                width: 100%;
+              }
+              .isOpen {
+                background-color: #f44335;
+                color: color(white);
+                padding: 0.4rem 1.4rem;
+                border-radius: to-rem(4);
+                border: 1px solid #f44335;
+                width: to-rem(95);
+                position: absolute;
+                top: 15rem;
+                left: 8rem;
+                height: to-rem(40);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.noResult{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .vendor {
+    display: block;
+    .filter{
+      padding: 20px 5px 0 5px;
+    }
+    &_header{
+      display: none;
+    }
+    &_vendorListing {
+      .content{
+        padding: 5px;
+      }
+    }
+  }
+}

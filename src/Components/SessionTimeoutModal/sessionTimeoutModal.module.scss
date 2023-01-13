@@ -1,0 +1,59 @@
+@import "../../Assets/styles/shared-styles.scss";
+.timeoutModal{
+    width: to-rem(435);
+    height: to-rem(435);
+    padding: to-rem(58 21 54 21 );
+    background-color: color(White);
+    text-align: center;
+    @include breakpoint('m'){
+        max-width: to-rem(410);
+        height: to-rem(480);
+    }
+
+    &_title{
+        font-size: to-rem(24);
+        font-weight: 500;
+    }
+    &_icon{
+        margin: to-rem(36) auto to-rem(34) auto;
+    }
+    &_text{
+        width: to-rem(281);
+        margin: 0 auto to-rem(58) auto;
+        font-weight: 500;
+    }
+    &_buttons{
+       display: flex;
+       justify-content: space-between;
+       @include breakpoint('m'){
+           flex-direction: column;
+       }
+       .inactiveButton{
+           width: to-rem(176);
+           height: to-rem(54);
+           border: to-rem(1) solid color(PrimaryLight);
+           border-radius: to-rem(4);
+           text-align: center;
+           font-size: to-rem(18);
+           color: color(Black);
+           background-color: color(White);
+           @include breakpoint('m'){
+               width: 100%;
+           }
+       } 
+       .activeButton{
+        width: to-rem(209);
+        height: to-rem(54);
+        border-radius: to-rem(4);
+        text-align: center;
+        font-size: to-rem(18);
+        background-color: color(PrimaryLight);
+        color: color(White);
+        @include breakpoint('m'){
+            margin-top: to-rem(5);
+            width: 100%;
+        }
+    } 
+    }
+
+}

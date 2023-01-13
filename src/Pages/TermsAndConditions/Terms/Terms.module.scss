@@ -1,0 +1,120 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+$mediumBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'm')})";
+$largeBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'l')})";
+$xLargeBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'xl')})";
+
+@mixin detailPagePadding {
+  margin: 0 to-rem(10);
+
+  @media #{$mediumBreakpoint} {
+    margin: 0 to-rem(15);
+  }
+
+  @media #{$largeBreakpoint} {
+    margin: 0 to-rem(15 20);
+  }
+}
+
+.arrow {
+  padding-top: 1.875rem;
+  padding-right: to-rem(94);
+  @include breakpoint("s") {
+    padding-top: 0.7rem;
+    padding-right: 0.875rem;
+  }
+}
+.content {
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: to-rem(20);
+}
+
+.contentWrapper {
+  width: 80%;
+  @include breakpoint("s") {
+    width: 100%;
+  }
+  @include breakpoint("m") {
+    width: 100%;
+  }
+}
+.dropdown {
+  padding: to-rem(46);
+  line-height: to-rem(19.09);
+  font-weight: 400;
+  color: #909090;
+  @include breakpoint("s") {
+    padding: to-rem(0);
+    font-size: to-rem(10);
+  }
+}
+.headerWrapper {
+  padding: to-rem(30) 0;
+  @include breakpoint("m") {
+    padding: to-rem(10) 0;
+  }
+}
+.header {
+  font-weight: 700;
+  font-size: to-rem(40);
+  line-height: to-rem(48.84);
+  color: #1c1d1f;
+  @include breakpoint("s") {
+    font-size: to-rem(20);
+  }
+  @include breakpoint("m") {
+    font-size: to-rem(24);
+  }
+}
+
+.mainContentWrapper {
+  margin-top: to-rem(25);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.redTitle {
+  font-weight: 700;
+  font-size: to-rem(20);
+  line-height: to-rem(24.42);
+  padding: to-rem(28) to-rem(0) to-rem(0) to-rem(46);
+  color: #ed017f;
+  @include breakpoint("s") {
+    font-size: to-rem(14);
+    padding: 0.5rem 0 0 0.2rem;
+  }
+}
+.textWrapper {
+  max-width: 60%;
+}
+.title {
+  font-weight: 500;
+  font-size: to-rem(20);
+  line-height: to-rem(24.42);
+  padding: to-rem(28) to-rem(0) to-rem(28) to-rem(46);
+  @include breakpoint("s") {
+    font-size: to-rem(14);
+    line-height: 1.52625rem;
+    padding: 0.75rem 0 0.75rem 0.875rem;
+  }
+}
+
+.titleWrapper {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.titleWrapperWhite {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.wrapper {
+  margin: mixin-exists($name: detailPagePadding);
+  background-color: color(WhiteSmoke);
+}
+

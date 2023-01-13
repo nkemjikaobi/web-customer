@@ -1,0 +1,48 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.alertBody {
+  background-color: #80ba45;
+  z-index: 3;
+  .proceedBtn {
+    background-color: #74b037;
+    border-color: #74b037;
+  }
+}
+.label {
+  margin-right: to-rem(100);
+  @include breakpoint-mini("xxl") {
+    margin-right: to-rem(180) !important;
+  }
+}
+.breadCrumbClass {
+  background-color: transparent !important;
+  li,
+  a {
+    font-size: to-rem(12);
+    font-weight: 500;
+  }
+  @include breakpoint-mini("l") {
+    padding-left: to-rem(70);
+    margin: to-rem(-25) auto;
+  }
+  @include breakpoint-mini("xxxl") {
+    max-width: 1440px;
+    margin: to-rem(-25) auto;
+    padding-left: to-rem(0);
+  }
+}
+.stickyCart {
+  position: fixed !important;
+  width: 100% !important;
+}
+.currentLocation {
+  max-width: 1440px;
+  margin: 1.5625rem auto;
+  @include breakpoint('xxl'){
+    padding-left: 4.375rem;
+  }
+   @include breakpoint('m'){
+    padding-left: 1.5rem;
+  }
+  //margin-bottom: to-rem(90);
+}

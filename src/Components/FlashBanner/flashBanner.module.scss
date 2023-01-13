@@ -1,0 +1,47 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.flashBanner {
+    background-color: color(PrimaryLight);
+    max-height: to-rem(75);
+    width: 100vw;
+    > div {
+        width: 100%;
+    }
+
+    &Hidden {
+        display: none;
+    }
+
+    // &Mobile {
+    //     @extend %mobileOnly;
+    // }
+
+    // &Desktop {
+    //     @extend %tabletAndAboveOnly;
+    // }
+
+    &Icon {
+        align-self:  center;
+        border: to-rem(5) solid;
+        border-radius: 50%;
+        box-shadow: to-rem(1 2 5) color(Grey56);
+        cursor: pointer;
+        height: to-rem(20);
+        position: absolute;
+        right: to-rem(10);
+        transform: translateY(40%);
+        width: to-rem(20);
+
+        path {
+            fill: color(White);
+            stroke: color(White);
+        }
+    }
+    img{
+        height: to-rem(75);
+    }
+    &Image {
+        display: block;
+        width: 100%;
+    }
+}

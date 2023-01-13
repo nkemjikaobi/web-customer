@@ -1,0 +1,209 @@
+@import "../../Assets/styles/shared-styles.scss";
+.active {
+  background-color: rgba(71, 95, 126, 0.05);
+  .info {
+    color: black !important;
+  }
+}
+
+.paymentOptions {
+  &_card {
+    padding: to-rem(35 0 20 49);
+    @include breakpoint("m") {
+      padding: to-rem(35 10 0 10);
+    }
+    @include breakpoint("s") {
+      height: to-rem(150);
+    }
+    .cardInfo {
+      display: flex;
+      margin-top: to-rem(4);
+      @include breakpoint("s") {
+        display: block;
+      }
+      .info {
+        color: #ccc;
+      }
+      p {
+        font-weight: 400;
+      }
+
+      .cards {
+        cursor: pointer;
+
+        .cardsImage {
+          margin-left: to-rem(15);
+        }
+        @include breakpoint("s") {
+          padding-top: to-rem(5);
+          margin-left: to-rem(20);
+          .cardsImage {
+            margin-left: to-rem(10);
+          }
+        }
+      }
+    }
+    .inputWrapper {
+      position: relative;
+      margin-bottom: to-rem(15);
+      .payOnDeliveryLabel {
+        font-weight: 400;
+      }
+      label {
+        font-size: to-rem(14);
+        font-weight: 700;
+      }
+      label::before {
+        border-radius: 50%;
+      }
+      input {
+        top: to-rem(1) !important;
+        left: to-rem(3) !important;
+        margin-right: to-rem(8);
+      }
+    }
+    p {
+      font-size: to-rem(12);
+      font-weight: 500;
+      max-width: to-rem(400);
+      margin-left: to-rem(30);
+    }
+  }
+  .addVoucher {
+    padding: to-rem(35 0 30 80);
+    @include breakpoint("m") {
+      padding: to-rem(10 10 30 12);
+    }
+    .heading {
+      h3 {
+        font-size: to-rem(16);
+        font-weight: 700;
+        margin-bottom: to-rem(16);
+      }
+      p {
+        font-size: to-rem(16);
+        font-weight: 400;
+      }
+    }
+    .applyVoucher {
+      display: flex;
+      margin-bottom: to-rem(5);
+      .input {
+        width: to-rem(535);
+        height: to-rem(40);
+        input {
+          height: to-rem(40) !important;
+        }
+      }
+      .applyVoucherButton {
+        width: to-rem(90);
+        height: to-rem(40);
+        margin: to-rem(10 0 0 0);
+        background-color: #ed017f;
+        color: color(white) !important;
+        border-radius: 0px 3px 3px 0px;
+        button {
+          color: color(white) !important;
+        }
+      }
+    }
+    .terms {
+      font-size: to-rem(14);
+      color: #606060;
+      margin-bottom: to-rem(10.8);
+      span {
+        color: color(PrimaryLight);
+      }
+    }
+    .confirmButtonWrapper{
+      .confirmOrderButton {
+        width: to-rem(390);
+        height: to-rem(40);
+        border-radius: to-rem(4);
+        background-color: #ed017f;
+        @include breakpoint("m") {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.addressAlert {
+  position: fixed;
+  width: to-rem(590);
+  height: to-rem(288);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: color(White);
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 11;
+
+  @include breakpoint("s") {
+    width: 80%;
+  }
+
+  svg,
+  p {
+    margin-left: to-rem(50);
+  }
+  p {
+    font-weight: 400;
+    font-size: to-rem(24);
+    line-height: to-rem(29);
+    @include breakpoint("s") {
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    width: to-rem(68);
+    height: to-rem(49);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 4px;
+    background: color(PrimaryLight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: color(White);
+    text-transform: uppercase;
+    font-size: to-rem(14);
+    line-height: to-rem(17);
+  }
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .paymentOptions{
+      .addVoucher{
+        .terms{
+          position: absolute;
+          bottom: 65px;
+        }
+        .confirmButtonWrapper{
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          padding: 20px 16px;
+        }
+      }
+    }
+}

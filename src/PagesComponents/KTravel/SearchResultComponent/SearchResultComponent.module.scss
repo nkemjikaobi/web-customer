@@ -1,0 +1,153 @@
+@import "Assets/styles/shared-styles.scss";
+.resultWrapper{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: white;
+  .image {
+    width: 122px;
+    height: 77px;
+  }
+  .button {
+    margin-top: to-rem(13);
+    width: to-rem(200);
+    height: to-rem(46);
+  }
+  .searchResult {
+    display: flex;
+    max-height: to-rem(294);
+    justify-content: space-between;
+    padding: to-rem(25 20 0 30);
+    .direction{
+      width: 100%;
+    }
+    .col4 {
+      text-align: center;
+      p {
+        color: #000;
+        font-size: to-rem(21);
+        margin-bottom: to-rem(20);
+      }
+      .viewFlight{
+        display: none;
+      }
+    }
+    .bookNowButton {
+      width: to-rem(161);
+      height: to-rem(48);
+    }
+    .flightLogo{
+      display: none;
+    }
+  }
+  .flightDetails{
+    display: none;
+  }
+  .optionsStrip{
+    padding: 12px 30px;
+    background-color: #F6F6F6;
+    span{
+      color: #ED017F;
+      font-size: 14px;
+      margin-right: 55px;
+      cursor: pointer;
+    }
+    .icon2 {
+      margin-left: to-rem(-18);
+    }
+  }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .resultWrapper {
+      .optionsStrip{
+        span:first-child {
+          display: none;
+        }
+      }
+      .searchResult{
+        padding: to-rem(15) !important;
+        max-height: 10.375rem !important;
+        padding-right: 22px !important;
+        .details{
+          display: none !important;
+        }
+        .tripDuration{
+          .flightLogo{
+            display: block !important;
+            width: to-rem(80);
+            text-align: center;
+            span{
+              font-size: 12px;
+              color: #727272;
+            }
+          }
+          .timeHolders{
+            .city,.loc{
+              font-size: 10px;
+              font-weight: 400;
+              color: #727272;
+            }
+          }
+          .rule,.icon{
+            display: none !important;
+          }
+          .durationClass{
+            display: block;
+            text-align: center;
+            .duration,.cabinClass{
+              color: #727272;
+            }
+            .duration{
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 14.32px;
+            }
+            .cabinClass{
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 11.93px;
+            }
+          }
+        }
+        .col3Web{
+          display: none !important;
+        }
+        .col4{
+          .fare{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+          }
+          .bookNowButton{
+            display: none !important;
+          }
+          .viewFlight{
+            display: block !important;
+            font-size: to-rem(10) !important;
+            height: inherit;
+            margin-top: -13px;
+            background-color: #ED017F26;
+            color: #ED017F !important;
+          }
+        }
+      }
+      .flightDetails{
+        display: block !important;
+        position: fixed;
+        background-color: white;
+        height: 100vh;
+        top: 50px;
+        margin-left: -17px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .optionsStrip{
+        display: none;
+      }
+  }
+}

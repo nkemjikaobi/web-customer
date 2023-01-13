@@ -1,0 +1,46 @@
+@import "../../Assets/styles/shared-styles.scss";
+.otpVerification {
+  border: to-rem(1) solid color(MercuryVarOne);
+  box-shadow: to-rem(0 4 4 0) #00000008;
+  width: to-rem(640);
+  @include breakpoint("s") {
+    width: 100%;
+  }
+  height: to-rem(459);
+  margin: to-rem(49) auto 0 auto;
+  text-align: center;
+  &Heading {
+    text-align: center;
+    h1,
+    p {
+      font-size: to-rem(16);
+      font-weight: to-rem(500);
+    }
+    h1 {
+      margin: to-rem(31 0 32 0);
+    }
+    p {
+      margin: 0px auto 35px auto;
+      width: to-rem(461);
+    }
+  }
+  .passcodeWrapper {
+    display: flex;
+    justify-content: center;
+    .input {
+      width: to-rem(48);
+      height: to-rem(48);
+      margin-right: to-rem(16);
+      border: none;
+      background-color: color(Snow);
+    }
+  }
+  .button {
+    width: to-rem(420);
+    height: to-rem(48);
+    margin: to-rem(48) auto to-rem(50) auto;
+  }
+  .bottomText {
+    color: color(Nobel);
+  }
+}

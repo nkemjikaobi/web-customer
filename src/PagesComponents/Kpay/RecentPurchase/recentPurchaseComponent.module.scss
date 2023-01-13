@@ -1,0 +1,14 @@
+.purchasesWrapper{
+    .container {
+        padding: 3.5rem;
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .container {
+        padding: 2rem !important;
+    }
+}

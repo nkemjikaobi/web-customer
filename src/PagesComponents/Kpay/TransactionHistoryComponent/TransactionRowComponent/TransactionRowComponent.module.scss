@@ -1,0 +1,39 @@
+.transactionDetails{
+    .transactionDetailsInner{
+        display: flex;
+        justify-content: space-between;
+      }
+    span,p,label{
+      font-size: 14px;
+    }
+    .transactionType{
+      min-width: 5rem;
+      span{
+        padding: 4px 8px;
+        background-color: #0089400D;
+        border-radius: 4px;
+        color: #008940;
+      }
+    }
+    .transactionTitle{
+      padding: 0 1rem;
+      width: 34rem;
+      p{
+        line-height: 1;
+        font-size: 12px;
+        color: #767676;
+      }
+      label{
+        color: #00579B;
+        cursor: pointer;
+      }
+    }
+    .transactionAmount{
+      .creditAmount{
+        color: #008940;
+      }
+      .debitAmount{
+        color: #EC1111;
+      }
+    }
+}

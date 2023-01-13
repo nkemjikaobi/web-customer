@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: aphrodite-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    - hosts:
+      - az-staging-aphrodite.igbimo.com
+      secretName: igbimo-tls
+  rules:
+    - host: az-staging-aphrodite.igbimo.com
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service: 
+                name: aphrodite
+                port:
+                  number: 80

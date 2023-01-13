@@ -1,0 +1,31 @@
+.infoHolder {
+    background-color: #FBF3EB;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    .customerInfo{
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 14px;
+            line-height: 25px;
+            color: #333333;
+        }
+        div:nth-child(2) {
+            p {
+                font-weight: 500;
+            }
+            width: 50%;
+            text-align: right;
+            .changePlan{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                background-color: #E5E5E5;
+                padding: 0.3rem;
+                margin-left: 50%;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        }
+    }
+}

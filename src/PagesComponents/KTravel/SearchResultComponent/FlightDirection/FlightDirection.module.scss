@@ -1,0 +1,142 @@
+@import "Assets/styles/shared-styles.scss";
+.flightDirection{
+    display: flex;
+    height: to-rem(150);
+    justify-content: space-between;
+    padding: to-rem(0 125 0 0);
+    .oneStopButton {
+      font-weight: bold;
+      font-size: to-rem(13);
+      height: to-rem(32);
+      width: 100%;
+      border-radius: to-rem(50);
+      background-color: #fbe0bc;
+      color: #e18506;
+    }
+    .col1 {
+        .details {
+          text-align: center;
+          width: to-rem(150);
+          .icon2 {
+            margin-left: to-rem(-18);
+          }
+          .carrierDetails{
+            p{
+              font-size: to-rem(12);
+            }
+          }
+        }
+      }
+      .col3 {
+        margin-right: to-rem(-30);
+        margin-left: to-rem(30);
+        font-size: to-rem(14) !important;
+        p {
+          font-size: to-rem(14) !important;
+          color: color(Grey56);
+          padding-bottom: to-rem(14);
+        }
+        .button {
+          width: to-rem(90);
+          margin: 14px auto;
+        }
+    }
+
+    .tripDuration {
+        max-height: to-rem(50);
+        display: flex;
+        .durationClass{
+          display: none;
+        }
+        .timeHolders {
+          .time{
+            color: #F9A024;
+            font-size: to-rem(18);
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+          margin-top: to-rem(5);
+          font-size: to-rem(14);
+        }
+        .rule {
+          align-self: center;
+          width: to-rem(60);
+          height: to-rem(5);
+          border-bottom: to-rem(1) solid color(WhisperVarOne);
+        }
+        .icon {
+          margin-top: to-rem(10);
+          padding: to-rem(0 5);
+  
+          svg {
+            path {
+              fill: #F9A024;
+            }
+              width: to-rem(15) !important;
+              margin-top: to-rem(5) !important;
+              margin-left: to-rem(5) !important;
+              margin-right: to-rem(5) !important;
+          }
+        }
+        .flightLogo{
+            display: none;
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .flightDirection{
+        height: to-rem(86);
+        padding: 0 0 0 0;
+        .details{
+            display: none !important;
+          }
+        .tripDuration{
+            .flightLogo{
+              display: block !important;
+              width: to-rem(80);
+              text-align: center;
+              span{
+                font-size: to-rem(12);
+                color: #727272;
+              }
+            }
+            .timeHolders{
+              .city,.loc{
+                font-size: to-rem(10);
+                font-weight: 400;
+                color: #727272;
+              }
+              .time{
+                margin-bottom: 0px;
+              }
+            }
+            .rule,.icon{
+              display: none !important;
+            }
+            .durationClass{
+              display: block;
+              text-align: center;
+              .duration,.cabinClass{
+                color: #727272;
+              }
+              .duration{
+                font-size: to-rem(12);
+                font-weight: 400;
+                line-height: to-rem(14.32);
+              }
+              .cabinClass{
+                font-weight: 400;
+                font-size: to-rem(10);
+                line-height: to-rem(11.93);
+              }
+            }
+        }
+        .col3Web{
+            display: none !important;
+        }
+    }    
+}

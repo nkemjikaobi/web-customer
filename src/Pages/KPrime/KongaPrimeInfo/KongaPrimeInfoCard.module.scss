@@ -1,0 +1,79 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+h1,
+p {
+    margin: to-rem(0);
+    padding: to-rem(0);
+}
+
+.KongaPrimeInfoCard {
+    box-shadow: to-rem(0 0 5) rgba(0, 0, 0, 0.07);
+    height: to-rem(170);
+    margin: 0 auto;
+    margin-bottom: to-rem(18);
+    padding: to-rem(25 19 21 12);
+    width: to-rem(296);
+    
+    @include breakpoint-mini('l') {
+        display: block;
+        height: to-rem(307);
+        margin: to-rem(0);
+        margin-bottom: to-rem(37);
+        padding: to-rem(28 48 21 30);
+        width: to-rem(345);
+    }
+
+    @include breakpoint('xl') {
+        width: to-rem(300);
+    }
+
+    &_Icon {
+        padding-left: to-rem(23);
+        
+        img {
+            height: to-rem(38);
+            width: to-rem(38);
+
+            @include breakpoint-mini('l') {
+                height: to-rem(73);
+                width: to-rem(73);
+            }
+        }
+        
+        @include breakpoint-mini('l') {
+            padding-left: to-rem(0);
+        }
+    }
+
+    &_Info {
+        line-height: to-rem(20);
+        padding-left: to-rem(23);
+
+        @include breakpoint-mini('l') {
+            padding-left: 0;
+        }
+
+        h1 {
+            font-size: to-rem(14);
+            font-weight: 500;
+
+            @include breakpoint-mini('l') {
+                font-size: to-rem(20);
+                line-height: to-rem(24);
+                margin-top: to-rem(24);
+            }
+        }
+
+        p {
+            font-size: to-rem(14);
+            font-weight: 300;
+            margin-top: to-rem(8);
+
+            @include breakpoint-mini('l') {
+                font-size: to-rem(16);
+                line-height: to-rem(24);
+                margin-top: to-rem(18);
+            }
+        }
+    }
+}

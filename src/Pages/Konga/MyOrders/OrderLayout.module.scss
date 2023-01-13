@@ -1,0 +1,144 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.header {
+  margin-top: 4rem !important;
+  @include breakpoint("s") {
+    display: none;
+  }
+}
+
+.wrapper1 {
+  @include breakpoint-mini("l") {
+    margin-top: -1rem;
+  }
+  margin-bottom: 5rem;
+  .accountLayout {
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 7rem;
+    background-color: #f2f2f2;
+    @include breakpoint("s") {
+      display: block;
+      padding: 0;
+    }
+    .settingsWrapper {
+      border: 1px solid color(Whisper);
+      width: to-rem(400);
+      height: 100%;
+      margin-right: to-rem(21);
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 6px 1px rgba(63, 4, 35, 0.03);
+      background-color: color(White);
+      .InfoContainer {
+        padding: 10px 0px 10px 0px;
+        border-top: 1px solid color(Whisper);
+      }
+      .heading {
+        display: flex;
+        padding: 0.75rem 1.1875rem;
+        border-bottom: 1px solid color(Whisper);
+        border-top: 1px solid color(Whisper);
+        cursor: pointer;
+        h1,
+        h2 {
+          font-size: to-rem(16);
+          font-weight: 500;
+        }
+        h6 {
+          margin: 0.3rem 0rem 0rem 1rem;
+          font-size: 15px;
+          color: #4a4a4a;
+        }
+      }
+      .Info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 0 3.5rem;
+        cursor: pointer;
+        .infoIcon {
+          margin-right: to-rem(20);
+        }
+        .InfoLeft {
+          display: flex;
+          svg {
+            margin: 0.3125rem 1.5625rem 0.3125rem 1rem;
+          }
+        }
+      }
+      .infoMessage {
+        list-style: none;
+        margin-left: 3rem;
+        cursor: pointer;
+        svg {
+          margin-bottom: to-rem(5);
+        }
+        :hover {
+          color: color(PrimaryLight);
+          svg {
+            path {
+              fill: color(PrimaryLight);
+            }
+          }
+        }
+        .active {
+          color: color(PrimaryLight);
+          font-weight: bold;
+          svg {
+            path {
+              fill: color(PrimaryLight);
+            }
+          }
+        }
+      }
+    }
+    .accountLayoutContent {
+      border: 1px solid color(Whisper);
+      width: 55rem;
+      height: 100%;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 6px 1px rgba(63, 4, 35, 0.03);
+      background: color(White) !important;
+    }
+  }
+}
+.wrapper {
+  width: 100%;
+  margin-bottom: 3rem;
+  background: color(White) !important;
+}
+
+.hiden {
+  @include breakpoint("s") {
+    display: none;
+  }
+}
+
+@media screen and (min-device-width: 767px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+  .header {
+    margin-top: 4.5rem !important;
+    margin-left: 1rem !important;
+  }
+  .accountLayout {
+    padding: 3.0625rem 0 0 0rem;
+    .settingsWrapper {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
+  .header {
+    margin-top: 3rem !important;
+    margin-left: 7.5% !important;
+  }
+  .accountLayout {
+    padding: 3.0625rem 0 0 7rem;
+  }
+}
+
+@media screen and (min-device-width: 1441px) and (-webkit-min-device-pixel-ratio: 1) {
+  .header {
+    margin-top: 3rem !important;
+  }
+  .accountLayout {
+    padding: 3.0625rem 0 3rem 5rem;
+  }
+}

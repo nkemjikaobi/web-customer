@@ -1,0 +1,21 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.imagesCarousel {
+  .itemWrapper {
+    margin-top: 5rem;
+    margin-left: 10%;
+    img {
+      max-width: 80%;
+    }
+  }
+  ol {
+    z-index: 1 !important;
+    .active {
+        background-color: color(PrimaryLight) !important;
+      }
+    li {
+      border: 1px solid #c4c4c4;
+      border-radius: 5px;
+      margin-right: 2px;
+    }
+  }
+}

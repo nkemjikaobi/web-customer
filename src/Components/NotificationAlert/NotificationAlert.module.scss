@@ -1,0 +1,21 @@
+@import "../../Assets/styles/shared-styles.scss";
+.notificationBase, .notificationBase2 {
+    position: fixed;
+    right: 0; 
+    z-index: 200;
+}
+.notificationBase{
+    top: 90px;
+}
+.notificationBase2{
+    top: 160px;
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .notificationBase, .notificationBase2 {
+        top: 0 !important;
+    }
+}
+  

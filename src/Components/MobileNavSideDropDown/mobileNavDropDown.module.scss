@@ -1,0 +1,20 @@
+.forBusinessData{
+    padding-left: 52px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.listItem{
+    display: flex;
+    height: to-rem(44);
+    padding: to-rem(0 0 0 20);
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-top: 5px;
+    }
+    svg{
+        margin: auto 0;
+    }
+}

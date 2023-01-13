@@ -1,0 +1,64 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.konlineCartCard{
+    display: flex;
+    padding: to-rem(8 7 14 5);
+    border-bottom: to-rem(1) solid color(Grey96);
+    background-color: color(white);
+    width: 100%;
+    z-index: 4;
+    width: 200px;
+    .productImg{
+        height: to-rem(100);
+        width: to-rem(100) !important;
+        margin-right: to-rem(5);
+        img {
+            max-width: none;
+            height: -webkit-fill-available;
+            width: auto;
+        }
+    }
+    .right{
+        width: 100%;
+        .productName{
+            font-size: to-rem(14);
+            font-weight: 400;
+            margin-bottom: to-rem(8);
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &_bottom{
+           .productInfo{
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin-bottom: to-rem(10);
+               .price{
+                font-size: to-rem(18);
+                display: block;
+                margin-right: 40%;
+               }
+               .quantity{
+                   font-size: to-rem(14);
+                   color: color(Grey89);
+               }
+           } 
+           .actions{
+               display: flex;
+               align-items: baseline;
+               .icon{
+                   margin-right: to-rem(29);
+                   margin-top: inherit;
+               }
+               .icon:nth-child(2){
+                   svg{
+                       path{
+                           fill: color(PrimaryLight);
+                       }
+                   }
+               }
+           }
+        }
+    }
+
+}

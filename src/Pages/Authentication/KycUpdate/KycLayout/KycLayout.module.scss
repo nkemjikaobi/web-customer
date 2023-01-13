@@ -1,0 +1,103 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.kycContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding: to-rem(60 0 45 110);
+    .sideMenu {
+        width: 30%;
+        height: to-rem(207);
+        margin-right: 1.5rem;
+        border: 1px solid #E5E5E5;
+        background-color: #fff;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+        .header {
+            background: #F1F1F1;
+            padding: 1rem 2rem;
+            h1 {
+                font-size: 16px;
+                line-height: 20px;
+                display: flex;
+                align-items: flex-end;
+                color: #000000;
+            }
+        }
+    }
+    .componentsHolder {
+        width: 48%;
+    }
+}
+
+.menuItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: to-rem(12 30);
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+    .menuItemLeft {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            color: #878787;
+        }
+        svg {
+            margin-right: 0.7rem;
+        }
+
+    }
+}
+.active {
+    p {
+        color: color(PrimaryLight) !important;
+    }
+    svg {
+        path{
+            fill: color(PrimaryLight);
+        }
+        rect{
+            fill: color(PrimaryLight);
+        }
+    }
+}
+
+@media screen 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .kycContainer {
+        padding: 5rem 0 0 1.5rem;
+        .sideMenu {
+            width: 35%;
+            height: 15rem;
+        }
+        .componentsHolder {
+            width: 58%;
+        }
+    }
+}
+@media screen 
+  and (max-device-width: 700px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .kycContainer {
+        display: none;
+        // display: flex;
+        // // flex-direction: column;
+        // padding: 1rem 0 0 0;
+        // .sideMenu {
+        //     // display: none;
+        //     width: 100%;
+
+        // }
+        // .componentsHolder {
+        //     width: 100%;
+        // }
+    }
+}

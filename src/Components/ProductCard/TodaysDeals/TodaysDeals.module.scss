@@ -1,0 +1,99 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.no_scrollbar {
+  overflow: hidden !important;
+}
+.leftPointer, .rightPointer {
+    display: none;
+}
+
+.home{
+    &_recomendation{
+        border: to-rem(1) solid color(Whisper);
+        margin: to-rem(30 0 30 0);
+        height: to-rem(283);
+        overflow: hidden;
+        background-color: color(White);
+        @include breakpoint-mini('l'){
+            height: auto !important;
+          }
+          .recommendationContentWrapper{
+            height: 100%;
+            overflow: hidden;
+          }
+            .heading{
+              display: flex;
+              border-bottom: to-rem(1) solid color(Whisper);
+              h1{
+                  font-size: to-rem(20);
+                  padding: to-rem(20);
+                  font-weight: 700;
+                  @include breakpoint("s"){
+                    font-size: to-rem(16);
+                  }
+              }
+            }
+            .recommendationContent{
+              display: block;
+              overflow: hidden;
+              @include breakpoint-mini('l'){
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+              }
+                padding: to-rem(5);
+            }
+            .recomendationCardWrapper{
+                margin: to-rem(10);
+                }
+    }
+}
+
+@media screen 
+and (min-device-width: 320px) 
+and (max-device-width: 767px) 
+and (-webkit-min-device-pixel-ratio: 1){
+  .home {
+    &_recomendation{
+        .heading{
+          justify-content: space-between;
+          h1{
+              padding: 0.5rem;
+          }
+          .small {
+            font-size: to-rem(14) !important;
+          }
+        }
+    }
+}
+  .recommendationContentWrapper{
+    height: 100%;
+    display: block !important;
+  }
+  .recommendationContent{
+    display: flex !important;
+    overflow-x: scroll !important;
+  }
+  .todaysDealsWrapper{
+    position: relative;
+    margin-top: to-rem(-20);
+    .leftPointer, .rightPointer {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: to-rem(130) !important;
+        @include breakpoint('s'){
+            top: to-rem(40);
+        }
+    }
+    .leftPointer {
+        left: to-rem(140) !important;
+         @include breakpoint('s'){
+            left: to-rem(0) !important;
+        }
+    }
+    
+    .rightPointer {
+        right: to-rem(0);
+    }
+}
+}

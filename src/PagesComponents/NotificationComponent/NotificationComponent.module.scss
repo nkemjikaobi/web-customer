@@ -1,0 +1,66 @@
+.loginWrapper{
+    display: flex;
+    .loginNotification{
+        display: flex;
+        padding-left: 25px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transition-duration: .5s;
+        padding-right: 25px;
+        .message{
+            color: white;
+            font-size: 12px;
+            line-height: 15px;
+            padding-top: 18px;
+            padding-bottom: 19px;
+            padding-left: 25px;
+            label{
+                color: white;
+                font-weight: 700;
+                margin-bottom: 3px;
+            }
+        }
+        .tick{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .closeButton{
+        background-color: #4A8D06;
+        width: 30px;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .loginWrapper{
+        display: flex;
+        .loginNotification{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding-left: 0;
+            .message{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 0;
+                p{
+                    font-size: 12px;
+                    height: 31px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        .closeButton{
+            padding: 0 5px;
+        }
+    }
+}

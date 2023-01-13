@@ -1,0 +1,8 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+
+.selectContainer {
+  position: relative;
+  select::-ms-expand {
+    display: none;
+  }
+}

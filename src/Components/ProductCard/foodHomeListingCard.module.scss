@@ -1,0 +1,38 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.listingCard {
+  min-width: to-rem(267.01);
+  height: to-rem(351);
+  margin-right: to-rem(20);
+  box-shadow: 0px 1px 5px 0px #0000002e;
+  max-width: 33%;
+
+  &_top {
+    position: relative;
+  }
+  &_bottom {
+    padding: to-rem(17.7);
+    h1 {
+      font-size: to-rem(18);
+      margin-bottom: to-rem(8);
+    }
+    p {
+      color: color(SuvaGrey);
+    }
+    .labels {
+      display: flex;
+      font-size: to-rem(14);
+      .label {
+        display: flex;
+        justify-content: center;
+        width: to-rem(86.64);
+        background-color: color(Grey95);
+        margin-right: to-rem(6);
+        padding-top: to-rem(9);
+      }
+    }
+  }
+  &:hover{
+    box-shadow: 0px 3px 5px 0px #00000026;
+}
+}

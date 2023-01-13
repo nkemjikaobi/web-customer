@@ -1,0 +1,124 @@
+@import "../../../Assets/styles/shared-styles.scss";
+.header {
+    background: linear-gradient(93.2deg, #FFF3F4 2.4%, #FFBDC3 173.15%);
+    background: no-repeat;
+    @include breakpoint-mini('xxxl'){
+        margin: 0 -12.5%;
+    }
+    
+    &_Text {
+        color: color(Black);
+        text-align: center;
+        padding-top: to-rem(20);
+        h1 {
+            font-size: to-rem(60);
+        }
+        p {
+            font-size: to-rem(25);
+            font-weight: 600;
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    .bannerInner{
+        text-align: center;
+        img{
+            height: 90%;
+        }
+    }
+}
+.mainContent{
+    @include breakpoint-mini('xl'){
+        padding: to-rem(0 70) ;
+      }
+      @include breakpoint-mini('xxxl'){
+          padding: 0;
+      }
+}
+.seoText {
+    padding: to-rem(120 16 143 16);
+}
+
+.flightDeals {
+    margin-top: to-rem(600);
+    margin-bottom: to-rem(40);
+    @include breakpoint-mini('xxl'){
+        margin-top: to-rem(30);
+    }
+}
+.holidayPackages{
+    margin-top: to-rem(40);
+}
+.tripTypeSelectors {
+    display: flex;
+    .selector {
+        display: flex;
+        margin: to-rem(28 0 0 26);
+        input {
+            margin-top: to-rem(6);
+        }
+        label {
+            font-size: to-rem(16);
+            color: color(Grey2);
+            margin-left: to-rem(7);
+        }
+    }
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .header {
+        background-image: none !important;
+        background-color: #FFF4F5;
+        &_Text {
+            display: none;
+        }
+    }
+    .flightDeals {
+        margin-top: to-rem(30);
+    }
+    .seoText {
+        padding: 1rem 1rem 2rem 1.2rem;
+    }
+    .mainContent{
+        .banner{
+            .bannerInner{
+                margin-top: 1rem !important;
+            }
+        }
+        .holidayPackages{
+            margin-top: to-rem(10);
+        }
+    }
+}
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1023px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .flightDeals {
+        margin-top: to-rem(100);
+    }
+}
+@media screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1439px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .flightDeals {
+        margin-top: to-rem(120);
+    }
+    .seoText {
+        padding: 3.5rem 2rem 2.9375rem 2.2rem;
+    }
+}
+@media screen 
+  and (min-device-width: 1440px) 
+  and (max-device-width: 1440px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .seoText {
+        padding: 3.5rem 3rem 2.9375rem 4.2rem;
+    }
+}

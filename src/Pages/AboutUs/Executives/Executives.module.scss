@@ -1,0 +1,70 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.container {
+    padding: to-rem(67 67 100);
+    @include breakpoint('s'){
+        padding: to-rem(20);
+        }
+    .back {
+        padding: to-rem(10 0 50 0);
+        cursor: pointer;
+    }
+    .content {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .top {
+        width: 25%;
+        @include breakpoint('s'){
+            width: 100%;
+        }
+        margin-right: 1rem;
+        .img {
+            background: #F7F7F7;
+            text-align: center;
+            height: to-rem(240);
+            img {
+                width: 211.27px;
+                height: auto;
+                border-top: 25px solid #fbebf3;
+                border-right: 25px solid #fbebf3;
+                border-left: 25px solid #fbebf3;
+                border-bottom: 5px solid #fbebf3;
+            }
+        }
+        h5{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.165px;
+            color: #000000;
+            text-align: center;
+        }
+        h6 {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.165px;
+            color: #000000;
+            text-align: center;
+        }
+    }
+    .text {
+        width: 73%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.165px;
+        color: #6B7280;
+        @include breakpoint('s'){
+            width: 100%;
+        }
+
+        @include breakpoint('m'){
+            width: 100%;
+        }
+        
+    }
+}

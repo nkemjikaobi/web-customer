@@ -1,0 +1,42 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.paymentSuccess {
+  padding: to-rem(0 104);
+  text-align: center;
+  .heading {
+    .image {
+      margin-bottom: to-rem(32);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      color: color(ShinyShamrock);
+    }
+  }
+  .details {
+    margin-top: to-rem(48);
+    p {
+      font-size: to-rem(24);
+      font-weight: 500;
+      padding: to-rem(0 115);
+      margin-bottom: to-rem(48);
+    }
+  }
+  .transactionReference {
+    padding: to-rem(0 102);
+    margin-bottom: to-rem(60);
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: to-rem(434);
+    height: to-rem(48);
+    color: color(White) !important;
+    background: color(PrimaryLight);
+    border-radius: to-rem(3);
+    button {
+      color: color(White) !important;
+    }
+  }
+}

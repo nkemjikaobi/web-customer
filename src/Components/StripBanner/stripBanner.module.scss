@@ -1,0 +1,24 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.stripBanner {
+    background-color: color(White);
+    border-radius: to-rem(5);
+    box-shadow: 0 0 to-rem(5) transparentize(color(Black), 0.95);
+    min-height: to-rem(100);
+    padding: to-rem(10);
+
+    &Image {
+        border-radius: to-rem(5);
+        height: 100%;
+        max-height: to-rem(100);
+        width: 100%;
+    }
+
+    &Mobile {
+        @extend %mobileOnly;
+    }
+
+    &Desktop {
+        @extend %tabletAndAboveOnly;
+    }
+}

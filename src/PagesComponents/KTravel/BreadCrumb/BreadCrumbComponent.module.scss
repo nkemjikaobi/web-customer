@@ -1,0 +1,13 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.header {
+    &_head {
+        color: color(Black);    
+    }
+    &_head:first-child{
+        margin-left: 10.28%;
+    }
+    &_travels {
+        color: color(PrimaryLight);
+    }
+}

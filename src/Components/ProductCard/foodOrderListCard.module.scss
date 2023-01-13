@@ -1,0 +1,43 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.vendorOrderCard{
+  display: flex;
+  flex-basis: 25%;
+  
+  .orderContent{
+    display: flex;
+    width: 100%;
+    box-shadow: 0 3px 10px color(Whisper);
+    max-height: to-rem(300);
+    padding: to-rem(5 15 5 15);
+    align-content: space-evenly;
+    justify-content: center;
+    .defaultText{
+      display: flex;
+      padding: to-rem(20 20 20 20);
+      color: color(Grey29);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .orderItems{
+        display: flex;
+        justify-content: space-between;
+        padding-top: to-rem(5);
+        padding-bottom: to-rem(5);
+        border-bottom: 1px solid color(grey);
+    }
+    .lightFont{
+        color: color(Grey29)
+    }
+    .darkFont{
+        color: color(Nero);
+    }
+  }
+  .virtual{
+      flex-grow: 1;
+      padding: to-rem(15 40 15 50);
+      border-bottom: to-rem(1) solid #aaa;
+  }
+  
+}

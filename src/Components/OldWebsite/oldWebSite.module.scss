@@ -1,0 +1,200 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.oldWebsite {
+  position: relative;
+  width: 22rem;
+  right: 0;
+  top: to-rem(70);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  z-index: 999;
+  padding: 1rem;
+  animation: slideInFromRight 0.2s ease-in;
+  a {
+    color: white;
+  }
+  .bottomContainer {
+    max-height: 70vh;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .iconWrapper {
+    margin-right: -18rem;
+    margin-bottom: to-rem(10);
+    cursor: pointer;
+  }
+
+  h4 {
+    color: color(PrimaryLight);
+    font-weight: 700;
+    line-height: to-rem(24);
+    margin-bottom: 15px;
+  }
+  h3 {
+    color: black;
+    font-weight: 700;
+    line-height: to-rem(24);
+    margin-bottom: 15px;
+  }
+  p {
+    color: #555555;
+    font-size: to-rem(14);
+    width: to-rem(262);
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  .done {
+    color: #555555;
+    font-size: to-rem(16);
+    width: to-rem(262);
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  .backButton {
+    display: inline-block;
+    line-height: 1.5;
+    background-color: color(PrimaryLight) !important;
+    color: color(white) !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .feedBackButton {
+    background-color: rgba(80, 80, 80, 0.2) !important;
+    color: #505050 !important;
+    height: 35px;
+  }
+  .continueButton {
+    background-color: #ffebf6 !important;
+    color: color(PrimaryLight) !important;
+  }
+  .ratings {
+    h4 {
+      color: black;
+      font-size: to-rem(18);
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #344356;
+      font-weight: 400;
+    }
+    .reactions {
+      display: flex;
+      justify-content: space-around;
+      .hateColor {
+        path {
+          fill: #ed6e69;
+        }
+      }
+      .dontLikeColor {
+        path {
+          fill: #b57ff5;
+        }
+      }
+      .neutralColor {
+        path {
+          fill: #468bf3;
+        }
+      }
+      .likeColor {
+        path {
+          fill: #5caf7f;
+        }
+      }
+      .loveColor {
+        path {
+          fill: #e9a844;
+        }
+      }
+    }
+  }
+  .satisfaction {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    overflow-x: hidden;
+    span {
+      display: block;
+      color: #373737;
+      margin-top: 25px;
+      font-size: to-rem(14);
+      font-weight: 400;
+    }
+    .satisfactoryItem {
+      .selectedColor {
+        background-color: #5caf7f;
+        color: white;
+        padding: 0.7rem;
+        border-radius: 3px;
+      }
+      span {
+        display: block;
+        color: #373737;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: to-rem(14);
+      }
+      color: #373737;
+      .satisfactoryScore {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15px;
+        .bgColor {
+          background-color: #f2f2f2;
+          color: #373737;
+          padding: 0.7rem;
+          border-radius: 3px;
+        }
+      }
+      .finalEmotion {
+        display: flex;
+        justify-content: space-between;
+        width: 150%;
+        p {
+          color: #949494;
+          font-size: 12px;
+        }
+        p:last-of-type {
+          margin-left: auto;
+        }
+      }
+      .messageBox {
+        height: 138px;
+        margin-bottom: 30px;
+        .messageBoxx {
+          height: 100%;
+          padding: 5px 5px;
+          color: #979797;
+          font-size: 12px;
+        }
+      }
+    }
+    .submitButton {
+      color: white !important;
+      background-color: color(PrimaryLight) !important;
+    }
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

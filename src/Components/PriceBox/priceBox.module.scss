@@ -1,0 +1,100 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+/* Styling for Price Box component */
+$block-className: priceBox;
+
+.#{$block-className} {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 500;
+    margin: 0;
+
+    &Duration {
+        color: #8f8f8f;
+        margin: to-rem(0);
+        text-transform: capitalize;
+    }
+
+    &Price {
+        color: color(Black);
+        display: inline-block;
+        font-size: to-rem(28);
+        margin-bottom: to-rem(10);
+
+        @include breakpoint-mini('m') {
+            font-size: to-rem(26);
+            font-weight: 700;
+        }
+    }
+
+    &OriginalPrice {
+        color: color(Disabled);
+        display: inline-block;
+        font-size: to-rem(16);
+        font-weight: $font-weight-regular;
+        margin-left: to-rem(10);
+        text-decoration: line-through;
+
+        @include breakpoint-mini('m') {
+            font-size: to-rem(14);
+        }
+    }
+
+    &FreeDelivery {
+        color: color(SeaFoamGreen);
+        font-size: to-rem(12);
+        font-weight: $font-weight-bold;
+        line-height: to-rem(15);
+        margin-bottom: 0;
+
+        &Large {
+            font-size: to-rem(14);
+        }
+
+        .youSave {
+            margin-right: to-rem(5);
+            font-weight: 700;
+        }
+
+        .freeDelivery {
+            margin-right: to-rem(16);
+        }
+    }
+
+    @include breakpoint('m') {
+        @include flexWrap(wrap);
+    }
+}
+.primePriceBox{
+    display:flex;
+    .primeOriginalPrice{
+        margin-top: to-rem(5);
+    }
+    .priceBoxFreeDelivery{
+        margin: to-rem(8 0 0 9);
+    }
+}
+.priceLabelNew {
+    background-color: #ffeded;
+    border-radius: 0.3125rem;
+    color: #d0021b;
+    font-size: to-rem(14);
+    font-weight: 700;
+    padding: 0.3125rem;
+    text-transform: uppercase;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+    .#{$block-className} {
+        &Price {
+            color: #ED017F;
+            font-size: to-rem(18);
+            font-weight: 700;
+            line-height: 15px;
+        }
+    }
+    .priceBoxFreeDelivery{
+        display: block !important;
+    }
+  }

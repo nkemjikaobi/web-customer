@@ -1,0 +1,108 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+.paginationContainer {
+   max-width:100;
+    display: block;
+    font-size: to-rem(14);
+    text-align: center;
+    margin: to-rem(30 0);
+
+    @include breakpoint-mini('s') {
+        width: to-rem(400);
+    }
+
+    @include breakpoint-mini('l') {
+        margin: to-rem(30) auto;
+    }
+}
+
+.pageList {
+    max-width: I 80;
+    @extend
+        %listReset;
+
+    display: inline-block;
+    text-align: center;
+
+    li {
+        color: color(Black);
+        display: inline-block;
+        margin: 0;
+
+        a {
+            padding: to-rem(5 10);
+        }
+
+        &.currentPage {
+            a {
+                background-color: color(PrimaryLight);
+                border-radius: to-rem(3);
+                color: color(White);
+                transition: background-color 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: darken(color(PrimaryLight), 5%);
+                }
+            }
+        }
+    }
+}
+
+.pageLink {
+    border-radius: to-rem(3);
+    display: inline-block;
+    font-size: to-rem(12);
+    margin: to-rem(0 5);
+    padding: to-rem(6 8);
+
+    svg {
+        height: to-rem(10);
+        margin-top: to-rem(-1);
+    }
+
+    &.previous {
+        svg {
+            margin-right: to-rem(4);
+            transform: rotateY(180deg);
+        }
+    }
+
+    &.next {
+        svg {
+            margin-left: to-rem(4);
+        }
+    }
+
+    &:not(.pageLinkDisabled) {
+        background-color: color(LightGrey);
+        color: color(Black);
+        font-weight: $font-weight-medium;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken(color(LightGrey), 5%);
+        }
+    }
+}
+
+.pageLinkDisabled {
+    color: color(Grey71);
+}
+
+.paginationEllipsis {
+    padding: to-rem(0 2);
+    font-size: to-rem(14);
+}
+
+@media screen 
+and (min-device-width: 320px) 
+and (max-device-width: 767px) 
+and (-webkit-min-device-pixel-ratio: 1){
+    ul{
+        width: 100% !important;
+    }
+}

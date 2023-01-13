@@ -1,0 +1,54 @@
+@import "../../../Assets//styles/shared-styles.scss";
+/* Pagination Buttons */
+.paginationBttns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 !important;
+}
+.paginationBttns a {
+  padding: 9px 12px;
+  margin: 8px;
+  color: color(White);
+  cursor: pointer;
+}
+.nextClassName {
+  background-color: color(White);
+  border: 1px solid #dee2e6;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+.previousClassName {
+  background-color: color(White);
+  border: 1px solid #dee2e6;
+}
+.previousClassName a {
+  padding: 0 !important;
+  width: 100%;
+}
+.nextClassName a {
+  padding: 0 !important;
+  width: 100%;
+}
+.previousClassName:hover {
+  background-color: #dee2e6;
+}
+.nextClassName:hover {
+  background-color: #dee2e6;
+}
+.paginationBttns a:hover {
+  color: color(White);
+  background-color: #dee2e6;
+}
+.paginationActive a {
+  color: color(White) !important;
+  background-color: #ed017f;
+}
+.activeText {
+  color: color(White) !important;
+  background-color: color(White) !important;
+}

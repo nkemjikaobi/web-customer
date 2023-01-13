@@ -1,0 +1,21 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+.foodFilter{
+    display: block;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        .heading{
+            color: #2E3333;
+            font-size: to-rem(14);
+        }
+        .icon{
+            margin-top: to-rem(13);
+        }
+    }
+    .checkboxFiltersContainer{
+        padding-bottom: to-rem(30);
+        border-bottom: to-rem(1) solid #D8D8D8;
+    }
+
+}

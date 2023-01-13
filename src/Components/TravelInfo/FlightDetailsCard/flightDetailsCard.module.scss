@@ -1,0 +1,59 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+.flightDetailsCard{
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        padding: to-rem(19 26 19 23);
+        background-color: #fffafa;
+        height: to-rem(96);
+        .left{
+            .flightDirection{
+                display: flex;
+                .airplaneIcon{
+                    margin: to-rem( 0 14);
+                }
+    
+            }
+            .date{
+                margin-top: to-rem(19);
+            }
+        }
+        .right{
+            display: flex;
+            margin-top: to-rem(42);
+            cursor: pointer;
+            .changeFlightIcon{
+                margin-right: to-rem(9);
+            }
+        }
+    }
+    .flightDetails{
+        padding: to-rem(15 49 36 23);
+        &_heading{
+            font-size: to-rem(18);
+            color:  #777777;
+        }
+        &_info{
+            display: flex;
+           .row1,.row2,.row3{
+               display: flex;
+           }
+        }
+    }
+}
+.airlineMatrixMobile{
+    display: none;
+}
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+      .flightDetailsCard{
+        display: none !important;
+      }
+      .airlineMatrixMobile{
+          display: block !important;
+          padding-left: 1rem;
+      }
+}

@@ -1,0 +1,46 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+
+.healthCarousel{
+    display: flex;
+    overflow-x: scroll;
+    .productCardWrapper{
+        margin-right: 9rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.sectionWrapper {
+    padding: to-rem(20);
+    width: 100%;
+
+    @include breakpoint-mini('m') {
+        padding: to-rem(100 80);
+        min-height: to-rem(600);
+    }
+}
+
+.leftColumn, .rightColumn {
+    width: 100%;
+
+    @include breakpoint-mini('l') {
+        width: 50%;
+    }
+
+    &Content {
+        width: 100%;
+
+        @include breakpoint-mini('l') {
+            width: 90%;
+        }
+    }
+}
+
+.LeftColumnContent {
+    width: 100%;
+
+    @include breakpoint-mini('l') {
+        width: 80%;
+    }
+}

@@ -1,0 +1,200 @@
+@import "../../../Assets/styles/shared-styles.scss";
+
+$mediumBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'm')})";
+$largeBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'l')})";
+$xLargeBreakpoint: "screen and (min-width: #{map-get($breakpoints, 'xl')})";
+
+@mixin detailPagePadding {
+  margin: 0 to-rem(10);
+
+  @media #{$mediumBreakpoint} {
+    margin: 0 to-rem(15);
+  }
+
+  @media #{$largeBreakpoint} {
+    margin: 0 to-rem(15 20);
+  }
+}
+
+.arrow {
+  padding-top: 1.875rem;
+  padding-right: to-rem(94);
+}
+
+.container,
+.bannerContainer {
+  padding: 0 to-rem(30);
+  width: 100%;
+  @include breakpoint("m") {
+    padding: 0;
+  }
+}
+.bannerContainer {
+  background-color: #3bb6d5;
+  height: to-rem(300);
+  position: relative;
+
+  @include breakpoint("s") {
+    height: auto;
+    margin: 0;
+    padding: to-rem(20);
+  }
+
+  p {
+    color: color(White);
+    font-size: to-rem(15);
+    left: to-rem(50);
+    line-height: 1.4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 40%;
+
+    @include breakpoint("l") {
+      font-size: to-rem(12);
+      left: to-rem(20);
+      width: 45%;
+    }
+
+    @include breakpoint("m") {
+      font-size: to-rem(15);
+      left: to-rem(10);
+      width: 50%;
+    }
+
+    @include breakpoint("s") {
+      font-size: to-rem(14);
+      margin-bottom: to-rem(50);
+      position: unset;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+  }
+
+  img {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint("xl") {
+      max-width: 50%;
+    }
+
+    @include breakpoint("m") {
+      width: to-rem(350);
+    }
+
+    @include breakpoint("s") {
+      margin: 0 auto;
+      position: unset;
+      right: unset;
+      top: unset;
+      transform: none;
+    }
+  }
+}
+.content {
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: to-rem(20);
+}
+
+.contentWrapper {
+  width: 80%;
+  @include breakpoint("s") {
+    width: 100%;
+  }
+  @include breakpoint("m") {
+    width: 100%;
+  }
+}
+.dropdown {
+  padding: to-rem(46);
+  line-height: to-rem(19.09);
+  font-weight: 400;
+  color: #909090;
+  @include breakpoint("s") {
+    font-size: to-rem(10);
+  }
+}
+.headerWrapper {
+  padding: to-rem(30) 0;
+  @include breakpoint("m") {
+    padding: to-rem(10) 0;
+  }
+}
+.header {
+  font-weight: 700;
+  font-size: to-rem(40);
+  line-height: to-rem(48.84);
+  color: #1c1d1f;
+  @include breakpoint("s") {
+    font-size: to-rem(20);
+  }
+  @include breakpoint("m") {
+    font-size: to-rem(24);
+  }
+}
+.mainContainer {
+  max-width: to-rem(1440);
+  padding: 0 to-rem(30);
+
+  margin: 0 auto;
+}
+.mainContainer {
+  margin-bottom: to-rem(50);
+
+  @include breakpoint("s") {
+    margin-bottom: 0;
+  }
+}
+
+.mainContentWrapper {
+  margin-top: to-rem(25);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.redTitle {
+  font-weight: 700;
+  font-size: to-rem(20);
+  line-height: to-rem(24.42);
+  padding: to-rem(28) to-rem(0) to-rem(0) to-rem(46);
+  color: #ed017f;
+  @include breakpoint("s") {
+    font-size: to-rem(14);
+  }
+}
+.textWrapper {
+  max-width: 60%;
+}
+.title {
+  font-weight: 500;
+  font-size: to-rem(20);
+  line-height: to-rem(24.42);
+  padding: to-rem(28) to-rem(0) to-rem(28) to-rem(46);
+  @include breakpoint("s") {
+    font-size: to-rem(14);
+  }
+}
+
+.titleWrapper {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.titleWrapperWhite {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.wrapper {
+  margin: mixin-exists($name: detailPagePadding);
+  background-color: color(WhiteSmoke);
+}

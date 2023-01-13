@@ -1,0 +1,473 @@
+@import "../../Assets/styles/shared-styles.scss";
+
+
+.container {
+    .about {
+        background-color: #fff5fa;
+        height: to-rem(650);
+        padding: to-rem(73);
+        h1 {
+            font-weight: 700;
+            font-size: to-rem(32);
+            line-height: to-rem(39);
+            letter-spacing: -0.165px;
+            color: #000000;
+            padding: to-rem(20 0 30);
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .text {
+                margin: 0rem 0.3rem 0rem 0rem;
+                width: 50%;
+                height: 100%;
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: -0.165px;
+                    color: #6B7280;
+                }
+            }
+            img {
+                border: 8px solid #fff;
+                width: 48%;
+                height: 100%;
+            }
+        }
+    }
+    .team {
+        min-height: to-rem(1121);
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: -0.165px;
+            color: #000000;
+            padding: to-rem(65 0 20);
+        }
+        .members {
+            display: grid;
+            grid-template-areas: 'myarea myarea';
+            margin: 0 auto;
+            width: to-rem(900);
+            height: to-rem(910);
+           
+            @include breakpoint('s'){
+                display: flex;
+                flex-direction: column;
+                row-gap: 70px;
+                padding: to-rem(0 17);
+                width: 100%;
+            }
+            &> div:first-child{
+                grid-area: myarea;
+                justify-self: center;
+            }
+            &> div:not(:first-child){
+                gap: 50px 31px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            .card{
+                width: to-rem(420);
+                height: to-rem(360);
+                padding: to-rem(27 63 0 63);
+                background-color: #fff5fa;
+                @include breakpoint('m'){
+                width: to-rem(420);
+                height: to-rem(260);
+                padding: to-rem(17 33 0 33);
+                }  
+                @include breakpoint('s'){
+                width: 100%;
+                height: to-rem(280);
+                padding: to-rem(26 54 0 54);
+                }
+
+            }
+                .cardText {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                        .teamMemberName {
+                            width: 470px;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -0.165px;
+                            color: #555555;
+                            word-wrap: break-word;
+                            text-align: center;
+                            @include breakpoint('s'){
+                                font-size: to-rem(14);
+                            }
+                        }
+                        p {
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -0.165px;                      
+                            color: #000000;      
+                            text-align: center; 
+                            @include breakpoint('s'){
+                                font-size: to-rem(12);
+                            }                  
+                        }
+            }
+        }
+        
+    }
+    .culture {
+        max-width: to-rem(1441);
+        height: to-rem(1094);
+        background: #F9FAFB;
+        .cultureContainer {
+            padding: to-rem(20 70 40);
+            .header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid #6B7280;
+                padding-bottom: to-rem(20);
+                h1 {
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 39px;
+                    letter-spacing: -0.165px;
+                    color: #000000;
+                    padding: 3rem 0 2.25rem 0;
+                }
+                .holder {
+                    text-align: center;
+                    svg {
+                        text-align: center;
+                    }
+                    h4 {
+                        font-weight: 700;
+                        font-size: 32px;
+                        line-height: 39px;
+                        letter-spacing: -0.165px;
+                        color: #6B7280;
+
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: -0.165px;
+                        color: #6B7280;
+                    }
+                }
+                
+            }
+        }
+    }
+    .vision {
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: -0.165px;
+            color: #6B7280;
+            text-align: center;
+            padding-top: to-rem(36);
+        }
+        .visionList {
+            display: flex;
+            .visionCard {
+                width: 33.5%;
+                border-bottom: 1px solid #6B7280;
+                h6 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.165px;
+                    color: #111827;
+                    padding: to-rem(10 0 3);
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: -0.165px;
+                    color: #6B7280;
+                    padding-bottom: to-rem(60);
+                }
+            }
+
+        }
+    }
+    .values {
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: -0.165px;
+            color: #6B7280;
+            text-align: center;
+            padding: to-rem(36 0);
+        }
+        .valueList {
+            display: flex;
+            flex-wrap: wrap;
+            .valuesCard {
+                width: 32%;
+                margin: to-rem(0 10 0 0);
+                h6 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.165px;
+                    color: #111827;
+                    padding: to-rem(10 0 3);
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: -0.165px;
+                    color: #6B7280;
+                    padding-bottom: to-rem(60);
+                }
+            }
+        }
+    }
+    .otherBusinesses {
+        padding: to-rem(20 70 40);
+        h1 {
+            font-weight: 700;
+            font-size: to-rem(32);
+            line-height: to-rem(39);
+            letter-spacing: -0.165px;
+            color: #000000;
+            padding: to-rem(20 0 40);
+            text-align: center;
+        }
+        .businessesList {
+            display: flex;
+            flex-wrap: wrap;
+            .businessesCard {
+                width: 32%;
+                margin: to-rem(0 10 40 0);
+                h6 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.165px;
+                    color: #111827;
+                    padding: to-rem(10 0 3);
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: -0.165px;
+                    color: #6B7280;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .container {
+        .about {
+            height: to-rem(670);
+            padding: to-rem(40);
+        }
+    }
+}
+@media screen and (max-device-width: 768px) {
+    .container {
+        .about {
+            height: to-rem(900);
+            padding: to-rem(70 40);
+            h1 {
+                font-size: to-rem(24);
+            }
+        }
+        .culture {
+            height: 80rem;
+            .cultureContainer {
+                padding: to-rem(20 40 40);
+                .header {
+                    h1 {
+                        font-size: 24px;
+                    }
+                    .holder {
+                        text-align: center;
+                        svg {
+                            text-align: center;
+                        }
+                        h4 {
+                            font-size: 24px;
+                            text-align: center;
+    
+                        }
+                    }
+                }
+            }
+        }
+        .team {
+            min-height: to-rem(1000);
+            .header {
+                font-size: 24px;
+            }
+        }
+        .values {
+            h1 {
+                font-size: 24px;
+            }
+            .valueList {
+                .valuesCard {
+                    width: 31%;
+                    h6 {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .vision {
+            h1 {
+                font-size: 24px;
+            }
+            .visionList {
+               display: flex;
+                .visionCard {
+                    width: 48%;
+                    h6 {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+    
+            }
+        }
+        .otherBusinesses {
+            padding: to-rem(20 40 40);
+            h1 {
+                font-size: to-rem(24);
+            }
+            .businessesList {
+                .businessesCard {
+                    width: 31%;
+                    h6 {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 540px) {
+    .container {
+        .about {
+            height: to-rem(1040);
+            padding: to-rem(0 20);
+            .content {
+                display: flex;
+                flex-direction: column-reverse;
+                .text {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .team {
+            min-height: 74rem;
+            .header {
+                font-size: 24px;
+            }
+        }
+        .culture {
+            height: 135rem;
+            padding-top: 0rem;
+            .cultureContainer {
+                padding: to-rem(20 20 40);
+                .header {
+                    h1 {
+                        font-size: 24px;
+                    }
+                    .holder {
+                        text-align: center;
+                        svg {
+                            text-align: center;
+                        }
+                        h4 {
+                            font-size: 24px;
+                            text-align: center;
+    
+                        }
+                    }
+                }
+            }
+        }
+        .values {
+            h1 {
+                font-size: 24px;
+            }
+            .valueList {
+                display: flex;
+                flex-direction: column;
+                .valuesCard {
+                    width: 100%;
+                }
+            }
+        }
+        .vision {
+            h1 {
+                font-size: 24px;
+            }
+            .visionList {
+               display: flex;
+               flex-direction: column;
+                .visionCard {
+                    width: 100%;
+                    border: none;
+                }
+    
+            }
+        }
+        .otherBusinesses {
+            padding: to-rem(120 20 30);
+            h1 {
+                font-size: to-rem(24);
+            }
+            .businessesList {
+                display: flex;
+                flex-direction: column;
+                .businessesCard {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

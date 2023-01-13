@@ -1,0 +1,38 @@
+@import "../../Assets/styles/shared-styles.scss";
+.foodCartCard{
+    border-bottom: to-rem(1) solid color(Grey96);
+    width: to-rem(330);
+    background-color: color(White);
+    display: flex;
+    padding: to-rem(7 21 12 10);
+    .logo{
+        width: to-rem(100);
+        height: to-rem(100);
+        margin-right: to-rem(5);
+    }
+    .content{
+        width: 100%;
+    }
+    .productName{
+        font-size: to-rem(14);
+        font-weight: 400;
+        margin-bottom: to-rem(8);
+    }
+    .productDescription{
+        font-size: to-rem(12);
+        color: #858585;
+    }
+    .priceQuantityWrapper{
+        display: flex;
+        justify-content: space-between;
+        .productPrice{
+            font-size: to-rem(18);
+            font-weight: 700;
+        }
+        .productQuantity{
+            font-size: to-rem(14);
+            font-weight: 400;
+            padding: to-rem(3 0);
+        }
+    }
+}

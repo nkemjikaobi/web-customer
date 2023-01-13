@@ -1,0 +1,75 @@
+/* eslint-disable @typescript-eslint/ban-types */
+import BasePageLayout from "Components/BasePageLayout/basePageLayout";
+import Icon from "Components/Icons";
+import React, { Fragment, useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { CURRENCIES } from "Helpers/Constants";
+
+export interface ITransactionSuccessful {
+  kpay: any;
+}
+
+const TransactionSuccessful: React.FunctionComponent<
+  ITransactionSuccessful
+> = ({ kpay }: ITransactionSuccessful) => {
+  const history = useHistory();
+  const [amount, setAmount] = useState("");
+  const [operator, setOperator] = useState("");
+  const [referenceCode, setReferenceCode] = useState("");
+
+  useEffect(() => {
+    let mounted = true;
+
+    if (mounted) {
+      if (kpay.OrderDetails === null) {
+        history.push("/pay-bills");
+      } else {
+        setAmount(kpay.OrderDetails.amount);
+        setOperator(kpay.OrderDetails.operator);
+        setReferenceCode(kpay.OrderRefenceNumber);
+      }
+    }
+    return () => {
+      mounted = false;
+    };
+  }, [kpay]);
+
+  return (
+    <Fragment>
+      <BasePageLayout
+        hideFooterOnMobile={"false"}
+        hideNavigation={0}
+        showNavigation={"no"}
+      >
+        <div className={"container my-4 mb-5 mx-0 px-0"}>
+          <div className={"row pt-4"}>
+            <div className={"col-md-6 offset-md-3"}>
+              <div className={"card py-3"}>
+                <div className={"card-body text-center"}>
+                  <Icon className={"my- 4"} name={"check"} />
+                  <p className={"text-success h5"}>Transaction Successful</p>
+                  <p className={"strong h6 pt-3"}>{operator}</p>
+                  <p className={"h6"}>{`${CURRENCIES.NAIRA}${amount}`}</p>
+                  <p className={"text-secondary"}>Transaction reference is</p>
+                  <p className={"text-secondary h6"}>{referenceCode}</p>
+                  <Link
+                    className={"btn btn-danger text-white w-50 mt-4"}
+                    to={"/pay-bills/"}
+                  >
+                    Return to Home
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </BasePageLayout>
+    </Fragment>
+  );
+};
+
+const mapStateToProps = (state: any) => {
+  return { kpay: state.kpay };
+};
+export default connect(mapStateToProps, null)(TransactionSuccessful);

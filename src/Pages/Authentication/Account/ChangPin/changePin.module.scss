@@ -1,0 +1,120 @@
+@import "../../../../Assets/styles/shared-styles.scss";
+.changePin {
+    background-color: color(White);
+    padding: to-rem(0 16);
+    h1 {
+        font-size: to-rem(14);
+        padding: to-rem(30 0 16 0);
+      }
+      p {
+        font-size: to-rem(14);
+        padding: to-rem(30 0 16 0);
+      }
+  @include breakpoint-mini("l") {
+    text-align: center;
+    width: to-rem(640);
+    border: to-rem(1) solid color(Whisper);
+    padding: to-rem(31 104 158 104);
+    margin-bottom: to-rem(173);
+    h1 {
+      font-size: to-rem(16);
+      font-weight: 500;
+    }
+    p {
+      font-size: to-rem(14);
+      padding: to-rem(42 0 32 0);
+    }
+  }
+  .inputsWrapper {
+    display: flex;
+    justify-content: flex-start;
+    @include breakpoint-mini('l'){
+        justify-content: center;
+    }
+    .input{
+        width: to-rem(48);
+        height: to-rem(48);
+        margin-right: to-rem(16);
+        @include breakpoint-mini("l") {
+              margin-right: to-rem(10);
+          }
+    }
+  
+  }
+  .button {
+    height: to-rem(52);
+    margin-top: to-rem(60);
+    @include breakpoint-mini("l") {
+      margin-top: to-rem(106);
+    }
+  }
+}
+.newPin {
+    background-color: color(White);
+    padding: to-rem(0 16);
+    h2 {
+        font-size: to-rem(14);
+        padding: to-rem(30 0 16 0)
+      }
+      p {
+        font-size: to-rem(14);
+        padding: to-rem(30 0 16 0)
+      }
+  @include breakpoint-mini("l") {
+    text-align: center;
+    width: to-rem(640);
+    border: to-rem(1) solid color(Whisper);
+    padding: to-rem(31 0 54 0);
+    h2 {
+      font-size: to-rem(16);
+      font-weight: 500;
+    }
+    p {
+      font-size: to-rem(14);
+      padding: to-rem(42 0 32 0);
+    }
+  }
+  .header {
+    position: relative;
+    display: inline;
+    // text-align: center;
+    .icon {
+      position: absolute;
+      margin-left: to-rem(32);
+    }
+  }
+  .inputsWrapper {
+    display: flex;
+    justify-content: center;
+    .input{
+        width: to-rem(48);
+        height: to-rem(48);
+        margin-right: to-rem(16);
+        @include breakpoint-mini("l") {
+              margin-right: to-rem(10);
+          }
+    }
+  }
+  .button {
+    height: to-rem(52);
+    margin-top: to-rem(60);
+    @include breakpoint-mini("l") {
+      margin: to-rem(106) auto to-rem(0) auto;
+      width: to-rem(433);
+    }
+  }
+  @include breakpoint('s'){
+    .hidden{
+        display: none;
+    }
+}
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+    .changePin {
+      padding: to-rem(120 16);
+  }
+}
